@@ -1,0 +1,71 @@
+/* src/Navigation.css */
+.nav-header {
+  font-size: 0.9em;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 20px; /* Add space between sections */
+}
+
+/* --- HIERARCHY STYLING --- */
+.tree-item {
+  margin-left: 5px; /* Base indent */
+}
+
+/* Style for top-level parents (data-level="0") */
+.tree-item[data-level="0"] > .tree-label {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: -5px; /* Remove base indent for parents */
+}
+/* Optional: Style for level 1 children */
+.tree-item[data-level="1"] > .tree-label {
+ font-weight: 500;
+}
+/* --- END HIERARCHY STYLING --- */
+
+
+.tree-label {
+  padding: 6px 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95em; /* Slightly smaller font */
+}
+
+.tree-label:hover {
+  background-color: #e9ecef; /* Light grey hover */
+}
+
+.tree-label.active {
+  background-color: #007bff; /* Standard blue */
+  color: white;
+  font-weight: bold;
+}
+
+/* Make parent bold when active too */
+.tree-item[data-level="0"] > .tree-label.active {
+ font-weight: bold;
+}
+
+
+.tree-label .toggle {
+  width: 20px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777;
+  margin-right: 3px;
+}
+
+.tree-label.active .toggle {
+  color: white;
+}
+
+.tree-children {
+  padding-left: 20px; /* Indentation for children */
+  border-left: 1px dashed #ccc; /* Use dashed line */
+  margin-left: 10px; /* Space before the line */
+}

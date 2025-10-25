@@ -66,3 +66,509 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* src/index.css */
+
+/* --- Add these styles to the bottom --- */
+
+/* Basic Form Group Styling (used in DetailPane and AddAppForm) */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+.form-group textarea {
+  resize: vertical; /* Allow vertical resize */
+  min-height: 80px;
+}
+
+.form-group input:disabled {
+ background-color: #f0f0f0;
+ color: #777;
+}
+
+/* Detail Pane Specific Styles */
+.detail-pane {
+  padding: 20px;
+  position: relative;
+  height: 100%; /* Ensure it fills parent */
+  overflow-y: auto; /* Allow scrolling */
+  box-sizing: border-box;
+}
+
+.detail-pane-message {
+  padding: 20px;
+  color: #777;
+  text-align: center;
+  margin-top: 50px;
+}
+.detail-pane-message.instructions {
+ font-style: italic;
+}
+
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8em; /* Make it bigger */
+  cursor: pointer;
+  color: #888;
+  padding: 0 5px;
+  line-height: 1;
+}
+.close-button:hover {
+ color: #333;
+}
+
+.slider-group label {
+  font-size: 0.85em;
+  color: #555;
+}
+.slider-group input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+.supporting-metric label {
+  color: #777 !important; /* !important to override base */
+  font-style: italic;
+}
+.supporting-metric input[type="range"] {
+  opacity: 0.7;
+}
+
+/* Reduce the size of the main H1 title in the header */
+header h1 {
+  font-size: 1.6em; /* Adjust this value (e.g., 1.5em, 2em) to your liking */
+  margin-top: 0;    /* Optional: Reduce top space */
+  margin-bottom: 0; /* Optional: Reduce bottom space */
+}
+
+.section-header {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #333;
+  display: flex; /* For aligning button */
+  justify-content: space-between; /* For aligning button */
+  align-items: center; /* For aligning button */
+}
+
+.score-display {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.score-display strong {
+ font-size: 1.1em;
+ color: #007bff;
+}
+
+/* Linked Data Styles */
+.linked-data-container {
+  margin-top: 15px;
+}
+.linked-data-container strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background-color: #e9ecef;
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 0.85em;
+  color: #333;
+  border: 1px solid #ced4da;
+}
+.tag.market {
+  background-color: #d1ecf1; /* Light blue for markets */
+  border-color: #bee5eb;
+}
+.tag.ontology {
+  background-color: #d4edda; /* Light green for ontology */
+  border-color: #c3e6cb;
+}
+.tag-none {
+  font-style: italic;
+  color: #888;
+  font-size: 0.9em;
+}
+
+/* List Editor Styles */
+.list-editor label {
+  margin-bottom: 8px;
+}
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 5px;
+}
+.item-list li {
+  background-color: #f8f9fa;
+  margin-bottom: 5px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+}
+.item-list li.empty-list {
+ font-style: italic;
+ color: #888;
+ background: none;
+}
+.item-list button {
+  background: none;
+  border: none;
+  color: #dc3545; /* Red */
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 0 5px;
+  line-height: 1;
+}
+.item-list button:hover {
+ color: #a71d2a;
+}
+.add-item-form {
+  display: flex;
+  gap: 10px;
+}
+.add-item-form input {
+  flex-grow: 1;
+}
+.add-item-form button {
+  padding: 10px 15px;
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent wrap */
+}
+.add-item-form button:hover {
+ background-color: #218838;
+}
+
+.cagr-display {
+ margin-left: 8px;
+ font-size: 0.9em;
+ color: #6c757d; /* Gray */
+}
+
+/* Edit Links Button */
+.edit-links-button {
+  padding: 4px 10px;
+  font-size: 0.8em;
+  background-color: #6c757d; /* Gray */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.edit-links-button:hover {
+ background-color: #5a6268;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 900px; /* Limit max width */
+  max-height: 85vh; /* Limit max height */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content h2 {
+ margin-top: 0;
+ border-bottom: 1px solid #eee;
+ padding-bottom: 15px;
+ margin-bottom: 20px;
+}
+
+/* Make TreeLinker scrollable inside modal */
+.modal-content .TreeLinker-container { /* Add a class to TreeLinker wrapper */
+  max-height: calc(85vh - 250px); /* Adjust based on modal padding/buttons */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+
+.modal-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.modal-actions .save-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+.modal-actions .save-button:hover {
+ background-color: #0056b3;
+}
+
+.modal-actions .cancel-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+.modal-actions .cancel-button:hover {
+ background-color: #5a6268;
+}
+/* Style for arrow placed after the name */
+.arrow-after {
+  margin-left: auto; /* Pushes the arrow to the far right */
+  padding-left: 5px; /* Adds space before the arrow */
+  width: auto; /* Override fixed width if needed */
+}
+
+/* src/Modal.css or index.css */
+
+/* --- General Modal Styles (May overlap with LinkEditorModal styles) --- */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* Add padding for smaller screens */
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 25px 30px; /* Adjust padding */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 90%; /* Responsive width */
+  max-width: 650px; /* Max width for info modal */
+  max-height: 90vh; /* Limit height */
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Needed for absolute close button */
+}
+
+.modal-content h2 {
+ margin-top: 0;
+ border-bottom: 1px solid #eee;
+ padding-bottom: 15px;
+ margin-bottom: 20px;
+ font-size: 1.3em;
+ color: #333;
+}
+
+.modal-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+/* ... (Save/Cancel button styles from previous step) ... */
+.modal-actions .save-button { background-color: #007bff; color: white; border: none; }
+.modal-actions .save-button:hover { background-color: #0056b3; }
+.modal-actions .cancel-button { background-color: #6c757d; color: white; border: none; }
+.modal-actions .cancel-button:hover { background-color: #5a6268; }
+
+
+/* --- Info Modal Specific Styles --- */
+.info-modal-content {
+    /* Optional: Slightly different style if needed */
+}
+
+.info-modal-body {
+  overflow-y: auto; /* Allow content scrolling if needed */
+  line-height: 1.6;
+  font-size: 0.95em;
+  color: #444;
+}
+.info-modal-body h4 { /* Style subheadings */
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #0056b3; /* Blue */
+}
+.info-modal-body ul {
+ padding-left: 20px;
+ margin-top: 5px;
+}
+.info-modal-body li {
+ margin-bottom: 8px;
+}
+
+.info-close-button { /* Use general close button style */
+    position: absolute;
+    top: 10px; /* Adjust position */
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #aaa; /* Lighter color */
+    padding: 0 5px;
+    line-height: 1;
+}
+.info-close-button:hover {
+    color: #555;
+}
+
+/* Add an info icon style */
+.info-icon {
+  display: inline-block;
+  margin-left: 8px;
+  color: #007bff; /* Blue */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9em;
+  border: 1px solid #007bff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+}
+.info-icon:hover {
+ background-color: #007bff;
+ color: white;
+}
+
+/* Add/Modify in index.css */
+
+/* Control height of TreeLinker INSIDE the AddAppForm */
+.add-app-form .TreeLinker-container { /* Assuming AddAppForm has class 'add-app-form' or use direct ancestor selector */
+  max-height: 250px; /* Reduced max height */
+  min-height: 150px; /* Ensure a minimum visible area */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+/* Ensure form itself doesn't cause overflow issues if possible */
+.add-app-form-container { /* You might need a wrapper div around AddAppForm in App.jsx */
+  max-height: 80vh; /* Example max height */
+  overflow-y: auto; /* Allow form itself to scroll if content exceeds max height */
+  /* Add padding, margins etc. as needed */
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  background: #fefefe;
+  border-radius: 8px;
+}
+
+.score-explanation {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  padding: 8px;
+  background-color: #f8f9fa; /* Light background */
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+}
+
+/* Styling for CSV Export Buttons */
+.csv-export-button {
+  display: inline-block; /* Allow margin */
+  margin-left: 10px; /* Space between buttons */
+  padding: 10px 15px;
+  font-size: 0.9em; /* Slightly smaller than main buttons */
+  background-color: #17a2b8; /* Teal color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from link */
+  line-height: normal; /* Ensure proper vertical alignment */
+}
+
+.csv-export-button:hover {
+  background-color: #138496; /* Darker teal on hover */
+}
+
+/* Adjust header layout if needed */
+header > div {
+ display: flex; /* Align buttons horizontally */
+ align-items: center;
+}

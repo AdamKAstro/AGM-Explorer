@@ -1,0 +1,304 @@
+/* src/DetailPane.css */
+.detail-pane {
+  padding: 20px;
+  position: relative;
+  height: 100%; /* Ensure it fills parent */
+  overflow-y: auto; /* Allow scrolling */
+  box-sizing: border-box;
+}
+
+.detail-pane-message {
+  padding: 20px;
+  color: #777;
+  text-align: center;
+  margin-top: 50px;
+}
+.detail-pane-message.instructions {
+ font-style: italic;
+}
+
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8em; /* Make it bigger */
+  cursor: pointer;
+  color: #888;
+  padding: 0 5px;
+  line-height: 1;
+}
+.close-button:hover {
+ color: #333;
+}
+
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+.form-group textarea {
+  resize: vertical; /* Allow vertical resize */
+  min-height: 80px;
+}
+
+.form-group input:disabled {
+ background-color: #f0f0f0;
+ color: #777;
+}
+
+.slider-group label {
+  font-size: 0.85em;
+  color: #555;
+}
+.slider-group input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+.supporting-metric label {
+  color: #777 !important; /* !important to override base */
+  font-style: italic;
+}
+.supporting-metric input[type="range"] {
+  opacity: 0.7;
+}
+
+.section-header {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.score-display {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.score-display strong {
+ font-size: 1.1em;
+ color: #007bff;
+}
+
+/* Linked Data Styles */
+.linked-data-container {
+  margin-top: 15px;
+}
+.linked-data-container strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background-color: #e9ecef;
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 0.85em;
+  color: #333;
+  border: 1px solid #ced4da;
+}
+.tag.market {
+  background-color: #d1ecf1; /* Light blue for markets */
+  border-color: #bee5eb;
+}
+.tag.ontology {
+  background-color: #d4edda; /* Light green for ontology */
+  border-color: #c3e6cb;
+}
+.tag-none {
+  font-style: italic;
+  color: #888;
+  font-size: 0.9em;
+}
+
+/* List Editor Styles */
+.list-editor label {
+  margin-bottom: 8px;
+}
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 5px;
+}
+.item-list li {
+  background-color: #f8f9fa;
+  margin-bottom: 5px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+}
+.item-list li.empty-list {
+ font-style: italic;
+ color: #888;
+ background: none;
+}
+.item-list button {
+  background: none;
+  border: none;
+  color: #dc3545; /* Red */
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 0 5px;
+  line-height: 1;
+}
+.item-list button:hover {
+ color: #a71d2a;
+}
+.add-item-form {
+  display: flex;
+  gap: 10px;
+}
+.add-item-form input {
+  flex-grow: 1;
+}
+.add-item-form button {
+  padding: 10px 15px;
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-item-form button:hover {
+ background-color: #218838;
+}
+
+.cagr-display {
+ margin-left: 8px;
+ font-size: 0.9em;
+ color: #6c757d; /* Gray */
+}
+
+/* src/DetailPane.css OR Modal.css */
+
+.edit-links-button {
+  margin-left: 15px;
+  padding: 4px 10px;
+  font-size: 0.8em;
+  background-color: #6c757d; /* Gray */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.edit-links-button:hover {
+ background-color: #5a6268;
+}
+
+/* --- Modal Styles --- */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 900px; /* Limit max width */
+  max-height: 85vh; /* Limit max height */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content h2 {
+ margin-top: 0;
+ border-bottom: 1px solid #eee;
+ padding-bottom: 15px;
+ margin-bottom: 20px;
+}
+
+/* Make TreeLinker scrollable inside modal */
+.modal-content .TreeLinker { /* Assuming TreeLinker has a wrapper div or class */
+  max-height: 50vh; /* Adjust as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+
+.modal-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.modal-actions .save-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+.modal-actions .save-button:hover {
+ background-color: #0056b3;
+}
+
+.modal-actions .cancel-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+.modal-actions .cancel-button:hover {
+ background-color: #5a6268;
+}

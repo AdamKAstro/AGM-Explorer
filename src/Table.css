@@ -1,0 +1,146 @@
+/* src/Table.css */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  min-width: 800px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  cursor: pointer;
+  user-select: none;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td strong {
+  color: #0056b3;
+  cursor: help;
+}
+
+/* Add these new styles to src/Table.css */
+
+/* This highlights the selected row in the table */
+tr.selected-row {
+  background-color: #dbeafe !important;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Styles for the new DetailPane form */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.form-group.slider-group input[type="range"] {
+  width: 100%;
+}
+
+/* ADD THESE TO THE BOTTOM of src/Table.css */
+
+.linked-data-container {
+  margin-top: 25px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+}
+.linked-data-container strong {
+  display: block;
+  margin-bottom: 5px;
+}
+.linked-data-container p {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+.tag {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+.tag.market {
+  background-color: #e0f2fe;
+  color: #0c5999;
+}
+.tag.ontology {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+.tag-none {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* ADD THESE TO THE BOTTOM of src/Table.css */
+
+.market-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+.market-card h4 {
+  margin: 0 0 10px 0;
+  color: #0056b3;
+}
+.market-card ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+.market-card li {
+  margin-bottom: 5px;
+  color: #333;
+}
+.market-card li strong {
+  color: #000;
+}
