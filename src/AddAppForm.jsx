@@ -307,26 +307,7 @@ export function AddAppForm({ onFinished, preSelectedMarketId = null, preSelected
           </div>
       )}
 
-      {/* Embedded styles for warning/suggestion boxes (can move to CSS file) */}
-      <style jsx global>{`
-        .warning-box, .suggestion-box {
-            color: #856404; /* Dark yellow text */
-            background-color: #fff3cd; /* Light yellow background */
-            border: 1px solid #ffeeba; /* Yellow border */
-            padding: 10px 15px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            font-size: 0.9em;
-        }
-        .warning-box ul, .suggestion-box ul {
-            margin-top: 5px;
-            margin-bottom: 5px;
-            padding-left: 20px; /* Indent list items */
-        }
-        .warning-box strong { color: #721c24; } /* Darker red for warning emphasis */
-        .suggestion-box strong { color: #004085; } /* Darker blue for suggestion emphasis */
-        .suggestion-box small { color: #6c757d; display: block; margin-top: 5px;} /* Gray text for notes */
-      `}</style>
+ 
     </>
   );
 }

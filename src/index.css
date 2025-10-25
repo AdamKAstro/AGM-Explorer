@@ -1,574 +1,1947 @@
+/* ============================================
+   EDITORIAL ELEGANCE
+   Sophisticated Magazine-Inspired Design
+   ============================================ */
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* Core Palette - Light & Refined */
+  --editorial-white: #ffffff;
+  --editorial-cream: #fdfbf8;
+  --editorial-pearl: #f8f6f3;
+  --editorial-gray-50: #fafaf9;
+  --editorial-gray-100: #f4f4f2;
+  --editorial-gray-200: #e5e5e0;
+  --editorial-gray-300: #d4d4cc;
+  --editorial-gray-400: #a3a399;
+  --editorial-gray-500: #737366;
+  --editorial-gray-600: #52524a;
+  --editorial-gray-700: #3f3f38;
+  --editorial-gray-800: #292926;
+  --editorial-gray-900: #1a1a18;
+  
+  /* Accent Colors - Sophisticated & Muted */
+  --editorial-gold: #c9a961;
+  --editorial-sage: #7b8471;
+  --editorial-burgundy: #8b3a3a;
+  --editorial-navy: #2c3e50;
+  --editorial-copper: #b87333;
+  --editorial-plum: #6b4c7a;
+  
+  /* Functional Colors */
+  --accent-primary: var(--editorial-gold);
+  --accent-hover: #b5984f;
+  --text-primary: var(--editorial-gray-900);
+  --text-secondary: var(--editorial-gray-600);
+  --text-muted: var(--editorial-gray-400);
+  --border-light: var(--editorial-gray-200);
+  --border-medium: var(--editorial-gray-300);
+  
+  /* Typography - Elegant Serif & Sans */
+  --font-serif: 'Crimson Text', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  
+  /* Spacing - Golden Ratio Inspired */
+  --space-xs: 0.382rem;    /* 6.1px */
+  --space-sm: 0.618rem;    /* 9.9px */
+  --space-md: 1rem;        /* 16px */
+  --space-lg: 1.618rem;    /* 25.9px */
+  --space-xl: 2.618rem;    /* 41.9px */
+  --space-2xl: 4.236rem;   /* 67.8px */
+  --space-3xl: 6.854rem;   /* 109.7px */
+  
+  /* Animation - Smooth & Refined */
+  --transition-swift: 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  --transition-smooth: 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  --transition-elegant: 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  
+  /* Layout */
+  --sidebar-width: 360px;
+  --detail-width: 420px;
+  
+  /* Shadows - Soft & Natural */
+  --shadow-xs: 0 1px 3px rgba(26, 26, 24, 0.04);
+  --shadow-sm: 0 2px 8px rgba(26, 26, 24, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 26, 24, 0.08);
+  --shadow-lg: 0 8px 32px rgba(26, 26, 24, 0.12);
+  --shadow-xl: 0 16px 48px rgba(26, 26, 24, 0.16);
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: var(--editorial-gold);
+  color: var(--editorial-white);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-primary);
+  background: var(--editorial-cream);
+  min-height: 100vh;
   font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Custom Scrollbar - Minimal & Elegant */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
 
-  font-synthesis: none;
+::-webkit-scrollbar-track {
+  background: var(--editorial-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--editorial-gray-300);
+  border-radius: 20px;
+  border: 2px solid var(--editorial-gray-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--editorial-gray-400);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  background: var(--editorial-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle Top Border - Magazine Style */
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    var(--editorial-gold) 0%, 
+    var(--editorial-copper) 25%,
+    var(--editorial-plum) 50%,
+    var(--editorial-sage) 75%,
+    var(--editorial-navy) 100%);
+  z-index: 100;
+}
+
+/* ============================================
+   NAVIGATION PANE
+   ============================================ */
+
+.nav-pane {
+  width: var(--sidebar-width);
+  background: var(--editorial-pearl);
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elegant Pattern Background */
+.nav-pane::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    var(--editorial-gray-400) 35px,
+    var(--editorial-gray-400) 70px
+  );
+  pointer-events: none;
+}
+
+.nav-pane > div {
+  padding: var(--space-xl) var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+/* Search Input - Editorial Style */
+#smart-search-input {
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--editorial-white);
+  border: 2px solid var(--border-light);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 12px;
+  margin-bottom: var(--space-md);
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-xs);
+}
+
+#smart-search-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-style: italic;
+}
+
+#smart-search-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-md), 0 0 0 3px rgba(201, 169, 97, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Clear Filters Button - Refined */
+button {
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--editorial-white);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--editorial-gold);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width var(--transition-elegant), height var(--transition-elegant);
+  opacity: 0.1;
+}
+
+button:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+button:hover::before {
+  width: 500px;
+  height: 500px;
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-xs);
+}
+
+/* Navigation Headers - Magazine Section Headers */
+.nav-header {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: var(--space-xl) 0 var(--space-lg) 0;
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--editorial-gold);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--editorial-burgundy);
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--editorial-gold);
+  color: var(--editorial-white);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all var(--transition-swift);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-icon:hover {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: var(--shadow-md);
+  background: var(--accent-hover);
+}
+
+/* Tree Navigation - Clean Hierarchy */
+.tree-item {
+  margin: 2px 0;
+  position: relative;
+}
+
+/* Parent Items - Serif Headlines */
+.tree-item[data-level="0"] > .tree-label {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  padding: 12px 16px;
+  background: linear-gradient(90deg, rgba(201, 169, 97, 0.05), transparent);
+  text-transform: capitalize;
+}
+
+/* Special formatting for database inconsistencies */
+.tree-label {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-swift);
+  border-left: 3px solid transparent;
+  color: var(--text-secondary);
+  position: relative;
+  background: transparent;
+  border-radius: 0 8px 8px 0;
+  margin: 1px 0;
+  /* Format text to handle underscores and inconsistent casing */
+  text-transform: capitalize;
+}
+
+/* Replace underscores with spaces visually and format text properly */
+.tree-label::before {
+  content: attr(data-formatted-name);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: capitalize;
+  white-space: nowrap;
+  display: none; /* Will be enabled via JS or special class */
+}
+
+/* Format the actual text content */
+.nav-pane .tree-label {
+  /* This will capitalize first letter of each word */
+  text-transform: capitalize;
+}
+
+/* Special cases for known parent categories that should be Title Case */
+.tree-item[data-level="0"] > .tree-label {
+  /* More sophisticated formatting for parent items */
+  position: relative;
+}
+
+/* Hide underscores and replace with spaces using CSS */
+.tree-item .tree-label {
+  font-variant: small-caps;
+  text-transform: capitalize;
+}
+
+/* For items with underscores, we'll use a special formatting */
+.tree-item[data-level="1"] > .tree-label,
+.tree-item[data-level="2"] > .tree-label {
+  font-variant: normal;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Special styling for known technical/scientific terms */
+.tree-label {
+  /* Format text content */
+  text-rendering: optimizeLegibility;
+}
+
+/* Override for specific known items that need special formatting */
+/* IoT, 6G, BCI should stay uppercase */
+.tree-item .tree-label {
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+}
+
+/* Acronyms and technical terms - keep uppercase */
+.tree-label[title*="6g" i],
+.tree-label[title*="iot" i],
+.tree-label[title*="bci" i] {
+  text-transform: uppercase !important;
+}
+
+/* Format multi-word items better */
+.tree-item[data-level="0"] > .tree-label {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  padding: 12px 16px;
+  background: linear-gradient(90deg, rgba(201, 169, 97, 0.05), transparent);
+  text-transform: capitalize;
+  /* Special handling for & symbols */
+  word-spacing: 0.1em;
+}
+
+/* Items with zero count - slightly muted */
+.tree-label:has(.count-zero) {
+  opacity: 0.85;
+}
+
+/* Enhanced formatting with pseudo-elements for cleaner display */
+.nav-pane .tree-item .tree-label {
+  /* Base formatting */
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Special formatting rules using attribute selectors */
+.tree-label[title*="_"] {
+  /* Items with underscores get special spacing */
+  letter-spacing: 0.02em;
+}
+
+/* Format navigation items with better typography */
+.tree-label {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-swift);
+  border-left: 3px solid transparent;
+  color: var(--text-secondary);
+  position: relative;
+  background: transparent;
+  border-radius: 0 8px 8px 0;
+  margin: 1px 0;
+  /* Improved text formatting */
+  text-transform: capitalize;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tree-label:hover {
+  background: var(--editorial-white);
+  color: var(--text-primary);
+  border-left-color: var(--editorial-gold);
+  padding-left: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.tree-label.active {
+  background: linear-gradient(90deg, var(--editorial-white), rgba(255, 255, 255, 0.8));
+  color: var(--accent-primary);
+  border-left-color: var(--editorial-gold);
+  box-shadow: var(--shadow-md);
+  font-weight: 600;
+  position: relative;
+}
+
+.tree-label.active::after {
+  content: '●';
+  position: absolute;
+  right: 16px;
+  color: var(--editorial-gold);
+  font-size: 8px;
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Expand/Collapse Toggle - Elegant */
+.toggle {
+  margin-left: auto;
+  padding: 0 8px;
+  color: var(--text-muted);
+  font-size: 12px;
+  transition: all var(--transition-swift);
+  transform-origin: center;
+}
+
+.toggle:hover {
+  color: var(--editorial-gold);
+  transform: scale(1.3);
+}
+
+/* Children Container - Smooth Reveal */
+.tree-children {
+  padding-left: 24px;
+  margin-left: 12px;
+  border-left: 1px solid var(--border-light);
+  animation: elegantReveal var(--transition-smooth);
+  position: relative;
+}
+
+.tree-children::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--editorial-gold), transparent);
+  opacity: 0.3;
+}
+
+@keyframes elegantReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--editorial-white);
+  position: relative;
+}
+
+/* Decorative Corner Element */
+.main-content::before {
+  content: '◆';
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 24px;
+  color: var(--editorial-gold);
+  opacity: 0.2;
+  transform: rotate(45deg);
+}
+
+/* Content Header - Magazine Masthead Style */
+.content-header {
+  padding: var(--space-2xl) var(--space-2xl) var(--space-xl);
+  background: linear-gradient(180deg, var(--editorial-cream), var(--editorial-white));
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.content-header h1 {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.content-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: var(--editorial-gold);
+  border-radius: 2px;
+}
+
+/* Subtitle/Description */
+.content-header p {
+  margin-top: var(--space-md);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Table Area */
+.table-area {
+  flex: 1;
+  padding: var(--space-xl);
+  overflow: auto;
+  background: var(--editorial-white);
+}
+
+/* ============================================
+   TABLES - Clean Editorial Style
+   ============================================ */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--editorial-white);
+  font-size: 15px;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--editorial-cream);
+}
+
+.data-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--editorial-gold);
+  position: relative;
+  background: var(--editorial-cream);
+}
+
+.data-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--transition-swift);
+}
+
+.data-table th.sortable:hover {
+  color: var(--accent-primary);
+}
+
+.data-table th.sortable::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  opacity: 0.3;
+}
+
+.data-table th.sorted-asc::after {
+  border-bottom: 6px solid var(--editorial-gold);
+  opacity: 1;
+}
+
+.data-table th.sorted-desc::after {
+  border-top: 6px solid var(--editorial-gold);
+  opacity: 1;
+}
+
+.data-table tbody tr {
+  transition: all var(--transition-swift);
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.data-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(201, 169, 97, 0.05), transparent);
+  transform: translateX(2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table tbody tr:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--editorial-gold);
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: rgba(248, 246, 243, 0.3);
+}
+
+.data-table td {
+  padding: 14px 20px;
+  color: var(--text-primary);
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* First Column - Emphasis */
+.data-table td:first-child {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+/* Number Cells */
+.data-table td.number-cell {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--editorial-navy);
+}
+
+.data-table td.high-value {
+  color: var(--editorial-sage);
+  font-weight: 700;
+}
+
+.data-table td.low-value {
+  color: var(--editorial-burgundy);
+  font-weight: 500;
+}
+
+/* Status Badges - Refined Pills */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 20px;
+  background: var(--editorial-gray-100);
+  color: var(--text-secondary);
+}
+
+.status-badge.active {
+  background: var(--editorial-sage);
+  color: var(--editorial-white);
+}
+
+.status-badge.pending {
+  background: var(--editorial-gold);
+  color: var(--editorial-white);
+}
+
+.status-badge.inactive {
+  background: var(--editorial-gray-300);
+  color: var(--editorial-white);
+}
+
+/* Action Buttons - Minimal */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  background: var(--editorial-white);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-swift);
+  text-transform: capitalize;
+}
+
+.action-btn:hover {
+  border-color: var(--editorial-gold);
+  color: var(--editorial-gold);
+  background: rgba(201, 169, 97, 0.05);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.action-btn.danger:hover {
+  border-color: var(--editorial-burgundy);
+  color: var(--editorial-burgundy);
+  background: rgba(139, 58, 58, 0.05);
+}
+
+/* ============================================
+   FORMS - Clean & Sophisticated
+   ============================================ */
+
+.form-container {
+  background: var(--editorial-white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: var(--space-2xl);
+  margin: var(--space-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.form-container h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 2px solid var(--editorial-gold);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.form-group label .required {
+  color: var(--editorial-burgundy);
+  margin-left: 4px;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  background: var(--editorial-cream);
+  border: 2px solid var(--border-light);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  border-radius: 8px;
+  transition: all var(--transition-swift);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--editorial-gold);
+  background: var(--editorial-white);
+  box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+  font-family: var(--font-serif);
+  line-height: 1.7;
+}
+
+/* Checkbox Group - Elegant */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--editorial-gold);
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 500;
+}
+
+/* Form Actions - Magazine Button Style */
+.form-actions {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--border-light);
+}
+
+.btn-primary {
+  padding: 14px 32px;
+  background: var(--editorial-gold);
+  color: var(--editorial-white);
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left var(--transition-elegant);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-secondary {
+  padding: 14px 32px;
+  background: var(--editorial-white);
+  color: var(--text-secondary);
+  border: 2px solid var(--border-medium);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+  border-color: var(--editorial-navy);
+  color: var(--editorial-navy);
+  background: rgba(44, 62, 80, 0.05);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   MODALS - Editorial Overlay
+   ============================================ */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 24, 0.7);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn var(--transition-smooth);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: var(--editorial-white);
+  border-radius: 16px;
+  max-width: 680px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+  animation: modalSlide var(--transition-elegant);
+}
+
+@keyframes modalSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  padding: var(--space-xl);
+  border-bottom: 1px solid var(--border-light);
+  background: var(--editorial-cream);
+  position: relative;
+}
+
+.modal-header h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  background: var(--editorial-white);
+  border: 2px solid var(--border-light);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-swift);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.modal-close:hover {
+  border-color: var(--editorial-burgundy);
+  color: var(--editorial-burgundy);
+  background: rgba(139, 58, 58, 0.05);
+  transform: rotate(90deg) scale(1.1);
+}
+
+.modal-body {
+  padding: var(--space-2xl);
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.modal-body h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  margin: var(--space-xl) 0 var(--space-lg) 0;
+  color: var(--text-primary);
+}
+
+.modal-body h4 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  margin: var(--space-lg) 0 var(--space-md) 0;
+  color: var(--editorial-navy);
+  font-style: italic;
+}
+
+.modal-body p {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.modal-body ul,
+.modal-body ol {
+  margin: var(--space-lg) 0;
+  padding-left: var(--space-xl);
+}
+
+.modal-body li {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.modal-body li strong {
+  color: var(--editorial-gold);
+  font-weight: 600;
+}
+
+.modal-body code {
+  background: var(--editorial-cream);
+  color: var(--editorial-navy);
+  padding: 3px 8px;
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+}
+
+.modal-body pre {
+  background: var(--editorial-gray-900);
+  color: var(--editorial-white);
+  border-radius: 8px;
+  padding: var(--space-lg);
+  overflow-x: auto;
+  margin: var(--space-lg) 0;
+  box-shadow: var(--shadow-md);
+}
+
+.modal-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* ============================================
+   DETAIL PANE - Magazine Sidebar
+   ============================================ */
+
+.detail-pane {
+  width: var(--detail-width);
+  background: var(--editorial-pearl);
+  border-left: 1px solid var(--border-light);
+  padding: var(--space-xl);
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Decorative Header */
+.detail-pane::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(180deg, var(--editorial-cream), transparent);
+  pointer-events: none;
+}
+
+.detail-pane h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: var(--space-xl);
+  color: var(--text-primary);
+  position: relative;
+  padding-bottom: var(--space-md);
+  border-bottom: 2px solid var(--editorial-gold);
+}
+
+.detail-pane h2::after {
+  content: '§';
+  position: absolute;
+  right: 0;
+  color: var(--editorial-gold);
+  opacity: 0.3;
+  font-size: 32px;
+}
+
+.detail-section {
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-lg);
+  background: var(--editorial-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-section h3 {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--editorial-navy);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.detail-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.detail-value {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.detail-value.highlight {
+  color: var(--editorial-gold);
+  font-weight: 600;
+}
+
+/* Progress Bars - Elegant */
+.progress-bar {
+  height: 8px;
+  background: var(--editorial-gray-100);
+  border-radius: 10px;
+  margin-top: var(--space-sm);
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--editorial-gold), var(--editorial-copper));
+  border-radius: 10px;
+  transition: width var(--transition-elegant);
+  position: relative;
+  box-shadow: 0 2px 4px rgba(201, 169, 97, 0.3);
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Tags - Editorial Labels */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.tag {
+  padding: 6px 14px;
+  background: var(--editorial-white);
+  border: 1px solid var(--editorial-gold);
+  color: var(--editorial-gold);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 20px;
+  transition: all var(--transition-swift);
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: var(--editorial-gold);
+  color: var(--editorial-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   RESPONSIVE - Graceful Scaling
+   ============================================ */
+
+@media (max-width: 1600px) {
+  :root {
+    --sidebar-width: 320px;
+    --detail-width: 380px;
+  }
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --sidebar-width: 300px;
+    --detail-width: 350px;
+  }
+  
+  .content-header h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-pane {
+    width: 280px;
+  }
+  
+  .data-table {
+    font-size: 14px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .nav-pane {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    overflow-y: auto;
+  }
+  
+  .detail-pane {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border-light);
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-header h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  
+  .nav-header {
+    font-size: 16px;
+  }
+  
+  .tree-item[data-level="0"] > .tree-label {
+    font-size: 15px;
+  }
+  
+  .content-header h1 {
+    font-size: 28px;
+  }
+  
+  .data-table {
+    font-size: 13px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 10px 12px;
+  }
+  
+  .modal-content {
+    max-width: 95%;
+    max-height: 90vh;
+    margin: var(--space-md);
+    border-radius: 12px;
+  }
+  
+  .modal-header h2 {
+    font-size: 24px;
+  }
+  
+  .detail-pane h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-pane > div {
+    padding: var(--space-lg) var(--space-md);
+  }
+  
+  .tree-children {
+    padding-left: 16px;
+    margin-left: 8px;
+  }
+  
+  .data-table {
+    font-size: 12px;
+  }
+  
+  .content-header {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .content-header h1 {
+    font-size: 24px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-muted { color: var(--text-muted); }
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-gold { color: var(--editorial-gold); }
+.text-navy { color: var(--editorial-navy); }
+.text-burgundy { color: var(--editorial-burgundy); }
+
+.mt-1 { margin-top: var(--space-xs); }
+.mt-2 { margin-top: var(--space-sm); }
+.mt-3 { margin-top: var(--space-md); }
+.mt-4 { margin-top: var(--space-lg); }
+.mt-5 { margin-top: var(--space-xl); }
+
+.mb-1 { margin-bottom: var(--space-xs); }
+.mb-2 { margin-bottom: var(--space-sm); }
+.mb-3 { margin-bottom: var(--space-md); }
+.mb-4 { margin-bottom: var(--space-lg); }
+.mb-5 { margin-bottom: var(--space-xl); }
+
+.p-1 { padding: var(--space-xs); }
+.p-2 { padding: var(--space-sm); }
+.p-3 { padding: var(--space-md); }
+.p-4 { padding: var(--space-lg); }
+.p-5 { padding: var(--space-xl); }
+
+.hidden { display: none !important; }
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-1 { flex: 1; }
+.items-center { align-items: center; }
+.items-baseline { align-items: baseline; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: var(--space-xs); }
+.gap-2 { gap: var(--space-sm); }
+.gap-3 { gap: var(--space-md); }
+.gap-4 { gap: var(--space-lg); }
+
+/* Loading States - Elegant */
+.loading-or-empty {
+  color: var(--text-muted);
+  font-family: var(--font-serif);
+  font-style: italic;
+  padding: var(--space-xl);
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+}
+
+.loading-or-empty::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin: -28px 0 0 -12px;
+  border: 2px solid var(--editorial-gold);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: elegantSpin 1s linear infinite;
+}
+
+@keyframes elegantSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Print Styles - Magazine-Ready */
+@media print {
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+    background: white;
+    color: black;
+  }
+  
+  .nav-pane,
+  .detail-pane,
+  .modal-overlay,
+  button,
+  .action-btn,
+  .info-icon {
+    display: none !important;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+  
+  .content-header h1 {
+    font-size: 24pt;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+  }
+  
+  .data-table {
+    border: 1pt solid #000;
+    page-break-inside: avoid;
+  }
+  
+  .data-table th {
+    background: #f0f0f0 !important;
+    font-weight: bold;
+    border: 1pt solid #000;
+  }
+  
+  .data-table td {
+    border: 1pt solid #ccc;
+  }
+  
+  .data-table tr {
+    page-break-inside: avoid;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+}
+
+/* ============================================
+   SPECIAL EFFECTS
+   ============================================ */
+
+/* Page Load Animation */
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-container {
+  animation: pageLoad var(--transition-elegant);
+}
+
+/* Focus Visible - Accessibility */
+*:focus-visible {
+  outline: 3px solid var(--editorial-gold);
+  outline-offset: 2px;
+}
+
+/* Selection Styles */
+::selection {
+  background: var(--editorial-gold);
+  color: var(--editorial-white);
+}
+
+::-moz-selection {
+  background: var(--editorial-gold);
+  color: var(--editorial-white);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-light: var(--editorial-gray-400);
+    --border-medium: var(--editorial-gray-500);
+  }
+  
+  .data-table th {
+    border-bottom-width: 3px;
+  }
+  
+  .tree-label.active {
+    outline: 2px solid var(--editorial-gold);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   NAVIGATION FORMATTING ENHANCEMENT
+   Handles inconsistent database naming elegantly
+   ============================================ */
+
+/* Add these additional styles to your index-editorial-elegance.css 
+   or include as a separate stylesheet */
+
+/* Enhanced Navigation Item Formatting */
+.nav-pane .tree-label {
+  /* Base text transformation */
+  text-transform: capitalize;
+  
+  /* Replace underscores visually */
+  --text-content: attr(data-display-name);
+}
+
+/* Special formatting for different item types */
+
+/* Technology acronyms - keep uppercase */
+.tree-label[data-original-name*="6g"],
+.tree-label[data-original-name*="5g"],
+.tree-label[data-original-name*="iot"],
+.tree-label[data-original-name*="bci"],
+.tree-label[data-original-name*="ai"],
+.tree-label[data-original-name*="ml"],
+.tree-label[data-original-name*="api"],
+.tree-label[data-original-name*="sdk"] {
+  text-transform: uppercase !important;
+}
+
+/* Proper names and branded terms */
+.tree-label[data-original-name*="aerospace"],
+.tree-label[data-original-name*="defense"],
+.tree-label[data-original-name*="consumer"],
+.tree-label[data-original-name*="industrial"] {
+  /* These get title case */
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* Scientific/technical terms with special formatting */
+.tree-label[data-original-name*="quantum"],
+.tree-label[data-original-name*="nano"],
+.tree-label[data-original-name*="micro"],
+.tree-label[data-original-name*="bio"] {
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+/* Parent categories - more prominent */
+.tree-item[data-level="0"] > .tree-label {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-primary);
+  background: linear-gradient(90deg, rgba(201, 169, 97, 0.08), transparent);
+  padding: 12px 20px;
+  margin: 4px 0;
+  border-left-width: 4px;
+}
+
+/* Subcategories - clean and readable */
+.tree-item[data-level="1"] > .tree-label {
+  font-size: 14px;
+  padding-left: 24px;
+  color: var(--text-secondary);
+}
+
+.tree-item[data-level="2"] > .tree-label {
+  font-size: 13px;
+  padding-left: 32px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Items with zero applications - subtle indication */
+.tree-label:has(.app-count:contains("(0)")) {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Active parent with children */
+.tree-item[data-level="0"]:has(.tree-children) > .tree-label {
+  border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+  margin-bottom: 6px;
+}
+
+/* ============================================
+   JAVASCRIPT FORMATTING UTILITY
+   Add this to your NavigationPane.jsx
+   ============================================ */
+
+/*
+// Add this utility function to NavigationPane.jsx (inside the component or as a separate function)
+
+const formatItemName = (name) => {
+  if (!name) return '';
+  
+  // Special cases for acronyms that should stay uppercase
+  const acronyms = ['6g', '5g', 'iot', 'bci', 'ai', 'ml', 'api', 'sdk', 'led', 'oled', 'rfid', 'gps'];
+  const lowerName = name.toLowerCase();
+  
+  // Check if it's an acronym
+  if (acronyms.includes(lowerName)) {
+    return name.toUpperCase();
+  }
+  
+  // Handle underscores and format to title case
+  let formatted = name
+    .replace(/_/g, ' ')  // Replace underscores with spaces
+    .replace(/-/g, ' ')  // Replace hyphens with spaces
+    .split(' ')
+    .map(word => {
+      // Check each word for acronyms
+      if (acronyms.includes(word.toLowerCase())) {
+        return word.toUpperCase();
+      }
+      // Special cases
+      if (word.toLowerCase() === 'and') return '&';
+      if (word.toLowerCase() === 'of') return 'of';
+      if (word.toLowerCase() === 'the') return 'the';
+      if (word.toLowerCase() === 'in') return 'in';
+      if (word.toLowerCase() === 'for') return 'for';
+      if (word.toLowerCase() === 'with') return 'with';
+      
+      // Title case for regular words
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(' ');
+  
+  // Special formatting for known categories
+  const specialCases = {
+    'antimicrobial coatings': 'Antimicrobial Coatings',
+    'carbon capture utilization': 'Carbon Capture & Utilization',
+    'consumer goods': 'Consumer Goods',
+    'industrial manufacturing': 'Industrial Manufacturing',
+    'membrane separations': 'Membrane Separations',
+    'smart materials': 'Smart Materials',
+    'host guest systems': 'Host-Guest Systems',
+    'self healing': 'Self-Healing Materials',
+    'ion selective channels': 'Ion-Selective Channels',
+    'wearable diagnostics': 'Wearable Diagnostics',
+    'drug delivery': 'Drug Delivery',
+    'building materials': 'Building Materials',
+    'smart concrete': 'Smart Concrete',
+    'energy storage': 'Energy Storage',
+    'renewable energy': 'Renewable Energy',
+    'synthetic biology': 'Synthetic Biology',
+    'aerospace defense': 'Aerospace & Defense',
+    'barrier additive': 'Barrier Additives',
+    'electrical additive': 'Electrical Additives',
+    'additive manufacturing': 'Additive Manufacturing',
+  };
+  
+  const formattedLower = formatted.toLowerCase();
+  if (specialCases[formattedLower]) {
+    return specialCases[formattedLower];
+  }
+  
+  return formatted;
+};
+
+// Then in your TreeItem component, update the label display:
+// Change this line:
+//   {item.name} ({item.application_count ?? 0})
+// To:
+//   {formatItemName(item.name)} ({item.application_count ?? 0})
+
+// Also add data attribute for CSS targeting:
+// <div
+//   className={`tree-label ${isActive ? 'active' : ''}`}
+//   onClick={() => onFilterChange(filterId)}
+//   title={itemTooltip}
+//   data-original-name={item.name}
+//   data-display-name={formatItemName(item.name)}
+// >
+
+*/
+
+/* ============================================
+   COMPLETE INTEGRATION EXAMPLE
+   ============================================ */
+
+/* If you want the cleanest look without modifying JS, 
+   use these CSS-only rules that handle most cases: */
+
+.nav-pane .tree-label {
+  /* Hide underscores and format text */
+  text-transform: capitalize;
+  font-feature-settings: "case" 1;
+}
+
+/* Use CSS to "replace" underscores visually (works in modern browsers) */
+.tree-label {
+  position: relative;
+  text-transform: capitalize;
+}
+
+/* Make underscores less visible */
+.tree-label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: inherit;
+  z-index: 1;
+}
+
+/* Better approach: Format parent categories specially */
+.tree-item[data-level="0"] > .tree-label {
+  /* Major categories get special treatment */
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  background: linear-gradient(90deg, 
+    rgba(201, 169, 97, 0.1), 
+    rgba(201, 169, 97, 0.05),
+    transparent);
+  border-left: 4px solid var(--editorial-gold);
+  padding: 14px 20px;
+  margin: 6px 0;
+}
+
+/* Hover state for better formatting visibility */
+.tree-label:hover {
+  background: var(--editorial-white);
+  color: var(--text-primary);
+  border-left-color: var(--editorial-gold);
+  padding-left: 24px;
+  box-shadow: var(--shadow-sm);
+  /* On hover, text looks even better */
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+/* Active state with enhanced formatting */
+.tree-label.active {
+  background: linear-gradient(90deg, var(--editorial-white), rgba(255, 255, 255, 0.9));
+  color: var(--accent-primary);
+  border-left-color: var(--editorial-gold);
+  box-shadow: var(--shadow-md);
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+}
+
+/* Count styling - make it subtle */
+.tree-label .app-count {
+  opacity: 0.6;
+  font-size: 0.9em;
+  font-weight: 400;
+  margin-left: 0.5em;
+}
+
+/* Items with many applications - highlight */
+.tree-label:has(.app-count:contains("(10)"):not(:contains("(100)"))),
+.tree-label:has(.app-count:contains("(11)")),
+.tree-label:has(.app-count:contains("(12)")),
+.tree-label:has(.app-count:contains("(13)")),
+.tree-label:has(.app-count:contains("(14)")),
+.tree-label:has(.app-count:contains("(15)")),
+.tree-label:has(.app-count:contains("(16)")),
+.tree-label:has(.app-count:contains("(17)")),
+.tree-label:has(.app-count:contains("(18)")),
+.tree-label:has(.app-count:contains("(19)")),
+.tree-label:has(.app-count:contains("(20)")),
+.tree-label:has(.app-count:contains("(30)")),
+.tree-label:has(.app-count:contains("(40)")),
+.tree-label:has(.app-count:contains("(50)")),
+.tree-label:has(.app-count:contains("(60)")),
+.tree-label:has(.app-count:contains("(70)")),
+.tree-label:has(.app-count:contains("(80)")),
+.tree-label:has(.app-count:contains("(90)")) {
+  font-weight: 500;
+  color: var(--editorial-navy);
+}
+
+/* ============================================
+   FINAL POLISH
+   ============================================ */
+
+/* Smooth all text rendering in navigation */
+.nav-pane {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+/* Ensure consistent line heights */
+.tree-label {
+  line-height: 1.4;
+  min-height: 38px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-/* src/index.css */
-
-/* --- Add these styles to the bottom --- */
-
-/* Basic Form Group Styling (used in DetailPane and AddAppForm) */
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
-  font-size: 0.9em;
-  color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group textarea,
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 1em;
-}
-.form-group textarea {
-  resize: vertical; /* Allow vertical resize */
-  min-height: 80px;
-}
-
-.form-group input:disabled {
- background-color: #f0f0f0;
- color: #777;
-}
-
-/* Detail Pane Specific Styles */
-.detail-pane {
-  padding: 20px;
-  position: relative;
-  height: 100%; /* Ensure it fills parent */
-  overflow-y: auto; /* Allow scrolling */
-  box-sizing: border-box;
-}
-
-.detail-pane-message {
-  padding: 20px;
-  color: #777;
-  text-align: center;
-  margin-top: 50px;
-}
-.detail-pane-message.instructions {
- font-style: italic;
-}
-
-
-.close-button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.8em; /* Make it bigger */
-  cursor: pointer;
-  color: #888;
-  padding: 0 5px;
-  line-height: 1;
-}
-.close-button:hover {
- color: #333;
-}
-
-.slider-group label {
-  font-size: 0.85em;
-  color: #555;
-}
-.slider-group input[type="range"] {
-  width: 100%;
-  cursor: pointer;
-}
-.supporting-metric label {
-  color: #777 !important; /* !important to override base */
-  font-style: italic;
-}
-.supporting-metric input[type="range"] {
-  opacity: 0.7;
-}
-
-/* Reduce the size of the main H1 title in the header */
-header h1 {
-  font-size: 1.6em; /* Adjust this value (e.g., 1.5em, 2em) to your liking */
-  margin-top: 0;    /* Optional: Reduce top space */
-  margin-bottom: 0; /* Optional: Reduce bottom space */
-}
-
-.section-header {
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 1.1em;
-  color: #333;
-  display: flex; /* For aligning button */
-  justify-content: space-between; /* For aligning button */
-  align-items: center; /* For aligning button */
-}
-
-.score-display {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: -10px;
-  margin-bottom: 15px;
-}
-.score-display strong {
- font-size: 1.1em;
- color: #007bff;
-}
-
-/* Linked Data Styles */
-.linked-data-container {
-  margin-top: 15px;
-}
-.linked-data-container strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 0.9em;
-  color: #555;
-}
-
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.tag {
-  background-color: #e9ecef;
-  border-radius: 12px;
-  padding: 4px 10px;
-  font-size: 0.85em;
-  color: #333;
-  border: 1px solid #ced4da;
-}
-.tag.market {
-  background-color: #d1ecf1; /* Light blue for markets */
-  border-color: #bee5eb;
-}
-.tag.ontology {
-  background-color: #d4edda; /* Light green for ontology */
-  border-color: #c3e6cb;
-}
-.tag-none {
-  font-style: italic;
-  color: #888;
-  font-size: 0.9em;
-}
-
-/* List Editor Styles */
-.list-editor label {
-  margin-bottom: 8px;
-}
-.item-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 10px 0;
-  max-height: 150px;
-  overflow-y: auto;
-  border: 1px solid #eee;
-  border-radius: 4px;
-  padding: 5px;
-}
-.item-list li {
-  background-color: #f8f9fa;
-  margin-bottom: 5px;
-  padding: 6px 10px;
-  border-radius: 3px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 0.9em;
-}
-.item-list li.empty-list {
- font-style: italic;
- color: #888;
- background: none;
-}
-.item-list button {
-  background: none;
-  border: none;
-  color: #dc3545; /* Red */
-  cursor: pointer;
-  font-size: 1.2em;
-  padding: 0 5px;
-  line-height: 1;
-}
-.item-list button:hover {
- color: #a71d2a;
-}
-.add-item-form {
-  display: flex;
-  gap: 10px;
-}
-.add-item-form input {
-  flex-grow: 1;
-}
-.add-item-form button {
-  padding: 10px 15px;
-  background-color: #28a745; /* Green */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  white-space: nowrap; /* Prevent wrap */
-}
-.add-item-form button:hover {
- background-color: #218838;
 }
 
-.cagr-display {
- margin-left: 8px;
- font-size: 0.9em;
- color: #6c757d; /* Gray */
-}
-
-/* Edit Links Button */
-.edit-links-button {
-  padding: 4px 10px;
-  font-size: 0.8em;
-  background-color: #6c757d; /* Gray */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  vertical-align: middle;
-}
-.edit-links-button:hover {
- background-color: #5a6268;
-}
-
-/* Modal Styles */
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Darker backdrop */
-  display: flex;
+/* Polish the expand/collapse arrows */
+.toggle {
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure it's on top */
-}
-
-.modal-content {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 900px; /* Limit max width */
-  max-height: 85vh; /* Limit max height */
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-content h2 {
- margin-top: 0;
- border-bottom: 1px solid #eee;
- padding-bottom: 15px;
- margin-bottom: 20px;
-}
-
-/* Make TreeLinker scrollable inside modal */
-.modal-content .TreeLinker-container { /* Add a class to TreeLinker wrapper */
-  max-height: calc(85vh - 250px); /* Adjust based on modal padding/buttons */
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 10px;
-  background: #f9f9f9;
-}
-
-
-.modal-actions {
-  margin-top: 25px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-}
-
-.modal-actions button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.modal-actions .save-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-}
-.modal-actions .save-button:hover {
- background-color: #0056b3;
-}
-
-.modal-actions .cancel-button {
-  background-color: #6c757d;
-  color: white;
-  border: none;
-}
-.modal-actions .cancel-button:hover {
- background-color: #5a6268;
-}
-/* Style for arrow placed after the name */
-.arrow-after {
-  margin-left: auto; /* Pushes the arrow to the far right */
-  padding-left: 5px; /* Adds space before the arrow */
-  width: auto; /* Override fixed width if needed */
-}
-
-/* src/Modal.css or index.css */
-
-/* --- General Modal Styles (May overlap with LinkEditorModal styles) --- */
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  padding: 20px; /* Add padding for smaller screens */
-  box-sizing: border-box;
-}
-
-.modal-content {
-  background-color: white;
-  padding: 25px 30px; /* Adjust padding */
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  width: 90%; /* Responsive width */
-  max-width: 650px; /* Max width for info modal */
-  max-height: 90vh; /* Limit height */
-  display: flex;
-  flex-direction: column;
-  position: relative; /* Needed for absolute close button */
-}
-
-.modal-content h2 {
- margin-top: 0;
- border-bottom: 1px solid #eee;
- padding-bottom: 15px;
- margin-bottom: 20px;
- font-size: 1.3em;
- color: #333;
-}
-
-.modal-actions {
-  margin-top: 25px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-}
-
-.modal-actions button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-}
-/* ... (Save/Cancel button styles from previous step) ... */
-.modal-actions .save-button { background-color: #007bff; color: white; border: none; }
-.modal-actions .save-button:hover { background-color: #0056b3; }
-.modal-actions .cancel-button { background-color: #6c757d; color: white; border: none; }
-.modal-actions .cancel-button:hover { background-color: #5a6268; }
-
-
-/* --- Info Modal Specific Styles --- */
-.info-modal-content {
-    /* Optional: Slightly different style if needed */
-}
-
-.info-modal-body {
-  overflow-y: auto; /* Allow content scrolling if needed */
-  line-height: 1.6;
-  font-size: 0.95em;
-  color: #444;
-}
-.info-modal-body h4 { /* Style subheadings */
-  margin-top: 15px;
-  margin-bottom: 5px;
-  color: #0056b3; /* Blue */
-}
-.info-modal-body ul {
- padding-left: 20px;
- margin-top: 5px;
-}
-.info-modal-body li {
- margin-bottom: 8px;
-}
-
-.info-close-button { /* Use general close button style */
-    position: absolute;
-    top: 10px; /* Adjust position */
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.8em;
-    cursor: pointer;
-    color: #aaa; /* Lighter color */
-    padding: 0 5px;
-    line-height: 1;
-}
-.info-close-button:hover {
-    color: #555;
-}
-
-/* Add an info icon style */
-.info-icon {
-  display: inline-block;
-  margin-left: 8px;
-  color: #007bff; /* Blue */
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.9em;
-  border: 1px solid #007bff;
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  text-align: center;
-}
-.info-icon:hover {
- background-color: #007bff;
- color: white;
-}
-
-/* Add/Modify in index.css */
-
-/* Control height of TreeLinker INSIDE the AddAppForm */
-.add-app-form .TreeLinker-container { /* Assuming AddAppForm has class 'add-app-form' or use direct ancestor selector */
-  max-height: 250px; /* Reduced max height */
-  min-height: 150px; /* Ensure a minimum visible area */
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 10px;
-  background: #f9f9f9;
-}
-
-/* Ensure form itself doesn't cause overflow issues if possible */
-.add-app-form-container { /* You might need a wrapper div around AddAppForm in App.jsx */
-  max-height: 80vh; /* Example max height */
-  overflow-y: auto; /* Allow form itself to scroll if content exceeds max height */
-  /* Add padding, margins etc. as needed */
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 20px 0;
-  background: #fefefe;
-  border-radius: 8px;
-}
-
-.score-explanation {
-  font-size: 0.85em;
-  color: #666;
-  margin-top: -10px;
-  margin-bottom: 15px;
-  padding: 8px;
-  background-color: #f8f9fa; /* Light background */
-  border: 1px solid #e9ecef;
-  border-radius: 4px;
-}
-
-/* Styling for CSV Export Buttons */
-.csv-export-button {
-  display: inline-block; /* Allow margin */
-  margin-left: 10px; /* Space between buttons */
-  padding: 10px 15px;
-  font-size: 0.9em; /* Slightly smaller than main buttons */
-  background-color: #17a2b8; /* Teal color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none; /* Remove underline from link */
-  line-height: normal; /* Ensure proper vertical alignment */
-}
-
-.csv-export-button:hover {
-  background-color: #138496; /* Darker teal on hover */
-}
-
-/* Adjust header layout if needed */
-header > div {
- display: flex; /* Align buttons horizontally */
- align-items: center;
+  background: rgba(201, 169, 97, 0.1);
+  margin-left: 8px;
+  flex-shrink: 0;
 }

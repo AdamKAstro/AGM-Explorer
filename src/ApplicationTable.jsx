@@ -6,7 +6,7 @@ import {
   flexRender,
   getSortedRowModel,
 } from '@tanstack/react-table';
-import './Table.css'; 
+//import './Table.css'; 
 
 // A helper to truncate text
 const truncate = (str, n) => {
