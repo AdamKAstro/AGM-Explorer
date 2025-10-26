@@ -1,18 +1,26 @@
 // src/InfoModal.jsx
 import React from 'react';
-//import './Modal.css'; // We'll create this CSS file
+// Your index.css has all the styles
 
 export function InfoModal({ title, content, onClose }) {
   return (
-    <div className="modal-backdrop info-modal-backdrop">
-      <div className="modal-content info-modal-content">
-        <h2>{title} <span style={{fontSize: '0.8em', fontWeight:'normal'}}>ℹ️</span></h2>
-        <button onClick={onClose} className="close-button info-close-button" title="Close Info">&times;</button>
-        <div className="info-modal-body">
+    <div className="modal-overlay"> {/* Corrected: Use modal-overlay */}
+      <div className="modal-content">
+        
+        {/* Added modal-header for proper structure */}
+        <div className="modal-header">
+          <h2>{title} ℹ️</h2>
+          <button onClick={onClose} className="modal-close" title="Close Info">&times;</button> {/* Corrected: Use modal-close */}
+        </div>
+        
+        {/* Corrected: Use modal-body */}
+        <div className="modal-body">
           {content}
         </div>
-        <div className="modal-actions info-modal-actions">
-           <button onClick={onClose} className="cancel-button">Close</button>
+        
+        {/* Corrected: Use form-actions and btn-secondary */}
+        <div className="form-actions" style={{ justifyContent: 'flex-end' }}>
+           <button onClick={onClose} className="btn-secondary">Close</button>
         </div>
       </div>
     </div>

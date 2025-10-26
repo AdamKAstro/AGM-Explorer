@@ -1,24 +1,22 @@
 // src/DetailPane.jsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from './supabase';
-import { TreeLinker } from './TreeLinker'; // Import TreeLinker
-// ** NOTE: Remove import for './DetailPane.css'; if you put styles in index.css **
+import { TreeLinker } from './TreeLinker';
+import { SuggestionModal } from './SuggestionModal'; // *** ENSURE THIS IMPORT IS PRESENT ***
+// Assuming styles are in index.css
 
-// Reusable component for displaying/editing list-based fields
+// --- Reusable ListEditor Component ---
 const ListEditor = ({ label, items = [], fieldName, onSave }) => {
   const [list, setList] = useState(items || []);
   const [newItem, setNewItem] = useState('');
 
-  // Update local state if props change externally
-  useEffect(() => {
-    setList(items || []);
-  }, [items]);
+  useEffect(() => { setList(items || []); }, [items]);
 
   const handleAddItem = () => {
     if (newItem.trim()) {
       const updatedList = [...list, newItem.trim()];
       setList(updatedList);
-      onSave(fieldName, updatedList); // Save immediately
+      onSave(fieldName, updatedList);
       setNewItem('');
     }
   };
@@ -26,7 +24,7 @@ const ListEditor = ({ label, items = [], fieldName, onSave }) => {
   const handleRemoveItem = (indexToRemove) => {
     const updatedList = list.filter((_, index) => index !== indexToRemove);
     setList(updatedList);
-    onSave(fieldName, updatedList); // Save immediately
+    onSave(fieldName, updatedList);
   };
 
   return (
@@ -34,7 +32,7 @@ const ListEditor = ({ label, items = [], fieldName, onSave }) => {
       <label>{label}</label>
       <ul className="item-list">
         {list.map((item, index) => (
-          <li key={index}>
+          <li key={`${fieldName}-${index}-${item}`}> {/* Improved key */}
             {item}
             <button onClick={() => handleRemoveItem(index)} title="Remove">&times;</button>
           </li>
@@ -47,6 +45,7 @@ const ListEditor = ({ label, items = [], fieldName, onSave }) => {
           value={newItem}
           onChange={(e) => setNewItem(e.target.value)}
           placeholder={`Add new ${label.toLowerCase().replace(':', '')}...`}
+          aria-label={`Add new ${label.toLowerCase().replace(':', '')}`}
         />
         <button type="button" onClick={handleAddItem}>Add +</button>
       </div>
@@ -54,8 +53,7 @@ const ListEditor = ({ label, items = [], fieldName, onSave }) => {
   );
 };
 
-
-// Linked Data Viewer (simplified)
+// --- Linked Data Viewer Component ---
 const LinkedDataViewer = ({ marketData = [], ontologyData = [] }) => {
  return (
    <div className="linked-data-container">
@@ -63,23 +61,23 @@ const LinkedDataViewer = ({ marketData = [], ontologyData = [] }) => {
       <div className="tag-list">
         {marketData.length > 0 ? (
          marketData.map(market => (
-           <span key={market.id} className="tag market">{market.name}</span>
+           <span key={market.id} className="tag market">{market.name || 'Unnamed Market'}</span>
          ))
        ) : (
          <span className="tag-none">No markets linked.</span>
        )}
       </div>
 
-      <strong style={{marginTop: '15px'}}>Linked Ontology Tags ({ontologyData.length})</strong>
+      <strong style={{marginTop: '15px'}}>Linked Technical Functions ({ontologyData.length})</strong>
       <div className="tag-list">
        {ontologyData.length > 0 ? (
          ontologyData.map(tag => (
            <span key={tag.id} className="tag ontology" title={`Full Path: ${tag.path}`}>
-             {tag.name}
+             {tag.name || 'Unnamed Function'}
            </span>
          ))
        ) : (
-         <span className="tag-none">No ontology tags linked.</span>
+         <span className="tag-none">No functions linked.</span>
        )}
       </div>
    </div>
@@ -90,38 +88,55 @@ const LinkedDataViewer = ({ marketData = [], ontologyData = [] }) => {
 const LinkEditorModal = ({ initialMarketIds = [], initialOntologyIds = [], onSave, onClose }) => {
   const [selectedMarketIds, setSelectedMarketIds] = useState(initialMarketIds || []);
   const [selectedTagIds, setSelectedTagIds] = useState(initialOntologyIds || []);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSaveClick = () => {
-    onSave(selectedMarketIds, selectedTagIds);
+  // Recalculate initial state if props change (modal reopens)
+  useEffect(() => {
+    setSelectedMarketIds(initialMarketIds || []);
+    setSelectedTagIds(initialOntologyIds || []);
+  }, [initialMarketIds, initialOntologyIds]);
+
+
+  const handleSaveClick = async () => {
+    setIsLoading(true);
+    await onSave(selectedMarketIds, selectedTagIds);
+    // Loading state is reset within handleSaveLinks now
+    // setIsLoading(false); // Can likely remove this line
   };
 
   return (
-    <div className="modal-backdrop">
+    <div className="modal-overlay">
       <div className="modal-content">
-        <h2>Edit Application Links 🔗</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', margin: '20px 0' }}>
-          {/* Added container div with class */}
-          <div className="TreeLinker-container">
+        {/* Put close button inside header for better structure */}
+        <div className="modal-header">
+             <h2>Edit Application Links 🔗</h2>
+             <button onClick={onClose} className="close-button info-close-button" title="Close Link Editor" disabled={isLoading}>&times;</button>
+        </div>
+        <div className="modal-body" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div className="TreeLinker-container form-group"> {/* Added form-group for consistency */}
+             <label style={{marginBottom: 'var(--space-sm)'}}>Select Markets</label> {/* Added label */}
             <TreeLinker
-              title="Select Markets"
+              // title="Select Markets" // Title removed, using label now
               rpcName="market_segments"
               initialSelection={initialMarketIds}
               onSelectionChange={setSelectedMarketIds}
             />
           </div>
-          {/* Added container div with class */}
-          <div className="TreeLinker-container">
+          <div className="TreeLinker-container form-group">
+             <label style={{marginBottom: 'var(--space-sm)'}}>Select Technical Functions</label> {/* Added label */}
             <TreeLinker
-              title="Select Ontologies"
+              // title="Select Technical Functions"
               rpcName="ontology_tags"
               initialSelection={initialOntologyIds}
               onSelectionChange={setSelectedTagIds}
             />
           </div>
         </div>
-        <div className="modal-actions">
-           <button onClick={handleSaveClick} className="save-button">Save Links</button>
-           <button onClick={onClose} className="cancel-button">Cancel</button>
+        <div className="form-actions">
+           <button onClick={handleSaveClick} className="btn-primary" disabled={isLoading}>
+             {isLoading ? 'Saving...' : 'Save Links'}
+            </button>
+           <button onClick={onClose} className="btn-secondary" disabled={isLoading}>Cancel</button>
         </div>
       </div>
     </div>
@@ -132,221 +147,138 @@ const LinkEditorModal = ({ initialMarketIds = [], initialOntologyIds = [], onSav
 // --- MAIN DETAIL PANE COMPONENT ---
 export function DetailPane({ selectedItemId, selectedItemType, onClose, onItemUpdated }) {
   const [loading, setLoading] = useState(false);
-  const [itemData, setItemData] = useState(null); // Holds app OR market data
+  const [itemData, setItemData] = useState(null);
   const [saveTimer, setSaveTimer] = useState(null);
   const [showLinkModal, setShowLinkModal] = useState(false);
   const [modalLinks, setModalLinks] = useState({ markets: [], ontologies: [] });
+  const [isSavingLinks, setIsSavingLinks] = useState(false);
 
+  // *** State for Suggestion Modal ***
+  const [showSuggestionModal, setShowSuggestionModal] = useState(false);
+  // **********************************
 
-  // Unified fetcher for App or Market details
+  // Unified fetcher
   const fetchDetails = useCallback(async (id, type) => {
-    if (!id || ! type) {
-        setItemData(null);
-        setLoading(false);
-        return;
-    }
-    setLoading(true);
-    setItemData(null); // Clear previous data
-    let data, error;
-    let fetchedLinks = { linked_markets: [], linked_ontologies: [] }; // Store links separately
+     if (!id || ! type) { setItemData(null); setLoading(false); return; }
+     setLoading(true); setItemData(null);
+     let data, error;
+     let fetchedLinks = { linked_markets: [], linked_ontologies: [] };
+     try {
+         if (type === 'application') {
+           ({ data, error } = await supabase.from('applications').select(`*, application_metrics ( * )`).eq('id', id).maybeSingle());
+           if (error) throw error;
+           if (data) {
+                // Fetch links only AFTER confirming app data exists
+                const { data: marketLinks, error: marketLinkError } = await supabase.from('application_market_links').select('market_segments!inner( id, name )').eq('application_id', id); // Use !inner join
+                if (marketLinkError) throw marketLinkError;
+                const { data: ontologyLinks, error: ontologyLinkError } = await supabase.from('application_ontology_links').select('ontology_tags!inner( id, name, path )').eq('application_id', id); // Use !inner join
+                if (ontologyLinkError) throw ontologyLinkError;
+                // Inner join means data is guaranteed if links exist, simplify mapping
+                fetchedLinks.linked_markets = marketLinks?.map(m => m.market_segments) || [];
+                fetchedLinks.linked_ontologies = ontologyLinks?.map(o => o.ontology_tags) || [];
+           }
+         } else if (type === 'market') {
+           ({ data, error } = await supabase.from('market_segments').select(`*, parent_market:parent_id ( id, name )`).eq('id', id).maybeSingle());
+           if (error) throw error;
+         } else if (type === 'ontology') {
+           ({ data, error } = await supabase.from('ontology_tags').select(`*, parent_ontology:parent_id ( id, name, path)`).eq('id', id).maybeSingle());
+           if (error) throw error;
+         }
+         // Combine base data with links IF it's an application
+         const finalData = (type === 'application' && data)
+            ? { ...data, ...(data.application_metrics || {}), ...fetchedLinks }
+            : data;
 
-    try {
-        if (type === 'application') {
-          // Fetch application core data + metrics in one go
-          ({ data, error } = await supabase
-            .from('applications')
-            .select(`*, application_metrics ( * )`) // Select app + metrics
-            .eq('id', id)
-            .single());
+         setItemData(finalData || null); // Ensure null if data is null/undefined
 
-            if (error) throw error; // Throw error to be caught below
-
-            // Fetch links separately ONLY if app data loaded
-            if (data) {
-                 const { data: marketLinks, error: marketLinkError } = await supabase
-                   .from('application_market_links')
-                   .select('market_segments ( id, name )') // Only fetch needed fields
-                   .eq('application_id', id);
-                 if (marketLinkError) throw marketLinkError;
-
-                 const { data: ontologyLinks, error: ontologyLinkError } = await supabase
-                   .from('application_ontology_links')
-                   .select('ontology_tags ( id, name, path )') // Fetch needed fields
-                   .eq('application_id', id);
-                 if (ontologyLinkError) throw ontologyLinkError;
-
-                 fetchedLinks.linked_markets = marketLinks?.map(m => m.market_segments).filter(Boolean) || [];
-                 fetchedLinks.linked_ontologies = ontologyLinks?.map(o => o.ontology_tags).filter(Boolean) || [];
-            }
-
-
-        } else if (type === 'market') {
-          ({ data, error } = await supabase
-            .from('market_segments')
-            .select(`*, parent_market:parent_id ( id, name )`) // Fetch market + parent ID and name
-            .eq('id', id)
-            .single());
-            if (error) throw error;
-
-        } else if (type === 'ontology') { // Added Ontology Fetch
-             ({ data, error } = await supabase
-             .from('ontology_tags')
-             .select(`*, parent_ontology:parent_id ( id, name, path)`) // Fetch tag + parent ID and name
-             .eq('id', id)
-             .single());
-             if (error) throw error;
-        }
-
-        if (data) {
-          // Flatten metrics if it's an application
-          const baseData = type === 'application' ? { ...data, ...(data.application_metrics || {}) } : data;
-          // Combine base data with fetched links
-          setItemData({ ...baseData, ...fetchedLinks });
-        } else {
-             setItemData(null); // Ensure null if no data
-        }
-
-    } catch (err) {
-         console.error(`Error fetching ${type} details for ID ${id}:`, err);
-         alert(`Could not load details: ${err.message}`);
-         setItemData(null); // Clear item data on error
-    } finally {
-        setLoading(false);
-    }
-  }, []); // Removed itemData from dependencies
+     } catch (err) {
+          console.error(`Error fetching ${type} details for ID ${id}:`, err);
+          alert(`Could not load details: ${err.message}. Item may have been deleted or there was a network issue.`);
+          setItemData(null);
+          onClose(); // Close the pane if the item fetch fails critically
+     } finally { setLoading(false); }
+  }, [onClose]); // Added onClose dependency
 
   // Fetch when selection changes
   useEffect(() => {
-    // Clear save timer when selection changes
     if (saveTimer) clearTimeout(saveTimer);
     fetchDetails(selectedItemId, selectedItemType);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedItemId, selectedItemType, fetchDetails]); // Keep fetchDetails dependency if needed for useCallback
+  }, [selectedItemId, selectedItemType, fetchDetails, saveTimer]); // Include fetchDetails and saveTimer
 
 
   // Unified Change Handler
   const handleChange = (field, value) => {
-    if (!itemData) return;
-
-    // Prevent direct mutation
-    const updatedItem = { ...itemData, [field]: value };
-    setItemData(updatedItem);
-
-    // Debounced Auto-Save
-    if (saveTimer) clearTimeout(saveTimer);
-    const newTimer = setTimeout(() => {
-      handleSave(updatedItem, field, value);
-    }, 1500); // Auto-save after 1.5s
-    setSaveTimer(newTimer);
+     if (!itemData || isSavingLinks) return; // Prevent edits while saving links
+     const updatedItem = { ...itemData, [field]: value };
+     setItemData(updatedItem); // Optimistic UI update
+     if (saveTimer) clearTimeout(saveTimer);
+     const newTimer = setTimeout(() => { handleSave(field, value); }, 1500); // Pass field/value directly
+     setSaveTimer(newTimer);
   };
 
-  // Unified Save Handler
-  const handleSave = async (updatedItem, field, value) => {
-    if (!selectedItemId || !selectedItemType) return; // Guard against saving nothing
+  // Unified Save Handler - simplified to use current itemData state
+  const handleSave = async (field, value) => {
+     if (!selectedItemId || !selectedItemType || !itemData) return;
 
-    let error;
-    let tableName = '';
-    let recordId = selectedItemId; // Use selectedItemId directly
-    let updateData = { [field]: value };
-    let needsScoreUpdate = false;
+     let error; let tableName = ''; let recordId = selectedItemId;
+     let updateData = { [field]: value }; let needsScoreUpdate = false;
 
-    // Determine target table and adjust data/ID if necessary
-    if (selectedItemType === 'application') {
-      if (['component_name', 'description', 'status', 'legacy_name'].includes(field)) {
-        tableName = 'applications';
-      } else if ([
-          'technical_feasibility', 'market_access', 'strategic_synergy',
-          'potential_price_premium', 'ip_defensibility', 'capital_efficiency',
-          'market_potential', 'priority_score' // Include priority_score although it's calculated
-        ].includes(field)) {
-        tableName = 'application_metrics';
-        // Ensure we use application_id for the metrics table condition
-        // recordId remains selectedItemId which IS the application_id here
-      } else {
-         console.warn(`Attempted to save unknown application field: ${field}`);
-         return; // Don't save if field is not recognized
-      }
-       // Check if it's a score-affecting metric
-       if (['strategic_synergy', 'ip_defensibility', 'potential_price_premium', 'capital_efficiency', 'market_access'].includes(field)){
-           needsScoreUpdate = true;
-       }
+     try {
+         // Determine table and adjust data based on type/field
+         if (selectedItemType === 'application') {
+           if (['component_name', 'description', 'status'].includes(field)) { tableName = 'applications'; } // legacy_name shouldn't be edited
+           else if (['technical_feasibility', 'market_access', 'strategic_synergy','potential_price_premium', 'ip_defensibility', 'capital_efficiency','market_potential'].includes(field)) {
+             tableName = 'application_metrics';
+              // Convert value to number for metrics
+              updateData = { [field]: value === '' || value === null ? null : Number(value) };
+              // Check if it's a score-affecting metric
+             if (['strategic_synergy', 'ip_defensibility', 'potential_price_premium', 'capital_efficiency', 'market_access'].includes(field)){ needsScoreUpdate = true; }
+           } else { throw new Error(`Unknown/Readonly application field: ${field}`); }
 
-    } else if (selectedItemType === 'market') {
-      tableName = 'market_segments';
-      if (field === 'market_size_b' || field === 'cagr') {
-          // Handle empty string -> null, otherwise convert to number
-          updateData = { [field]: value === '' || value === null ? null : Number(value) } ;
-      } else if (field === 'key_players' || field === 'untapped_opportunities'){
-          // ListEditor provides the correct array format
-          updateData = { [field]: value };
-      } else if (['name'].includes(field)){
-          updateData = { [field]: value }; // Standard text update
-      } else {
-         console.warn(`Attempted to save unknown market field: ${field}`);
-         return;
-      }
-    } else if (selectedItemType === 'ontology') { // Handle Ontology Save
-       tableName = 'ontology_tags';
-       if (['name', 'path'].includes(field)) { // Only allow editing name and path for now
-            updateData = { [field]: value };
-            if (field === 'path') {
-                // Add a warning or confirmation here in a real app
-                console.warn("Changing ontology path can have wide effects, proceed with caution.");
-            }
-       } else {
-           console.warn(`Attempted to save unknown ontology field: ${field}`);
-           return;
-       }
-    }
+         } else if (selectedItemType === 'market') {
+           tableName = 'market_segments';
+           if (field === 'market_size_b' || field === 'cagr') { updateData = { [field]: value === '' || value === null ? null : Number(value) }; }
+           else if (field === 'key_players' || field === 'untapped_opportunities'){ updateData = { [field]: value || [] }; } // Use ListEditor's array
+           else if (['name'].includes(field)){ updateData = { [field]: value }; }
+           else { throw new Error(`Unknown/Readonly market field: ${field}`); }
 
-    if (!tableName) {
-       console.error("Save failed: Could not determine table name.", { selectedItemType, field });
-       alert("Save failed: Internal error.");
-       return;
-    }
+         } else if (selectedItemType === 'ontology') {
+           tableName = 'ontology_tags';
+           if (['name'].includes(field)) { // Only allow editing name for now
+             updateData = { [field]: value };
+           } else { throw new Error(`Unknown/Readonly ontology field: ${field}`); }
+         } else { throw new Error(`Unknown item type: ${selectedItemType}`); }
 
-    console.log(`Attempting to save to ${tableName}, ID: ${recordId}, Data:`, updateData);
+         console.log(`Saving to ${tableName}, ID: ${recordId}, Data:`, updateData);
+         ({ error } = await supabase.from(tableName).update(updateData)
+           .eq(tableName === 'application_metrics' ? 'application_id' : 'id', recordId));
+         if (error) throw error;
 
-    // Perform the update
-    ({ error } = await supabase
-      .from(tableName)
-      .update(updateData)
-      .eq(tableName === 'application_metrics' ? 'application_id' : 'id', recordId) // Use correct ID column
-     );
+         console.log(`Saved: ${field} to ${tableName}`);
 
-
-    if (error) {
-      console.error(`Save failed for ${tableName} ID ${recordId}:`, error)
-      alert(`Save failed: ${error.message}`);
-      // Optional: Revert local state if save fails by re-fetching
-      fetchDetails(selectedItemId, selectedItemType);
-    } else {
-      console.log(`Saved: ${field} to ${tableName}`);
-
-      // Trigger score update if needed (only for applications)
-      if (needsScoreUpdate && selectedItemType === 'application') {
-         console.log(`Triggering score update for app ${recordId}...`);
-         const { error: scoreError } = await supabase.rpc('calculate_priority_score', {
-           app_id: recordId
-         });
-         if (scoreError) {
-           console.error("Score calculation failed:", scoreError);
-         } else {
-           console.log("Score recalculation triggered.");
-           // Re-fetch details needed to show new score immediately
-           // Using onItemUpdated causes App.jsx to refetch, which is safer
-           // fetchDetails(recordId, 'application'); // This could cause race conditions with rapid edits
+         // Trigger score update if needed (only for applications)
+         if (needsScoreUpdate && selectedItemType === 'application') {
+            console.log(`Triggering score update for app ${recordId}...`);
+            const { error: scoreError } = await supabase.rpc('calculate_priority_score', { app_id: recordId });
+            // Log score error but don't block UI flow
+            if (scoreError) console.error("Score calculation RPC failed:", scoreError);
+            else console.log("Score recalculation triggered successfully.");
+            // Score update will be reflected on next fetch triggered by onItemUpdated
          }
-      }
-      // Notify parent to refetch list data (e.g., scores in table, counts in nav)
-      onItemUpdated();
-    }
+         onItemUpdated(); // Notify parent AFTER successful save/score trigger
+
+     } catch (err) {
+         console.error(`Save failed for ${tableName} ID ${recordId}:`, err);
+         alert(`Save failed: ${err.message}`);
+         // Revert local state by re-fetching
+         fetchDetails(selectedItemId, selectedItemType);
+     }
   };
+
 
   // --- Link Editing Logic ---
   const openLinkEditor = () => {
     if (selectedItemType === 'application' && itemData) {
-      // Pass current link IDs to the modal
       setModalLinks({
         markets: itemData.linked_markets?.map(m => m.id) || [],
         ontologies: itemData.linked_ontologies?.map(o => o.id) || [],
@@ -356,159 +288,233 @@ export function DetailPane({ selectedItemId, selectedItemType, onClose, onItemUp
   };
 
   const handleSaveLinks = async (newMarketIds, newOntologyIds) => {
-    if (!itemData || selectedItemType !== 'application') return;
+    if (!itemData || selectedItemType !== 'application' || isSavingLinks) return;
+    setIsSavingLinks(true); // Set loading state FOR LINKS
 
     const originalMarketIds = itemData.linked_markets?.map(m => m.id) || [];
     const originalOntologyIds = itemData.linked_ontologies?.map(o => o.id) || [];
 
-    // Calculate differences
     const marketsToAdd = newMarketIds.filter(id => !originalMarketIds.includes(id));
     const marketsToRemove = originalMarketIds.filter(id => !newMarketIds.includes(id));
     const tagsToAdd = newOntologyIds.filter(id => !originalOntologyIds.includes(id));
     const tagsToRemove = originalOntologyIds.filter(id => !newOntologyIds.includes(id));
 
-    // Only call RPC if there are changes
     if (marketsToAdd.length === 0 && marketsToRemove.length === 0 && tagsToAdd.length === 0 && tagsToRemove.length === 0) {
         console.log("No link changes detected.");
         setShowLinkModal(false);
+        setIsSavingLinks(false);
         return;
     }
 
     console.log("Updating links:", { marketsToAdd, marketsToRemove, tagsToAdd, tagsToRemove });
+    try {
+        const { error } = await supabase.rpc('update_application_links', {
+          p_app_id: itemData.id, p_markets_to_add: marketsToAdd, p_markets_to_remove: marketsToRemove,
+          p_tags_to_add: tagsToAdd, p_tags_to_remove: tagsToRemove
+        });
+        if (error) throw error;
 
-    // Call the RPC function
-    const { error } = await supabase.rpc('update_application_links', {
-      p_app_id: itemData.id,
-      p_markets_to_add: marketsToAdd,
-      p_markets_to_remove: marketsToRemove,
-      p_tags_to_add: tagsToAdd,
-      p_tags_to_remove: tagsToRemove
-    });
+        console.log("Links updated successfully.");
+        setShowLinkModal(false);
+        // Re-fetch details immediately to update this pane's view
+        fetchDetails(itemData.id, 'application');
+        // Notify App.jsx AFTER details are re-fetched locally
+        onItemUpdated();
 
-    if (error) {
-      alert(`Error updating links: ${error.message}`);
-    } else {
-      console.log("Links updated successfully.");
-      setShowLinkModal(false); // Close modal on success
-      // Re-fetch details to update the displayed links IN THIS PANE
-      fetchDetails(itemData.id, 'application');
-      // Also notify App.jsx to refetch lists (e.g., market counts might change)
-      onItemUpdated();
+    } catch (error) {
+         alert(`Error updating links: ${error.message}`);
+         console.error("Link update failed:", error);
+    } finally {
+        setIsSavingLinks(false); // Clear link saving state
     }
   };
 
   // --- RENDER LOGIC ---
-  if (loading) {
+  if (loading && !itemData) {
     return <div className="detail-pane-message">Loading details...</div>;
   }
-  if (!itemData) {
+  // Show message only if NO item ID is selected
+  if (!selectedItemId) {
     return (
       <div className="detail-pane-message instructions">
-        Select an application, market, or ontology tag from the left panes to see details here. 🧐
+        Select an application, market segment, or technical function from the left panes to view or edit details here. 🧐
       </div>
     );
   }
+  // Show slightly different message if ID is selected but data hasn't loaded (or failed)
+   if (!itemData) {
+     return <div className="detail-pane-message">Loading or item not found...</div>;
+   }
 
-  // Close Button (common to all views)
-  const CloseButton = () => (
-     <button onClick={onClose} className="close-button" title="Close Details">
-        &times;
-      </button>
+
+  // Determine item name for suggestion context (use optional chaining)
+  const currentItemName = itemData?.name || itemData?.component_name || 'Selected Item';
+
+  // --- Action Buttons Component ---
+  // Placed inside main component to access state easily
+  const ActionButtons = () => (
+      <div className="detail-pane-actions" style={{display: 'flex', gap: 'var(--space-sm)'}}> {/* Added flex styles */}
+           {/* Suggest Button */}
+           <button
+              onClick={() => setShowSuggestionModal(true)}
+              className="btn-primary" /* <-- Use .btn-primary */
+              title="Suggest an edit, merge, or correction for Adam to review"
+              disabled={loading || isSavingLinks}
+              /* Added inline style to override button defaults */
+              style={{
+                width: 'auto',
+                padding: '10px 16px',
+                fontSize: '13px',
+                letterSpacing: '0.06em',
+                margin: 0,
+                lineHeight: '1.2'
+              }}
+           >
+              Suggest Change... 📝
+           </button>
+           
+           {/* Close Button */}
+           <button
+              onClick={onClose}
+              className="btn-secondary" /* <-- Use .btn-secondary */
+              title="Close Details"
+              disabled={loading || isSavingLinks}
+              /* Added inline style to override button defaults */
+              style={{
+                width: 'auto',
+                padding: '10px 16px',
+                fontSize: '13px',
+                letterSpacing: '0.06em',
+                margin: 0,
+                lineHeight: '1.2'
+              }}
+           >
+              {/* Added requested text */}
+              Close Details <span style={{fontSize: '1.4em', verticalAlign: 'middle', marginLeft: '4px'}}>&times;</span>
+           </button>
+      </div>
   );
 
-  // --- APPLICATION DETAIL VIEW ---
-  if (selectedItemType === 'application') {
-    const app = itemData; // Rename for clarity
-    return (
-      <div className="detail-pane application-detail">
-        <CloseButton />
-        <h2>Application Details 💡</h2>
+  // --- MAIN RENDER SWITCH ---
+  return (
+    <> {/* Fragment needed for adjacent Detail Content and Modals */}
+        {/* Render based on selectedItemType */}
+        {selectedItemType === 'application' && (
+            <div key={`app-${selectedItemId}`} className="detail-pane application-detail">
+                <ActionButtons />
+                <h2>Application Details 💡</h2>
+                {/* --- Form Fields --- */}
+                <div className="form-group">
+                  <label htmlFor={`appName-${selectedItemId}`}>B2B Component Name</label>
+                  <input id={`appName-${selectedItemId}`} type="text" value={itemData.component_name || ''} onChange={(e) => handleChange('component_name', e.target.value)} disabled={loading || isSavingLinks}/>
+                </div>
+                <div className="form-group">
+                  <label>Legacy Name (Read Only)</label>
+                  <input type="text" value={itemData.legacy_name || 'N/A'} readOnly disabled />
+                </div>
+                <div className="form-group">
+                  <label htmlFor={`appDesc-${selectedItemId}`}>Description</label>
+                  <textarea id={`appDesc-${selectedItemId}`} value={itemData.description || ''} onChange={(e) => handleChange('description', e.target.value)} rows={5} disabled={loading || isSavingLinks}/>
+                </div>
+                <div className="form-group">
+                  <label htmlFor={`appStatus-${selectedItemId}`}>Status</label>
+                  <select id={`appStatus-${selectedItemId}`} value={itemData.status || 'proposed'} onChange={(e) => handleChange('status', e.target.value)} disabled={loading || isSavingLinks}>
+                    <option value="proposed">Proposed</option> <option value="in_review">In Review</option>
+                    <option value="active_r&d">Active R&D</option> <option value="backlog">Backlog</option>
+                    <option value="archived">Archived</option>
+                  </select>
+                </div>
+                {/* --- Scoring Section --- */}
+                <h3 className="section-header" title="Metrics score THIS application based on Kevin's IP-Venture model.">Application Prioritization Metrics 📈</h3>
+                <p className="score-explanation">Score <strong>this application's potential</strong>. 'Calculated Priority Score' updates automatically.</p>
+                <p className="score-display">Calculated Priority Score: <strong>{itemData.priority_score?.toFixed(1) ?? 'N/A'}</strong></p>
+                {/* Sliders */}
+                <div className="form-group slider-group" title="[Weight: 30%] Leverage unique fractal turbostratic advantage? (1=Any graphene, 10=Only AGM)">
+                  <label>Strategic Synergy ({itemData.strategic_synergy ?? '5'})</label>
+                  <input type="range" min="1" max="10" value={itemData.strategic_synergy || 5} onChange={(e) => handleChange('strategic_synergy', Number(e.target.value))} disabled={loading || isSavingLinks}/>
+                </div>
+                 <div className="form-group slider-group" title="[Weight: 25%] Patent strength? Covalent bonding? (1=Weak/Easy copy, 10=Strong/Unique)">
+                  <label>IP Defensibility ({itemData.ip_defensibility ?? '5'})</label>
+                  <input type="range" min="1" max="10" value={itemData.ip_defensibility || 5} onChange={(e) => handleChange('ip_defensibility', Number(e.target.value))} disabled={loading || isSavingLinks}/>
+                </div>
+                <div className="form-group slider-group" title="[Weight: 20%] Potential product price premium? ($0.10 -> $10+?) (1=Low, 10=High)">
+                  <label>Potential Price Premium ({itemData.potential_price_premium ?? '5'})</label>
+                  <input type="range" min="1" max="10" value={itemData.potential_price_premium || 5} onChange={(e) => handleChange('potential_price_premium', Number(e.target.value))} disabled={loading || isSavingLinks}/>
+                </div>
+                <div className="form-group slider-group" title="[Weight: 15%] Ease/cost of prototype & launch via contract manufacturers? (1=High Capital, 10=Low Capital)">
+                  <label>Capital Efficiency ({itemData.capital_efficiency ?? '5'})</label>
+                  <input type="range" min="1" max="10" value={itemData.capital_efficiency || 5} onChange={(e) => handleChange('capital_efficiency', Number(e.target.value))} disabled={loading || isSavingLinks}/>
+                </div>
+                <div className="form-group slider-group supporting-metric" title="[Weight: 10%] Market entry ease? JV partner potential? (1=High Barriers, 10=Existing Partners)">
+                  <label>Market Access ({itemData.market_access ?? '5'})</label>
+                  <input type="range" min="1" max="10" value={itemData.market_access || 5} onChange={(e) => handleChange('market_access', Number(e.target.value))} disabled={loading || isSavingLinks}/>
+                </div>
+                <div className="form-group slider-group supporting-metric" title="[Weight: 0% - Info Only] Science/manufacturing difficulty? (1=Pure Research, 10=Off-the-shelf)">
+                  <label>Technical Feasibility ({itemData.technical_feasibility ?? '5'})</label>
+                  <input type="range" min="1" max="10" value={itemData.technical_feasibility || 5} onChange={(e) => handleChange('technical_feasibility', Number(e.target.value))} disabled={loading || isSavingLinks}/>
+                </div>
+                {/* --- Linked Data Section --- */}
+                <h3 className="section-header">
+                  Linked Data 🔗
+                  <button onClick={openLinkEditor} className="edit-links-button" title="Edit Market & Technical Function Links" disabled={loading || isSavingLinks}>
+                    Edit Links
+                  </button>
+                </h3>
+                <LinkedDataViewer marketData={itemData.linked_markets} ontologyData={itemData.linked_ontologies}/>
+            </div>
+        )}
 
-        <div className="form-group">
-          <label>B2B Component Name</label>
-          <input
-            type="text"
-            value={app.component_name || ''}
-            onChange={(e) => handleChange('component_name', e.target.value)}
-          />
-        </div>
+        {selectedItemType === 'market' && (
+            <div key={`market-${selectedItemId}`} className="detail-pane market-detail">
+                <ActionButtons />
+                <h2>Market Segment Details 🗺️</h2>
+                {/* --- Form Fields --- */}
+                <div className="form-group">
+                  <label htmlFor={`marketName-${selectedItemId}`}>Market Segment Name</label>
+                  <input id={`marketName-${selectedItemId}`} type="text" value={itemData.name || ''} onChange={(e) => handleChange('name', e.target.value)} disabled={loading}/>
+                </div>
+                <div className="form-group">
+                   <label>Parent Market (Read Only)</label>
+                   <input type="text" value={itemData.parent_market?.name || 'Top Level'} readOnly disabled />
+                </div>
+                <div className="form-group">
+                  <label htmlFor={`marketSize-${selectedItemId}`}>Market Size ($B, Est.)</label>
+                  <input id={`marketSize-${selectedItemId}`} type="number" step="0.1" value={itemData.market_size_b ?? ''} onChange={(e) => handleChange('market_size_b', e.target.value)} placeholder="e.g., 10.5" disabled={loading}/>
+                </div>
+                <div className="form-group">
+                  <label htmlFor={`marketCagr-${selectedItemId}`}>Projected CAGR (Est.)</label>
+                   <input id={`marketCagr-${selectedItemId}`} type="number" step="0.01" value={itemData.cagr ?? ''} onChange={(e) => handleChange('cagr', e.target.value)} placeholder="e.g., 0.15 for 15%" disabled={loading}/>
+                  {itemData.cagr !== null && itemData.cagr !== undefined && <span className="cagr-display">({(Number(itemData.cagr) * 100).toFixed(1)}%)</span>}
+                </div>
+                {/* --- List Editors --- */}
+                <ListEditor label="Key Players:" items={itemData.key_players} fieldName="key_players" onSave={(field, value) => handleSave(field, value)}/>
+                <ListEditor label="Untapped Opportunities:" items={itemData.untapped_opportunities} fieldName="untapped_opportunities" onSave={(field, value) => handleSave(field, value)}/>
+            </div>
+        )}
 
-        <div className="form-group">
-           <label>Legacy Name (Read Only)</label>
-           <input type="text" value={app.legacy_name || 'N/A'} readOnly disabled />
-        </div>
+        {selectedItemType === 'ontology' && (
+            <div key={`ontology-${selectedItemId}`} className="detail-pane ontology-detail">
+                <ActionButtons />
+                <h2>Technical Function Details 🔬</h2>
+                {/* --- Form Fields --- */}
+                <div className="form-group">
+                  <label htmlFor={`tagName-${selectedItemId}`}>Function Name</label>
+                  <input id={`tagName-${selectedItemId}`} type="text" value={itemData.name || ''} onChange={(e) => handleChange('name', e.target.value)} disabled={loading}/>
+                </div>
+                <div className="form-group">
+                   <label title="Unique identifier showing position in hierarchy. Changing this is high-risk.">Full Path (Read Only)</label>
+                   <input type="text" value={itemData.path || 'N/A'} readOnly disabled />
+                </div>
+                <div className="form-group">
+                   <label>Parent Function (Read Only)</label>
+                   <input type="text" value={itemData.parent_ontology?.name || 'Top Level'} readOnly disabled />
+                </div>
+                {/* Add description field here later if needed */}
+            </div>
+        )}
 
-
-        <div className="form-group">
-          <label>Description</label>
-          <textarea
-            value={app.description || ''}
-            onChange={(e) => handleChange('description', e.target.value)}
-            rows={5}
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Status</label>
-          <select value={app.status || 'proposed'} onChange={(e) => handleChange('status', e.target.value)}>
-            <option value="proposed">Proposed</option>
-            <option value="in_review">In Review</option>
-            <option value="active_r&d">Active R&D</option>
-            <option value="backlog">Backlog</option>
-            <option value="archived">Archived</option>
-          </select>
-        </div>
-
-		{/* --- Scoring Section --- */}
-        <h3 className="section-header" title="These metrics score THIS SPECIFIC application based on Kevin's IP-Venture model."> {/* Added Tooltip */}
-            Application Prioritization Metrics 📈 {/* Renamed Header */}
-        </h3>
-        {/* Added Explanatory Paragraph */}
-        <p className="score-explanation">
-            Use the sliders below to score <strong>this application's potential</strong>. The 'Calculated Priority Score' is automatically generated based on these inputs using AGM's strategic weighting.
-        </p>
-         <p className="score-display">
-            Calculated Priority Score: <strong>{app.priority_score?.toFixed(1) ?? 'N/A'}</strong>
-         </p>
-
-        {/* Sliders as defined before */}
-         <div className="form-group slider-group" title="[Weight: 30%] How uniquely does this leverage our fractal turbostratic advantage? (1 = Any graphene works, 10 = Only AGM material works)">
-           <label>Strategic Synergy ({app.strategic_synergy ?? 'N/A'})</label>
-           <input type="range" min="1" max="10" value={app.strategic_synergy || 5} onChange={(e) => handleChange('strategic_synergy', Number(e.target.value))}/>
-         </div>
-          <div className="form-group slider-group" title="[Weight: 25%] How strong is the potential patent? Relies on covalent bonding? (1 = Weak/Easy to copy, 10 = Strong/Unique)">
-           <label>IP Defensibility ({app.ip_defensibility ?? 'N/A'})</label>
-           <input type="range" min="1" max="10" value={app.ip_defensibility || 5} onChange={(e) => handleChange('ip_defensibility', Number(e.target.value))}/>
-         </div>
-         <div className="form-group slider-group" title="[Weight: 20%] How much more could the end product sell for with our graphene? ($0.10 -> $10+?) (1 = Low Premium, 10 = High Premium)">
-           <label>Potential Price Premium ({app.potential_price_premium ?? 'N/A'})</label>
-           <input type="range" min="1" max="10" value={app.potential_price_premium || 5} onChange={(e) => handleChange('potential_price_premium', Number(e.target.value))}/>
-         </div>
-         <div className="form-group slider-group" title="[Weight: 15%] How easy/cheap to prototype & launch via contract manufacturers? (1 = High Capital Needed, 10 = Low Capital / Easy)">
-           <label>Capital Efficiency ({app.capital_efficiency ?? 'N/A'})</label>
-           <input type="range" min="1" max="10" value={app.capital_efficiency || 5} onChange={(e) => handleChange('capital_efficiency', Number(e.target.value))}/>
-         </div>
-         <div className="form-group slider-group supporting-metric" title="[Weight: 10%] How easy is market entry? Focus on JV partner potential. (1 = High Barriers, 10 = Existing Partners)">
-           <label>Market Access ({app.market_access ?? 'N/A'})</label>
-           <input type="range" min="1" max="10" value={app.market_access || 5} onChange={(e) => handleChange('market_access', Number(e.target.value))}/>
-         </div>
-         <div className="form-group slider-group supporting-metric" title="[Weight: 0% - Info Only] How hard is the science/manufacturing? (1 = Pure Research, 10 = Off-the-shelf)">
-           <label>Technical Feasibility ({app.technical_feasibility ?? 'N/A'})</label>
-           <input type="range" min="1" max="10" value={app.technical_feasibility || 5} onChange={(e) => handleChange('technical_feasibility', Number(e.target.value))}/>
-         </div>
-
-        {/* --- Linked Data Section --- */}
-        <h3 className="section-header">
-           Linked Data 🔗
-           {/* Add Edit Links Button */}
-           <button onClick={openLinkEditor} className="edit-links-button" title="Edit Market & Ontology Links">
-             Edit Links
-           </button>
-        </h3>
-        <LinkedDataViewer marketData={app.linked_markets} ontologyData={app.linked_ontologies}/>
-
-        {/* Add Link Editor Modal */}
-        {showLinkModal && (
+        {/* Render Link Editor Modal only when needed */}
+        {showLinkModal && selectedItemType === 'application' && (
           <LinkEditorModal
             initialMarketIds={modalLinks.markets}
             initialOntologyIds={modalLinks.ontologies}
@@ -516,108 +522,16 @@ export function DetailPane({ selectedItemId, selectedItemType, onClose, onItemUp
             onClose={() => setShowLinkModal(false)}
           />
         )}
-      </div>
-    );
-  }
 
-  // --- MARKET DETAIL VIEW ---
-  else if (selectedItemType === 'market') {
-    const market = itemData; // Rename for clarity
-    return (
-      <div className="detail-pane market-detail">
-        <CloseButton />
-        <h2>Market Segment Details 🗺️</h2>
-
-         <div className="form-group">
-           <label>Market Segment Name</label>
-           <input
-             type="text"
-             value={market.name || ''}
-             onChange={(e) => handleChange('name', e.target.value)}
-           />
-         </div>
-
-         <div className="form-group">
-            <label>Parent Market (Read Only)</label>
-            <input type="text" value={market.parent_market?.name || 'Top Level'} readOnly disabled />
-         </div>
-
-         <div className="form-group">
-           <label>Market Size ($B, Est.)</label>
-           <input
-             type="number" // Use number input
-             step="0.1"    // Allow decimals
-             value={market.market_size_b ?? ''} // Handle null
-             onChange={(e) => handleChange('market_size_b', e.target.value)}
-             placeholder="e.g., 10.5"
-           />
-         </div>
-
-         <div className="form-group">
-           <label>Projected CAGR (Est.)</label>
-            <input
-             type="number"
-             step="0.01" // Allow percentage decimals
-             value={market.cagr ?? ''} // Handle null
-             onChange={(e) => handleChange('cagr', e.target.value)}
-             placeholder="e.g., 0.15 for 15%"
-           />
-           {/* Display formatted CAGR next to input */}
-           {market.cagr !== null && market.cagr !== undefined && <span className="cagr-display">({(Number(market.cagr) * 100).toFixed(1)}%)</span>}
-         </div>
-
-         {/* Use ListEditor for Key Players and Opportunities */}
-         <ListEditor
-            label="Key Players:"
-            items={market.key_players}
-            fieldName="key_players"
-            onSave={(field, value) => handleSave(market, field, value)} // Pass market data to save handler
-         />
-
-          <ListEditor
-            label="Untapped Opportunities:"
-            items={market.untapped_opportunities}
-            fieldName="untapped_opportunities"
-            onSave={(field, value) => handleSave(market, field, value)} // Pass market data to save handler
-         />
-
-      </div>
-    );
-  }
-
-  // --- ONTOLOGY DETAIL VIEW (NEW) ---
-   else if (selectedItemType === 'ontology') {
-    const tag = itemData; // Rename for clarity
-    return (
-      <div className="detail-pane ontology-detail">
-        <CloseButton />
-        <h2>Ontology Tag Details 🔬</h2>
-
-         <div className="form-group">
-           <label>Tag Name</label>
-           <input
-             type="text"
-             value={tag.name || ''}
-             onChange={(e) => handleChange('name', e.target.value)}
-           />
-         </div>
-
-         <div className="form-group">
-            <label>Full Path (Read Only - Use caution if enabling edit later)</label>
-            <input type="text" value={tag.path || 'N/A'} readOnly disabled />
-         </div>
-
-         <div className="form-group">
-            <label>Parent Ontology (Read Only)</label>
-            <input type="text" value={tag.parent_ontology?.name || 'Top Level'} readOnly disabled />
-         </div>
-
-         {/* Add more fields here later if needed (e.g., description for ontology tags) */}
-
-      </div>
-    );
-  }
-
-  // Fallback if type is unknown
-  return <div className="detail-pane-message">Unknown item type selected.</div>;
+        {/* Render Suggestion Modal only when needed */}
+         {showSuggestionModal && selectedItemId && selectedItemType && (
+             <SuggestionModal
+                 itemType={selectedItemType}
+                 itemId={selectedItemId}
+                 itemName={currentItemName}
+                 onClose={() => setShowSuggestionModal(false)}
+             />
+         )}
+    </> // End Fragment
+  );
 }

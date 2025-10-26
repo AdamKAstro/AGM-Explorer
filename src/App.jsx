@@ -6,7 +6,8 @@ import { NavigationPane } from './NavigationPane';
 import { ApplicationTable } from './ApplicationTable';
 import { DetailPane } from './DetailPane';
 import { AddAppForm } from './AddAppForm';
-import { CSVLink } from "react-csv"; // *** 1. IMPORT CSVLink ***
+import { CSVLink } from "react-csv"; // Import CSVLink
+
 // Assuming index.css contains all necessary styles including modal styles
 
 function App() {
@@ -22,107 +23,138 @@ function App() {
 
   const [showAddForm, setShowAddForm] = useState(false); // Controls visibility of the Add form
 
-  // State to hold the name of the selected market for the Add button text
-  const [selectedMarketName, setSelectedMarketName] = useState('');
+  // State to hold the name of the selected market/ontology for the Add button text
+  const [selectedItemName, setSelectedItemName] = useState(''); // Generic name holder
 
-
-// *** 2. NEW STATE for CSV data preparation ***
+  // State for CSV data preparation
   const [csvData, setCsvData] = useState([]);
   const [csvHeaders, setCsvHeaders] = useState([]);
   const [csvFilename, setCsvFilename] = useState("agm_applications.csv");
-  // ********************************************
+  const [isPreparingCsv, setIsPreparingCsv] = useState(false); // Prevent multiple clicks
 
 
   // Fetch application data based on current search term and filters using the Supabase RPC function
-  const fetchApplications = useCallback(async () => {
-    setLoading(true); // Indicate loading start
+  // Accepts an optional app ID to try and select after fetching
+  const fetchApplications = useCallback(async (selectAppId = null) => {
+    setLoading(true);
     console.log('Fetching applications with filter:', filter, 'and search:', searchTerm);
+    let finalApplications = []; // Use a temporary variable
 
-    // Call the search_applications RPC function
-    const { data: appData, error: appError } = await supabase.rpc('search_applications', {
-      search_text: searchTerm || null, // Pass null if search term is empty
-      market_id_filter: filter.type === 'market' ? filter.id : null, // Pass market ID or null
-      ontology_id_filter: filter.type === 'ontology' ? filter.id : null, // Pass ontology ID or null
-    });
+    try {
+        // Call the search_applications RPC function
+        const { data: appData, error: appError } = await supabase.rpc('search_applications', {
+          search_text: searchTerm || null,
+          market_id_filter: filter.type === 'market' ? filter.id : null,
+          ontology_id_filter: filter.type === 'ontology' ? filter.id : null,
+        });
+        if (appError) throw new Error(`App fetch failed: ${appError.message}`);
 
-    if (appError) {
-      console.error('Error fetching applications:', appError);
-      alert(`Error loading applications: ${appError.message}`);
-      setApplications([]); // Clear data on error to prevent displaying stale info
-    } else {
-        // Successfully fetched app data (or empty array), now fetch ALL metrics
+        // Fetch ALL metrics separately
         const { data: metricsData, error: metricsError } = await supabase
             .from('application_metrics')
-            .select('*'); // Select all metrics columns
-
+            .select('*');
         if (metricsError) {
-            console.error('Error fetching metrics:', metricsError);
-            // Non-critical error: Show applications even if metrics fail to load
-            setApplications(appData || []);
-            alert("Warning: Could not load application scores/metrics.");
+            console.error('Warning: Could not load application scores/metrics:', metricsError);
+            // Proceed with app data only if metrics fail
+            finalApplications = appData || [];
         } else {
-            // Create a Map for efficient lookup of metrics by application_id
+            // Create a lookup map for metrics
             const metricsMap = new Map((metricsData || []).map(m => [m.application_id, m]));
             // Combine application data with its corresponding metrics
-            const flatData = (appData || []).map(app => ({
-              ...app, // Spread application properties
-              // Spread metrics found in the map, use empty object as fallback if no metrics exist
-              ...(metricsMap.get(app.id) || {})
+            finalApplications = (appData || []).map(app => ({
+              ...app,
+              ...(metricsMap.get(app.id) || {}) // Use empty object if no metrics found
             }));
-            setApplications(flatData); // Update state with combined data
         }
-    }
-    setLoading(false); // Indicate loading finished
-  }, [searchTerm, filter]); // Dependency array: Re-run fetchApplications if searchTerm or filter changes
 
-  // Fetch initial data on component mount and whenever fetchApplications function reference changes (due to dependencies)
+        setApplications(finalApplications); // Update state
+
+        // If an app ID was passed (e.g., after adding), try to select it
+        if (selectAppId && finalApplications.some(app => app.id === selectAppId)) {
+            console.log("Automatically selecting newly added/updated app:", selectAppId);
+            setSelectedItem({ id: selectAppId, type: 'application' });
+        } else if (selectAppId) {
+            console.warn(`App ID ${selectAppId} was requested for selection but not found in fetched results.`);
+            // Optionally clear selection if the requested app isn't found
+            // setSelectedItem({ id: null, type: null });
+        }
+
+    } catch (error) {
+        console.error('Error in fetchApplications:', error);
+        alert(`Error loading applications: ${error.message}`);
+        setApplications([]); // Clear data on significant error
+    } finally {
+        setLoading(false); // Indicate loading finished
+    }
+  }, [searchTerm, filter]); // Dependency array
+
+  // Fetch initial data on component mount
   useEffect(() => {
     fetchApplications();
-  }, [fetchApplications]);
+  }, [fetchApplications]); // Now depends on the stable useCallback reference
 
-  // Fetch the name of the selected market whenever the selected item changes
-  // Used for context-aware "Add Application" button text
+  // Fetch the name of the selected market/ontology whenever the selected item changes
   useEffect(() => {
-       if (selectedItem.type === 'market' && selectedItem.id) {
-            setLoading(true); // Indicate loading briefly
-            supabase.from('market_segments').select('name').eq('id', selectedItem.id).single()
-             .then(({ data, error }) => {
-                 if (error) console.error("Error fetching market name:", error);
-                 setSelectedMarketName(data?.name || ''); // Update name or clear if error/not found
-                 setLoading(false);
-             });
-       } else {
-            setSelectedMarketName(''); // Clear name if selection is not a market
-       }
+       let isMounted = true;
+       const fetchName = async () => {
+            // Only fetch if ID and type are valid, and it's not an application
+            if (!selectedItem.id || !selectedItem.type || selectedItem.type === 'application') {
+                 if (isMounted) setSelectedItemName('');
+                 return;
+            }
+
+            const tableName = selectedItem.type === 'market' ? 'market_segments' : 'ontology_tags';
+            console.log(`Fetching name for ${selectedItem.type} ID: ${selectedItem.id}`);
+            try {
+                const { data, error } = await supabase
+                    .from(tableName)
+                    .select('name')
+                    .eq('id', selectedItem.id)
+                    .maybeSingle(); // Use maybeSingle to handle potential null result gracefully
+
+                if (error) throw error;
+                if (isMounted) setSelectedItemName(data?.name || ''); // Update name or clear if error/not found
+            } catch (error) {
+                 console.error(`Error fetching ${selectedItem.type} name:`, error);
+                 if (isMounted) setSelectedItemName(''); // Clear name on error
+            }
+       };
+
+       fetchName();
+       // Cleanup function to prevent state updates if component unmounts during fetch
+       return () => { isMounted = false; };
    }, [selectedItem]); // Dependency array: Rerun when selectedItem changes
 
 
   // Handler called when a new application/venture is successfully added via the form
-  const handleItemAdded = () => {
-    setShowAddForm(false); // Close the add form
-    // Reset filters and selection to ensure the new item is visible and context is cleared
-    setSearchTerm('');
-    setFilter({ type: null, id: null });
+  const handleItemAdded = (newAppId = null) => {
+    setShowAddForm(false);
+    setSearchTerm(''); // Clear search
+    setFilter({ type: null, id: null }); // Clear filter
+    // Keep selectedItem null for now, fetchApplications will select the new one
     setSelectedItem({ id: null, type: null });
-    // Refetch the application list to include the newly added item
-    // Note: This might not immediately update NavigationPane counts until next full refresh/RPC call
-    fetchApplications();
-    // TODO: Consider adding a function to force-refresh NavigationPane tree data here if needed
+    // Refetch the application list AND try to select the new app
+    fetchApplications(newAppId);
+    // TODO: Force-refresh NavigationPane tree data if counts need immediate update
   };
 
   // Generic handler called when ANY item (App, Market, Ontology) is updated in DetailPane
   const handleItemUpdated = () => {
-    console.log("Item updated in DetailPane, refetching application list for potential score/name changes...");
+    console.log("Item updated in DetailPane, refetching application list...");
     // Refetch the main application list; this updates scores in the table
-    fetchApplications();
-    // OPTIONAL: Also refetch NavigationPane data if item update could affect counts/names
-    // Example: Manually trigger useEffect in NavigationPane or lift state up further
+    // Pass the currently selected App ID (if any) to try and re-select it after refetch
+    fetchApplications(selectedItem.type === 'application' ? selectedItem.id : null);
+    // OPTIONAL: Also refetch NavigationPane data if counts/names changed
+    // forceNavRefresh(); // Needs implementation
   };
 
   // Handler for when an APPLICATION row is clicked in the ApplicationTable
   const handleAppSelected = (appId) => {
     console.log("Application selected in table:", appId);
-    setSelectedItem({ id: appId, type: 'application' }); // Update selected item state
+    // Only update if the selection is actually changing
+    if (selectedItem.id !== appId || selectedItem.type !== 'application') {
+        setSelectedItem({ id: appId, type: 'application' });
+    }
   };
 
   // Handler for when a MARKET or ONTOLOGY item is clicked in the NavigationPane
@@ -132,51 +164,56 @@ function App() {
 
      // Update the detail pane selection based on the filter type
      if ((newFilter.type === 'market' || newFilter.type === 'ontology') && newFilter.id) {
-        // If a market or ontology is clicked, show its details
-        setSelectedItem({ id: newFilter.id, type: newFilter.type });
+        // Only update if the selection is changing
+        if (selectedItem.id !== newFilter.id || selectedItem.type !== newFilter.type) {
+            setSelectedItem({ id: newFilter.id, type: newFilter.type });
+        }
      } else if (!newFilter.type && !newFilter.id){
-         // If filters are cleared (type is null), clear the detail pane selection
-         setSelectedItem({ id: null, type: null });
+         // If filters are cleared, clear the detail pane selection
+         if (selectedItem.id || selectedItem.type) { // Only clear if something was selected
+             setSelectedItem({ id: null, type: null });
+         }
      }
-     // If only search term changes, filter.type remains null, so we don't change the detail pane selection
+     // If only search term changes, filter.type remains null, don't change detail selection
   };
 
   // Determine the text for the Add button based on context
   const getAddButtonText = () => {
     if (showAddForm) return 'Close Add Form';
-    // Use the fetched selectedMarketName state
-    if (selectedItem.type === 'market' && selectedMarketName) return `+ Add App to "${selectedMarketName}"...`;
-    // Add similar logic for ontology if desired
-    // if (selectedItem.type === 'ontology' && selectedOntologyName) return `+ Add App using "${selectedOntologyName}"...`;
-    return '+ Add New Application Idea'; // Default text
+    if (selectedItem.type === 'market' && selectedItemName) return `+ Add App to "${selectedItemName}"...`;
+    if (selectedItem.type === 'ontology' && selectedItemName) return `+ Add App using "${selectedItemName}"...`;
+    return '+ Add New IP Venture'; // Updated default text
   };
 
-// *** 3. FUNCTION to prepare data for CSV export ***
-  const prepareCsvData = (exportType = 'current_view') => {
+  // Function to prepare data for CSV export
+  const prepareCsvData = useCallback((exportType = 'current_view') => {
+    setIsPreparingCsv(true); // Indicate preparation start
     let dataToExport = [];
-    if (exportType === 'current_view') {
-      dataToExport = applications; // Use the currently filtered/searched list
-      setCsvFilename(`agm_apps_${filter.type ? filter.type + '_' : ''}${searchTerm ? 'search_' : ''}${new Date().toISOString().split('T')[0]}.csv`);
-    } else { // 'all' (could add more types later)
-      // Note: For a true "all apps" export, you might need a separate fetch without filters
-      // For now, let's just use the current 'applications' state as an example for 'all' too.
-      // A better approach would fetch *all* if needed.
-      dataToExport = applications; // Placeholder: Fetch all if implementing fully
-       setCsvFilename(`agm_all_apps_${new Date().toISOString().split('T')[0]}.csv`);
-    }
+    let filename = "agm_export.csv"; // Default filename
 
+    // Determine data source and filename
+    if (exportType === 'current_view') {
+      dataToExport = applications; // Use the currently displayed (filtered/searched) list
+      const dateStr = new Date().toISOString().split('T')[0];
+      const filterStr = filter.type ? `${filter.type}_` : '';
+      const searchStr = searchTerm ? 'search_' : '';
+      filename = `agm_apps_${filterStr}${searchStr}${dateStr}.csv`;
+    }
+    // Add 'all' case later with a separate fetch if needed
+    // else if (exportType === 'all') { ... fetch all ... }
+
+    // Check if there is data to export
     if (!dataToExport || dataToExport.length === 0) {
       setCsvData([]);
       setCsvHeaders([]);
-      alert("No data available to export in the current view.");
-      return false; // Indicate no data
+      alert("No data available to export for the current view/filter.");
+      setIsPreparingCsv(false);
+      return false; // Indicate failure
     }
 
-    // Define Headers (adjust based on what you want in the CSV)
+    // Define CSV Headers dynamically (can be customized)
     const headers = [
-      { label: "Application ID", key: "id" },
       { label: "B2B Component Name", key: "component_name" },
-      { label: "Legacy Name", key: "legacy_name" },
       { label: "Description", key: "description" },
       { label: "Status", key: "status" },
       { label: "Priority Score", key: "priority_score" },
@@ -186,134 +223,129 @@ function App() {
       { label: "Capital Efficiency", key: "capital_efficiency" },
       { label: "Market Access", key: "market_access" },
       { label: "Tech Feasibility", key: "technical_feasibility" },
-      // Add linked markets/ontologies if needed (requires processing the arrays)
+      { label: "Legacy Name", key: "legacy_name" },
+      { label: "Application ID", key: "id" },
+      // TODO: Add linked markets/ontologies as comma-separated strings if needed
     ];
     setCsvHeaders(headers);
+    setCsvFilename(filename);
 
-    // Format Data (flattening if necessary, handling nulls)
+    // Format Data for CSV (handle nulls, cleanup text)
     const formattedData = dataToExport.map(app => ({
-      id: app.id || '',
       component_name: app.component_name || '',
-      legacy_name: app.legacy_name || '',
-      description: (app.description || '').replace(/[\n\r,"]/g, ' '), // Basic CSV cleanup
+      description: (app.description || '').replace(/[\n\r",]/g, ' '), // Remove newlines, commas, quotes
       status: app.status || '',
-      priority_score: app.priority_score?.toFixed(1) ?? '',
+      priority_score: app.priority_score?.toFixed(1) ?? '', // Format score
       strategic_synergy: app.strategic_synergy ?? '',
       ip_defensibility: app.ip_defensibility ?? '',
       potential_price_premium: app.potential_price_premium ?? '',
       capital_efficiency: app.capital_efficiency ?? '',
       market_access: app.market_access ?? '',
       technical_feasibility: app.technical_feasibility ?? '',
+      legacy_name: app.legacy_name || '',
+      id: app.id || '',
     }));
     setCsvData(formattedData);
-    return true; // Indicate data is ready
-  };
-  // *************************************************
-
+    setIsPreparingCsv(false); // Indicate preparation end
+    return true; // Indicate success
+  // Include dependencies needed inside useCallback
+  }, [applications, filter, searchTerm]);
 
 
   return (
-    // Main container using flexbox for layout
-    <div style={{ padding: '0 20px 20px 20px', fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif', height: 'calc(100vh - 40px)', /* Adjust height accounting for padding */ display: 'flex', flexDirection: 'column' }}>
-      {/* Header section */}
-	{/* Header section */}
+    // Main container
+    <div style={{ padding: '0 20px 20px 20px', fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif', height: 'calc(100vh - 40px)', display: 'flex', flexDirection: 'column' }}>
+      {/* Header */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', flexShrink: 0, borderBottom: '1px solid #eee', marginBottom: '10px' }}>
-        <h1>  Advanced Graphene Materials - Applications Explorer</h1> {/* <-- NAME WAS CHANGED HERE as requested */}
+        <h1>AGM IP Venture Explorer</h1>
 
-        {/* Wrapper Div for Buttons on the right */}
-        <div>
-           {/* --- CSV EXPORT BUTTON --- */}
-           {/* Button 1: Export Current View */}
-           {/* Only render if there's data to export */}
-           {applications && applications.length > 0 && (
+        {/* Buttons Wrapper */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+           {/* CSV EXPORT BUTTON */}
+           {/* Show only when not loading & data exists */}
+           {!loading && applications && applications.length > 0 && (
              <CSVLink
                data={csvData}
                headers={csvHeaders}
                filename={csvFilename}
-               className="csv-export-button" // Class for styling
-               target="_blank" // Open in new tab/window
-               asyncOnClick={true} // Needed for async data preparation
+               className="csv-export-button" // Use class for styling
+               target="_blank"
+               asyncOnClick={true}
                onClick={(event, done) => {
-                 // Prepare data; returns true if successful
+                 // Prevent multiple rapid clicks while preparing
+                 if (isPreparingCsv) {
+                     event.preventDefault();
+                     console.log("CSV preparation already in progress.");
+                     return;
+                 }
                  const dataReady = prepareCsvData('current_view');
                  if (dataReady) {
-                   // Add a small delay to allow state update before download
-                   setTimeout(done, 250);
+                   setTimeout(done, 250); // Small delay to ensure state update
                  } else {
-                   // Prevent default download if prepareCsvData returned false (e.g., no data)
-                   event.preventDefault(); // Stop the link click
+                   event.preventDefault(); // Stop download if no data
                    console.warn("CSV Export prevented: No data prepared.");
-                   // Optionally provide user feedback here
                  }
                }}
+               // Add disabled state visually
+               style={isPreparingCsv ? { opacity: 0.6, cursor: 'not-allowed' } : {}}
              >
-               Export Current View (.csv) 📄
+               {isPreparingCsv ? 'Preparing...' : 'Export Current View (.csv) 📄'}
              </CSVLink>
            )}
-           {/* --- END CSV EXPORT BUTTON --- */}
+           {/* END CSV BUTTON */}
 
-           {/* --- Add New Venture Button --- */}
+           {/* ADD VENTURE BUTTON */}
            <button
-             onClick={() => setShowAddForm(!showAddForm)} // Toggle form visibility
-             style={{fontSize: '1em', padding: '10px 15px', marginLeft: '10px', /* Add spacing */ cursor: 'pointer', background: '#007bff', color: 'white', border: 'none', borderRadius: '5px'}}
+             onClick={() => setShowAddForm(!showAddForm)}
+             style={{fontSize: '1em', padding: '10px 15px', cursor: 'pointer', background: '#007bff', color: 'white', border: 'none', borderRadius: '5px'}}
              title={showAddForm ? "Close the form" : "Open form to add a new application idea. If a market/function is selected, it will be pre-linked."}
            >
-             {getAddButtonText()} {/* Use dynamic button text */}
+             {getAddButtonText()}
            </button>
-           {/* --- END Add New Venture Button --- */}
+           {/* END ADD BUTTON */}
         </div>
-        {/* End Button Wrapper Div */}
       </header>
 
-      {/* Conditionally render the AddAppForm component */}
+      {/* Conditionally render AddAppForm */}
       {showAddForm && (
-        // Wrap form in a scrollable container if it might get too long
-        <div className="add-app-form-container" style={{ maxHeight: 'calc(100vh - 150px)', overflowY: 'auto', marginBottom: '10px', border: '1px solid #ccc', borderRadius: '8px', background:'#fefefe' }}>
+        <div className="add-app-form-container" style={{ maxHeight: 'calc(100vh - 150px)', overflowY: 'auto', marginBottom: '10px', /* Add styles from index.css if needed */ }}>
             <AddAppForm
-               onFinished={handleItemAdded} // Handler to call when form is submitted successfully
-               // Pass the selected market ID to pre-select it in the form's linker
+               onFinished={handleItemAdded}
                preSelectedMarketId={selectedItem.type === 'market' ? selectedItem.id : null}
-               // Pass selected ontology ID if needed similarly
-               // preSelectedOntologyId={selectedItem.type === 'ontology' ? selectedItem.id : null}
+               preSelectedOntologyId={selectedItem.type === 'ontology' ? selectedItem.id : null}
             />
         </div>
       )}
 
-      {/* Main 3-panel layout using react-resizable-panels */}
-      <PanelGroup direction="horizontal" style={{ flexGrow: 1, /* Take remaining vertical space */ border: '1px solid #ccc', borderRadius: '8px', overflow: 'hidden' /* Prevent scrollbars on group */ }}>
+      {/* Main 3-panel layout */}
+      <PanelGroup direction="horizontal" style={{ flexGrow: 1, border: '1px solid #ccc', borderRadius: '8px', overflow: 'hidden' }}>
         {/* Pane 1: Navigation */}
-        <Panel defaultSize={20} minSize={15} style={{ overflowY: 'auto', background: '#f8f9fa' }}> {/* Vertical scroll only */}
+        <Panel defaultSize={20} minSize={15} style={{ overflowY: 'auto', background: '#f8f9fa' }}>
           <NavigationPane
-            onSearchChange={setSearchTerm} // Pass setter for search term
-            onFilterChange={handleFilterChange} // Pass the combined filter/selection handler
-            currentFilter={filter} // Pass current filter state for highlighting active item
+            onSearchChange={setSearchTerm}
+            onFilterChange={handleFilterChange}
+            currentFilter={filter}
           />
         </Panel>
-        {/* Resizer handle */}
         <PanelResizeHandle style={{ width: '8px', background: '#e9ecef', borderLeft: '1px solid #ccc', borderRight: '1px solid #ccc', cursor: 'col-resize', flexShrink: 0 }} />
 
         {/* Pane 2: Application List Table */}
-        <Panel defaultSize={45} minSize={30} style={{ display: 'flex', flexDirection: 'column' }}> {/* Use flex to let table container manage scroll */}
+        <Panel defaultSize={45} minSize={30} style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 'var(--space-xl)' /* Prevent double scroll */ }}>
           <ApplicationTable
-            data={applications} // Pass application data
-            loading={loading} // Pass loading state
-            // Pass only the application ID if an application is selected
+            data={applications}
+            loading={loading}
             selectedAppId={selectedItem.type === 'application' ? selectedItem.id : null}
-            onAppSelected={handleAppSelected} // Pass handler for selecting an app row
+            onAppSelected={handleAppSelected}
           />
         </Panel>
-        {/* Resizer handle */}
         <PanelResizeHandle style={{ width: '8px', background: '#e9ecef', borderLeft: '1px solid #ccc', borderRight: '1px solid #ccc', cursor: 'col-resize', flexShrink: 0 }} />
 
         {/* Pane 3: Details Pane */}
-        <Panel defaultSize={35} minSize={25} style={{ overflowY: 'auto' }}> {/* Vertical scroll only */}
+        <Panel defaultSize={35} minSize={25} style={{ overflowY: 'auto' }}>
           <DetailPane
-            // Pass the full selected item state (ID and type)
             selectedItemId={selectedItem.id}
             selectedItemType={selectedItem.type}
-            // Handler to clear selection when closed from within DetailPane
             onClose={() => setSelectedItem({ id: null, type: null })}
-            // Handler to notify App.jsx when data is updated (e.g., score changes)
             onItemUpdated={handleItemUpdated}
           />
         </Panel>

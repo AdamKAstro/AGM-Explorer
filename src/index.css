@@ -380,7 +380,7 @@ button:active {
 
 /* Hide underscores and replace with spaces using CSS */
 .tree-item .tree-label {
-  font-variant: small-caps;
+  /*font-variant: small-caps;*/
   text-transform: capitalize;
 }
 
@@ -609,7 +609,7 @@ button:active {
 /* Table Area */
 .table-area {
   flex: 1;
-  padding: var(--space-xl);
+  /*padding: var(--space-xl);*/
   overflow: auto;
   background: var(--editorial-white);
 }
@@ -686,26 +686,78 @@ button:active {
   border-bottom: 1px solid var(--border-light);
   position: relative;
 }
-
+/*
 .data-table tbody tr:hover {
   background: linear-gradient(90deg, rgba(201, 169, 97, 0.05), transparent);
-  transform: translateX(2px);
-  box-shadow: var(--shadow-sm);
+  /* transform: translateX(2px);  <-- REMOVED for a more subtle effect */
+  /* box-shadow: var(--shadow-sm); <-- REMOVED for a more subtle effect 
 }
 
+/* Option 1: Thinner Bar 
 .data-table tbody tr:hover::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: var(--editorial-gold);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px; /* <-- Thinner 
+  background: var(--editorial-gold);
+}*/
+
+/* Option 5: Subtle Gradient Bar 
+.data-table tbody tr:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  /* Fades from gold to transparent 
+  background: linear-gradient(90deg, var(--editorial-gold) 0%, rgba(201, 169, 97, 0) 100%);
+}
+
+*/
+
+
+/* Option 8: Dashed Line */
+.data-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(201, 169, 97, 0.05), transparent);
+  border-left: 2px dashed var(--editorial-gold);
+}
+
+/* Make sure the ::before rule is deleted or empty for this option! */
+.data-table tbody tr:hover::before {
+  content: none;
 }
 
 .data-table tbody tr:nth-child(even) {
   background: rgba(248, 246, 243, 0.3);
 }
+
+/*
+   *** NEW CSS RULE ADDED HERE ***
+   This styles the selected row to match the navigation tree
+*/
+.data-table tbody tr.selected-row {
+  background: linear-gradient(90deg, var(--editorial-white), rgba(201, 169, 97, 0.15));
+  color: var(--accent-primary);
+  border-left: 1.5px solid var(--editorial-gold);
+  box-shadow: var(--shadow-md);
+  font-weight: 600;
+}
+
+.data-table tbody tr.selected-row:hover {
+  /* Ensure hover style is consistent with selected state */
+  background: linear-gradient(90deg, var(--editorial-white), rgba(201, 169, 97, 0.2));
+  transform: translateX(2px); /* Keep the hover transform */
+}
+
+.data-table tbody tr.selected-row td:first-child {
+  color: var(--accent-primary);
+}
+/* *** END OF NEW CSS RULE *** */
+
+
 
 .data-table td {
   padding: 14px 20px;
@@ -1143,7 +1195,8 @@ button:active {
    ============================================ */
 
 .detail-pane {
-  width: var(--detail-width);
+/* width: var(--detail-width); <-- REPLACE THIS LINE */
+  width: 100%; /* <-- WITH THIS LINE */
   background: var(--editorial-pearl);
   border-left: 1px solid var(--border-light);
   padding: var(--space-xl);
@@ -1944,4 +1997,32 @@ const formatItemName = (name) => {
   background: rgba(201, 169, 97, 0.1);
   margin-left: 8px;
   flex-shrink: 0;
+}
+
+/* ============================================
+   MODAL MESSAGES (Bolt-On)
+   ============================================ */
+
+.error-message {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--editorial-burgundy);
+  background: rgba(139, 58, 58, 0.05);
+  border: 1px solid var(--editorial-burgundy);
+  border-radius: 8px;
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.success-message {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--editorial-sage);
+  background: rgba(123, 132, 113, 0.05);
+  border: 1px solid var(--editorial-sage);
+  border-radius: 8px;
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-lg);
 }

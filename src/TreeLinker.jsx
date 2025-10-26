@@ -1,7 +1,7 @@
 // src/TreeLinker.jsx
 import React, { useState } from 'react';
 //import './Navigation.css'; // We re-use the same CSS!
-
+import { supabase } from './supabase'; //
 // A recursive component to render the tree with checkboxes
 const TreeItem = ({ item, selectedIds, onToggle }) => {
   const [isOpen, setIsOpen] = useState(false);

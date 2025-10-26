@@ -8,178 +8,132 @@ import { cacheOntologyTags, findOntologySuggestions } from './ontologyMatcher'; 
 // Main Add Application Form component
 export function AddAppForm({ onFinished, preSelectedMarketId = null, preSelectedOntologyId = null }) {
   // --- State Variables ---
-  // Core form fields
   const [componentName, setComponentName] = useState('');
   const [description, setDescription] = useState('');
   const [submitter, setSubmitter] = useState('AGM Team'); // Default or get from user auth
 
-  // State for the TreeLinker components
+  // Initialize linkers with pre-selected IDs if provided
   const [selectedMarketIds, setSelectedMarketIds] = useState(preSelectedMarketId ? [preSelectedMarketId] : []);
   const [selectedTagIds, setSelectedTagIds] = useState(preSelectedOntologyId ? [preSelectedOntologyId] : []);
 
-  // State for "AGM Brain" helpers
   const [similarApps, setSimilarApps] = useState([]); // Stores results from name similarity check
   const [ontologySuggestions, setOntologySuggestions] = useState([]); // Stores tag suggestions based on keywords
   const [similarVentures, setSimilarVentures] = useState([]); // Stores results from link overlap check
   const [showVentureConfirm, setShowVentureConfirm] = useState(false); // Controls the strategy alert modal
-
-  // Loading/Submitting state flags
   const [isCheckingVentures, setIsCheckingVentures] = useState(false); // Loading for pre-submit check
   const [isSubmitting, setIsSubmitting] = useState(false); // Loading for final submission
 
   // --- Effects ---
-
-  // Cache Ontology Tags on component mount for keyword suggestions
+  // Cache Ontology Tags on mount for keyword suggestions
   useEffect(() => {
-    cacheOntologyTags(supabase); // Call the caching function from the matcher utility
-  }, []); // Empty dependency array ensures it runs only once
+    cacheOntologyTags(supabase);
+  }, []);
 
   // Debounced Duplicate Application Name Check (Helper 1a)
   useEffect(() => {
-    // Only run check if name is reasonably long
     if (componentName.trim().length < 4) {
-      setSimilarApps([]); // Clear previous suggestions if name is too short
-      return; // Exit early
+      setSimilarApps([]); return;
     }
-    // Set up a timer to delay the check
     const debounceTimer = setTimeout(async () => {
       console.log(`Checking name similarity for: "${componentName}"`);
-      // Call the Supabase RPC function to get similar names
       const { data, error } = await supabase.rpc('get_similar_apps', { query_name: componentName });
-      if (error) {
-          console.error("Error checking similar app names:", error);
-          setSimilarApps([]); // Clear suggestions on error
-      } else {
-          setSimilarApps(data || []); // Update state with results (or empty array)
-      }
-    }, 400); // 400ms delay after user stops typing
-
-    // Cleanup function: Clear the timer if component unmounts or name changes again
+      if (error) console.error("Error checking similar app names:", error);
+      setSimilarApps(data || []);
+    }, 400);
     return () => clearTimeout(debounceTimer);
-  }, [componentName]); // Dependency array: Rerun effect only when componentName changes
+  }, [componentName]);
 
   // Debounced Ontology Tag Suggestions based on Name and Description (Helper 1b)
   useEffect(() => {
     const textToAnalyze = `${componentName} ${description}`.trim();
-    // Only run if there's enough text to analyze
     if (textToAnalyze.length < 5) {
-      setOntologySuggestions([]); // Clear suggestions if input is too short
-      return; // Exit early
+      setOntologySuggestions([]); return;
     }
-    // Set up a timer to delay suggestion generation
-    const debounceTimer = setTimeout(() => {
+     const debounceTimer = setTimeout(() => {
         console.log("Finding ontology suggestions for:", textToAnalyze);
-        // Call the suggestion function from the matcher utility
         const suggestions = findOntologySuggestions(textToAnalyze);
-        setOntologySuggestions(suggestions); // Update state with suggestions
-    }, 500); // 500ms delay
-
-    // Cleanup function: Clear the timer
-    return () => clearTimeout(debounceTimer);
-  }, [componentName, description]); // Dependency array: Rerun effect if name or description changes
-
+        setOntologySuggestions(suggestions);
+     }, 500);
+     return () => clearTimeout(debounceTimer);
+  }, [componentName, description]);
 
   // --- Event Handlers ---
-
   // Handler for the main form submission (triggers pre-check first)
   const handlePreSubmitCheck = async (e) => {
-     e.preventDefault(); // Prevent standard HTML form submission
-     // Prevent multiple submissions or checks running concurrently
+     e.preventDefault();
      if (isSubmitting || isCheckingVentures) return;
+     if (!componentName.trim()) { alert("Please enter the B2B Component Name."); return; }
+     if (!description.trim()) { alert("Please enter a Description."); return; }
+     if (selectedMarketIds.length === 0) { alert("Please link to at least one Market Segment."); return; }
+     if (selectedTagIds.length === 0) { alert("Please link to at least one Technical Function."); return; }
 
-     // Basic client-side validation
-     if (!componentName.trim()) {
-         alert("Please enter the B2B Component Name.");
-         return;
-     }
-     if (!description.trim()) {
-          alert("Please enter a Description.");
-          return;
-     }
-      if (selectedMarketIds.length === 0) {
-          alert("Please link to at least one Market Segment.");
-          return;
-      }
-       if (selectedTagIds.length === 0) {
-           alert("Please link to at least one Technical Function (Ontology Tag).");
-           return;
-       }
-
-     // Start the pre-check loading state
      setIsCheckingVentures(true);
-     setSimilarVentures([]); // Clear previous check results
-
+     setSimilarVentures([]);
      console.log("Checking for similar ventures based on links:", { selectedMarketIds, selectedTagIds });
-     // Call the Supabase RPC to find ventures with overlapping links
-     const { data, error } = await supabase.rpc('find_similar_ventures', {
-        p_market_ids: selectedMarketIds,
-        p_tag_ids: selectedTagIds
-     });
 
-     setIsCheckingVentures(false); // End the pre-check loading state
+     try {
+        const { data, error } = await supabase.rpc('find_similar_ventures', {
+           p_market_ids: selectedMarketIds, p_tag_ids: selectedTagIds
+        });
+        if (error) throw error; // Let catch block handle it
 
-     if (error) {
-         console.error("Error checking similar ventures via RPC:", error);
-         // Decide how to handle this - For robustness, let's allow submission but warn the user.
-         const proceed = window.confirm("Warning: Could not automatically check for similar ventures due to an error. Proceed with submission anyway?");
-         if (proceed) {
-             await performSubmit(); // Proceed if user confirms
-         }
-     } else if (data && data.length > 0) {
-         // Found potentially overlapping ventures - show the confirmation modal
-         console.log("Found similar ventures:", data);
-         setSimilarVentures(data);
-         setShowVentureConfirm(true); // Open the modal
-     } else {
-         // No overlaps found - proceed directly to final submission
-         console.log("No significant link overlaps found. Proceeding to submit.");
-         await performSubmit();
+        if (data && data.length > 0) {
+           console.log("Found similar ventures:", data);
+           setSimilarVentures(data);
+           setShowVentureConfirm(true); // Show confirmation modal
+        } else {
+           console.log("No significant link overlaps found. Proceeding to submit.");
+           await performSubmit(); // No overlaps, submit directly
+        }
+     } catch (error) {
+          console.error("Error checking similar ventures via RPC:", error);
+          const proceed = window.confirm(`Warning: Could not automatically check for similar ventures due to an error (${error.message}). Proceed with submission anyway?`);
+          if (proceed) await performSubmit();
+     } finally {
+          setIsCheckingVentures(false);
      }
   };
 
   // Function to perform the final data submission to the database
   const performSubmit = async () => {
-     // Prevent multiple submissions
      if (isSubmitting) return;
-     setIsSubmitting(true); // Start final submission loading state
-     setShowVentureConfirm(false); // Ensure confirmation modal is closed
-
+     setIsSubmitting(true);
+     setShowVentureConfirm(false);
      console.log("Submitting new venture:", { componentName, description, submitter, selectedMarketIds, selectedTagIds });
-     // Call the Supabase RPC to create the application, metrics, and links in one transaction
-     const { data: newAppId, error } = await supabase.rpc('create_new_application', {
-        app_name: componentName,
-        app_desc: description,
-        submitter: submitter || 'AGM Team', // Use default if submitter is empty
-        market_ids: selectedMarketIds,
-        tag_ids: selectedTagIds
-     });
 
-     setIsSubmitting(false); // End final submission loading state
+     try {
+         const { data: newAppId, error } = await supabase.rpc('create_new_application', {
+            app_name: componentName,
+            app_desc: description,
+            submitter: submitter || 'AGM Team',
+            market_ids: selectedMarketIds,
+            tag_ids: selectedTagIds
+         });
+         if (error) throw error; // Let catch block handle it
 
-     if (error) {
-        console.error("Error creating new venture:", error);
-        alert(`Error: ${error.message}`); // Show specific error to user
-     } else {
-        alert(`New IP Venture "${componentName}" created successfully!`); // Confirmation message
-        onFinished(); // Call the callback provided by App.jsx to close form and refetch data
+         alert(`New IP Venture "${componentName}" created successfully!`);
+         onFinished(newAppId); // Pass the new ID back to App.jsx
+
+     } catch (error) {
+         console.error("Error creating new venture:", error);
+         alert(`Error: ${error.message}`);
+     } finally {
+         setIsSubmitting(false);
      }
   };
 
-
   // --- JSX Rendering ---
   return (
-    // Use React Fragment <> to allow adjacent elements (form and modal)
-    <>
-      {/* Main Form Element */}
-      {/* Add class for potential styling hooks */}
-      <form onSubmit={handlePreSubmitCheck} className="add-app-form" style={{ padding: '20px' /* Remove redundant styles if using container */ }}>
-        <h2 style={{marginTop: 0}}>+ Add New IP Venture</h2>
+    <> {/* Fragment needed for adjacent form and modal */}
+      {/* Add class for styling, use form-container styles from index.css */}
+      <form onSubmit={handlePreSubmitCheck} className="add-app-form form-container" style={{ margin: 0 /* Reset margin if container adds it */ }}>
+        <h2 style={{marginTop: 0, marginBottom: 'var(--space-lg)'}}>+ Add New IP Venture</h2>
 
-        {/* B2B Component Name Input */}
+        {/* B2B Component Name */}
         <div className="form-group">
-          <label htmlFor="componentNameInput">B2B Component Name *</label>
+          <label htmlFor="componentNameInputAdd">B2B Component Name *</label>
           <input
-            id="componentNameInput" // Use unique ID for label association
+            id="componentNameInputAdd"
             type="text"
             value={componentName}
             onChange={e => setComponentName(e.target.value)}
@@ -189,42 +143,40 @@ export function AddAppForm({ onFinished, preSelectedMarketId = null, preSelected
           />
         </div>
 
-        {/* Similar App Name Warning (Helper 1a) */}
+        {/* Similar App Name Warning */}
         {similarApps.length > 0 && (
           <div className="warning-box">
             <strong>⚠️ Possible Name Duplicate Found:</strong>
             <ul>
               {similarApps.map(app => (
-                // Use unique key, app.name might not be unique if similarity score differs
                 <li key={`${app.name}-${app.similarity}`}>{app.name} (Similarity: {app.similarity.toFixed(2)})</li>
               ))}
             </ul>
           </div>
         )}
 
-        {/* Description Textarea */}
+        {/* Description */}
         <div className="form-group">
-          <label htmlFor="descriptionInput">Description *</label>
+          <label htmlFor="descriptionInputAdd">Description *</label>
           <textarea
-            id="descriptionInput"
+            id="descriptionInputAdd"
             value={description}
             onChange={e => setDescription(e.target.value)}
-            rows={4} // Slightly smaller default height
+            rows={4}
             required
             placeholder="Explain application, AGM graphene benefit (why us?), potential patent angle (e.g., covalent bonding). Keywords trigger suggestions."
             title="Provide detail on the opportunity and strategic fit. Keywords like 'conductive', 'strength', 'barrier' trigger suggestions."
           />
         </div>
 
-        {/* Ontology Suggestions Box (Helper 1b) */}
+        {/* Ontology Suggestions */}
         {ontologySuggestions.length > 0 && (
            <div className="suggestion-box">
              <strong>🤖 AGM Brain Suggests Linking To Functions:</strong>
              <ul>
-               {ontologySuggestions.slice(0, 5).map(tag => ( // Show top 5 suggestions
+               {ontologySuggestions.slice(0, 5).map(tag => (
                  <li key={tag.id}>
                     {tag.name} <small>({tag.path})</small>
-                    {/* Potential: Add button to auto-check this tag in linker below */}
                  </li>
                ))}
                 {ontologySuggestions.length > 5 && <li>... and more (see linker below)</li>}
@@ -233,11 +185,11 @@ export function AddAppForm({ onFinished, preSelectedMarketId = null, preSelected
            </div>
          )}
 
-        {/* Submitter Input */}
+        {/* Submitter */}
         <div className="form-group">
-          <label htmlFor="submitterInput">Submitted By</label>
+          <label htmlFor="submitterInputAdd">Submitted By</label>
           <input
-            id="submitterInput"
+            id="submitterInputAdd"
             type="text"
             value={submitter}
             onChange={e => setSubmitter(e.target.value)}
@@ -246,60 +198,61 @@ export function AddAppForm({ onFinished, preSelectedMarketId = null, preSelected
           />
         </div>
 
-        {/* Market and Ontology Linkers using TreeLinker Component */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', margin: '20px 0' }}>
+        {/* Linkers - Using Grid Layout */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', /* Responsive columns */ gap: 'var(--space-lg)', margin: 'var(--space-lg) 0' }}>
           {/* Market Linker */}
-          <div className="TreeLinker-container" title="Select ALL relevant market segments where this IP could be applied. Helps identify total addressable market and potential partners.">
+          {/* Add wrapper div with class for styling */}
+          <div className="TreeLinker-container form-group" title="Select ALL relevant market segments where this IP could be applied. Helps identify total addressable market and potential partners.">
+            {/* Add label consistent with other form groups */}
+            <label>Link to Markets *</label>
             <TreeLinker
-              title="Link to Markets *"
-              rpcName="market_segments" // Tells TreeLinker which table to fetch
-              // Pass pre-selected ID if provided by App.jsx
-              initialSelection={preSelectedMarketId ? [preSelectedMarketId] : []}
-              // Callback to update selectedMarketIds state in this form
+              // title="Link to Markets *" // Title prop removed, using label instead
+              rpcName="market_segments"
+              initialSelection={selectedMarketIds} // Use state directly
               onSelectionChange={setSelectedMarketIds}
             />
           </div>
-          {/* Ontology (Technical Function) Linker */}
-          <div className="TreeLinker-container" title="Select ALL core technical functions/properties involved. Helps find similar ventures and assess strategic fit (Synergy score).">
+          {/* Ontology Linker */}
+          <div className="TreeLinker-container form-group" title="Select ALL core technical functions/properties involved. Helps find similar ventures and assess strategic fit (Synergy score).">
+             <label>Link to Technical Functions *</label>
             <TreeLinker
-              title="Link to Technical Functions *"
-              rpcName="ontology_tags" // Tells TreeLinker which table to fetch
-              // Pass pre-selected ID if provided (optional)
-              initialSelection={preSelectedOntologyId ? [preSelectedOntologyId] : []}
-              // Callback to update selectedTagIds state in this form
+              // title="Link to Technical Functions *"
+              rpcName="ontology_tags"
+              initialSelection={selectedTagIds} // Use state directly
               onSelectionChange={setSelectedTagIds}
             />
           </div>
         </div>
 
-        {/* Submit Button */}
-        <button type="submit" disabled={isSubmitting || isCheckingVentures} style={{fontSize: '1em', padding: '10px 15px', cursor: 'pointer'}}>
-          {/* Dynamically change button text based on state */}
-          {isCheckingVentures ? 'Checking for overlaps...' : (isSubmitting ? 'Submitting...' : 'Submit New Venture')}
-        </button>
+        {/* Submit Button - Use Editorial Style */}
+        <div className="form-actions" style={{justifyContent: 'flex-start'}}> {/* Align button left */}
+            <button type="submit" className="btn-primary" disabled={isSubmitting || isCheckingVentures}>
+              {isCheckingVentures ? 'Checking...' : (isSubmitting ? 'Submitting...' : 'Submit New Venture')}
+            </button>
+             {/* Optional: Add a cancel button */}
+             <button type="button" className="btn-secondary" onClick={onFinished}>
+                Cancel
+             </button>
+        </div>
       </form>
 
-      {/* Strategy Alert Confirmation Modal (Helper 2) */}
+      {/* Strategy Alert Confirmation Modal */}
       {showVentureConfirm && (
-          <div className="modal-backdrop"> {/* Re-use modal styles */}
+          <div className="modal-overlay"> {/* Re-use modal styles */}
              <div className="modal-content" style={{maxWidth: '600px'}}>
                  <h2>Strategy Alert! ⚠️</h2>
                  <p>This new venture seems very similar to existing ones based on its Market & Technical Function links:</p>
-                 {/* List of similar ventures found */}
                  <ul style={{ maxHeight: '200px', overflowY: 'auto', border:'1px solid #eee', padding:'10px', background:'#f8f9fa', marginBottom:'15px'}}>
                     {(similarVentures || []).map(v => (
-                        <li key={v.app_id}>{v.component_name} (Overlap: {v.overlap_score ? v.overlap_score.toFixed(2) : 'N/A'})</li>
+                        <li key={v.app_id}>{v.component_name} (Overlap Score: {v.overlap_score ? v.overlap_score.toFixed(2) : 'N/A'})</li>
                     ))}
                  </ul>
                  <p><strong>Are you sure this is a distinct IP opportunity and not an improvement or variation of an existing venture?</strong></p>
-                 {/* Modal Action Buttons */}
-                 <div className="modal-actions">
-                     {/* Button to proceed with submission */}
-                     <button onClick={performSubmit} className="save-button" disabled={isSubmitting}>
+                 <div className="form-actions">
+                     <button onClick={performSubmit} className="btn-primary" disabled={isSubmitting}>
                         {isSubmitting ? 'Submitting...' : 'Yes, Proceed Anyway'}
                      </button>
-                     {/* Button to cancel submission and close modal */}
-                     <button onClick={() => setShowVentureConfirm(false)} className="cancel-button">
+                     <button onClick={() => setShowVentureConfirm(false)} className="btn-secondary">
                         Cancel
                      </button>
                  </div>
@@ -307,7 +260,7 @@ export function AddAppForm({ onFinished, preSelectedMarketId = null, preSelected
           </div>
       )}
 
- 
+      {/* No need for embedded styles if using index.css */}
     </>
   );
 }
