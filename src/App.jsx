@@ -14,7 +14,7 @@ function App() {
   // ALL HOOKS MOVED TO TOP: Password protection states (new)
   const [password, setPassword] = useState('');
   const [showApp, setShowApp] = useState(false);
-  const CORRECT_PASSWORD = 'agm-group:AGM123'; // Updated to match your _headers creds (or change back)
+  const CORRECT_PASSWORD = 'TSI2025!'; // Updated to match your _headers creds (or change back)
 
   // ALL HOOKS MOVED TO TOP: Original states
   const [loading, setLoading] = useState(true); // Loading state for the main application list
