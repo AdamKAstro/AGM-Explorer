@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "cc18a2ec-c257-4cdf-a732-40c2c2db9f5c",
+    "component_name": "\"Green\" High-Strength Concrete Mix"
+  },
+  {
+    "id": "08a92a8f-46ae-473f-a9bb-cf3e4ee531b0",
+    "component_name": "\"Silent-Series\" Dishwasher"
+  },
+  {
+    "id": "46a5116d-0cf2-4a76-af4b-7e94216ca07e",
+    "component_name": "\"Smart\" Athletic Shirt"
+  },
+  {
+    "id": "9ecc5374-20d9-4f89-be2c-060d9c25ef26",
+    "component_name": "\"Smart\" Bandage"
+  },
+  {
+    "id": "980be886-231f-45a4-902b-53cc031411db",
+    "component_name": "\"Stainless Steel\" Appliance Coating"
+  },
+  {
+    "id": "8f2879d1-ad89-42c4-8fca-5e0a72a8372a",
+    "component_name": "3D Printer Beds/Surfaces"
+  },
+  {
+    "id": "4fbb109f-62da-466b-bd5a-d2f6f035c4d4",
+    "component_name": "3D Printing Reinforcement"
+  },
+  {
+    "id": "c37a88ae-c64c-4118-9328-4858b1f1f0ed",
+    "component_name": "3D-Printed Concrete Structures"
+  },
+  {
+    "id": "5df99f79-aaaf-4a9e-b9ce-2afe9b2a85a3",
+    "component_name": "Acoustic Dampening Materials (Electronics)"
+  },
+  {
+    "id": "4406059d-9e71-4981-89d5-71c10f837e57",
+    "component_name": "Acoustic Metamaterials"
+  },
+  {
+    "id": "a8a4aca9-8377-4a40-a036-cb9cd3deb44f",
+    "component_name": "Advanced Water Purification Filter (Personal/Home)"
+  },
+  {
+    "id": "6fcfd01b-5ff3-4756-952f-2ba45294623e",
+    "component_name": "Aerogels (Graphene-Based)"
+  },
+  {
+    "id": "f7a92e71-153a-4b0e-be0c-3dd47cfd8d99",
+    "component_name": "Aerospace Actuators"
+  },
+  {
+    "id": "100ea177-91e8-4345-871c-6533f654f0d7",
+    "component_name": "Aerospace Structural Components"
+  },
+  {
+    "id": "4d0ce6e0-4b1f-4367-bd6a-cd66e879dc0b",
+    "component_name": "Agricultural Films (Greenhouse/Mulch)"
+  },
+  {
+    "id": "66828ad3-86ce-4fe3-bad7-de9b9b2e4eb3",
+    "component_name": "Air Mattresses"
+  },
+  {
+    "id": "0af0ed33-4efc-4970-8ced-1efce47666cc",
+    "component_name": "Air Purifier"
+  },
+  {
+    "id": "c701c066-7937-4d46-afe2-6e39ac1b99e8",
+    "component_name": "Aircraft Lightweight Composites"
+  },
+  {
+    "id": "b813a92d-2ff8-42cf-97d3-f540abb53b5b",
+    "component_name": "Airport Runway Repair Materials"
+  },
+  {
+    "id": "e613e131-06a8-4866-b282-12188e99152a",
+    "component_name": "Aluminum Beverage Can (Internal Liner)"
+  },
+  {
+    "id": "ed6cfea7-4e74-464f-a660-7f9a2ea592f3",
+    "component_name": "Antennas (Printed)"
+  },
+  {
+    "id": "8803efbb-3eb2-4aea-8639-a9a82dd0902d",
+    "component_name": "Anti-Bacterial Hospital Surface Coating"
+  },
+  {
+    "id": "052f9d96-aedb-4cad-90c5-38032a617f97",
+    "component_name": "Anti-Corrosion Coatings (Machinery)"
+  },
+  {
+    "id": "60e3503f-2a1c-41e8-a2ab-3550dea22f8d",
+    "component_name": "Anti-Corrosion Metal Paint"
+  },
+  {
+    "id": "aa20e37d-005a-4a9e-8e1f-7848143703ae",
+    "component_name": "Anti-Corrosion Undercoating"
+  },
+  {
+    "id": "f8b82615-04e1-4ec6-8c1d-c49b21ac9d19",
+    "component_name": "Anti-Graffiti Coatings"
+  },
+  {
+    "id": "cc0bdcde-05cf-4622-8ef3-1d6e9e4a317f",
+    "component_name": "Anti-Icing Coatings"
+  },
+  {
+    "id": "0be47d55-176f-4431-9ab8-97ebbfd66b32",
+    "component_name": "Anti-Static Coatings/Flooring (Manufacturing)"
+  },
+  {
+    "id": "a4a65798-a657-4dbe-ac76-a02d76c82d6e",
+    "component_name": "Anti-Static Epoxy Garage Floor Coating"
+  },
+  {
+    "id": "56c36c18-eced-4a19-b3ff-265df8bb94b6",
+    "component_name": "Anti-Static Hospital Flooring"
+  },
+  {
+    "id": "d72555e3-c959-40b6-9622-e857b36b0a48",
+    "component_name": "Aquaculture Nets/Cages"
+  },
+  {
+    "id": "48001ad7-e743-4984-afb8-3023fe1be56b",
+    "component_name": "Archery Bows/Arrows"
+  },
+  {
+    "id": "55f773fd-4c05-4c4d-ba2e-832def10ed57",
+    "component_name": "Area Rugs/Carpets"
+  },
+  {
+    "id": "1858beb9-7b80-4b4a-810e-30b21ba4a725",
+    "component_name": "Art Supplies (Pigments/Binders)"
+  },
+  {
+    "id": "50ae2827-4a25-4307-954e-1d600221f178",
+    "component_name": "Artificial Muscles/Actuators (Non-Electrothermal)"
+  },
+  {
+    "id": "0c545686-0639-447a-918b-758528397c52",
+    "component_name": "Asphalt Sealant (Driveway)"
+  },
+  {
+    "id": "99ea064c-06c0-40ec-8026-68db7c660cda",
+    "component_name": "At-Home Cancer Screening Test"
+  },
+  {
+    "id": "4c7a4ac3-7ef0-4910-87c7-980b151a2307",
+    "component_name": "Automotive Composite Body Panels (e.g., Bumper)"
+  },
+  {
+    "id": "3ec939f5-917c-45ce-a795-d84086450284",
+    "component_name": "Automotive Composite Lightweight Components"
+  },
+  {
+    "id": "7fda8e07-54c9-4b9b-835a-c82d09f1c026",
+    "component_name": "Automotive Engine Lubricant"
+  },
+  {
+    "id": "1b01d53c-bbe7-4eee-a72e-966ae5435669",
+    "component_name": "Automotive Fuel Rail Covers"
+  },
+  {
+    "id": "ff74f516-13d8-46f8-8401-77e97590c0d3",
+    "component_name": "Automotive Interior Cabin HVAC Vents"
+  },
+  {
+    "id": "dfd8c0a2-e80e-43b9-a80c-80844c6bbe7e",
+    "component_name": "Backpacks"
+  },
+  {
+    "id": "fc6f9482-9035-4a8a-9a14-944afed972cf",
+    "component_name": "Ballistic Panels (Body Armor)"
+  },
+  {
+    "id": "4a602c55-31ef-46aa-9983-8472ac8705c3",
+    "component_name": "Baseball Bat (Composite)"
+  },
+  {
+    "id": "a29698ff-698b-42b5-97bf-3fc7752f06b1",
+    "component_name": "Bearings (Coatings/Composites)"
+  },
+  {
+    "id": "231e34f5-8f2e-4c10-89a4-a8472d1f0d6a",
+    "component_name": "Bicycle Helmet"
+  },
+  {
+    "id": "f354ccf3-ad2b-4fa2-b3f5-5656b585f931",
+    "component_name": "Binoculars/Telescopes (Casings)"
+  },
+  {
+    "id": "cd89ad87-4cd7-45c8-a9ef-54a43e95ad0e",
+    "component_name": "Biocompatible Coatings for Medical Devices"
+  },
+  {
+    "id": "a8195d6c-e9a5-4fba-bd65-05897a7a1248",
+    "component_name": "Blast-Resistant Curtains/Liners"
+  },
+  {
+    "id": "e6553930-ab87-49b9-9ded-3b578e3e9b8f",
+    "component_name": "Blender / Food Processor"
+  },
+  {
+    "id": "40cfdf17-7982-4356-9221-b931e242e8b4",
+    "component_name": "Bookbinding Materials"
+  },
+  {
+    "id": "600b1d24-aac5-4b18-8c71-f867c0c2945c",
+    "component_name": "Brake Pads/Rotors"
+  },
+  {
+    "id": "f16bb7de-4529-4187-8eeb-291bbc383f41",
+    "component_name": "Camping Chairs/Tables"
+  },
+  {
+    "id": "2e640595-06af-4e6c-aea8-82a910a3d2b9",
+    "component_name": "Canvas/Awnings"
+  },
+  {
+    "id": "3fc51cd4-7650-403b-b169-22c54abd98e9",
+    "component_name": "Capacitors (Dielectric Material)"
+  },
+  {
+    "id": "87533659-d5cd-44e0-9bbd-56ce72bb2c5f",
+    "component_name": "Car Battery (12V Lead-Acid)"
+  },
+  {
+    "id": "8ad0df58-3cd5-4057-9351-36db1b80aba3",
+    "component_name": "Catalyst Support Structures (Textile)"
+  },
+  {
+    "id": "42f7f790-b784-41f7-bdaf-78b3260a4f40",
+    "component_name": "Caulking Guns"
+  },
+  {
+    "id": "15da701e-fd73-4712-bd55-2f9d0bf0dcd8",
+    "component_name": "Cement (General Additive)"
+  },
+  {
+    "id": "a020298f-c789-4671-9add-ddaa9ae41986",
+    "component_name": "Chemical Protective Suits"
+  },
+  {
+    "id": "6c15d9fc-e747-49a6-8abb-74ef659cceba",
+    "component_name": "Cleanroom Wipes"
+  },
+  {
+    "id": "f81e8519-7ced-4b0b-a2ba-5654d519d636",
+    "component_name": "Climbing Harness"
+  },
+  {
+    "id": "be07d11a-007a-428f-8742-7480e4e25c5c",
+    "component_name": "Clothes Dryer Drum"
+  },
+  {
+    "id": "8bbc8f99-22f1-491c-80e1-0aed4cd056be",
+    "component_name": "Computer Mouse"
+  },
+  {
+    "id": "6fdf046b-ef8c-4b38-9c96-9a1ccc25200d",
+    "component_name": "Conductive Adhesives"
+  },
+  {
+    "id": "5f46f51e-cf56-4e56-a95c-f24f4983b8ed",
+    "component_name": "Conductive Seat Heaters"
+  },
+  {
+    "id": "34d4d2b2-80cd-49e8-8984-e8b2aa5dafe9",
+    "component_name": "Contact Lens Cases"
+  },
+  {
+    "id": "49313b22-71d9-477f-8ffc-480c4034d007",
+    "component_name": "Conveyor Belts"
+  },
+  {
+    "id": "639b4e25-09d1-46b6-8949-dd0983a6e36a",
+    "component_name": "Cookware (Pots/Pans)"
+  },
+  {
+    "id": "cde0f984-7664-4596-9589-57f48a214ce2",
+    "component_name": "Coolers/Insulated Boxes"
+  },
+  {
+    "id": "fa7c24a4-6d30-42c9-ab20-3e6432b2976d",
+    "component_name": "Cordless Stick Vacuum"
+  },
+  {
+    "id": "f1a0bcec-9273-433d-a037-2a1a60cb23ca",
+    "component_name": "Cosmetic Containers"
+  },
+  {
+    "id": "afe7651e-cc72-4617-a86a-afac5ac25b4d",
+    "component_name": "Covers for Electronic Devices (eReaders, etc.)"
+  },
+  {
+    "id": "acaa3d08-f75c-4b93-81a4-e17908a4a174",
+    "component_name": "Crack Injection Resins (Concrete/Asphalt)"
+  },
+  {
+    "id": "8e7a2dd8-eb79-4bc7-b4f6-ec76ceb4825c",
+    "component_name": "Curtains/Blinds (Thermal)"
+  },
+  {
+    "id": "c7f7eff4-1f9e-4fb0-96f0-cb7945e287aa",
+    "component_name": "Cutlery (Knives)"
+  },
+  {
+    "id": "b32be0ec-494c-475f-8e7c-111e78f080f3",
+    "component_name": "Cutting Tools (Industrial Coating)"
+  },
+  {
+    "id": "db3b2ed9-b915-41a1-be4c-425b15f1231c",
+    "component_name": "Data Center Server Casing"
+  },
+  {
+    "id": "8ccf2365-c1a8-4f98-80f5-a0c0f5a964ed",
+    "component_name": "Defense Equipment Casings"
+  },
+  {
+    "id": "4c6e60de-f2da-4fb1-82eb-9b347720a1ce",
+    "component_name": "Dental Fillings (Composite)"
+  },
+  {
+    "id": "00b5b7ec-eb3c-44bc-b4fb-5ff90d1d3282",
+    "component_name": "Desalination Membranes"
+  },
+  {
+    "id": "2ead394f-4103-4970-a18d-b35317439143",
+    "component_name": "Desiccant Materials (Enhanced)"
+  },
+  {
+    "id": "64eea5b1-9c47-4cb2-bd31-153c3161365d",
+    "component_name": "Desk Lamps (LED)"
+  },
+  {
+    "id": "d68012d1-0463-4053-a1cd-f8eea760b7ca",
+    "component_name": "Diaper Pails"
+  },
+  {
+    "id": "56a9efeb-7a69-4817-bf86-cbf8226278df",
+    "component_name": "Doorknobs/Handles"
+  },
+  {
+    "id": "6fa3534f-3ea3-4426-8f61-0ab31bf40401",
+    "component_name": "Drill Bits/Saw Blades (Consumer Grade)"
+  },
+  {
+    "id": "59de93dd-2192-49a5-ae53-080e5204db43",
+    "component_name": "Drink Coasters"
+  },
+  {
+    "id": "63ca0764-5e18-409b-9bc2-e53bba14dab2",
+    "component_name": "Drone Body/Propellers"
+  },
+  {
+    "id": "459c8ee9-098d-4749-adb5-26842f3a17c4",
+    "component_name": "Drug Delivery Systems"
+  },
+  {
+    "id": "d1aa7563-01f5-4d4d-86b7-8976b01fd210",
+    "component_name": "E-Bike Battery Pack"
+  },
+  {
+    "id": "3beaa230-bf67-4b4b-b8f0-64e7a39ad451",
+    "component_name": "Electric Stand Mixer"
+  },
+  {
+    "id": "d04d5a3f-112f-4466-b73a-be233bd0763b",
+    "component_name": "Electric Vehicle Battery Enclosure"
+  },
+  {
+    "id": "20beab9d-9ca7-46f0-9e36-2bae1c86709e",
+    "component_name": "Electrical Conduit (Plastic)"
+  },
+  {
+    "id": "0b71c135-16a7-4c05-ad37-33790e6e3437",
+    "component_name": "Emergency Escape Hoods/Masks"
+  },
+  {
+    "id": "f1298753-6b18-43f8-b6a3-6cab366ad408",
+    "component_name": "EMI Shielding (Aerospace/Defense)"
+  },
+  {
+    "id": "0ccccf87-7b17-4527-ae12-f1a586af5c21",
+    "component_name": "EMI Shielding Fabrics/Tapes"
+  },
+  {
+    "id": "3574f139-6031-47d7-9dc9-74e75c327418",
+    "component_name": "EMI-Shielded USB/HDMI Cable"
+  },
+  {
+    "id": "0a936b9e-e250-45f7-9c97-70fb4785f2df",
+    "component_name": "Engine Air Filters/Cabin Air Filters"
+  },
+  {
+    "id": "508fca42-7eaf-424b-802f-95ef32d3fd22",
+    "component_name": "Environmental Remediation Sorbents"
+  },
+  {
+    "id": "8eb40767-365c-4e9c-bb07-7452ad93e7d8",
+    "component_name": "EV Thermal Management Actuator"
+  },
+  {
+    "id": "ee072959-cad4-413b-9f7f-9b4c07a1391b",
+    "component_name": "Exhaust System Components (Coatings)"
+  },
+  {
+    "id": "09f5c0b6-7680-4a44-b01a-effbc5b0aacb",
+    "component_name": "Fertilizer Coatings (Controlled Release)"
+  },
+  {
+    "id": "cbdfc5a0-fb58-405b-be4f-b8c9ee2a49fe",
+    "component_name": "Fire-Retardant Paint"
+  },
+  {
+    "id": "fb90051d-2edc-403c-a066-16b30f05a0e5",
+    "component_name": "Firefighter Turnout Gear"
+  },
+  {
+    "id": "d3a3cfb3-c513-4288-a5db-ffc92d88cbe7",
+    "component_name": "Fishing Lures"
+  },
+  {
+    "id": "467d38a7-f8e9-416a-ad53-9a561d78d1a8",
+    "component_name": "Fishing Rod"
+  },
+  {
+    "id": "3984124a-760b-4d1e-9a26-8cd56152d6de",
+    "component_name": "Flashlights/Headlamps"
+  },
+  {
+    "id": "a5f92bf8-f074-461f-8a57-8756d8c55f2f",
+    "component_name": "Flexible Food Packaging Films"
+  },
+  {
+    "id": "4f207f5d-21b4-4152-8e5e-301e64ea4443",
+    "component_name": "Flexible Heaters"
+  },
+  {
+    "id": "8da3d944-e037-43c8-860a-31264dfce5f5",
+    "component_name": "Flexible Solar Panel"
+  },
+  {
+    "id": "ca507b9a-5ba2-4f5e-87f4-a5b810fe335a",
+    "component_name": "Flexible/Bendable Smartphone Display"
+  },
+  {
+    "id": "5363a70a-b851-4277-bc26-36644958c771",
+    "component_name": "Food Storage Container"
+  },
+  {
+    "id": "3e35e087-d652-47b5-a275-9bd4e3be6f37",
+    "component_name": "Fuel Cell Components (Membranes/Electrodes)"
+  },
+  {
+    "id": "4501cf81-b36e-4a90-91e2-c0cdfdadd5a7",
+    "component_name": "Fuel Lines/Hoses"
+  },
+  {
+    "id": "0bd48a0c-4cf4-4ee8-84d3-fea84568e953",
+    "component_name": "Gaming Console"
+  },
+  {
+    "id": "49b156e1-f29b-45b2-bef6-323c5efb6085",
+    "component_name": "Gas Separation Membranes"
+  },
+  {
+    "id": "93f475ec-32ca-404c-83d9-1738eb10996f",
+    "component_name": "Geotextiles (Civil Engineering)"
+  },
+  {
+    "id": "77fcf08a-380e-43fc-84d8-388be3015cc0",
+    "component_name": "Geothermal Piping"
+  },
+  {
+    "id": "c09e7345-203e-4f36-b43a-ee262811590e",
+    "component_name": "Golf Club (Driver)"
+  },
+  {
+    "id": "f64d039a-f00f-4641-86d0-f00b446c9774",
+    "component_name": "Graphene-Coated Fabrics (General)"
+  },
+  {
+    "id": "8d53fb15-6ce8-400b-b138-dfb246045e61",
+    "component_name": "Graphene-Enhanced Cutting Fluids"
+  },
+  {
+    "id": "9c9779a9-3e34-472a-9f82-47b13bcbc265",
+    "component_name": "Grid-Scale Battery Components (Non-Electrode)"
+  },
+  {
+    "id": "ad86e8cd-0621-4edd-88aa-34a7494385bb",
+    "component_name": "Grid-Scale Supercapacitors"
+  },
+  {
+    "id": "9622df5e-6c3e-4505-938b-44dc48940d57",
+    "component_name": "Hard Drives and Memories"
+  },
+  {
+    "id": "1c9ec0bf-6103-4921-99f0-5d55ba23b29e",
+    "component_name": "Headlight/Taillight Housings"
+  },
+  {
+    "id": "5e735c47-4597-4203-896c-2c289b08a282",
+    "component_name": "Hearing Aids"
+  },
+  {
+    "id": "1f2a78f4-1490-4df0-af68-07d4de448ea0",
+    "component_name": "Heated Gloves / Boots"
+  },
+  {
+    "id": "654b483c-2fb1-47cc-821b-4989018bfee7",
+    "component_name": "High-Barrier PET Juice/Beer Bottle"
+  },
+  {
+    "id": "062644ac-2756-4e12-962a-471316147818",
+    "component_name": "High-End Audio Cables"
+  },
+  {
+    "id": "7808dcdf-6950-4d3a-9c63-ad0982b1a4e8",
+    "component_name": "High-End Coffee / Espresso Machine"
+  },
+  {
+    "id": "379eea34-9a02-4873-983e-4c90fffbf444",
+    "component_name": "High-Frequency Transistors"
+  },
+  {
+    "id": "99e83c49-5732-433d-b00c-fa773cef69b8",
+    "component_name": "High-Performance Cement Grout"
+  },
+  {
+    "id": "8bca3a25-3037-4a0f-aeb6-6a32f7010e1e",
+    "component_name": "High-Voltage Insulators (Ceramic/Polymer)"
+  },
+  {
+    "id": "2af24d97-c236-4615-ab9b-8194a65fd7a7",
+    "component_name": "Hockey Stick"
+  },
+  {
+    "id": "d3d1f9fa-dbd0-4895-aef0-88c32f1b5b12",
+    "component_name": "Hot Press Dies"
+  },
+  {
+    "id": "693d7270-8aef-402b-becb-b422f608fad6",
+    "component_name": "Hydrogen Production Catalysts"
+  },
+  {
+    "id": "f5f5ba2b-09c9-4288-b8ce-1b2cbbb935d9",
+    "component_name": "Hydrogen Storage Tanks (Composite)"
+  },
+  {
+    "id": "f2daa46c-d163-4e1a-95d6-ab9483956e28",
+    "component_name": "Hydroponic System Components"
+  },
+  {
+    "id": "1a625658-7b78-4908-ada1-340e9438e651",
+    "component_name": "Inductors (Core Material/Shielding)"
+  },
+  {
+    "id": "b33fdc39-8339-4ff0-8450-3777c0f9965d",
+    "component_name": "Industrial Air Filters"
+  },
+  {
+    "id": "8a81218b-fa9a-43f3-8fc6-655ccbab7713",
+    "component_name": "Industrial Chemical Containers"
+  },
+  {
+    "id": "dcffe719-93ab-4479-a7e1-87ba1304ef4f",
+    "component_name": "Industrial Gaskets & Seals"
+  },
+  {
+    "id": "e1cbd66a-3e8d-4f5e-b73f-c0437e8caf52",
+    "component_name": "Industrial Hoses (Chemical/Abrasion Resistant)"
+  },
+  {
+    "id": "20f00e40-0578-42cc-8f56-4c7e802d8b32",
+    "component_name": "Industrial Lubricant"
+  },
+  {
+    "id": "8db2146c-73be-40ee-8aff-51ee3e715186",
+    "component_name": "Industrial Protective Textiles"
+  },
+  {
+    "id": "53b6bdda-b0ae-485b-884d-00c9db5bb277",
+    "component_name": "Inflatable Kayaks/Paddleboards"
+  },
+  {
+    "id": "b27b7f8b-a4af-4156-9362-9f874889509f",
+    "component_name": "Insulated Window Frames"
+  },
+  {
+    "id": "b66aeffc-e857-45bf-8029-ada2aa769f76",
+    "component_name": "Interior Trim Components (High Wear Areas)"
+  },
+  {
+    "id": "c77127a6-10f8-42ea-8a40-5298d100c712",
+    "component_name": "Ironing Board Cover"
+  },
+  {
+    "id": "2d950422-9882-44a1-a475-7a2c1605ba82",
+    "component_name": "Irrigation Pipes/Drip Emitters"
+  },
+  {
+    "id": "78e18b23-4485-49a1-8861-f3ad0780b961",
+    "component_name": "Kayak / Canoe"
+  },
+  {
+    "id": "3701ebc3-b486-4435-98d2-51fc46fc07b9",
+    "component_name": "Keyboard Components"
+  },
+  {
+    "id": "1be53122-1e12-45c0-a81a-6b854f345470",
+    "component_name": "Keychains"
+  },
+  {
+    "id": "6a39c1ec-3be8-4499-af26-e25df056d173",
+    "component_name": "Laptop Casing"
+  },
+  {
+    "id": "a884364a-56fc-4c63-b7fc-e2500e88029d",
+    "component_name": "Laptop/Tablet Stand"
+  },
+  {
+    "id": "ffec8cd6-6ecd-4f12-95a0-72d880301e7d",
+    "component_name": "Levels (Tool)"
+  },
+  {
+    "id": "9c01b90b-7764-424c-a3c5-aad1ceb63de5",
+    "component_name": "Light Bulbs (LED Heat Sinks)"
+  },
+  {
+    "id": "8d04ebf6-87fd-4c99-9b14-b957380c2b50",
+    "component_name": "Lightweight Composite Decking"
+  },
+  {
+    "id": "bb0cdd73-52cd-4890-a137-40c65443e211",
+    "component_name": "Lightweight Composite Siding"
+  },
+  {
+    "id": "6311315c-a5b3-4bec-8015-a20d037eb5fe",
+    "component_name": "Lightweight PET Water/Soda Bottle"
+  },
+  {
+    "id": "88d37c17-317e-4e4d-bb4b-4867efbffe72",
+    "component_name": "Lightweight Pre-Cast Concrete Panels"
+  },
+  {
+    "id": "433ebbe7-a465-46fb-921d-a4354715bcff",
+    "component_name": "Lightweight Prosthetic Limb"
+  },
+  {
+    "id": "c6decfab-549c-42ed-b917-eeecdb0e8691",
+    "component_name": "Lightweight Skis / Snowboard"
+  },
+  {
+    "id": "ab209036-9ecb-4729-afd1-cab2ef9e4e79",
+    "component_name": "Liquid Filtration Membranes (Industrial)"
+  },
+  {
+    "id": "95fc9bea-5b22-4b15-9995-1a9314780eba",
+    "component_name": "Lithium-Ion Battery Electrodes"
+  },
+  {
+    "id": "73f96099-b844-4269-85e5-95491ffc073c",
+    "component_name": "Livestock Containment Fencing (Composite Posts)"
+  },
+  {
+    "id": "a9068715-55a3-4fc3-bbac-3386b1279122",
+    "component_name": "Lubricants (Solid/Dry)"
+  },
+  {
+    "id": "7c16cf28-cff7-4c13-902b-2717fe139924",
+    "component_name": "Luggage Tags"
+  },
+  {
+    "id": "5cc7f2fc-eb8d-49dc-a55e-e264fb4807f5",
+    "component_name": "Luggage Wheels"
+  },
+  {
+    "id": "64cb2484-3bfb-4746-8993-b9f574b6cdf1",
+    "component_name": "Magnetic Shielding Materials"
+  },
+  {
+    "id": "662a7a8b-f0a3-42f6-91ec-ec59d9f19606",
+    "component_name": "Manhole Covers/Frames (Composite)"
+  },
+  {
+    "id": "9fd3dad7-06dc-4092-a9ce-c671ea47edb7",
+    "component_name": "Marine Gelcoat (Boat Hull)"
+  },
+  {
+    "id": "570ea8a3-855f-4915-9370-2b5335c464e6",
+    "component_name": "Marine Pier/Piling Wraps"
+  },
+  {
+    "id": "fd904b57-6a4e-4e0a-9682-175ed33fc27a",
+    "component_name": "Marine Propellers (Composite)"
+  },
+  {
+    "id": "5c01ba4d-2751-4736-a40f-dc0f12b5e747",
+    "component_name": "Mattresses (Foam)"
+  },
+  {
+    "id": "811c67a4-5e58-4f75-abb3-f3cf5ecb15fc",
+    "component_name": "Medical Diagnostic Lab-on-a-Chip"
+  },
+  {
+    "id": "6236806b-013a-4861-9fb2-bcda3bd9a918",
+    "component_name": "Medical Implant (Bone Scaffold)"
+  },
+  {
+    "id": "52684097-8ebe-4e8f-ad23-b225ea67a104",
+    "component_name": "Memristor Devices"
+  },
+  {
+    "id": "963a5005-0924-48cb-b12d-a6fa4f922181",
+    "component_name": "Military Vehicle Armor"
+  },
+  {
+    "id": "1d2bbd0b-d0fd-4ea5-86cf-d5143814224c",
+    "component_name": "Mirrors (Anti-fog Coating)"
+  },
+  {
+    "id": "55a4dcae-7f72-4725-a7b2-34cb13ffa180",
+    "component_name": "Mouse Pad"
+  },
+  {
+    "id": "568062e9-6fa2-49bf-978e-712ffa3842f6",
+    "component_name": "Neural Interfaces/Implants"
+  },
+  {
+    "id": "6ad7ddb4-c093-4225-9a48-df172bc2e4ba",
+    "component_name": "Oil Absorption Materials"
+  },
+  {
+    "id": "8aa48510-0f85-4f96-964f-3c97bbc25ca9",
+    "component_name": "Paintball/Airsoft Gear"
+  },
+  {
+    "id": "e8d82875-d535-4cbb-84a1-ae2f0610c2e3",
+    "component_name": "Paper Shredders"
+  },
+  {
+    "id": "c703af47-476b-4393-903e-2809289ff639",
+    "component_name": "Passenger Car Tires"
+  },
+  {
+    "id": "e16f0c47-38eb-4f38-974d-5bba9e026ab7",
+    "component_name": "Pens/Pencils (Casings)"
+  },
+  {
+    "id": "9f410f92-67d1-452d-a291-dcf3db1dbd42",
+    "component_name": "Perovskite Solar Cells"
+  },
+  {
+    "id": "f0b2a88f-d746-4226-96c0-19de76753ad8",
+    "component_name": "Personal Alert Systems (Casings)"
+  },
+  {
+    "id": "b951b91b-cebc-4d86-a930-2cd7aa957fd5",
+    "component_name": "Pesticide Delivery Systems"
+  },
+  {
+    "id": "bee05571-5eb6-4289-a14d-a3c3bf40c377",
+    "component_name": "Pharmaceutical Packaging"
+  },
+  {
+    "id": "8d61f6a9-39ad-4871-9f58-94523956ec1d",
+    "component_name": "Phase Change Materials (Enhanced)"
+  },
+  {
+    "id": "2cd12a1d-ea30-45e1-885e-f2ff513982e2",
+    "component_name": "Photocatalytic Coatings (Air/Water Purification)"
+  },
+  {
+    "id": "b4d6d8b1-822e-4fa6-bffa-5e1489d17140",
+    "component_name": "Photodetectors"
+  },
+  {
+    "id": "59d8a1d2-60a4-4450-893d-12c2fcf86963",
+    "component_name": "Picture Frames (Composite)"
+  },
+  {
+    "id": "d4e7b739-1b16-4044-9e5f-c35d73d9318b",
+    "component_name": "Piezoelectric Energy Harvesters (Enhanced)"
+  },
+  {
+    "id": "3384819d-5b00-46b2-b90e-ed78e7997614",
+    "component_name": "Pillows (Cooling)"
+  },
+  {
+    "id": "de064316-cc6c-4886-92a2-68b1c4d5d049",
+    "component_name": "Pipeline Repair Wraps (Composite)"
+  },
+  {
+    "id": "c864104b-f833-487b-98ca-5c881fec3a37",
+    "component_name": "Plywood / Oriented Strand Board (OSB)"
+  },
+  {
+    "id": "1e04e08c-c558-47ab-9fb9-a978478dee66",
+    "component_name": "Pocket Knives/Multi-tools"
+  },
+  {
+    "id": "8309b167-7409-4814-8cac-d154b128aad5",
+    "component_name": "Power Cable Shielding"
+  },
+  {
+    "id": "e21db223-9063-4f19-b39e-777841b53d2d",
+    "component_name": "Power Cords/Charging Cables (Enhanced Durability)"
+  },
+  {
+    "id": "4bef49e4-796c-4f83-a22d-959017cd587c",
+    "component_name": "Power Transmission Belts (V-belts/Timing Belts)"
+  },
+  {
+    "id": "f4399481-cb3f-4e61-a554-24b4b45ed7a2",
+    "component_name": "Printed Circuit Board (PCB) Substrates"
+  },
+  {
+    "id": "40ecb009-dc93-4aa1-bbf9-34f3737d9e71",
+    "component_name": "Professional Camera Bodies/Lenses"
+  },
+  {
+    "id": "b3b3130a-68ff-40d8-9215-475c4ed891da",
+    "component_name": "Projector Casings"
+  },
+  {
+    "id": "ec91ff58-1cfa-4110-b511-60ac2cce9d6a",
+    "component_name": "Protective Coatings for Bridges/Structures"
+  },
+  {
+    "id": "d2c15609-e4a5-459e-a840-090cd5829aac",
+    "component_name": "Pump Components (Impellers/Casings)"
+  },
+  {
+    "id": "1df69f08-da3d-4a24-b686-5634da0ebf59",
+    "component_name": "Quantum Dots (Graphene-Based)"
+  },
+  {
+    "id": "4978a333-1a0c-41e0-9477-d4528419c3e4",
+    "component_name": "Radiation Detectors"
+  },
+  {
+    "id": "b0ee3c6e-ae78-43b2-b54e-a03c0199c9c1",
+    "component_name": "Radiation Shielding Materials (Flexible)"
+  },
+  {
+    "id": "564d5766-17b4-49a9-a956-69c93495e482",
+    "component_name": "Railway Components (Composite Sleepers/Ties)"
+  },
+  {
+    "id": "0df8833d-2e9d-49fa-b46c-2c88889ff85e",
+    "component_name": "Raincoats/Umbrellas"
+  },
+  {
+    "id": "334378d6-19a8-4a3c-95b0-4de90a3d6998",
+    "component_name": "Refrigerator Water/Ice Dispenser"
+  },
+  {
+    "id": "744d901e-5ae3-40c8-9af6-a74a6150c0c9",
+    "component_name": "Resistors (Conductive Element)"
+  },
+  {
+    "id": "ebe17da5-6e2b-4d67-9894-11c2d9fc248b",
+    "component_name": "Reusable Coffee Filters (Mesh)"
+  },
+  {
+    "id": "49e412c4-5cff-4a68-aac9-99e720643b5c",
+    "component_name": "RFID Tag (Security Label)"
+  },
+  {
+    "id": "416e5a81-6e8b-42ae-b377-96ad460e1b85",
+    "component_name": "Road Marking Paint"
+  },
+  {
+    "id": "e7f3021d-1f46-4834-bfa7-80583377628c",
+    "component_name": "Robotic Vacuum Cleaner"
+  },
+  {
+    "id": "20fa279f-d70f-4a01-be4a-ed0152efcb52",
+    "component_name": "Running Shoes"
+  },
+  {
+    "id": "1c638a07-09d4-4836-9c1e-1dfa2f88359d",
+    "component_name": "Safety Glasses"
+  },
+  {
+    "id": "59c16cfe-7250-4141-8cd4-76bfa6bda35f",
+    "component_name": "Satellite Components"
+  },
+  {
+    "id": "ea8af358-f7d8-4ea2-b0ce-1f7c277071a1",
+    "component_name": "Scientific Instrument Components"
+  },
+  {
+    "id": "9fb4891b-cd6b-4efa-9bbc-820af42c69c0",
+    "component_name": "Scissors (Household/Office)"
+  },
+  {
+    "id": "c8887626-eafb-46d3-9b10-d6f61a1728aa",
+    "component_name": "Screwdriver Tips (Consumer Grade)"
+  },
+  {
+    "id": "90dbcf88-0739-44f2-b41c-50bf7bdf1ff8",
+    "component_name": "Self-Healing Materials (Coatings/Composites)"
+  },
+  {
+    "id": "bcaba79b-2ee0-4dae-af92-61dc7b08a7b5",
+    "component_name": "Shock Absorber Seals/Fluid"
+  },
+  {
+    "id": "9aa2bad0-da9c-4938-8419-258474ecbcd5",
+    "component_name": "Shoe Insoles"
+  },
+  {
+    "id": "c2f81102-d9cd-40bb-be0d-7cda0b284951",
+    "component_name": "Shower Heads/Faucets"
+  },
+  {
+    "id": "81890117-911e-478a-96a0-85e379045ff6",
+    "component_name": "Skateboards (Decks)"
+  },
+  {
+    "id": "e48c15d8-eb8f-45f9-98a8-4c5d490cb0d7",
+    "component_name": "Sleeping Bags"
+  },
+  {
+    "id": "cb1c77d4-50b2-4b08-bf27-31daf90565b3",
+    "component_name": "Smart Blinds / Window Openers"
+  },
+  {
+    "id": "852661d3-c5da-4725-b0db-2450bc925652",
+    "component_name": "Smart Grids"
+  },
+  {
+    "id": "c1b03033-ae0e-4188-91bc-3e14958616c5",
+    "component_name": "Smart Home Hub"
+  },
+  {
+    "id": "c25f6e3e-2593-49a3-99ea-224e63a5dd42",
+    "component_name": "Smart Thermostat / HVAC Zone Valve"
+  },
+  {
+    "id": "2f75c9be-30cd-44ba-8852-ff47791b30c0",
+    "component_name": "Smart Watch"
+  },
+  {
+    "id": "ae78cefb-fbf4-492f-8ef7-8b9b929125b7",
+    "component_name": "Smart Windows (Electrochromic)"
+  },
+  {
+    "id": "b821d143-84d4-421f-8452-b525a69a49c0",
+    "component_name": "Smartphone/Tablet"
+  },
+  {
+    "id": "c320ad90-6f17-4799-ba19-bcfec87d0caf",
+    "component_name": "Snowshoes"
+  },
+  {
+    "id": "604da0da-0fbc-46d8-972c-e4b88162c272",
+    "component_name": "Socks"
+  },
+  {
+    "id": "d5067ee3-37db-479e-a346-163947d52611",
+    "component_name": "Soil Moisture Sensors"
+  },
+  {
+    "id": "e87d8b00-9429-4f02-a72d-74f9e3adfeeb",
+    "component_name": "Solar Panel Backsheets"
+  },
+  {
+    "id": "91b386db-6b51-4c2a-837e-30097fbff1d8",
+    "component_name": "Solid-State Battery Components"
+  },
+  {
+    "id": "754941f9-69aa-45bf-82c4-75ad487aef45",
+    "component_name": "Sound Absorption Materials (Building)"
+  },
+  {
+    "id": "5f1e45eb-e9cf-4ca7-be7e-2d0c329e8027",
+    "component_name": "Spacecraft Thermal Management"
+  },
+  {
+    "id": "4d922167-5e8d-4df2-9d98-f987b8c34fca",
+    "component_name": "Speaker Cones/Diaphragms (Larger Audio)"
+  },
+  {
+    "id": "8158f9c2-2bd4-44c5-96c0-3f426aa96253",
+    "component_name": "Specialized Sensor Housings"
+  },
+  {
+    "id": "82baf3a3-8e7d-4f61-ade4-16035456b11a",
+    "component_name": "Spintronic Devices"
+  },
+  {
+    "id": "9671757a-e38d-4e97-8082-3b3a2fd17e6c",
+    "component_name": "Sports Watch (GPS)"
+  },
+  {
+    "id": "2feb5860-46af-47b2-845f-7d2d58b7b3ba",
+    "component_name": "Staplers/Hole Punchers"
+  },
+  {
+    "id": "b5626cca-3043-4c7d-bd8c-92b7d7a0df83",
+    "component_name": "Stealth Coatings"
+  },
+  {
+    "id": "0747d5bb-db2e-4298-98b8-f38892b388b4",
+    "component_name": "Steam Mop / Steam Cleaner"
+  },
+  {
+    "id": "a417a206-261a-48cc-a601-db3c831f9c6f",
+    "component_name": "Sulfur or Silicon Anode Batteries"
+  },
+  {
+    "id": "11ff0b02-6ab4-49b3-be88-82c0e0a1179a",
+    "component_name": "Sunroof/Window Seals"
+  },
+  {
+    "id": "8365f274-4620-41f3-9ee9-b5ed198492bd",
+    "component_name": "Supercapacitor Power Bank"
+  },
+  {
+    "id": "9ad8ca7a-f069-4473-9147-46d40ec74341",
+    "component_name": "Surfboards/Wakeboards"
+  },
+  {
+    "id": "94e109ed-359e-4cae-a543-f46297d7f548",
+    "component_name": "Surgical Tools (Coating)"
+  },
+  {
+    "id": "f59bc8b9-cf5c-4f8a-8494-24e4207493ad",
+    "component_name": "Swimwear"
+  },
+  {
+    "id": "4f90c7df-8ad1-4552-b09e-df612d2b1f30",
+    "component_name": "Tape Measures"
+  },
+  {
+    "id": "76dd9973-2b6a-4696-b37c-e85ecdf27eeb",
+    "component_name": "Tennis Racket"
+  },
+  {
+    "id": "aacede52-68f7-41a0-ac5d-faf9f18d8fd7",
+    "component_name": "Tents/Tarps"
+  },
+  {
+    "id": "33738d30-7d8c-4bd6-8c6e-ef4ffda253dd",
+    "component_name": "Terahertz Detectors/Emitters"
+  },
+  {
+    "id": "211f3745-7d02-435b-ae00-07fcbeba67f2",
+    "component_name": "Thermal Base Layers"
+  },
+  {
+    "id": "bc210e1c-7989-4bfd-8ac5-fdebd7df940a",
+    "component_name": "Thermal Camouflage Materials"
+  },
+  {
+    "id": "aca798bf-d3b3-443c-91c6-3ae15d247931",
+    "component_name": "Thermal Interface Pads (beyond paste)"
+  },
+  {
+    "id": "6aaa4b96-9059-407f-8f40-7a05bea3cba8",
+    "component_name": "Thermally Conductive Tooling & Molds"
+  },
+  {
+    "id": "8d653759-379c-4aed-ad7f-cd15a6e62431",
+    "component_name": "Thermoelectric Generator Components"
+  },
+  {
+    "id": "48f66285-cf50-4794-b40e-ef45f80fe92f",
+    "component_name": "Tissue Engineering Scaffolds"
+  },
+  {
+    "id": "ab5ad4fd-2e76-4973-97d5-db4d0cdc6508",
+    "component_name": "Tool Boxes (Plastic)"
+  },
+  {
+    "id": "ca18c3f1-617a-42c8-b4be-91970647ef80",
+    "component_name": "Transformer Oil"
+  },
+  {
+    "id": "8cc01610-841e-4445-8ca2-201941745fc8",
+    "component_name": "Transparent Antennas"
+  },
+  {
+    "id": "2e726493-2666-4e1d-bf2b-d449e42ed0c0",
+    "component_name": "Transparent Conductive Films"
+  },
+  {
+    "id": "d9e81cc8-e6da-441f-a8b6-e43a05fdf771",
+    "component_name": "Tunnel Lining Sealants"
+  },
+  {
+    "id": "b811044b-70b8-4401-90ed-9d1452a5513e",
+    "component_name": "TV Remote Control"
+  },
+  {
+    "id": "4f62e4fd-8cc6-4c4f-92b5-7acf7127a8d8",
+    "component_name": "Underwear"
+  },
+  {
+    "id": "59b77640-a970-4a77-aa43-8b254d914ecc",
+    "component_name": "Upholstery Fabric"
+  },
+  {
+    "id": "6c5183fb-6532-467a-ae97-76393d71bf06",
+    "component_name": "Valves (Seats/Seals)"
+  },
+  {
+    "id": "89597d49-4549-419d-8d8f-cfc90dfce005",
+    "component_name": "Vehicle Sensors (Integrated)"
+  },
+  {
+    "id": "680e2e70-3284-44c5-a680-18fb51615632",
+    "component_name": "VR/AR Headset"
+  },
+  {
+    "id": "3d9f0197-406e-422a-b36c-514cdc26aa2f",
+    "component_name": "Washing Machine"
+  },
+  {
+    "id": "36667e88-60ef-49d4-8164-82e8ac9d2127",
+    "component_name": "Watch Bands (Rubber/Silicone)"
+  },
+  {
+    "id": "79822a89-cf9e-4fa6-bf89-37127a27e192",
+    "component_name": "Water Bottles (Insulated)"
+  },
+  {
+    "id": "398c5669-5b06-44f0-8bfe-3ee92f766c63",
+    "component_name": "Water Piping (PEX, PVC)"
+  },
+  {
+    "id": "03bba2c6-4ae1-4f42-a4aa-fe5eea764678",
+    "component_name": "Water Storage Tanks (Liners/Coatings)"
+  },
+  {
+    "id": "348da614-5254-4340-8add-4c448ef1967f",
+    "component_name": "Wave Energy Converter Components"
+  },
+  {
+    "id": "79235672-7546-466e-9d14-d1f55b47d281",
+    "component_name": "Wearable \"Smart\" E-Textile"
+  },
+  {
+    "id": "b7dd9ef1-a4ed-4b5f-aece-5b9fdbf5c138",
+    "component_name": "Wearable Health Monitors (Skin Patches)"
+  },
+  {
+    "id": "bc9c5a75-a57e-4299-a86c-ca077d9a05a3",
+    "component_name": "Wearable Supercapacitors"
+  },
+  {
+    "id": "6d1ff080-56bc-4b45-b68a-d3651dacdb5a",
+    "component_name": "Welding Electrodes"
+  },
+  {
+    "id": "02b0dbd6-0216-4a96-89c2-9977b4a5cf8d",
+    "component_name": "Wetsuit"
+  },
+  {
+    "id": "df2a66ec-ae8c-4a03-bd7e-d3eab0b1531f",
+    "component_name": "Whiteboard/Dry Erase Board"
+  },
+  {
+    "id": "79e83ba8-9d79-45b5-85a3-172ebb781023",
+    "component_name": "Wind Turbine Blade Coatings"
+  },
+  {
+    "id": "34bf5ea1-2034-4696-875e-2591c795ab6a",
+    "component_name": "Wire & Cable Insulation/Jacketing"
+  },
+  {
+    "id": "36f2e58a-0b50-4006-a915-3c5d71b87230",
+    "component_name": "Wireless Earbuds"
+  },
+  {
+    "id": "768d785b-ce5a-4db4-82e0-c16c24fa068a",
+    "component_name": "Wiring Harness Tapes/Sleeves"
+  },
+  {
+    "id": "9de5f545-dd8f-4b1a-89d9-a5acf611f16e",
+    "component_name": "Work Gloves"
+  },
+  {
+    "id": "34bc6dda-8b2c-48d1-a18e-bf4869721038",
+    "component_name": "Wrenches/Pliers (Consumer Grade)"
+  },
+  {
+    "id": "6749a5d1-9850-4cdf-92cb-c3e2f1331322",
+    "component_name": "X-Ray Shielding (Apron/Flexible Material)"
+  },
+  {
+    "id": "dfc952a8-08e8-4846-943d-4c5e003cc587",
+    "component_name": "Yoga Mat"
+  }
+]

@@ -1,0 +1,301 @@
+id,legacy_name,new_component_name,rationale
+cc18a2ec-c257-4cdf-a732-40c2c2db9f5c,Green High-Strength Concrete Mix,Concrete Admixture (Fractal Reinforcement),"Identifies the B2B product form as an admixture and its function for reinforcement, eliminating vague 'green' branding."
+08a92a8f-46ae-473f-a9bb-cf3e4ee531b0,Silent-Series Dishwasher,Quiet-Operation Actuator Components (Noise Reduction),"Shifts from B2C appliance to B2B actuator components enabling quiet operation, removing brand language."
+46a5116d-0cf2-4a76-af4b-7e94216ca07e,Smart Athletic Shirt,Conductive Textile Fabric (Sensing/Monitoring),"Focuses on the B2B conductive fabric component for sensing functions, eliminating B2C clothing reference."
+9ecc5374-20d9-4f89-be2c-060d9c25ef26,Smart Bandage,Wound Dressing Membrane (Conductive/Healing),"Converts to B2B membrane component with conductive properties for healing, removing vague 'smart' descriptor."
+980be886-231f-45a4-902b-53cc031411db,Stainless Steel Appliance Coating,Appliance Surface Coating (Corrosion Resistance),"Specifies the B2B coating for corrosion resistance on appliance surfaces, eliminating brand-like material mimicry."
+8f2879d1-ad89-42c4-8fca-5e0a72a8372a,3D Printer Beds/Surfaces,Printer Bed Coating (Adhesion/Thermal),Identifies the B2B coating for printer beds enhancing adhesion and thermal properties.
+4fbb109f-62da-466b-bd5a-d2f6f035c4d4,3D Printing Reinforcement,Filament Additive (Mechanical Reinforcement),Focuses on the B2B additive for filaments providing mechanical reinforcement.
+c37a88ae-c64c-4118-9328-4858b1f1f0ed,3D-Printed Concrete Structures,Concrete Extrusion Admixture (Strength/Printability),Shifts to B2B admixture for concrete extrusion enhancing strength and printability.
+5df99f79-aaaf-4a9e-b9ce-2afe9b2a85a3,Acoustic Dampening Materials (Electronics),Electronic Enclosure Dampening Compound (Vibration Absorption),Specifies B2B compound for enclosures absorbing vibrations in electronics.
+4406059d-9e71-4981-89d5-71c10f837e57,Acoustic Metamaterials,Metamaterial Composite (Sound Manipulation),Identifies B2B composite for metamaterials enabling sound manipulation.
+a8a4aca9-8377-4a40-a036-cb9cd3deb44f,Advanced Water Purification Filter (Personal/Home),Filtration Membrane (Contaminant Removal),"Converts to B2B membrane for filtration with contaminant removal function, eliminating B2C context."
+6fcfd01b-5ff3-4756-952f-2ba45294623e,Aerogels (Graphene-Based),Aerogel Composite (Thermal Insulation),Focuses on B2B composite form for aerogels providing thermal insulation.
+f7a92e71-153a-4b0e-be0c-3dd47cfd8d99,Aerospace Actuators,Actuator Composite (Lightweight/Strength),Specifies B2B composite for actuators emphasizing lightweight and strength properties.
+100ea177-91e8-4345-871c-6533f654f0d7,Aerospace Structural Components,Structural Composite (High-Strength/Lightweight),Identifies B2B composite for structural components with high-strength and lightweight functions.
+4d0ce6e0-4b1f-4367-bd6a-cd66e879dc0b,Agricultural Films (Greenhouse/Mulch),Polymer Film Additive (Barrier/Durability),Shifts to B2B additive for polymer films enhancing barrier and durability.
+66828ad3-86ce-4fe3-bad7-de9b9b2e4eb3,Air Mattresses,Inflatable Membrane (Puncture Resistance),Converts to B2B membrane for inflatables with puncture resistance function.
+0af0ed33-4efc-4970-8ced-1efce47666cc,Air Purifier,Filtration Media (Adsorption/Efficiency),Focuses on B2B media for filtration enhancing adsorption and efficiency.
+c701c066-7937-4d46-afe2-6e39ac1b99e8,Aircraft Lightweight Composites,Aircraft Panel Composite (Lightweight/Strength),Specifies B2B composite for aircraft panels with lightweight and strength properties.
+b813a92d-2ff8-42cf-97d3-f540abb53b5b,Airport Runway Repair Materials,Asphalt Repair Compound (Durability/Reinforcement),Identifies B2B compound for asphalt repair providing durability and reinforcement.
+e613e131-06a8-4866-b282-12188e99152a,Aluminum Beverage Can (Internal Liner),Can Liner Coating (Barrier/Corrosion),Shifts to B2B coating for can liners enhancing barrier and corrosion resistance.
+ed6cfea7-4e74-464f-a660-7f9a2ea592f3,Antennas (Printed),Printed Antenna Ink (Conductive),Focuses on B2B ink for printed antennas providing conductivity.
+8803efbb-3eb2-4aea-8639-a9a82dd0902d,Anti-Bacterial Hospital Surface Coating,Surface Coating (Anti-Microbial),Specifies B2B coating for surfaces with anti-microbial function.
+052f9d96-aedb-4cad-90c5-38032a617f97,Anti-Corrosion Coatings (Machinery),Machinery Coating (Corrosion Resistance),Identifies B2B coating for machinery providing corrosion resistance.
+60e3503f-2a1c-41e8-a2ab-3550dea22f8d,Anti-Corrosion Metal Paint,Metal Paint Additive (Corrosion Inhibition),Converts to B2B additive for metal paints inhibiting corrosion.
+aa20e37d-005a-4a9e-8e1f-7848143703ae,Anti-Corrosion Undercoating,Underbody Coating (Corrosion Protection),Focuses on B2B coating for underbodies providing corrosion protection.
+f8b82615-04e1-4ec6-8c1d-c49b21ac9d19,Anti-Graffiti Coatings,Surface Coating (Graffiti Resistance),Specifies B2B coating for surfaces resisting graffiti.
+cc0bdcde-05cf-4622-8ef3-1d6e9e4a317f,Anti-Icing Coatings,Surface Coating (Ice Repellency),Identifies B2B coating for surfaces providing ice repellency.
+0be47d55-176f-4431-9ab8-97ebbfd66b32,Anti-Static Coatings/Flooring (Manufacturing),Flooring Coating (ESD Protection),Shifts to B2B coating for flooring with ESD protection function.
+a4a65798-a657-4dbe-ac76-a02d76c82d6e,Anti-Static Epoxy Garage Floor Coating,Epoxy Floor Coating (ESD),Focuses on B2B epoxy coating for floors providing ESD properties.
+56c36c18-eced-4a19-b3ff-265df8bb94b6,Anti-Static Hospital Flooring,Hospital Floor Compound (ESD),Specifies B2B compound for hospital floors with ESD function.
+d72555e3-c959-40b6-9622-e857b36b0a48,Aquaculture Nets/Cages,Netting Composite (Strength/Durability),Converts to B2B composite for netting enhancing strength and durability.
+48001ad7-e743-4984-afb8-3023fe1be56b,Archery Bows/Arrows,Bow Limb Composite (Flexural Strength),Identifies B2B composite for bow limbs providing flexural strength.
+55f773fd-4c05-4c4d-ba2e-832def10ed57,Area Rugs/Carpets,Carpet Backing Compound (Durability/Anti-Static),Shifts to B2B compound for carpet backing with durability and anti-static functions.
+1858beb9-7b80-4b4a-810e-30b21ba4a725,Art Supplies (Pigments/Binders),Pigment Binder Additive (Conductivity/Dispersion),Focuses on B2B additive for pigment binders enhancing conductivity and dispersion.
+50ae2827-4a25-4307-954e-1d600221f178,Artificial Muscles/Actuators (Non-Electrothermal),Actuator Material (Flexible/Conductive),Specifies B2B material for actuators with flexible and conductive properties.
+0c545686-0639-447a-918b-758528397c52,Asphalt Sealant (Driveway),Asphalt Sealant Additive (Durability/Barrier),Identifies B2B additive for asphalt sealants providing durability and barrier functions.
+99ea064c-06c0-40ec-8026-68db7c660cda,At-Home Cancer Screening Test,Diagnostic Sensor Film (Biosensing),Converts to B2B sensor film for diagnostics with biosensing function.
+4c7a4ac3-7ef0-4910-87c7-980b151a2307,"Automotive Composite Body Panels (e.g., Bumper)",Body Panel Composite (Lightweight/Impact),Focuses on B2B composite for body panels with lightweight and impact resistance.
+3ec939f5-917c-45ce-a795-d84086450284,Automotive Composite Lightweight Components,Lightweight Component Composite (Structural),Specifies B2B composite for lightweight automotive components with structural function.
+7fda8e07-54c9-4b9b-835a-c82d09f1c026,Automotive Engine Lubricant,Lubricant Additive (Friction Reduction),Clarifies B2B additive for lubricants reducing friction.
+1b01d53c-bbe7-4eee-a72e-966ae5435669,Automotive Fuel Rail Covers,Fuel Rail Cover Composite (Thermal/Strength),Identifies B2B composite for fuel rail covers with thermal and strength properties.
+ff74f516-13d8-46f8-8401-77e97590c0d3,Automotive Interior Cabin HVAC Vents,HVAC Vent Composite (Lightweight/Durability),Shifts to B2B composite for HVAC vents emphasizing lightweight and durability.
+dfd8c0a2-e80e-43b9-a80c-80844c6bbe7e,Backpacks,Backpack Fabric Coating (Waterproof/Strength),Focuses on B2B coating for backpack fabrics providing waterproofing and strength.
+fc6f9482-9035-4a8a-9a14-944afed972cf,Ballistic Panels (Body Armor),Ballistic Panel Composite (Impact Resistance),Specifies B2B composite for ballistic panels with impact resistance.
+4a602c55-31ef-46aa-9983-8472ac8705c3,Baseball Bat (Composite),Bat Barrel Composite (Strength/Vibration Dampening),Identifies B2B composite for bat barrels enhancing strength and vibration dampening.
+a29698ff-698b-42b5-97bf-3fc7752f06b1,Bearings (Coatings/Composites),Bearing Coating (Wear Resistance),Converts to B2B coating for bearings providing wear resistance.
+231e34f5-8f2e-4c10-89a4-a8472d1f0d6a,Bicycle Helmet,Helmet Shell Composite (Impact Absorption),Focuses on B2B composite for helmet shells with impact absorption function.
+f354ccf3-ad2b-4fa2-b3f5-5656b585f931,Binoculars/Telescopes (Casings),Optical Device Casing (Lightweight/Durable),Specifies B2B casing for optical devices emphasizing lightweight and durability.
+cd89ad87-4cd7-45c8-a9ef-54a43e95ad0e,Biocompatible Coatings for Medical Devices,Device Coating (Biocompatible/Adhesion),Identifies B2B coating for medical devices with biocompatible and adhesion properties.
+a8195d6c-e9a5-4fba-bd65-05897a7a1248,Blast-Resistant Curtains/Liners,Protective Liner Fabric (Blast Resistance),Shifts to B2B fabric for protective liners providing blast resistance.
+e6553930-ab87-49b9-9ded-3b578e3e9b8f,Blender / Food Processor,Small Appliance Motor Gasket (Wear-Resistant),Focuses on B2B gasket for small appliance motors with wear resistance.
+40cfdf17-7982-4356-9221-b931e242e8b4,Bookbinding Materials,Binding Adhesive Additive (Strength/Flexibility),Specifies B2B additive for binding adhesives enhancing strength and flexibility.
+600b1d24-aac5-4b18-8c71-f867c0c2945c,Brake Pads/Rotors,Brake Pad Composite (Friction/Thermal),Identifies B2B composite for brake pads with friction and thermal properties.
+f16bb7de-4529-4187-8eeb-291bbc383f41,Camping Chairs/Tables,Furniture Frame Composite (Lightweight/Strength),Converts to B2B composite for furniture frames providing lightweight and strength.
+2e640595-06af-4e6c-aea8-82a910a3d2b9,Canvas/Awnings,Canvas Fabric Coating (UV/Weather Resistance),Focuses on B2B coating for canvas fabrics enhancing UV and weather resistance.
+3fc51cd4-7650-403b-b169-22c54abd98e9,Capacitors (Dielectric Material),Dielectric Additive (Capacitance Enhancement),Specifies B2B additive for dielectrics enhancing capacitance.
+87533659-d5cd-44e0-9bbd-56ce72bb2c5f,Car Battery (12V Lead-Acid),Battery Electrode Additive (Conductivity),Identifies B2B additive for battery electrodes improving conductivity.
+8ad0df58-3cd5-4057-9351-36db1b80aba3,Catalyst Support Structures (Textile),Catalyst Support Fabric (Porous/Conductive),Shifts to B2B fabric for catalyst supports with porous and conductive properties.
+42f7f790-b784-41f7-bdaf-78b3260a4f40,Caulking Guns,Gun Barrel Composite (Durability),Focuses on B2B composite for gun barrels providing durability.
+15da701e-fd73-4712-bd55-2f9d0bf0dcd8,Cement (General Additive),Cement Admixture (Strength Enhancement),Specifies B2B admixture for cement enhancing strength.
+a020298f-c789-4671-9add-ddaa9ae41986,Chemical Protective Suits,Protective Suit Fabric (Barrier/Chemical Resistance),Identifies B2B fabric for protective suits with barrier and chemical resistance.
+6c15d9fc-e747-49a6-8abb-74ef659cceba,Cleanroom Wipes,Wipe Fabric (Anti-Static/Absorbent),Converts to B2B fabric for wipes with anti-static and absorbent functions.
+f81e8519-7ced-4b0b-a2ba-5654d519d636,Climbing Harness,Harness Webbing Composite (Tensile Strength),Focuses on B2B composite for harness webbing providing tensile strength.
+be07d11a-007a-428f-8742-7480e4e25c5c,Clothes Dryer Drum,Dryer Drum Coating (Wear Resistance),Specifies B2B coating for dryer drums enhancing wear resistance.
+8bbc8f99-22f1-491c-80e1-0aed4cd056be,Computer Mouse,Mouse Casing Composite (Ergonomic/Durable),Identifies B2B composite for mouse casings with ergonomic and durable properties.
+6fdf046b-ef8c-4b38-9c96-9a1ccc25200d,Conductive Adhesives,Adhesive Additive (Conductivity),Shifts to B2B additive for adhesives providing conductivity.
+5f46f51e-cf56-4e56-a95c-f24f4983b8ed,Conductive Seat Heaters,Seat Heater Element (Conductive Fabric),Focuses on B2B conductive fabric for seat heater elements.
+34d4d2b2-80cd-49e8-8984-e8b2aa5dafe9,Contact Lens Cases,Lens Case Composite (Anti-Microbial),Specifies B2B composite for lens cases with anti-microbial function.
+49313b22-71d9-477f-8ffc-480c4034d007,Conveyor Belts,Belt Composite (Abrasion Resistance),Identifies B2B composite for conveyor belts providing abrasion resistance.
+639b4e25-09d1-46b6-8949-dd0983a6e36a,Cookware (Pots/Pans),Cookware Coating (Non-Stick/Thermal),Converts to B2B coating for cookware with non-stick and thermal properties.
+cde0f984-7664-4596-9589-57f48a214ce2,Coolers/Insulated Boxes,Insulation Foam Additive (Thermal Efficiency),Focuses on B2B additive for insulation foams enhancing thermal efficiency.
+fa7c24a4-6d30-42c9-ab20-3e6432b2976d,Cordless Stick Vacuum,Vacuum Housing Composite (Lightweight/Durable),Specifies B2B composite for vacuum housings with lightweight and durable properties.
+f1a0bcec-9273-433d-a037-2a1a60cb23ca,Cosmetic Containers,Container Composite (Barrier/Lightweight),Identifies B2B composite for containers providing barrier and lightweight functions.
+afe7651e-cc72-4617-a86a-afac5ac25b4d,"Covers for Electronic Devices (eReaders, etc.)",Device Cover Composite (Protective/Conductive),Shifts to B2B composite for device covers with protective and conductive properties.
+acaa3d08-f75c-4b93-81a4-e17908a4a174,Crack Injection Resins (Concrete/Asphalt),Resin Additive (Adhesion/Strength),Focuses on B2B additive for resins enhancing adhesion and strength.
+8e7a2dd8-eb79-4bc7-b4f6-ec76ceb4825c,Curtains/Blinds (Thermal),Fabric Coating (Thermal Insulation),Specifies B2B coating for fabrics providing thermal insulation.
+c7f7eff4-1f9e-4fb0-96f0-cb7945e287aa,Cutlery (Knives),Blade Coating (Wear Resistance),Identifies B2B coating for blades enhancing wear resistance.
+b32be0ec-494c-475f-8e7c-111e78f080f3,Cutting Tools (Industrial Coating),Tool Coating (Hardness/Durability),Converts to B2B coating for cutting tools providing hardness and durability.
+db3b2ed9-b915-41a1-be4c-425b15f1231c,Data Center Server Casing,Server Casing Composite (Thermal/EMI Shielding),Focuses on B2B composite for server casings with thermal and EMI shielding functions.
+8ccf2365-c1a8-4f98-80f5-a0c0f5a964ed,Defense Equipment Casings,Equipment Casing Composite (Impact/EMI),Specifies B2B composite for defense casings with impact and EMI protection.
+4c6e60de-f2da-4fb1-82eb-9b347720a1ce,Dental Fillings (Composite),Filling Composite Additive (Strength/Biocompatible),Identifies B2B additive for dental composites enhancing strength and biocompatibility.
+00b5b7ec-eb3c-44bc-b4fb-5ff90d1d3282,Desalination Membranes,Membrane Composite (Permeability/Fouling Resistance),Shifts to B2B composite for membranes with permeability and fouling resistance.
+2ead394f-4103-4970-a18d-b35317439143,Desiccant Materials (Enhanced),Desiccant Additive (Adsorption Efficiency),Focuses on B2B additive for desiccants enhancing adsorption efficiency.
+64eea5b1-9c47-4cb2-bd31-153c3161365d,Desk Lamps (LED),Lamp Heatsink (Thermal Conduction),Specifies B2B heatsink for lamps providing thermal conduction.
+d68012d1-0463-4053-a1cd-f8eea760b7ca,Diaper Pails,Pail Liner Coating (Odor Barrier),Identifies B2B coating for pail liners with odor barrier function.
+56a9efeb-7a69-4817-bf86-cbf8226278df,Doorknobs/Handles,Handle Coating (Anti-Microbial/Wear),Converts to B2B coating for handles providing anti-microbial and wear resistance.
+6fa3534f-3ea3-4426-8f61-0ab31bf40401,Drill Bits/Saw Blades (Consumer Grade),Tool Bit Coating (Hardness),Focuses on B2B coating for tool bits enhancing hardness.
+59de93dd-2192-49a5-ae53-080e5204db43,Drink Coasters,Coaster Composite (Absorbent/Thermal),Specifies B2B composite for coasters with absorbent and thermal properties.
+63ca0764-5e18-409b-9bc2-e53bba14dab2,Drone Body/Propellers,Drone Frame Composite (Lightweight/Strength),Identifies B2B composite for drone frames providing lightweight and strength.
+459c8ee9-098d-4749-adb5-26842f3a17c4,Drug Delivery Systems,Delivery Membrane (Controlled Release),Shifts to B2B membrane for drug delivery with controlled release function.
+d1aa7563-01f5-4d4d-86b7-8976b01fd210,E-Bike Battery Pack,Battery Pack Enclosure (Composite/Thermal),Focuses on B2B enclosure for battery packs with composite and thermal properties.
+3beaa230-bf67-4b4b-b8f0-64e7a39ad451,Electric Stand Mixer,Mixer Gear Housing (Wear-Resistant),Specifies B2B housing for mixer gears with wear resistance.
+d04d5a3f-112f-4466-b73a-be233bd0763b,Electric Vehicle Battery Enclosure,EV Battery Enclosure (Composite/EMI Shielding),Enhances specificity with B2B composite enclosure providing EMI shielding.
+20beab9d-9ca7-46f0-9e36-2bae1c86709e,Electrical Conduit (Plastic),Conduit Compound (ESD/Strength),Identifies B2B compound for conduits with ESD and strength properties.
+0b71c135-16a7-4c05-ad37-33790e6e3437,Emergency Escape Hoods/Masks,Mask Filter Membrane (Filtration/Thermal),Converts to B2B membrane for masks providing filtration and thermal resistance.
+f1298753-6b18-43f8-b6a3-6cab366ad408,EMI Shielding (Aerospace/Defense),Shielding Coating (EMI Protection),Focuses on B2B coating for EMI shielding in aerospace and defense.
+0ccccf87-7b17-4527-ae12-f1a586af5c21,EMI Shielding Fabrics/Tapes,Shielding Fabric (EMI Absorption),Specifies B2B fabric for EMI shielding with absorption function.
+3574f139-6031-47d7-9dc9-74e75c327418,EMI-Shielded USB/HDMI Cable,Cable Shielding Compound (EMI Protection),Identifies B2B compound for cable shielding providing EMI protection.
+0a936b9e-e250-45f7-9c97-70fb4785f2df,Engine Air Filters/Cabin Air Filters,Filter Media (Filtration Efficiency),Shifts to B2B media for filters enhancing filtration efficiency.
+508fca42-7eaf-424b-802f-95ef32d3fd22,Environmental Remediation Sorbents,Sorbent Additive (Adsorption Capacity),Focuses on B2B additive for sorbents increasing adsorption capacity.
+8eb40767-365c-4e9c-bb07-7452ad93e7d8,EV Thermal Management Actuator,Actuator Component (Thermal Control),Specifies B2B component for EV actuators with thermal control function.
+ee072959-cad4-413b-9f7f-9b4c07a1391b,Exhaust System Components (Coatings),Exhaust Coating (Corrosion/Thermal),Identifies B2B coating for exhaust components providing corrosion and thermal resistance.
+09f5c0b6-7680-4a44-b01a-effbc5b0aacb,Fertilizer Coatings (Controlled Release),Fertilizer Coating (Release Control),Converts to B2B coating for fertilizers controlling release.
+cbdfc5a0-fb58-405b-be4f-b8c9ee2a49fe,Fire-Retardant Paint,Paint Additive (Flame Retardancy),Focuses on B2B additive for paints providing flame retardancy.
+fb90051d-2edc-403c-a066-16b30f05a0e5,Firefighter Turnout Gear,Protective Fabric (Thermal/Flame Resistance),Specifies B2B fabric for protective gear with thermal and flame resistance.
+d3a3cfb3-c513-4288-a5db-ffc92d88cbe7,Fishing Lures,Lure Body Composite (Durability),Identifies B2B composite for lure bodies providing durability.
+467d38a7-f8e9-416a-ad53-9a561d78d1a8,Fishing Rod,Rod Blank Composite (Flexural Strength),Shifts to B2B composite for rod blanks enhancing flexural strength.
+3984124a-760b-4d1e-9a26-8cd56152d6de,Flashlights/Headlamps,Lamp Housing Composite (Impact Resistance),Focuses on B2B composite for lamp housings providing impact resistance.
+a5f92bf8-f074-461f-8a57-8756d8c55f2f,Flexible Food Packaging Films,Packaging Film Additive (Barrier/Flexibility),Specifies B2B additive for packaging films enhancing barrier and flexibility.
+4f207f5d-21b4-4152-8e5e-301e64ea4443,Flexible Heaters,Heater Film (Conductive/Flexible),Identifies B2B film for heaters with conductive and flexible properties.
+8da3d944-e037-43c8-860a-31264dfce5f5,Flexible Solar Panel,Solar Panel Substrate (Flexible/Conductive),Converts to B2B substrate for solar panels providing flexibility and conductivity.
+ca507b9a-5ba2-4f5e-87f4-a5b810fe335a,Flexible/Bendable Smartphone Display,Display Substrate Film (Flexible/Conductive),Focuses on B2B film for display substrates with flexible and conductive functions.
+5363a70a-b851-4277-bc26-36644958c771,Food Storage Container,Container Compound (Barrier/Durability),Specifies B2B compound for containers enhancing barrier and durability.
+3e35e087-d652-47b5-a275-9bd4e3be6f37,Fuel Cell Components (Membranes/Electrodes),Fuel Cell Membrane Additive (Conductivity),Identifies B2B additive for fuel cell membranes improving conductivity.
+4501cf81-b36e-4a90-91e2-c0cdfdadd5a7,Fuel Lines/Hoses,Hose Compound (Barrier/Strength),Shifts to B2B compound for hoses providing barrier and strength.
+0bd48a0c-4cf4-4ee8-84d3-fea84568e953,Gaming Console,Console Casing Composite (Thermal/EMI),Focuses on B2B composite for console casings with thermal and EMI functions.
+49b156e1-f29b-45b2-bef6-323c5efb6085,Gas Separation Membranes,Separation Membrane (Selectivity/Permeability),Specifies B2B membrane for gas separation with selectivity and permeability.
+93f475ec-32ca-404c-83d9-1738eb10996f,Geotextiles (Civil Engineering),Geotextile Fabric (Reinforcement/Drainage),Identifies B2B fabric for geotextiles providing reinforcement and drainage.
+77fcf08a-380e-43fc-84d8-388be3015cc0,Geothermal Piping,Pipe Compound (Thermal/Corrosion Resistance),Converts to B2B compound for pipes with thermal and corrosion resistance.
+c09e7345-203e-4f36-b43a-ee262811590e,Golf Club (Driver),Club Shaft Composite (Flexural Strength),Focuses on B2B composite for club shafts enhancing flexural strength.
+f64d039a-f00f-4641-86d0-f00b446c9774,Graphene-Coated Fabrics (General),Fabric Coating (Conductive/Durable),Specifies B2B coating for fabrics providing conductive and durable properties.
+8d53fb15-6ce8-400b-b138-dfb246045e61,Graphene-Enhanced Cutting Fluids,Cutting Fluid Additive (Lubrication/Thermal),Identifies B2B additive for cutting fluids enhancing lubrication and thermal properties.
+9c9779a9-3e34-472a-9f82-47b13bcbc265,Grid-Scale Battery Components (Non-Electrode),Battery Separator Membrane (Conductivity/Safety),Shifts to B2B membrane for battery separators with conductivity and safety functions.
+ad86e8cd-0621-4edd-88aa-34a7494385bb,Grid-Scale Supercapacitors,Supercapacitor Electrode Additive (Capacitance),Focuses on B2B additive for supercapacitor electrodes enhancing capacitance.
+9622df5e-6c3e-4505-938b-44dc48940d57,Hard Drives and Memories,Storage Device Coating (Thermal/EMI),Specifies B2B coating for storage devices with thermal and EMI properties.
+1c9ec0bf-6103-4921-99f0-5d55ba23b29e,Headlight/Taillight Housings,Light Housing Composite (Impact/Thermal),Identifies B2B composite for light housings providing impact and thermal resistance.
+5e735c47-4597-4203-896c-2c289b08a282,Hearing Aids,Aid Casing Composite (Lightweight/Conductive),Converts to B2B composite for hearing aid casings with lightweight and conductive properties.
+1f2a78f4-1490-4df0-af68-07d4de448ea0,Heated Gloves / Boots,Heating Element Fabric (Conductive/Thermal),Focuses on B2B fabric for heating elements providing conductive and thermal functions.
+654b483c-2fb1-47cc-821b-4989018bfee7,High-Barrier PET Juice/Beer Bottle,PET Bottle Compound (Barrier Enhancement),Specifies B2B compound for PET bottles enhancing barrier properties.
+062644ac-2756-4e12-962a-471316147818,High-End Audio Cables,Cable Conductor Coating (Conductivity),Identifies B2B coating for cable conductors improving conductivity.
+7808dcdf-6950-4d3a-9c63-ad0982b1a4e8,High-End Coffee / Espresso Machine,Machine Boiler Coating (Thermal Efficiency),Shifts to B2B coating for machine boilers enhancing thermal efficiency.
+379eea34-9a02-4873-983e-4c90fffbf444,High-Frequency Transistors,Transistor Gate Material (Conductivity),Focuses on B2B material for transistor gates providing conductivity.
+99e83c49-5732-433d-b00c-fa773cef69b8,High-Performance Cement Grout,Grout Admixture (Strength/Flowability),Specifies B2B admixture for grouts enhancing strength and flowability.
+8bca3a25-3037-4a0f-aeb6-6a32f7010e1e,High-Voltage Insulators (Ceramic/Polymer),Insulator Coating (Dielectric Strength),Identifies B2B coating for insulators providing dielectric strength.
+2af24d97-c236-4615-ab9b-8194a65fd7a7,Hockey Stick,Stick Shaft Composite (Flexural Strength),Converts to B2B composite for stick shafts enhancing flexural strength.
+d3d1f9fa-dbd0-4895-aef0-88c32f1b5b12,Hot Press Dies,Die Coating (Thermal/Wear Resistance),Focuses on B2B coating for dies providing thermal and wear resistance.
+693d7270-8aef-402b-becb-b422f608fad6,Hydrogen Production Catalysts,Catalyst Additive (Efficiency/Durability),Specifies B2B additive for catalysts enhancing efficiency and durability.
+f5f5ba2b-09c9-4288-b8ce-1b2cbbb935d9,Hydrogen Storage Tanks (Composite),Tank Liner Composite (Barrier/Strength),Identifies B2B composite for tank liners providing barrier and strength.
+f2daa46c-d163-4e1a-95d6-ab9483956e28,Hydroponic System Components,System Pipe Compound (Corrosion Resistance),Shifts to B2B compound for system pipes providing corrosion resistance.
+1a625658-7b78-4908-ada1-340e9438e651,Inductors (Core Material/Shielding),Inductor Core Additive (Magnetic Permeability),Focuses on B2B additive for inductor cores enhancing magnetic permeability.
+b33fdc39-8339-4ff0-8450-3777c0f9965d,Industrial Air Filters,Filter Media (Efficiency/Durability),Specifies B2B media for industrial filters enhancing efficiency and durability.
+8a81218b-fa9a-43f3-8fc6-655ccbab7713,Industrial Chemical Containers,Container Liner Coating (Chemical Resistance),Identifies B2B coating for container liners providing chemical resistance.
+dcffe719-93ab-4479-a7e1-87ba1304ef4f,Industrial Gaskets & Seals,Gasket Compound (Sealing/Durability),Converts to B2B compound for gaskets enhancing sealing and durability.
+e1cbd66a-3e8d-4f5e-b73f-c0437e8caf52,Industrial Hoses (Chemical/Abrasion Resistant),Hose Compound (Abrasion/Chemical Resistance),Focuses on B2B compound for hoses providing abrasion and chemical resistance.
+20f00e40-0578-42cc-8f56-4c7e802d8b32,Industrial Lubricant,Lubricant Additive (Friction Reduction),Specifies B2B additive for industrial lubricants reducing friction.
+8db2146c-73be-40ee-8aff-51ee3e715186,Industrial Protective Textiles,Protective Fabric (Abrasion Resistance),Identifies B2B fabric for protective textiles providing abrasion resistance.
+53b6bdda-b0ae-485b-884d-00c9db5bb277,Inflatable Kayaks/Paddleboards,Inflatable Hull Composite (Puncture Resistance),Shifts to B2B composite for inflatable hulls with puncture resistance.
+b27b7f8b-a4af-4156-9362-9f874889509f,Insulated Window Frames,Frame Compound (Thermal Insulation),Focuses on B2B compound for window frames providing thermal insulation.
+b66aeffc-e857-45bf-8029-ada2aa769f76,Interior Trim Components (High Wear Areas),Trim Composite (Wear Resistance),Specifies B2B composite for interior trim with wear resistance.
+c77127a6-10f8-42ea-8a40-5298d100c712,Ironing Board Cover,Cover Fabric Coating (Thermal Resistance),Identifies B2B coating for cover fabrics providing thermal resistance.
+2d950422-9882-44a1-a475-7a2c1605ba82,Irrigation Pipes/Drip Emitters,Pipe Compound (Durability/Barrier),Converts to B2B compound for irrigation pipes enhancing durability and barrier.
+78e18b23-4485-49a1-8861-f3ad0780b961,Kayak / Canoe,Hull Composite (Impact Resistance),Focuses on B2B composite for hulls providing impact resistance.
+3701ebc3-b486-4435-98d2-51fc46fc07b9,Keyboard Components,Key Switch Composite (Durability/Conductive),Specifies B2B composite for key switches with durability and conductive properties.
+1be53122-1e12-45c0-a81a-6b854f345470,Keychains,Keychain Composite (Strength/Durability),Identifies B2B composite for keychains providing strength and durability.
+6a39c1ec-3be8-4499-af26-e25df056d173,Laptop Casing,Laptop Enclosure Composite (Lightweight/Thermal),Shifts to B2B composite for laptop enclosures with lightweight and thermal properties.
+a884364a-56fc-4c63-b7fc-e2500e88029d,Laptop/Tablet Stand,Stand Composite (Strength/Stability),Focuses on B2B composite for stands providing strength and stability.
+ffec8cd6-6ecd-4f12-95a0-72d880301e7d,Levels (Tool),Tool Body Composite (Durability),Specifies B2B composite for tool bodies enhancing durability.
+9c01b90b-7764-424c-a3c5-aad1ceb63de5,Light Bulbs (LED Heat Sinks),LED Heatsink (Thermal Conduction),Identifies B2B heatsink for LEDs providing thermal conduction.
+8d04ebf6-87fd-4c99-9b14-b957380c2b50,Lightweight Composite Decking,Decking Composite (Lightweight/Durability),Converts to B2B composite for decking with lightweight and durability.
+bb0cdd73-52cd-4890-a137-40c65443e211,Lightweight Composite Siding,Siding Composite (Lightweight/Weather Resistance),Focuses on B2B composite for siding providing lightweight and weather resistance.
+6311315c-a5b3-4bec-8015-a20d037eb5fe,Lightweight PET Water/Soda Bottle,PET Bottle Compound (Lightweight/Barrier),Specifies B2B compound for PET bottles enhancing lightweight and barrier properties.
+88d37c17-317e-4e4d-bb4b-4867efbffe72,Lightweight Pre-Cast Concrete Panels,Concrete Panel Admixture (Lightweight/Strength),Identifies B2B admixture for concrete panels providing lightweight and strength.
+433ebbe7-a465-46fb-921d-a4354715bcff,Lightweight Prosthetic Limb,Prosthetic Composite (Lightweight/Strength),Shifts to B2B composite for prosthetics with lightweight and strength properties.
+c6decfab-549c-42ed-b917-eeecdb0e8691,Lightweight Skis / Snowboard,Ski Core Composite (Lightweight/Flexural),Focuses on B2B composite for ski cores providing lightweight and flexural properties.
+ab209036-9ecb-4729-afd1-cab2ef9e4e79,Liquid Filtration Membranes (Industrial),Filtration Membrane (Efficiency/Fouling Resistance),Specifies B2B membrane for liquid filtration enhancing efficiency and fouling resistance.
+95fc9bea-5b22-4b15-9995-1a9314780eba,Lithium-Ion Battery Electrodes,Anode/Cathode Conductive Additive,Clarifies B2B additive for battery electrodes providing conductivity.
+73f96099-b844-4269-85e5-95491ffc073c,Livestock Containment Fencing (Composite Posts),Fence Post Composite (Durability/Weather Resistance),Identifies B2B composite for fence posts with durability and weather resistance.
+a9068715-55a3-4fc3-bbac-3386b1279122,Lubricants (Solid/Dry),Solid Lubricant Additive (Friction Reduction),Converts to B2B additive for solid lubricants reducing friction.
+7c16cf28-cff7-4c13-902b-2717fe139924,Luggage Tags,Tag Composite (Durability),Focuses on B2B composite for tags providing durability.
+5cc7f2fc-eb8d-49dc-a55e-e264fb4807f5,Luggage Wheels,Wheel Compound (Wear Resistance),Specifies B2B compound for wheels enhancing wear resistance.
+64cb2484-3bfb-4746-8993-b9f574b6cdf1,Magnetic Shielding Materials,Shielding Composite (Magnetic Permeability),Identifies B2B composite for magnetic shielding with permeability function.
+662a7a8b-f0a3-42f6-91ec-ec59d9f19606,Manhole Covers/Frames (Composite),Cover Composite (Strength/Lightweight),Shifts to B2B composite for manhole covers providing strength and lightweight.
+9fd3dad7-06dc-4092-a9ce-c671ea47edb7,Marine Gelcoat (Boat Hull),Hull Gelcoat Additive (UV/Barrier),Focuses on B2B additive for gelcoats enhancing UV and barrier properties.
+570ea8a3-855f-4915-9370-2b5335c464e6,Marine Pier/Piling Wraps,Wrap Composite (Corrosion Protection),Specifies B2B composite for wraps providing corrosion protection.
+fd904b57-6a4e-4e0a-9682-175ed33fc27a,Marine Propellers (Composite),Propeller Blade Composite (Strength/Efficiency),Identifies B2B composite for propeller blades enhancing strength and efficiency.
+5c01ba4d-2751-4736-a40f-dc0f12b5e747,Mattresses (Foam),Foam Additive (Thermal Regulation),Converts to B2B additive for mattress foams providing thermal regulation.
+811c67a4-5e58-4f75-abb3-f3cf5ecb15fc,Medical Diagnostic Lab-on-a-Chip,Chip Substrate (Conductive/Biosensing),Focuses on B2B substrate for diagnostic chips with conductive and biosensing properties.
+6236806b-013a-4861-9fb2-bcda3bd9a918,Medical Implant (Bone Scaffold),Scaffold Composite (Biocompatible/Strength),Specifies B2B composite for bone scaffolds with biocompatible and strength properties.
+52684097-8ebe-4e8f-ad23-b225ea67a104,Memristor Devices,Memristor Material (Conductive/Switching),Identifies B2B material for memristors providing conductive and switching functions.
+963a5005-0924-48cb-b12d-a6fa4f922181,Military Vehicle Armor,Armor Panel Composite (Ballistic Protection),Shifts to B2B composite for armor panels providing ballistic protection.
+1d2bbd0b-d0fd-4ea5-86cf-d5143814224c,Mirrors (Anti-fog Coating),Mirror Coating (Anti-Fog/Hydrophilic),Focuses on B2B coating for mirrors with anti-fog and hydrophilic properties.
+55a4dcae-7f72-4725-a7b2-34cb13ffa180,Mouse Pad,Pad Surface Coating (Friction Control),Specifies B2B coating for mouse pads controlling friction.
+568062e9-6fa2-49bf-978e-712ffa3842f6,Neural Interfaces/Implants,Interface Electrode Coating (Biocompatible/Conductive),Identifies B2B coating for neural electrodes with biocompatible and conductive properties.
+6ad7ddb4-c093-4225-9a48-df172bc2e4ba,Oil Absorption Materials,Absorbent Additive (Hydrophobic/Oleophilic),Converts to B2B additive for absorbents with hydrophobic and oleophilic functions.
+8aa48510-0f85-4f96-964f-3c97bbc25ca9,Paintball/Airsoft Gear,Gear Composite (Impact Resistance),Focuses on B2B composite for gear providing impact resistance.
+e8d82875-d535-4cbb-84a1-ae2f0610c2e3,Paper Shredders,Shredder Blade Coating (Wear Resistance),Specifies B2B coating for shredder blades enhancing wear resistance.
+c703af47-476b-4393-903e-2809289ff639,Passenger Car Tires,Tire Tread Compound (Mechanical/ESD),Focuses on the B2B material (compound) and its dual functions (Mechanical + Anti-Static).
+e16f0c47-38eb-4f38-974d-5bba9e026ab7,Pens/Pencils (Casings),Casing Composite (Grip/Durability),Identifies B2B composite for pen casings providing grip and durability.
+9f410f92-67d1-452d-a291-dcf3db1dbd42,Perovskite Solar Cells,Solar Cell Additive (Efficiency/Stability),Shifts to B2B additive for perovskite cells enhancing efficiency and stability.
+f0b2a88f-d746-4226-96c0-19de76753ad8,Personal Alert Systems (Casings),Alert Device Casing (Composite/Durable),Focuses on B2B composite for alert casings providing durability.
+b951b91b-cebc-4d86-a930-2cd7aa957fd5,Pesticide Delivery Systems,Delivery Capsule Additive (Controlled Release),Specifies B2B additive for pesticide capsules controlling release.
+bee05571-5eb6-4289-a14d-a3c3bf40c377,Pharmaceutical Packaging,Packaging Film (Barrier/Anti-Microbial),Identifies B2B film for pharmaceutical packaging with barrier and anti-microbial functions.
+8d61f6a9-39ad-4871-9f58-94523956ec1d,Phase Change Materials (Enhanced),PCM Additive (Thermal Storage),Converts to B2B additive for phase change materials enhancing thermal storage.
+2cd12a1d-ea30-45e1-885e-f2ff513982e2,Photocatalytic Coatings (Air/Water Purification),Coating Additive (Photocatalytic Activity),Focuses on B2B additive for coatings providing photocatalytic activity.
+b4d6d8b1-822e-4fa6-bffa-5e1489d17140,Photodetectors,Detector Material (Sensitivity/Conductive),Specifies B2B material for photodetectors enhancing sensitivity and conductivity.
+59d8a1d2-60a4-4450-893d-12c2fcf86963,Picture Frames (Composite),Frame Composite (Lightweight/Strength),Identifies B2B composite for frames providing lightweight and strength.
+d4e7b739-1b16-4044-9e5f-c35d73d9318b,Piezoelectric Energy Harvesters (Enhanced),Harvester Additive (Efficiency),Shifts to B2B additive for piezoelectric harvesters enhancing efficiency.
+3384819d-5b00-46b2-b90e-ed78e7997614,Pillows (Cooling),Pillow Foam Additive (Thermal Regulation),Focuses on B2B additive for pillow foams providing thermal regulation.
+de064316-cc6c-4886-92a2-68b1c4d5d049,Pipeline Repair Wraps (Composite),Repair Wrap Composite (Strength/Sealing),Specifies B2B composite for pipeline wraps enhancing strength and sealing.
+c864104b-f833-487b-98ca-5c881fec3a37,Plywood / Oriented Strand Board (OSB),Board Binder Additive (Strength/Moisture Resistance),Identifies B2B additive for board binders providing strength and moisture resistance.
+1e04e08c-c558-47ab-9fb9-a978478dee66,Pocket Knives/Multi-tools,Tool Blade Coating (Corrosion Resistance),Converts to B2B coating for tool blades providing corrosion resistance.
+8309b167-7409-4814-8cac-d154b128aad5,Power Cable Shielding,Cable Shielding Compound (EMI Protection),Focuses on B2B compound for power cable shielding providing EMI protection.
+e21db223-9063-4f19-b39e-777841b53d2d,Power Cords/Charging Cables (Enhanced Durability),Cable Jacket Compound (Durability/Flexibility),Specifies B2B compound for cable jackets enhancing durability and flexibility.
+4bef49e4-796c-4f83-a22d-959017cd587c,Power Transmission Belts (V-belts/Timing Belts),Belt Compound (Tensile Strength/Wear),Identifies B2B compound for transmission belts providing tensile strength and wear resistance.
+f4399481-cb3f-4e61-a554-24b4b45ed7a2,Printed Circuit Board (PCB) Substrates,PCB Substrate Additive (Thermal/Conductive),Shifts to B2B additive for PCB substrates enhancing thermal and conductive properties.
+40ecb009-dc93-4aa1-bbf9-34f3737d9e71,Professional Camera Bodies/Lenses,Camera Body Composite (Lightweight/Durable),Focuses on B2B composite for camera bodies providing lightweight and durability.
+b3b3130a-68ff-40d8-9215-475c4ed891da,Projector Casings,Projector Enclosure Composite (Thermal),Specifies B2B composite for projector enclosures with thermal properties.
+ec91ff58-1cfa-4110-b511-60ac2cce9d6a,Protective Coatings for Bridges/Structures,Structure Coating (Corrosion/Weather Resistance),Identifies B2B coating for structures providing corrosion and weather resistance.
+d2c15609-e4a5-459e-a840-090cd5829aac,Pump Components (Impellers/Casings),Impeller Composite (Abrasion Resistance),Converts to B2B composite for pump impellers enhancing abrasion resistance.
+1df69f08-da3d-4a24-b686-5634da0ebf59,Quantum Dots (Graphene-Based),Quantum Dot Additive (Stability/Efficiency),Focuses on B2B additive for quantum dots enhancing stability and efficiency.
+4978a333-1a0c-41e0-9477-d4528419c3e4,Radiation Detectors,Detector Sensor Film (Sensitivity),Specifies B2B film for radiation detectors enhancing sensitivity.
+b0ee3c6e-ae78-43b2-b54e-a03c0199c9c1,Radiation Shielding Materials (Flexible),Shielding Fabric (Radiation Absorption),Identifies B2B fabric for radiation shielding providing absorption.
+564d5766-17b4-49a9-a956-69c93495e482,Railway Components (Composite Sleepers/Ties),Sleeper Composite (Durability/Weather Resistance),Shifts to B2B composite for railway sleepers with durability and weather resistance.
+0df8833d-2e9d-49fa-b46c-2c88889ff85e,Raincoats/Umbrellas,Fabric Coating (Waterproof/Breathable),Focuses on B2B coating for fabrics providing waterproof and breathable properties.
+334378d6-19a8-4a3c-95b0-4de90a3d6998,Refrigerator Water/Ice Dispenser,Dispenser Component Coating (Anti-Microbial),Specifies B2B coating for dispenser components with anti-microbial function.
+744d901e-5ae3-40c8-9af6-a74a6150c0c9,Resistors (Conductive Element),Resistor Material Additive (Conductivity),Identifies B2B additive for resistor materials enhancing conductivity.
+ebe17da5-6e2b-4d67-9894-11c2d9fc248b,Reusable Coffee Filters (Mesh),Filter Mesh Coating (Durability/Filtration),Converts to B2B coating for filter meshes enhancing durability and filtration.
+49e412c4-5cff-4a68-aac9-99e720643b5c,RFID Tag (Security Label),Tag Antenna Ink (Conductive),Focuses on B2B ink for RFID antennas providing conductivity.
+416e5a81-6e8b-42ae-b377-96ad460e1b85,Road Marking Paint,Paint Additive (Durability/Visibility),Specifies B2B additive for road paints enhancing durability and visibility.
+e7f3021d-1f46-4834-bfa7-80583377628c,Robotic Vacuum Cleaner,Vacuum Chassis Composite (Lightweight/Durable),Identifies B2B composite for vacuum chassis with lightweight and durable properties.
+20fa279f-d70f-4a01-be4a-ed0152efcb52,Running Shoes,Sole Compound (Cushioning/Grip),Shifts to B2B compound for shoe soles providing cushioning and grip.
+1c638a07-09d4-4836-9c1e-1dfa2f88359d,Safety Glasses,Lens Coating (Impact/Scratch Resistance),Focuses on B2B coating for safety lenses enhancing impact and scratch resistance.
+59c16cfe-7250-4141-8cd4-76bfa6bda35f,Satellite Components,Component Composite (Thermal/Radiation Resistance),Specifies B2B composite for satellite components with thermal and radiation resistance.
+ea8af358-f7d8-4ea2-b0ce-1f7c277071a1,Scientific Instrument Components,Instrument Housing Composite (Precision/Thermal),Identifies B2B composite for instrument housings providing precision and thermal properties.
+9fb4891b-cd6b-4efa-9bbc-820af42c69c0,Scissors (Household/Office),Blade Coating (Sharpness Retention),Converts to B2B coating for scissor blades retaining sharpness.
+c8887626-eafb-46d3-9b10-d6f61a1728aa,Screwdriver Tips (Consumer Grade),Tip Coating (Wear Resistance),Focuses on B2B coating for screwdriver tips enhancing wear resistance.
+90dbcf88-0739-44f2-b41c-50bf7bdf1ff8,Self-Healing Materials (Coatings/Composites),Coating Additive (Self-Healing),Specifies B2B additive for coatings enabling self-healing.
+bcaba79b-2ee0-4dae-af92-61dc7b08a7b5,Shock Absorber Seals/Fluid,Seal Compound (Durability/Sealing),Identifies B2B compound for shock absorber seals providing durability and sealing.
+9aa2bad0-da9c-4938-8419-258474ecbcd5,Shoe Insoles,Insole Foam Additive (Cushioning/Thermal),Shifts to B2B additive for insole foams enhancing cushioning and thermal properties.
+c2f81102-d9cd-40bb-be0d-7cda0b284951,Shower Heads/Faucets,Fixture Coating (Anti-Microbial/Corrosion),Focuses on B2B coating for fixtures providing anti-microbial and corrosion resistance.
+81890117-911e-478a-96a0-85e379045ff6,Skateboards (Decks),Deck Composite (Flexural Strength),Specifies B2B composite for skateboard decks enhancing flexural strength.
+e48c15d8-eb8f-45f9-98a8-4c5d490cb0d7,Sleeping Bags,Lining Fabric Coating (Thermal Insulation),Identifies B2B coating for sleeping bag linings providing thermal insulation.
+cb1c77d4-50b2-4b08-bf27-31daf90565b3,Smart Blinds / Window Openers,Actuator Component (Conductive/Efficient),Converts to B2B component for smart actuators with conductive and efficient properties.
+852661d3-c5da-4725-b0db-2450bc925652,Smart Grids,Grid Conductor Additive (Conductivity/Efficiency),Focuses on B2B additive for grid conductors enhancing conductivity and efficiency.
+c1b03033-ae0e-4188-91bc-3e14958616c5,Smart Home Hub,Hub Casing Composite (EMI Shielding/Thermal),Specifies B2B composite for home hub casings with EMI shielding and thermal functions.
+c25f6e3e-2593-49a3-99ea-224e63a5dd42,Smart Thermostat / HVAC Zone Valve,Valve Actuator Component (Conductive/Thermal),Identifies B2B component for valve actuators with conductive and thermal properties.
+2f75c9be-30cd-44ba-8852-ff47791b30c0,Smart Watch,Wearable Device Casing (Composite),Shifts from the B2C end-product to the B2B composite component we sell.
+ae78cefb-fbf4-492f-8ef7-8b9b929125b7,Smart Windows (Electrochromic),Window Film (Electrochromic/Conductive),Converts to B2B film for smart windows with electrochromic and conductive functions.
+b821d143-84d4-421f-8452-b525a69a49c0,Smartphone/Tablet,Device Casing Composite (Lightweight/Thermal),Focuses on B2B composite for device casings providing lightweight and thermal properties.
+c320ad90-6f17-4799-ba19-bcfec87d0caf,Snowshoes,Frame Composite (Lightweight/Strength),Specifies B2B composite for snowshoe frames with lightweight and strength.
+604da0da-0fbc-46d8-972c-e4b88162c272,Socks,Sock Fabric (Conductive/Thermal),Identifies B2B fabric for socks providing conductive and thermal properties.
+d5067ee3-37db-479e-a346-163947d52611,Soil Moisture Sensors,Sensor Electrode Coating (Conductive/Sensitive),Shifts to B2B coating for sensor electrodes enhancing conductivity and sensitivity.
+e87d8b00-9429-4f02-a72d-74f9e3adfeeb,Solar Panel Backsheets,Backsheet Film (Barrier/Durability),Focuses on B2B film for solar panel backsheets providing barrier and durability.
+91b386db-6b51-4c2a-837e-30097fbff1d8,Solid-State Battery Components,Battery Electrolyte Additive (Conductivity),Specifies B2B additive for solid-state electrolytes enhancing conductivity.
+754941f9-69aa-45bf-82c4-75ad487aef45,Sound Absorption Materials (Building),Absorption Panel Composite (Acoustic Dampening),Identifies B2B composite for absorption panels providing acoustic dampening.
+5f1e45eb-e9cf-4ca7-be7e-2d0c329e8027,Spacecraft Thermal Management,Thermal Management Coating (Heat Dissipation),Converts to B2B coating for spacecraft thermal management enhancing heat dissipation.
+4d922167-5e8d-4df2-9d98-f987b8c34fca,Speaker Cones/Diaphragms (Larger Audio),Diaphragm Composite (Stiffness/Lightweight),Focuses on B2B composite for speaker diaphragms providing stiffness and lightweight.
+8158f9c2-2bd4-44c5-96c0-3f426aa96253,Specialized Sensor Housings,Sensor Housing Composite (Protective/Thermal),Specifies B2B composite for sensor housings with protective and thermal properties.
+82baf3a3-8e7d-4f61-ade4-16035456b11a,Spintronic Devices,Device Material (Magnetic/Conductive),Identifies B2B material for spintronic devices with magnetic and conductive properties.
+9671757a-e38d-4e97-8082-3b3a2fd17e6c,Sports Watch (GPS),Watch Casing Composite (Lightweight/Durable),Shifts to B2B composite for watch casings providing lightweight and durability.
+2feb5860-46af-47b2-845f-7d2d58b7b3ba,Staplers/Hole Punchers,Mechanism Composite (Durability),Focuses on B2B composite for mechanisms providing durability.
+b5626cca-3043-4c7d-bd8c-92b7d7a0df83,Stealth Coatings,Coating Additive (Radar Absorption),Specifies B2B additive for stealth coatings providing radar absorption.
+0747d5bb-db2e-4298-98b8-f38892b388b4,Steam Mop / Steam Cleaner,Cleaner Housing Composite (Thermal Resistance),Identifies B2B composite for cleaner housings with thermal resistance.
+a417a206-261a-48cc-a601-db3c831f9c6f,Sulfur or Silicon Anode Batteries,Anode Additive (Capacity/Stability),Converts to B2B additive for anodes enhancing capacity and stability.
+11ff0b02-6ab4-49b3-be88-82c0e0a1179a,Sunroof/Window Seals,Seal Compound (Weather Resistance),Focuses on B2B compound for seals providing weather resistance.
+8365f274-4620-41f3-9ee9-b5ed198492bd,Supercapacitor Power Bank,Supercapacitor Electrode Additive (Energy Density),Specifies B2B additive for supercapacitor electrodes enhancing energy density.
+9ad8ca7a-f069-4473-9147-46d40ec74341,Surfboards/Wakeboards,Board Core Composite (Flexural Strength),Identifies B2B composite for board cores providing flexural strength.
+94e109ed-359e-4cae-a543-f46297d7f548,Surgical Tools (Coating),Tool Coating (Anti-Microbial/Wear),Shifts to B2B coating for surgical tools with anti-microbial and wear resistance.
+f59bc8b9-cf5c-4f8a-8494-24e4207493ad,Swimwear,Swim Fabric (Hydrophobic/Durable),Focuses on B2B fabric for swimwear providing hydrophobic and durable properties.
+4f90c7df-8ad1-4552-b09e-df612d2b1f30,Tape Measures,Tape Blade Coating (Wear Resistance),Specifies B2B coating for tape blades enhancing wear resistance.
+76dd9973-2b6a-4696-b37c-e85ecdf27eeb,Tennis Racket,Racket Frame Composite (Stiffness/Strength),Identifies B2B composite for racket frames providing stiffness and strength.
+aacede52-68f7-41a0-ac5d-faf9f18d8fd7,Tents/Tarps,Tent Fabric Coating (Waterproof/Tear Resistance),Converts to B2B coating for tent fabrics providing waterproof and tear resistance.
+33738d30-7d8c-4bd6-8c6e-ef4ffda253dd,Terahertz Detectors/Emitters,Device Material (Sensitivity/Conductive),Focuses on B2B material for terahertz devices enhancing sensitivity and conductivity.
+211f3745-7d02-435b-ae00-07fcbeba67f2,Thermal Base Layers,Base Layer Fabric (Thermal Regulation),Specifies B2B fabric for base layers providing thermal regulation.
+bc210e1c-7989-4bfd-8ac5-fdebd7df940a,Thermal Camouflage Materials,Camouflage Fabric (Thermal Insulation),Identifies B2B fabric for thermal camouflage providing insulation.
+aca798bf-d3b3-443c-91c6-3ae15d247931,Thermal Interface Pads (beyond paste),Interface Pad Composite (Thermal Conduction),Shifts to B2B composite for thermal pads providing conduction.
+6aaa4b96-9059-407f-8f40-7a05bea3cba8,Thermally Conductive Tooling & Molds,Mold Coating (Thermal Conduction),Focuses on B2B coating for molds enhancing thermal conduction.
+8d653759-379c-4aed-ad7f-cd15a6e62431,Thermoelectric Generator Components,Generator Material Additive (Efficiency),Specifies B2B additive for thermoelectric components enhancing efficiency.
+48f66285-cf50-4794-b40e-ef45f80fe92f,Tissue Engineering Scaffolds,Scaffold Composite (Biocompatible/Porous),Identifies B2B composite for tissue scaffolds with biocompatible and porous properties.
+ab5ad4fd-2e76-4973-97d5-db4d0cdc6508,Tool Boxes (Plastic),Box Composite (Impact Resistance),Converts to B2B composite for tool boxes providing impact resistance.
+ca18c3f1-617a-42c8-b4be-91970647ef80,Transformer Oil,Oil Additive (Thermal/Insulating),Focuses on B2B additive for transformer oils enhancing thermal and insulating properties.
+8cc01610-841e-4445-8ca2-201941745fc8,Transparent Antennas,Antenna Film (Transparent/Conductive),Specifies B2B film for transparent antennas providing conductivity.
+2e726493-2666-4e1d-bf2b-d449e42ed0c0,Transparent Conductive Films,Conductive Film (Transparent/Flexible),Identifies B2B film providing transparent and flexible conductivity.
+d9e81cc8-e6da-441f-a8b6-e43a05fdf771,Tunnel Lining Sealants,Sealant Additive (Adhesion/Waterproof),Shifts to B2B additive for sealants enhancing adhesion and waterproofing.
+b811044b-70b8-4401-90ed-9d1452a5513e,TV Remote Control,Remote Casing Composite (Durability/ESD),Focuses on B2B composite for remote casings with durability and ESD properties.
+4f62e4fd-8cc6-4c4f-92b5-7acf7127a8d8,Underwear,Fabric (Anti-Microbial/Thermal),Specifies B2B fabric for underwear providing anti-microbial and thermal properties.
+59b77640-a970-4a77-aa43-8b254d914ecc,Upholstery Fabric,Upholstery Fabric Coating (Stain Resistance/Durability),Identifies B2B coating for upholstery fabrics enhancing stain resistance and durability.
+6c5183fb-6532-467a-ae97-76393d71bf06,Valves (Seats/Seals),Valve Seal Compound (Sealing/Wear),Converts to B2B compound for valve seals providing sealing and wear resistance.
+89597d49-4549-419d-8d8f-cfc90dfce005,Vehicle Sensors (Integrated),Sensor Housing Composite (Protective/Conductive),Focuses on B2B composite for vehicle sensor housings with protective and conductive properties.
+680e2e70-3284-44c5-a680-18fb51615632,VR/AR Headset,Headset Frame Composite (Lightweight/Comfort),Specifies B2B composite for headset frames providing lightweight and comfort.
+3d9f0197-406e-422a-b36c-514cdc26aa2f,Washing Machine,Appliance Drum Coating (Anti-Microbial/Wear),Focuses on the specific part (drum) and function (coating) we sell to the appliance OEM.
+36667e88-60ef-49d4-8164-82e8ac9d2127,Watch Bands (Rubber/Silicone),Band Compound (Flexible/Durable),Identifies B2B compound for watch bands providing flexibility and durability.
+79822a89-cf9e-4fa6-bf89-37127a27e192,Water Bottles (Insulated),Bottle Liner Coating (Thermal Insulation),Shifts to B2B coating for bottle liners providing thermal insulation.
+398c5669-5b06-44f0-8bfe-3ee92f766c63,"Water Piping (PEX, PVC)",Pipe Compound (Strength/Barrier),Focuses on B2B compound for water pipes enhancing strength and barrier.
+03bba2c6-4ae1-4f42-a4aa-fe5eea764678,Water Storage Tanks (Liners/Coatings),Tank Liner Coating (Corrosion Resistance),Specifies B2B coating for tank liners providing corrosion resistance.
+348da614-5254-4340-8add-4c448ef1967f,Wave Energy Converter Components,Converter Composite (Durability/Corrosion),Identifies B2B composite for converter components with durability and corrosion resistance.
+79235672-7546-466e-9d14-d1f55b47d281,Wearable Smart E-Textile,E-Textile Fabric (Conductive/Sensing),Converts to B2B fabric for e-textiles providing conductive and sensing functions.
+b7dd9ef1-a4ed-4b5f-aece-5b9fdbf5c138,Wearable Health Monitors (Skin Patches),Patch Sensor Film (Biosensing/Flexible),Focuses on B2B film for health patches with biosensing and flexible properties.
+bc9c5a75-a57e-4299-a86c-ca077d9a05a3,Wearable Supercapacitors,Supercapacitor Electrode Fabric (Flexible/Energy Storage),Specifies B2B fabric for wearable supercapacitor electrodes with flexible energy storage.
+6d1ff080-56bc-4b45-b68a-d3651dacdb5a,Welding Electrodes,Electrode Coating (Conductivity/Durability),Identifies B2B coating for welding electrodes enhancing conductivity and durability.
+02b0dbd6-0216-4a96-89c2-9977b4a5cf8d,Wetsuit,Suit Fabric (Thermal Insulation/Flexible),Shifts to B2B fabric for wetsuits providing thermal insulation and flexibility.
+df2a66ec-ae8c-4a03-bd7e-d3eab0b1531f,Whiteboard/Dry Erase Board,Board Surface Coating (Erasable/Durable),Focuses on B2B coating for board surfaces providing erasable and durable properties.
+79e83ba8-9d79-45b5-85a3-172ebb781023,Wind Turbine Blade Coatings,Blade Coating (Erosion Resistance),Specifies B2B coating for turbine blades enhancing erosion resistance.
+34bf5ea1-2034-4696-875e-2591c795ab6a,Wire & Cable Insulation/Jacketing,Insulation Compound (Dielectric Strength),Identifies B2B compound for wire insulation providing dielectric strength.
+36f2e58a-0b50-4006-a915-3c5d71b87230,Wireless Earbuds,Earbud Casing Composite (Lightweight/Acoustic),Converts to B2B composite for earbud casings with lightweight and acoustic properties.
+768d785b-ce5a-4db4-82e0-c16c24fa068a,Wiring Harness Tapes/Sleeves,Sleeve Fabric (Abrasion Resistance),Focuses on B2B fabric for wiring sleeves providing abrasion resistance.
+9de5f545-dd8f-4b1a-89d9-a5acf611f16e,Work Gloves,Glove Fabric Coating (Grip/Abrasion),Specifies B2B coating for glove fabrics enhancing grip and abrasion resistance.
+34bc6dda-8b2c-48d1-a18e-bf4869721038,Wrenches/Pliers (Consumer Grade),Tool Handle Composite (Grip/Strength),Identifies B2B composite for tool handles providing grip and strength.
+6749a5d1-9850-4cdf-92cb-c3e2f1331322,X-Ray Shielding (Apron/Flexible Material),Shielding Fabric (Radiation Absorption),Shifts to B2B fabric for x-ray shielding providing radiation absorption.
+dfc952a8-08e8-4846-943d-4c5e003cc587,Yoga Mat,Mat Foam Compound (Cushioning/Grip),Focuses on B2B compound for yoga mats providing cushioning and grip.

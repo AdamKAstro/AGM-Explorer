@@ -1,0 +1,88 @@
+
+New High-Level Market Verticals
+[
+  {
+    "market_name": "Luxury Goods & Horology",
+    "rationale": "Extremely high margins, value placed on novel materials, performance (scratch resistance, low friction), and aesthetics. Low price sensitivity. Aligns perfectly with the low-volume, high-value IP model.",
+    "initial_opportunity_example": "Watch Movement Component Coating (Low-Friction/Wear)",
+    "agm_advantage_brief": "Turbostratic nature offers superior dry lubricity vs. standard GNP, enabling longer service intervals or novel movement designs. Low loading % is ideal for micro-components."
+  },
+  {
+    "market_name": "Scientific & Research Instrumentation",
+    "rationale": "Performance and sensitivity are paramount, justifying high costs for components with unique capabilities (e.g., extreme sensitivity, specific conductivity). Niche applications are ideal for an IP focus.",
+    "initial_opportunity_example": "High-Sensitivity Sensor Substrate (Functionalized)",
+    "agm_advantage_brief": "High surface area and specific functionalization (covalent bonding) of fractal graphene could enable novel sensor types or dramatically improved sensitivity/selectivity."
+  },
+  {
+    "market_name": "Art Conservation & Archeology",
+    "rationale": "Involves irreplaceable, high-value assets. Low-volume, capital-efficient ventures for creating patented solutions (e.g., protective films, structural reinforcement) would command high premiums.",
+    "initial_opportunity_example": "Archival Protective Film (UV/Gas Barrier)",
+    "agm_advantage_brief": "Fractal graphene's high aspect ratio at very low loading creates a superior gas/moisture barrier in a transparent film, protecting delicate art without aesthetic impact."
+  }
+]
+New Market Sub-Segments:
+[
+  {
+    "parent_market_name": "Industrial Manufacturing",
+    "segment_name": "Specialty Chemical Processing Components",
+    "rationale": "High-value sector requiring components (seals, mixers, reactor linings, filters) with extreme chemical/thermal resistance. Patented graphene-polymer composites can solve specific corrosion/wear issues.",
+    "example_application_idea": "Corrosion-Resistant Valve Seal (Functionalized Composite)",
+    "key_players_examples": [
+      "DuPont",
+      "Evonik",
+      "Saint-Gobain Performance Plastics"
+    ]
+  },
+  {
+    "parent_market_name": "Industrial Manufacturing",
+    "segment_name": "Non-Destructive Testing (NDT) Sensor Components",
+    "rationale": "High-value, performance-critical market. Graphene's high conductivity and potential for functionalization can create novel, highly sensitive sensors (e.g., eddy current, ultrasonic) for defect detection.",
+    "example_application_idea": "Flexible Eddy-Current Sensor Array (Printed Ink)",
+    "key_players_examples": [
+      "Olympus (Evident Scientific)",
+      "Baker Hughes (Waygate)",
+      "Zeiss Industrial Metrology"
+    ]
+  },
+  {
+    "parent_market_name": "Industrial Manufacturing",
+    "segment_name": "Abrasive Fluid Handling Components",
+    "rationale": "Targets high-wear components (pump impellers, slurry pipe liners, valve seats) that fail frequently. A small amount of graphene for mechanical reinforcement offers huge lifespan/maintenance value.",
+    "example_application_idea": "Pump Impeller Coating (Abrasion-Resistant)",
+    "key_players_examples": [
+      "KSB",
+      "Weir Group",
+      "ITT Goulds Pumps"
+    ]
+  }
+]
+New Application Ideas
+[
+  {
+    "component_name": "Heterogeneous Catalyst Support (Functionalized Fractal)",
+    "description": "A support material using functionalized fractal graphene to covalently bond and stabilize expensive catalyst nanoparticles (e.g., Platinum, Palladium). Solves catalyst 'leaching' and deactivation.",
+    "agm_advantage": "Unique fractal morphology provides vastly higher functionalizable surface area (>> GNPs) for anchoring nanoparticles, dramatically increasing catalytic efficiency and reducing precious metal loading.",
+    "ip_angle": "Composition of matter: covalently functionalized fractal graphene as a catalyst support; Method of binding specific metal nanoparticles to the functionalized sites.",
+    "margin_potential_rationale": "Saving $10+ of precious metal catalyst by using $0.50 of AGM graphene creates an immediate, high-value proposition for specialty chemical producers.",
+    "primary_market_link": "heterogeneous",
+    "primary_technical_function_link": "catalysis.heterogeneous"
+  },
+  {
+    "component_name": "Aerospace Composite Additive (LSP & Reinforcement)",
+    "description": "A masterbatch additive for carbon fiber pre-pregs. At <0.5 wt% loading, it provides multifunctional benefits: Z-axis electrical conductivity (for lightning strike protection) and mechanical reinforcement (fracture toughness), replacing heavier copper mesh.",
+    "agm_advantage": "Turbostratic, fractal structure enables percolation for conductivity at extremely low loading (<0.5 wt%) where GNPs would require >1-2 wt%. This low loading is critical to maintain resin properties and not add weight.",
+    "ip_angle": "Composition of matter for a 3-phase composite (carbon fiber, resin, fractal graphene); Method of incorporating the additive to achieve multi-functional properties.",
+    "margin_potential_rationale": "Replacing heavy, difficult-to-integrate copper mesh in aerospace components saves significant weight (high $$$ value in fuel) and manufacturing complexity.",
+    "primary_market_link": "commercial_aerospace",
+    "primary_technical_function_link": "polymers.additive.electrical"
+  },
+  {
+    "component_name": "Photopolymer Resin Additive (ESD Control)",
+    "description": "A functionalized graphene additive for SLA/DLP 3D printing resins that imparts permanent, reliable electrostatic dissipative (ESD) properties at <0.5 wt% loading without compromising print resolution or mechanical properties.",
+    "agm_advantage": "Low loading (<0.5 wt%) is essential for photopolymers, as higher loadings block UV light and ruin the printing process. Fractal graphene achieves percolation at this low level where other additives fail.",
+    "ip_angle": "Composition of matter for a photopolymer resin containing functionalized fractal graphene; Method of functionalizing/dispersing graphene to maintain resin transparency and stability.",
+    "margin_potential_rationale": "Enables on-demand, capital-efficient (contract mfg) printing of custom, high-resolution ESD-safe jigs and fixtures for electronics manufacturing, a high-value B2B niche.",
+    "primary_market_link": "additive_manufacturing",
+    "primary_technical_function_link": "additive_manufacturing.inks"
+  }
+]

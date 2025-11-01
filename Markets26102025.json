@@ -1,0 +1,1383 @@
+[
+  {
+    "id": "cd73db6d-1cd9-4897-9587-22e9f5e726b7",
+    "name": "6g",
+    "parent_market_name": null,
+    "market_size_b": "60",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "holographic communications",
+      "brain-computer wireless",
+      "terahertz sensors"
+    ]
+  },
+  {
+    "id": "d4f9e53c-ca8c-4b3e-bbff-fe3e0f652bd4",
+    "name": "antennas",
+    "parent_market_name": "6g",
+    "market_size_b": "35",
+    "cagr": "0.35",
+    "key_players": [
+      "Ericsson",
+      "Nokia",
+      "Huawei"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "32a24b6a-3fc0-46f1-9127-6262a93ae24d",
+    "name": "iot",
+    "parent_market_name": "6g",
+    "market_size_b": "25",
+    "cagr": "0.3",
+    "key_players": [
+      "Qualcomm",
+      "Intel",
+      "Cisco"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "c5677f60-ddab-465b-96fc-b46396195411",
+    "name": "acoustics",
+    "parent_market_name": null,
+    "market_size_b": "15",
+    "cagr": "0.07",
+    "key_players": [
+      "Bose",
+      "Saint-Gobain",
+      "Armstrong"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "a2220816-0d66-4474-ac17-b082c478e058",
+    "name": "Aerospace & Defense",
+    "parent_market_name": null,
+    "market_size_b": null,
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "da030559-7748-4d4d-b182-9d531a7fc487",
+    "name": "aerospace_defense",
+    "parent_market_name": "Aerospace & Defense",
+    "market_size_b": "95",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "hypersonic materials",
+      "electric propulsion composites",
+      "orbital debris remediation",
+      "CBRN sensors"
+    ]
+  },
+  {
+    "id": "3680d8de-dc95-4cf6-ab60-f2b8879de743",
+    "name": "commercial_aerospace",
+    "parent_market_name": "Aerospace & Defense",
+    "market_size_b": "35",
+    "cagr": "0.1",
+    "key_players": [
+      "Toray",
+      "Hexcel",
+      "Syensqo",
+      "Boeing",
+      "Airbus"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "e6ee5b38-cccf-4043-98a8-a3df8bcda7d0",
+    "name": "defense_platforms",
+    "parent_market_name": "Aerospace & Defense",
+    "market_size_b": "30",
+    "cagr": "0.12",
+    "key_players": [
+      "BAE Systems",
+      "Northrop Grumman",
+      "Lockheed Martin",
+      "Raytheon"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "317deaf9-62f2-447a-b7b9-6d32f592354f",
+    "name": "space",
+    "parent_market_name": "Aerospace & Defense",
+    "market_size_b": "15",
+    "cagr": "0.18",
+    "key_players": [
+      "SpaceX",
+      "Blue Origin",
+      "Maxar",
+      "NASA"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "6993ea78-eee1-4f9a-967e-03d3cb42f814",
+    "name": "space_exploration",
+    "parent_market_name": "Aerospace & Defense",
+    "market_size_b": "20",
+    "cagr": "0.15",
+    "key_players": [
+      "NASA",
+      "SpaceX",
+      "Blue Origin"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "19755f97-dda6-4642-a60d-dc62d45a4f3c",
+    "name": "stealth_ew",
+    "parent_market_name": "Aerospace & Defense",
+    "market_size_b": "15",
+    "cagr": "0.15",
+    "key_players": [
+      "BAE Systems",
+      "Lockheed Martin",
+      "3M"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "de1b60fa-ed5e-4de3-bd9a-2818ec321710",
+    "name": "agriculture",
+    "parent_market_name": null,
+    "market_size_b": "85",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "gene-delivery systems for crops",
+      "antimicrobial seed coatings",
+      "ethylene sensors for ripening"
+    ]
+  },
+  {
+    "id": "9ee01b6f-f5f5-4c57-9971-b4c197220c02",
+    "name": "precision_ag_sensors",
+    "parent_market_name": "agriculture",
+    "market_size_b": "40",
+    "cagr": "0.12",
+    "key_players": [
+      "John Deere",
+      "Trimble",
+      "Bosch"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "b32dcfd0-419e-4e15-ad31-30b92d7eba69",
+    "name": "smart_inputs",
+    "parent_market_name": "agriculture",
+    "market_size_b": "45",
+    "cagr": "0.15",
+    "key_players": [
+      "Bayer",
+      "Corteva",
+      "Yara",
+      "Nutrien"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "5ec61d14-75ef-4205-9560-b2b438ff83ba",
+    "name": "antimicrobial_coatings",
+    "parent_market_name": null,
+    "market_size_b": "15",
+    "cagr": "0.10",
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "85e0e68b-228d-4d3a-82a4-c55e82633943",
+    "name": "automotive",
+    "parent_market_name": null,
+    "market_size_b": "80",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "hydrogen fuel cells",
+      "solid-state batteries",
+      "self-healing paint"
+    ]
+  },
+  {
+    "id": "78782580-ff20-45aa-8267-4855da7870ba",
+    "name": "batteries",
+    "parent_market_name": "automotive",
+    "market_size_b": "40",
+    "cagr": "0.12",
+    "key_players": [
+      "CATL",
+      "LG Energy",
+      "Panasonic"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "613d6d30-e19d-4628-8f31-e3a829fae8a1",
+    "name": "ev",
+    "parent_market_name": "automotive",
+    "market_size_b": "125",
+    "cagr": "0.2",
+    "key_players": [
+      "CATL (35%)",
+      "BYD (18%)",
+      "LG Energy"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "4ce900ed-bae5-4415-9a02-cbeac762bbd6",
+    "name": "tires",
+    "parent_market_name": "automotive",
+    "market_size_b": "10",
+    "cagr": "0.05",
+    "key_players": [
+      "Michelin",
+      "Bridgestone",
+      "Goodyear"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "bed18d66-1e5e-46a3-b2f3-953936ae0c06",
+    "name": "bioconjugation",
+    "parent_market_name": null,
+    "market_size_b": "220",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "CRISPR conjugates",
+      "multi-modal probes",
+      "peptide-drug links"
+    ]
+  },
+  {
+    "id": "59702191-753c-42b5-b570-ea2b657d4367",
+    "name": "antibody_drug",
+    "parent_market_name": "bioconjugation",
+    "market_size_b": "90",
+    "cagr": "0.15",
+    "key_players": [
+      "AstraZeneca",
+      "Roche",
+      "Pfizer"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "cf8f62d5-6ecd-4cd8-8233-3f03ec3c8e1f",
+    "name": "diagnostics",
+    "parent_market_name": "bioconjugation",
+    "market_size_b": "60",
+    "cagr": "0.1",
+    "key_players": [
+      "Abbott",
+      "Siemens",
+      "Thermo Fisher"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "b8638fc6-14d4-4e4b-8644-1022fa5918ed",
+    "name": "imaging",
+    "parent_market_name": "bioconjugation",
+    "market_size_b": "45",
+    "cagr": "0.12",
+    "key_players": [
+      "GE Healthcare",
+      "Bayer",
+      "Bracco"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "e6c8126b-c33a-4959-ab1b-27b89645bf71",
+    "name": "biomimetics",
+    "parent_market_name": null,
+    "market_size_b": "150",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "artificial photosynthesis",
+      "biomimetic catalysis",
+      "molecular elevators",
+      "neural tissue scaffolds",
+      "vascular mimics"
+    ]
+  },
+  {
+    "id": "6fcd1edf-5ad1-49eb-9a12-d6dde336a538",
+    "name": "drug_delivery_mimics",
+    "parent_market_name": "biomimetics",
+    "market_size_b": "35",
+    "cagr": "0.16",
+    "key_players": [
+      "Johnson & Johnson",
+      "Pfizer",
+      "Gilead Sciences"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "95006c20-c110-489f-9baa-77305199463a",
+    "name": "enzyme_mimics",
+    "parent_market_name": "biomimetics",
+    "market_size_b": "10",
+    "cagr": "0.12",
+    "key_players": [
+      "DuPont",
+      "BASF",
+      "Novozymes"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "5f8128be-f3e3-45a2-99f8-6da15be2ef83",
+    "name": "ion_channels",
+    "parent_market_name": "biomimetics",
+    "market_size_b": "15",
+    "cagr": "0.13",
+    "key_players": [
+      "Ionis Pharmaceuticals",
+      "research consortia",
+      "AstraZeneca"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "175e3557-3162-40d9-839b-8f5fb5fc1f78",
+    "name": "peptide_helix",
+    "parent_market_name": "biomimetics",
+    "market_size_b": "20",
+    "cagr": "0.14",
+    "key_players": [
+      "supramolecular biotech",
+      "Peptide Therapeutics",
+      "Amgen"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "d39d4aa2-f40f-42dc-9099-fdd0ab0e699f",
+    "name": "scaffolds",
+    "parent_market_name": "biomimetics",
+    "market_size_b": "40",
+    "cagr": "0.1",
+    "key_players": [
+      "Organovo",
+      "Corning",
+      "Merck"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "9f24462c-cc5a-4e86-8171-df5c841806f8",
+    "name": "surface_mimics",
+    "parent_market_name": "biomimetics",
+    "market_size_b": "30",
+    "cagr": "0.11",
+    "key_players": [
+      "3M",
+      "PPG Industries",
+      "AkzoNobel"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "abf1217d-9617-4926-9021-064523a2a789",
+    "name": "Carbon Capture & Utilization",
+    "parent_market_name": null,
+    "market_size_b": null,
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "b05bca7f-0ed9-4928-90c2-c2e10e2b6c86",
+    "name": "catalysis",
+    "parent_market_name": null,
+    "market_size_b": "250",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "supramolecular enzyme mimics",
+      "single-atom catalysts",
+      "plasmonic photocatalysis",
+      "bifunctional electrocatalysts"
+    ]
+  },
+  {
+    "id": "b787ba71-4ec5-414a-a4bd-3fb9afb3c72f",
+    "name": "biocatalysis",
+    "parent_market_name": "catalysis",
+    "market_size_b": "40",
+    "cagr": "0.15",
+    "key_players": [
+      "Novozymes",
+      "Codexis",
+      "DSM",
+      "DuPont"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "60fb6c43-4b66-4af9-93c0-315a53957d16",
+    "name": "electrocatalysis",
+    "parent_market_name": "catalysis",
+    "market_size_b": "40",
+    "cagr": "0.12",
+    "key_players": [
+      "Ballard Power",
+      "Plug Power",
+      "Johnson Matthey",
+      "3M"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "a557fe02-c6d7-4127-881c-8477ec9b5e65",
+    "name": "heterogeneous",
+    "parent_market_name": "catalysis",
+    "market_size_b": "150",
+    "cagr": "0.05",
+    "key_players": [
+      "BASF",
+      "Johnson Matthey",
+      "Albemarle",
+      "Haldor Topsoe"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "adcddc5d-ed24-4e52-9aad-0708ef9abe9b",
+    "name": "photocatalysis",
+    "parent_market_name": "catalysis",
+    "market_size_b": "20",
+    "cagr": "0.15",
+    "key_players": [
+      "Toshiba",
+      "Panasonic",
+      "BASF",
+      "research consortia"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "88cf2583-112f-4ed1-b725-2b8bc58d3b17",
+    "name": "construction",
+    "parent_market_name": null,
+    "market_size_b": "55",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "3D-printed concrete",
+      "self-healing geopolymers",
+      "carbon-capturing cement"
+    ]
+  },
+  {
+    "id": "0f3ef50d-231d-452b-8d93-65abce6dc2c2",
+    "name": "building_materials",
+    "parent_market_name": "construction",
+    "market_size_b": "100",
+    "cagr": "0.05",
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "7d44cf76-00b5-4f1e-a254-6b8c67313834",
+    "name": "composites",
+    "parent_market_name": "construction",
+    "market_size_b": "10",
+    "cagr": "0.08",
+    "key_players": [
+      "Toray",
+      "Hexcel",
+      "SGL Carbon"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "5e48bfc8-b80b-467d-8833-f274826217dc",
+    "name": "concrete",
+    "parent_market_name": "construction",
+    "market_size_b": "30",
+    "cagr": "0.07",
+    "key_players": [
+      "CEMEX",
+      "LafargeHolcim",
+      "HeidelbergCement"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "cd88544c-f478-4e09-9888-c14a056252dc",
+    "name": "smart concrete",
+    "parent_market_name": "construction",
+    "market_size_b": "5",
+    "cagr": "0.15",
+    "key_players": [
+      "Concrene",
+      "BASF",
+      "Giatec"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "eeb67e78-e067-4be7-ad03-64832fce7287",
+    "name": "Consumer Goods",
+    "parent_market_name": null,
+    "market_size_b": null,
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "6dbe1aa4-b780-4539-8053-84ad187df5a2",
+    "name": "appliances",
+    "parent_market_name": "Consumer Goods",
+    "market_size_b": "50",
+    "cagr": "0.06",
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "a1041883-ecbf-4a9c-979a-2de44cab7466",
+    "name": "consumer",
+    "parent_market_name": "Consumer Goods",
+    "market_size_b": "40",
+    "cagr": "0.12",
+    "key_players": [
+      "Samsung SDI",
+      "Panasonic",
+      "Sony"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "cc7491dc-8675-4768-b416-6efe54be8868",
+    "name": "consumer_electronics",
+    "parent_market_name": "Consumer Goods",
+    "market_size_b": "500",
+    "cagr": "0.05",
+    "key_players": [
+      "Apple",
+      "Samsung",
+      "Sony"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "594f8547-f6be-4e73-ae29-a25c9e4754a4",
+    "name": "performance_wear",
+    "parent_market_name": "Consumer Goods",
+    "market_size_b": "30",
+    "cagr": "0.08",
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "70948099-2d57-4f3d-84bd-5bf6a8528fcc",
+    "name": "smart_clothing",
+    "parent_market_name": "Consumer Goods",
+    "market_size_b": "80",
+    "cagr": "0.18",
+    "key_players": [
+      "DuPont",
+      "Adidas",
+      "Under Armour"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "ae495d2f-bd6c-4e14-b78d-976e19894cf1",
+    "name": "sports_equipment",
+    "parent_market_name": "Consumer Goods",
+    "market_size_b": "60",
+    "cagr": "0.04",
+    "key_players": [
+      "Nike",
+      "Adidas",
+      "Wilson"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "14d90372-67d3-4cee-a8a6-5843408f3e41",
+    "name": "electronics",
+    "parent_market_name": null,
+    "market_size_b": "120",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "neuromorphic chips",
+      "quantum sensors",
+      "flexible photonics"
+    ]
+  },
+  {
+    "id": "953b3c95-7b32-4b1b-a6fa-7cf8a28bce64",
+    "name": "displays",
+    "parent_market_name": "electronics",
+    "market_size_b": "35",
+    "cagr": "0.08",
+    "key_players": [
+      "Samsung Display",
+      "LG Display",
+      "BOE"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "76d420f6-1530-4cf9-9a94-3b9fc76e7e71",
+    "name": "radiativeCooling",
+    "parent_market_name": "electronics",
+    "market_size_b": "5",
+    "cagr": "0.25",
+    "key_players": [
+      "SkyCool Systems",
+      "3M",
+      "Radi-Cool"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "ba783ae6-85a5-4045-b741-35a2bcc74ddc",
+    "name": "semiconductors",
+    "parent_market_name": "electronics",
+    "market_size_b": "40",
+    "cagr": "0.1",
+    "key_players": [
+      "TSMC",
+      "Samsung",
+      "Intel"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "3006efbe-3d01-417c-b0c4-183d06ee4bc0",
+    "name": "sensors",
+    "parent_market_name": "electronics",
+    "market_size_b": "25",
+    "cagr": "0.12",
+    "key_players": [
+      "Bosch",
+      "STMicroelectronics",
+      "TE Connectivity"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "4f04f2b4-9dfd-4660-bc3a-13948f5d76e9",
+    "name": "thermal",
+    "parent_market_name": "electronics",
+    "market_size_b": "15",
+    "cagr": "0.11",
+    "key_players": [
+      "3M",
+      "Henkel",
+      "Laird"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "bf4e622a-1476-4ef8-b4f6-18e403185e19",
+    "name": "energy storage",
+    "parent_market_name": null,
+    "market_size_b": "215",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "sodium-ion batteries",
+      "graphene micro-supercapacitors",
+      "structural batteries",
+      "vanadium flow batteries"
+    ]
+  },
+  {
+    "id": "0f2a0510-99d6-4998-b09c-2b177f581dbd",
+    "name": "grid",
+    "parent_market_name": "energy storage",
+    "market_size_b": "50",
+    "cagr": "0.25",
+    "key_players": [
+      "CATL",
+      "Tesla",
+      "Fluence"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "08cfdd18-2c2c-487c-aa27-551e73f8bb6c",
+    "name": "solid-state",
+    "parent_market_name": "energy storage",
+    "market_size_b": "10",
+    "cagr": "0.35",
+    "key_players": [
+      "QuantumScape",
+      "Solid Power"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "20875ba9-9df3-414a-84f0-9929feb26521",
+    "name": "environmental",
+    "parent_market_name": null,
+    "market_size_b": "70",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "ocean alkalinity enhancement",
+      "methane-capturing microbes",
+      "AI-driven phytoremediation",
+      "cucurbituril sieves for PFAS"
+    ]
+  },
+  {
+    "id": "11c8c3c9-8afc-4a8c-a58c-bea3e0d5bc6d",
+    "name": "co2",
+    "parent_market_name": "environmental",
+    "market_size_b": "35",
+    "cagr": "0.15",
+    "key_players": [
+      "Climeworks",
+      "Carbon Engineering",
+      "ExxonMobil"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "54f52b49-bfc3-4245-86e5-ff72482abba1",
+    "name": "remediation",
+    "parent_market_name": "environmental",
+    "market_size_b": "25",
+    "cagr": "0.08",
+    "key_players": [
+      "Evoqua",
+      "Xylem",
+      "Calgon Carbon"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "e7ce4b99-87f1-4671-8e4a-93a2459430cf",
+    "name": "filtration",
+    "parent_market_name": null,
+    "market_size_b": "90",
+    "cagr": "0.08",
+    "key_players": [
+      "Pall",
+      "Donaldson",
+      "Mann+Hummel"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "848993ba-c5a7-423d-8a8b-7681667582d7",
+    "name": "hydrogen",
+    "parent_market_name": null,
+    "market_size_b": "50",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "white hydrogen extraction",
+      "ammonia carriers",
+      "microbial fuel cells"
+    ]
+  },
+  {
+    "id": "a5dec839-dd6d-4574-a54e-af8f3a8f75fb",
+    "name": "fuelCells",
+    "parent_market_name": "hydrogen",
+    "market_size_b": "10",
+    "cagr": "0.3",
+    "key_players": [
+      "Ballard",
+      "Bloom Energy",
+      "Plug Power"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "0d657a2d-407f-4e59-a6bb-8b520a99330e",
+    "name": "production",
+    "parent_market_name": "hydrogen",
+    "market_size_b": "25",
+    "cagr": "0.2",
+    "key_players": [
+      "Plug Power",
+      "ITM Power",
+      "Nel"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "da5db028-1bf5-43e3-bb78-90e18da5c318",
+    "name": "storage",
+    "parent_market_name": "hydrogen",
+    "market_size_b": "15",
+    "cagr": "0.25",
+    "key_players": [
+      "Linde",
+      "Air Liquide",
+      "Hexagon"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "75292cb5-8ba7-44fb-a396-b22d2b69490c",
+    "name": "white_hydrogen",
+    "parent_market_name": "hydrogen",
+    "market_size_b": "10",
+    "cagr": "0.1",
+    "key_players": [
+      "Helios Hydrogen",
+      "Gold Hydrogen",
+      "Koloma"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "7f13877b-d9e4-4ba9-9607-3ab280bc1fe3",
+    "name": "coatings",
+    "parent_market_name": "industrial",
+    "market_size_b": "25",
+    "cagr": "0.12",
+    "key_players": [
+      "Oerlikon Balzers",
+      "IHI Ionbond",
+      "Surface Transforms"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "d82e08a4-b3d5-4746-afd8-8ac31daf58ce",
+    "name": "Industrial Manufacturing",
+    "parent_market_name": null,
+    "market_size_b": null,
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "1ccb6de1-9430-45b2-af1f-517adb345eee",
+    "name": "additive_manufacturing",
+    "parent_market_name": "Industrial Manufacturing",
+    "market_size_b": "80",
+    "cagr": "0.22",
+    "key_players": [
+      "Stratasys",
+      "3D Systems",
+      "EOS",
+      "GE Additive"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "9d091642-464d-4642-b1f4-52b215d87154",
+    "name": "industrial",
+    "parent_market_name": "Industrial Manufacturing",
+    "market_size_b": "75",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "self-healing tribofilms",
+      "graphene-liquid-metal lubricants",
+      "cryogenic lubricants"
+    ]
+  },
+  {
+    "id": "a53c84a8-2e4b-4809-9387-95ad277f7a1c",
+    "name": "industrial_fabrics",
+    "parent_market_name": "Industrial Manufacturing",
+    "market_size_b": "70",
+    "cagr": "0.1",
+    "key_players": [
+      "3M",
+      "Teijin",
+      "Freudenberg"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "b4264659-2f30-4081-82fe-e3dbd5238142",
+    "name": "polymers",
+    "parent_market_name": "Industrial Manufacturing",
+    "market_size_b": "730",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "detachable graphene for plastic recycling",
+      "bio-based EMI inks",
+      "self-extinguishing packaging composites"
+    ]
+  },
+  {
+    "id": "9051c235-631c-4fab-9f6b-1601470383c8",
+    "name": "processing",
+    "parent_market_name": "Industrial Manufacturing",
+    "market_size_b": "100",
+    "cagr": "0.11",
+    "key_players": [
+      "Stratasys",
+      "Evonik",
+      "Arkema"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "1ff1bde1-240c-43a1-a18b-64e82f3fef09",
+    "name": "marine",
+    "parent_market_name": null,
+    "market_size_b": "30",
+    "cagr": "0.05",
+    "key_players": [
+      "AkzoNobel",
+      "Hempel",
+      "Brunswick"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "437877a1-510c-435f-9714-ac03a973081e",
+    "name": "medical",
+    "parent_market_name": null,
+    "market_size_b": "130",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "bio-inks for 3D bioprinting",
+      "CRISPR delivery systems",
+      "neural dust sensors",
+      "peptide helix scaffolds"
+    ]
+  },
+  {
+    "id": "63ea8c8f-7b5d-4bd8-96af-a53916e865b5",
+    "name": "bci",
+    "parent_market_name": "medical",
+    "market_size_b": "20",
+    "cagr": "0.15",
+    "key_players": [
+      "Neuralink",
+      "Synchron",
+      "Blackrock Neurotech"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "c9f965a4-d069-4809-9c1c-8808bb1b26fe",
+    "name": "drug_delivery",
+    "parent_market_name": "medical",
+    "market_size_b": "30",
+    "cagr": "0.1",
+    "key_players": [
+      "Johnson & Johnson",
+      "Pfizer",
+      "Novartis"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "845e54f5-66b6-4627-a540-85d2234c242a",
+    "name": "implants",
+    "parent_market_name": "medical",
+    "market_size_b": "40",
+    "cagr": "0.09",
+    "key_players": [
+      "Medtronic",
+      "Stryker",
+      "Zimmer Biomet"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "1f4671ab-8e3f-4935-89c7-d0a8e34ae338",
+    "name": "ion-selective channels",
+    "parent_market_name": "medical",
+    "market_size_b": "15",
+    "cagr": "0.12",
+    "key_players": [
+      "Ionis Pharmaceuticals",
+      "supramolecular startups"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "f409883a-3f02-41ee-9828-b0a841ee714e",
+    "name": "wearable diagnostics",
+    "parent_market_name": "medical",
+    "market_size_b": "10",
+    "cagr": "0.18",
+    "key_players": [
+      "Abbott",
+      "Dexcom",
+      "Medtronic"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "b5752e18-40bf-432f-b130-a1a45bc74962",
+    "name": "Membrane Separations",
+    "parent_market_name": null,
+    "market_size_b": null,
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": null
+  },
+  {
+    "id": "7704b795-52e4-481b-bfae-73222076ba15",
+    "name": "food_packaging",
+    "parent_market_name": "packaging",
+    "market_size_b": "300",
+    "cagr": "0.04",
+    "key_players": [
+      "Amcor",
+      "Berry Global",
+      "Sealed Air"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "7ce081d6-8eeb-4589-a216-d48590a0a9fb",
+    "name": "crosslinking",
+    "parent_market_name": "polymers",
+    "market_size_b": "50",
+    "cagr": "0.07",
+    "key_players": [
+      "Arkema",
+      "Covestro",
+      "Henkel"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "a830b247-d821-4e2b-a478-8f25e21560e0",
+    "name": "grafting",
+    "parent_market_name": "polymers",
+    "market_size_b": "70",
+    "cagr": "0.08",
+    "key_players": [
+      "BASF",
+      "Dow",
+      "Evonik"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "9d3d50c1-b5b7-459a-bc90-24c95f8514da",
+    "name": "packaging",
+    "parent_market_name": "polymers",
+    "market_size_b": "50",
+    "cagr": "0.12",
+    "key_players": [
+      "Amcor",
+      "Tetra Pak",
+      "Bemis"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "97a7a363-1c3a-493c-929c-79a4b82b8db3",
+    "name": "paints_inks",
+    "parent_market_name": "polymers",
+    "market_size_b": "30",
+    "cagr": "0.15",
+    "key_players": [
+      "E Ink",
+      "DuPont",
+      "PPG"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "f1afa1e3-860d-4680-9856-6d67cb044bc4",
+    "name": "plastics_additives",
+    "parent_market_name": "polymers",
+    "market_size_b": "150",
+    "cagr": "0.09",
+    "key_players": [
+      "BASF",
+      "Dow",
+      "SABIC"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "519ee35b-d788-490c-b009-acc8e303df04",
+    "name": "quantum",
+    "parent_market_name": null,
+    "market_size_b": "70",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "topological qubits",
+      "quantum internet",
+      "room-temp superconductors"
+    ]
+  },
+  {
+    "id": "044b5c97-7718-4bc6-a9c3-859be4f852a7",
+    "name": "computing",
+    "parent_market_name": "quantum",
+    "market_size_b": "50",
+    "cagr": "0.3",
+    "key_players": [
+      "IBM",
+      "Google Quantum AI",
+      "IonQ"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "97bea02e-7dc4-42bc-ad66-2693143b6dd6",
+    "name": "neuromorphic",
+    "parent_market_name": "quantum",
+    "market_size_b": "20",
+    "cagr": "0.2",
+    "key_players": [
+      "Intel",
+      "IBM",
+      "BrainChip"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "b6a23e33-7cf8-4b2a-b3c3-14fa9bb9f1cc",
+    "name": "renewable_energy",
+    "parent_market_name": null,
+    "market_size_b": "400",
+    "cagr": "0.18",
+    "key_players": [
+      "Vestas",
+      "Siemens Gamesa",
+      "Jinko Solar"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "9837bd57-1058-4265-8502-18a712f0a148",
+    "name": "separations",
+    "parent_market_name": null,
+    "market_size_b": "90",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "graphene-oxide sieves",
+      "biomimetic ion channels",
+      "membrane reactors",
+      "pervaporation"
+    ]
+  },
+  {
+    "id": "86a3ee7e-0c23-4e19-b6e5-e77bd364095b",
+    "name": "gas",
+    "parent_market_name": "separations",
+    "market_size_b": "35",
+    "cagr": "0.12",
+    "key_players": [
+      "Air Liquide",
+      "Linde",
+      "Air Products",
+      "Honeywell UOP"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "0b8c31a8-b1aa-4c64-b184-085f2dea07db",
+    "name": "hemodialysis",
+    "parent_market_name": "separations",
+    "market_size_b": "10",
+    "cagr": "0.06",
+    "key_players": [
+      "Fresenius",
+      "Baxter",
+      "Asahi Kasei"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "536f68ea-cbcb-428d-ad83-c5b071ad33ab",
+    "name": "water_liquid",
+    "parent_market_name": "separations",
+    "market_size_b": "45",
+    "cagr": "0.1",
+    "key_players": [
+      "DuPont",
+      "Veolia",
+      "Toray",
+      "Nitto"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "f3ecb39e-67fb-4b02-ae80-96218e9d00cf",
+    "name": "smart_materials",
+    "parent_market_name": null,
+    "market_size_b": "180",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "mechano-responsive polymers",
+      "electrochromic fabrics",
+      "bio-mimetics",
+      "coordination cages"
+    ]
+  },
+  {
+    "id": "b5d9efb3-a717-419e-a677-9061cde40596",
+    "name": "actuators",
+    "parent_market_name": "smart_materials",
+    "market_size_b": "45",
+    "cagr": "0.12",
+    "key_players": [
+      "Bosch",
+      "Honeywell",
+      "Parker Hannifin"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "8b0dbb78-ffc4-40a1-a386-3c5f5c25897f",
+    "name": "host-guest systems",
+    "parent_market_name": "smart_materials",
+    "market_size_b": "25",
+    "cagr": "0.18",
+    "key_players": [
+      "supramolecular tech firms"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "2b805102-2931-4182-9f5a-c33be241b2d1",
+    "name": "self_healing",
+    "parent_market_name": "smart_materials",
+    "market_size_b": "40",
+    "cagr": "0.2",
+    "key_players": [
+      "BASF",
+      "Autonomic Materials"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "a5b5397a-e3cb-4b0c-a4ce-93598faa520f",
+    "name": "switches",
+    "parent_market_name": "smart_materials",
+    "market_size_b": "40",
+    "cagr": "0.18",
+    "key_players": [
+      "IBM",
+      "Intel",
+      "Gentherm"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "12cf01d7-c4c4-4098-99b1-d3ce7c7f42c0",
+    "name": "specialty",
+    "parent_market_name": null,
+    "market_size_b": "15",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "custom nanomaterials",
+      "hybrid bio-electronics"
+    ]
+  },
+  {
+    "id": "277cee2f-8e3e-4667-bd08-47c0c54fb03e",
+    "name": "niche",
+    "parent_market_name": "specialty",
+    "market_size_b": "15",
+    "cagr": "0.1",
+    "key_players": [
+      "Various startups",
+      "R&D firms"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "2465d61b-1ed8-42cf-8047-69382fdeeaa6",
+    "name": "synthetic_biology",
+    "parent_market_name": null,
+    "market_size_b": "120",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "microbial factories",
+      "synthetic genomes",
+      "bio-computing"
+    ]
+  },
+  {
+    "id": "99badaa8-2843-4f31-9eba-5957f8cf4390",
+    "name": "bio_foundries",
+    "parent_market_name": "synthetic_biology",
+    "market_size_b": "45",
+    "cagr": "0.22",
+    "key_players": [
+      "Ginkgo Bioworks",
+      "Zymergen"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "ece7abd9-a566-4f68-b364-639310550267",
+    "name": "cell_culture",
+    "parent_market_name": "synthetic_biology",
+    "market_size_b": "40",
+    "cagr": "0.15",
+    "key_players": [
+      "Thermo Fisher",
+      "Merck",
+      "Lonza"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "3fddf809-71c0-4550-94b5-e442753140dd",
+    "name": "gene_delivery",
+    "parent_market_name": "synthetic_biology",
+    "market_size_b": "35",
+    "cagr": "0.25",
+    "key_players": [
+      "CRISPR Therapeutics",
+      "Editas",
+      "Intellia"
+    ],
+    "untapped_opportunities": null
+  },
+  {
+    "id": "a39cf7ef-5f5c-4be2-9c89-b4f9a1e90368",
+    "name": "textiles",
+    "parent_market_name": null,
+    "market_size_b": "200",
+    "cagr": null,
+    "key_players": null,
+    "untapped_opportunities": [
+      "graphene ESD fabrics for electronics assembly",
+      "self-healing sportswear",
+      "IR-camouflage military textiles"
+    ]
+  },
+  {
+    "id": "c277cf7f-f6b2-4da3-9f0c-088fee560cd4",
+    "name": "sustainable",
+    "parent_market_name": "textiles",
+    "market_size_b": "50",
+    "cagr": "0.22",
+    "key_players": [
+      "Patagonia",
+      "H&M",
+      "Levi Strauss"
+    ],
+    "untapped_opportunities": null
+  }
+]

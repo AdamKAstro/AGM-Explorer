@@ -1,0 +1,34 @@
+The 10 Applications to Double Down On
+These exploit your unique structure:
+
+Solid-State Battery Interlayers - Turbostratic allows expansion
+Broadband Radar Absorbing Materials - Fractal frequency response
+Neural Interface Electrodes - Fractal matches neural architecture
+Quantum Hall Effect Devices - Turbostratic preserves 2D physics
+Self-Lubricating Electrical Brushes - Unique to your structure
+Hierarchical Separation Membranes - Fractal pore architecture
+Metamaterial Acoustic Dampeners - Fractal phonon scattering
+Ultra-Low Loading Percolation Networks - Fractal connectivity
+Sliding Wear Sensors - Turbostratic enables new sensing mode
+Frequency-Selective Surfaces - Fractal antenna arrays
+
+
+New Ontology Paths:sustainability.carbon_capture: Direct Air Capture Sorbents (adsorption via fractals).
+energy.storage.redoxFlow: Redox Flow Battery Membranes (new; ion selectivity).
+polymers.additive.fractal: Broadband EMI Shielding Gaskets (new; multi-freq absorption).
+filtration.nanofiltration: Organic Solvent Nanofiltration Membranes.
+smartMaterials.piezoresistive: Piezoresistive Strain Sensors (new; fractal paths for sensitivity).
+industrial.lubricant.dry: High-Performance Dry Lubricant Coatings (new; vacuum apps).
+coatings.protective.antifouling: Anti-Fouling Coatings for Marine Sensors (new).
+thermal.radiative: Radiative Cooling Films (new; IR emissivity).
+
+New Priority Apps (Fractal/Turbostratic-Driven):Direct Air Capture Sorbents: Market: carbon_capture_utilization | Ontology: environmental.remediation.air | Why: 10x capacity vs. zeolites; scalable from waste carbon. 
+
+Anode Materials for Sodium-Ion Batteries: Market: sodium_ion_storage, automotive | Ontology: energy.storage.batteries | Why: Abundant Na, TFG boosts rate capability 2x.
+Broadband EMI Shielding Gaskets: Market: aerospace_defense, electronics | Ontology: defense.stealth | Why: Fractal geometry scatters 1-100 GHz; 2025 EV/5G demand. 
+Organic Solvent Nanofiltration Membranes: Market: membrane_separations | Ontology: separations.liquidSeparation | Why: Hierarchical channels reject 99% solutes.
+Piezoresistive Strain Sensors: Market: iot, aerospace_defense | Ontology: electronics.sensors | Why: Gauge factor >100 via conductive fractals.
+High-Performance Dry Lubricant Coatings: Market: semiconductors, space | Ontology: industrial.lubricantCoatings | Why: <0.01 friction coeff. in vacuum.
+Anti-Fouling Coatings for Marine Sensors: Market: marine, environmental | Ontology: coatings.protective.antimicrobial | Why: Turbostratic slickness repels biofouling.
+
+market_segments_parent_name_key

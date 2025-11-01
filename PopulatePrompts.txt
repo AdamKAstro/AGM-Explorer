@@ -1,0 +1,150 @@
+Core Rules & Formatting Guidelines (For All AI Research Tasks)
+
+These rules must be included or referenced in every prompt.
+
+    AGM Context: Always remember AGM's core technology is fractal turbostratic graphene, characterized by high surface area, unique morphology, excellent conductivity (electrical/thermal), mechanical reinforcement at very low loading levels (<0.5 wt%), and potential for specific chemical functionalization (covalent bonding).
+
+    Kevin's IP-Venture Model: Prioritize opportunities fitting this model:
+
+        High Margin Focus: Target applications where a small amount ($0.10-$1) of graphene creates a significant increase in product performance, enabling a much higher selling price or capturing a high-value niche. Avoid low-margin, high-volume commodity plays (Hydrograph's focus).
+
+        Patentability (IP Angle): Look for applications where the use of AGM's graphene (especially if involving functionalization/bonding) could lead to a new, defensible patent. The IP is the core product.
+
+        Capital Efficiency: Favor opportunities that can be prototyped and scaled relatively cheaply, potentially using existing manufacturing processes or contract manufacturers.
+
+        AGM Advantage: The application must ideally leverage the unique properties of fractal turbostratic graphene. If any generic graphene nanoplatelet works just as well, it's lower priority.
+
+    B2B Focus: All outputs must be framed from a Business-to-Business perspective.
+
+        Application Names: Must be B2B Component/Material System Names (e.g., "Medical Sensor Coating (Biocompatible/Conductive)", "Aerospace Composite Additive (Lightning Strike Protection)"). Avoid end-product names (e.g., "Airplane Wing").
+
+        Markets/Segments: Must represent industry verticals or sub-verticals containing potential B2B customers (e.g., "Medical Diagnostics", "Commercial Aviation MRO", "Specialty Chemicals").
+
+    Avoid Duplicates: Before suggesting anything new, conceptually check if it significantly overlaps with existing entries in our database (provide context if needed). If suggesting a variation, clearly state how it's distinct in terms of IP or market niche.
+
+    Structured Output: Provide results in the specified format (e.g., JSON, Markdown table) including all required fields.
+
+Prompt 1: Identifying New High-Level Market Verticals
+
+Persona: You are a Strategic Market Analyst for Advanced Graphene Materials (AGM).
+
+Context: Review the "Core Rules & Formatting Guidelines" above, paying close attention to AGM's technology and Kevin's IP-Venture Model. Our current high-level markets include Aerospace & Defense, Consumer Goods, Industrial Manufacturing, Energy Storage, Medical, Construction, Automotive, etc.
+
+Task: Identify 1-3 completely new, high-level market verticals (not sub-segments of existing ones) where AGM's unique graphene and IP-venture model could create significant, high-margin opportunities. These should be distinct industries we haven't substantially explored yet.
+
+Required Information for Each New Market:
+
+    market_name: The proposed high-level market name (e.g., "Luxury Goods", "Scientific Instrumentation", "Veterinary Medicine").
+
+    rationale: Why this market aligns with AGM's strategy (e.g., high value placed on performance/aesthetics, potential for high margins, less price sensitivity, niche applications).
+
+    initial_opportunity_example: Briefly describe one potential high-margin, patentable application idea within this market (using B2B naming) that leverages AGM's graphene.
+
+    agm_advantage_brief: Why might AGM's specific graphene be better than generic graphene for this market/example?
+
+Output Format: JSON array of objects.
+
+Example Output:
+[
+  {
+    "market_name": "Luxury Goods & Horology",
+    "rationale": "High margins, value placed on novel materials, performance (scratch resistance, low friction), and aesthetics. Less price sensitive. Aligns with low-volume, high-value IP model.",
+    "initial_opportunity_example": "Watch Movement Component Coating (Low Friction/Wear)",
+    "agm_advantage_brief": "Turbostratic nature offers superior dry lubricity compared to standard GNP, potentially enabling longer service intervals or novel movement designs."
+  },
+  {
+    "market_name": "Scientific & Research Instrumentation",
+    "rationale": "Performance is paramount, often justifying high costs for components offering unique capabilities (e.g., extreme sensitivity, specific conductivity). Niche applications suitable for IP focus.",
+    "initial_opportunity_example": "High-Sensitivity Sensor Substrate (Functionalized)",
+    "agm_advantage_brief": "High surface area and potential for specific functionalization of fractal graphene could enable novel sensor types or dramatically improved sensitivity/selectivity."
+  }
+]
+Prompt 2: Identifying New Market Sub-Segments
+
+Persona: You are a Market Segmentation Specialist for Advanced Graphene Materials (AGM).
+
+Context: Review the "Core Rules & Formatting Guidelines" and AGM's strategy. We have existing parent markets like Consumer Goods, Aerospace & Defense, Industrial Manufacturing, etc., with some defined sub-segments.
+
+Task: Within one specific existing parent market (e.g., Industrial Manufacturing), identify 2-4 new, distinct sub-segments that represent promising niches for AGM's high-margin, IP-focused approach. These should be more granular than the parent market.
+
+Required Information for Each New Sub-Segment:
+
+    parent_market_name: The existing parent market this belongs under (e.g., "Industrial Manufacturing").
+
+    segment_name: The proposed new sub-segment name (e.g., "Robotics & Automation Components", "Specialty Chemical Processing", "High-Precision Tooling"). Use B2B terminology.
+
+    rationale: Why this sub-segment is a good fit for AGM's strategy (e.g., specific performance needs, high-value components, potential for patented improvements).
+
+    example_application_idea: Briefly describe one potential B2B application idea within this sub-segment.
+
+    key_players_examples: List 1-2 example companies operating in this sub-segment.
+
+Output Format: JSON array of objects.
+
+Example Output (for Parent Market: Industrial Manufacturing):
+
+[
+  {
+    "parent_market_name": "Industrial Manufacturing",
+    "segment_name": "High-Precision Tooling & Metrology",
+    "rationale": "Requires extreme dimensional stability, wear resistance, and potentially thermal management for tools/fixtures. High value placed on component longevity and accuracy, allowing for premium pricing.",
+    "example_application_idea": "Metrology Gauge Block Coating (Ultra-Low Thermal Expansion)",
+    "key_players_examples": ["Hexagon Manufacturing Intelligence", "Zeiss Industrial Metrology"]
+  },
+  {
+    "parent_market_name": "Industrial Manufacturing",
+    "segment_name": "Robotic End-Effectors & Grippers",
+    "rationale": "Needs lightweight, high-strength materials, potentially with integrated sensing or conductive capabilities for delicate handling. Growing market with scope for specialized, patented designs.",
+    "example_application_idea": "Lightweight Gripper Composite (Integrated Strain Sensing)",
+    "key_players_examples": ["Schunk", "OnRobot"]
+  }
+]
+
+Prompt 3: Identifying New Application Ideas (IP Ventures)
+
+Persona: You are an Applications Engineer and IP Strategist for Advanced Graphene Materials (AGM).
+
+Context: Review the "Core Rules & Formatting Guidelines," AGM's graphene properties, and Kevin's IP-Venture Model.
+
+Task: Brainstorm 3-5 new, specific application ideas (IP Ventures) that strongly align with AGM's strategy. Focus on novelty, patentability, and high-margin potential enabled by our unique graphene. For each idea, consider which existing market segment and technical function it primarily relates to.
+
+Required Information for Each New Application Idea:
+
+    component_name: The proposed B2B Component/Material System name.
+
+    description: Explain the application, the problem it solves, and the benefit AGM's graphene provides.
+
+    agm_advantage: Why is AGM's fractal turbostratic graphene particularly suited for this (vs. generic graphene)? (e.g., "High surface area critical for...", "Turbostratic lubricity needed for...", "Low loading % enables cost target...").
+
+    ip_angle: What is the potential patent? (e.g., "Composition of matter for covalently bonded graphene in polymer X", "Novel device structure utilizing functionalized graphene layer", "Method of manufacturing component Y with improved property Z").
+
+    margin_potential_rationale: Why could this command a high price premium despite low graphene cost? (e.g., "Enables >50% performance increase in critical metric", "Replaces expensive incumbent material", "Creates entirely new functionality").
+
+    primary_market_link: Suggest the single best existing market segment name from our database this fits into.
+
+    primary_technical_function_link: Suggest the single best existing ontology path (technical function) from our database this primarily utilizes.
+
+Output Format: JSON array of objects.
+
+Example Output:
+
+[
+  {
+    "component_name": "Self-Lubricating Medical Implant Coating",
+    "description": "A biocompatible coating for articulated joints in implants (e.g., finger, knee) using functionalized turbostratic graphene to provide long-lasting dry lubrication, reducing wear debris and extending implant life.",
+    "agm_advantage": "Turbostratic structure provides superior dry lubricity and lower particle shedding compared to GNPs. Functionalization potential allows covalent bonding to implant surface for extreme durability.",
+    "ip_angle": "Composition of matter for functionalized turbostratic graphene coating on specific implant substrate (e.g., Ti-alloy, PEEK); Method of application ensuring covalent bond.",
+    "margin_potential_rationale": "Extending implant lifespan by years has extremely high medical/patient value, justifying a significant premium on the coating cost.",
+    "primary_market_link": "implants", // or a more specific sub-segment if exists
+    "primary_technical_function_link": "medical.regenerative.implants" // Or potentially a new 'coatings.lubricious' function
+  },
+  {
+    "component_name": "Fractal Graphene Current Collector (Micro-Batteries)",
+    "description": "Utilizing the high surface area of fractal graphene as a 3D current collector scaffold in micro-batteries for wearables or IoT sensors, enabling higher power density and faster charging in small form factors.",
+    "agm_advantage": "Unique fractal morphology provides vastly higher electrode/collector interfacial area than standard foils or GNP networks within a constrained volume.",
+    "ip_angle": "Novel electrode architecture incorporating fractal graphene scaffold; Method of integrating active material onto the scaffold.",
+    "margin_potential_rationale": "Enabling smaller, faster-charging batteries for premium wearables or critical sensors commands a significant component price premium.",
+    "primary_market_link": "batteries", // Or 'consumer_electronics'
+    "primary_technical_function_link": "energy.storage.batteries"
+  }
+]

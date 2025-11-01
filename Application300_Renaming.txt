@@ -1,0 +1,1803 @@
+[
+  {
+    "id": "cc18a2ec-c257-4cdf-a732-40c2c2db9f5c",
+    "legacy_name": ""Green" High-Strength Concrete Mix",
+    "new_component_name": "Concrete Admixture (Fractal Reinforcement)",
+    "rationale": "Identifies the B2B product form as an admixture and its function for reinforcement, eliminating vague 'green' branding."
+  },
+  {
+    "id": "08a92a8f-46ae-473f-a9bb-cf3e4ee531b0",
+    "legacy_name": ""Silent-Series" Dishwasher",
+    "new_component_name": "Quiet-Operation Actuator Components (Noise Reduction)",
+    "rationale": "Shifts from B2C appliance to B2B actuator components enabling quiet operation, removing brand language."
+  },
+  {
+    "id": "46a5116d-0cf2-4a76-af4b-7e94216ca07e",
+    "legacy_name": ""Smart" Athletic Shirt",
+    "new_component_name": "Conductive Textile Fabric (Sensing/Monitoring)",
+    "rationale": "Focuses on the B2B conductive fabric component for sensing functions, eliminating B2C clothing reference."
+  },
+  {
+    "id": "9ecc5374-20d9-4f89-be2c-060d9c25ef26",
+    "legacy_name": ""Smart" Bandage",
+    "new_component_name": "Wound Dressing Membrane (Conductive/Healing)",
+    "rationale": "Converts to B2B membrane component with conductive properties for healing, removing vague 'smart' descriptor."
+  },
+  {
+    "id": "980be886-231f-45a4-902b-53cc031411db",
+    "legacy_name": ""Stainless Steel" Appliance Coating",
+    "new_component_name": "Appliance Surface Coating (Corrosion Resistance)",
+    "rationale": "Specifies the B2B coating for corrosion resistance on appliance surfaces, eliminating brand-like material mimicry."
+  },
+  {
+    "id": "8f2879d1-ad89-42c4-8fca-5e0a72a8372a",
+    "legacy_name": "3D Printer Beds/Surfaces",
+    "new_component_name": "Printer Bed Coating (Adhesion/Thermal)",
+    "rationale": "Identifies the B2B coating for printer beds enhancing adhesion and thermal properties."
+  },
+  {
+    "id": "4fbb109f-62da-466b-bd5a-d2f6f035c4d4",
+    "legacy_name": "3D Printing Reinforcement",
+    "new_component_name": "Filament Additive (Mechanical Reinforcement)",
+    "rationale": "Focuses on the B2B additive for filaments providing mechanical reinforcement."
+  },
+  {
+    "id": "c37a88ae-c64c-4118-9328-4858b1f1f0ed",
+    "legacy_name": "3D-Printed Concrete Structures",
+    "new_component_name": "Concrete Extrusion Admixture (Strength/Printability)",
+    "rationale": "Shifts to B2B admixture for concrete extrusion enhancing strength and printability."
+  },
+  {
+    "id": "5df99f79-aaaf-4a9e-b9ce-2afe9b2a85a3",
+    "legacy_name": "Acoustic Dampening Materials (Electronics)",
+    "new_component_name": "Electronic Enclosure Dampening Compound (Vibration Absorption)",
+    "rationale": "Specifies B2B compound for enclosures absorbing vibrations in electronics."
+  },
+  {
+    "id": "4406059d-9e71-4981-89d5-71c10f837e57",
+    "legacy_name": "Acoustic Metamaterials",
+    "new_component_name": "Metamaterial Composite (Sound Manipulation)",
+    "rationale": "Identifies B2B composite for metamaterials enabling sound manipulation."
+  },
+  {
+    "id": "a8a4aca9-8377-4a40-a036-cb9cd3deb44f",
+    "legacy_name": "Advanced Water Purification Filter (Personal/Home)",
+    "new_component_name": "Filtration Membrane (Contaminant Removal)",
+    "rationale": "Converts to B2B membrane for filtration with contaminant removal function, eliminating B2C context."
+  },
+  {
+    "id": "6fcfd01b-5ff3-4756-952f-2ba45294623e",
+    "legacy_name": "Aerogels (Graphene-Based)",
+    "new_component_name": "Aerogel Composite (Thermal Insulation)",
+    "rationale": "Focuses on B2B composite form for aerogels providing thermal insulation."
+  },
+  {
+    "id": "f7a92e71-153a-4b0e-be0c-3dd47cfd8d99",
+    "legacy_name": "Aerospace Actuators",
+    "new_component_name": "Actuator Composite (Lightweight/Strength)",
+    "rationale": "Specifies B2B composite for actuators emphasizing lightweight and strength properties."
+  },
+  {
+    "id": "100ea177-91e8-4345-871c-6533f654f0d7",
+    "legacy_name": "Aerospace Structural Components",
+    "new_component_name": "Structural Composite (High-Strength/Lightweight)",
+    "rationale": "Identifies B2B composite for structural components with high-strength and lightweight functions."
+  },
+  {
+    "id": "4d0ce6e0-4b1f-4367-bd6a-cd66e879dc0b",
+    "legacy_name": "Agricultural Films (Greenhouse/Mulch)",
+    "new_component_name": "Polymer Film Additive (Barrier/Durability)",
+    "rationale": "Shifts to B2B additive for polymer films enhancing barrier and durability."
+  },
+  {
+    "id": "66828ad3-86ce-4fe3-bad7-de9b9b2e4eb3",
+    "legacy_name": "Air Mattresses",
+    "new_component_name": "Inflatable Membrane (Puncture Resistance)",
+    "rationale": "Converts to B2B membrane for inflatables with puncture resistance function."
+  },
+  {
+    "id": "0af0ed33-4efc-4970-8ced-1efce47666cc",
+    "legacy_name": "Air Purifier",
+    "new_component_name": "Filtration Media (Adsorption/Efficiency)",
+    "rationale": "Focuses on B2B media for filtration enhancing adsorption and efficiency."
+  },
+  {
+    "id": "c701c066-7937-4d46-afe2-6e39ac1b99e8",
+    "legacy_name": "Aircraft Lightweight Composites",
+    "new_component_name": "Aircraft Panel Composite (Lightweight/Strength)",
+    "rationale": "Specifies B2B composite for aircraft panels with lightweight and strength properties."
+  },
+  {
+    "id": "b813a92d-2ff8-42cf-97d3-f540abb53b5b",
+    "legacy_name": "Airport Runway Repair Materials",
+    "new_component_name": "Asphalt Repair Compound (Durability/Reinforcement)",
+    "rationale": "Identifies B2B compound for asphalt repair providing durability and reinforcement."
+  },
+  {
+    "id": "e613e131-06a8-4866-b282-12188e99152a",
+    "legacy_name": "Aluminum Beverage Can (Internal Liner)",
+    "new_component_name": "Can Liner Coating (Barrier/Corrosion)",
+    "rationale": "Shifts to B2B coating for can liners enhancing barrier and corrosion resistance."
+  },
+  {
+    "id": "ed6cfea7-4e74-464f-a660-7f9a2ea592f3",
+    "legacy_name": "Antennas (Printed)",
+    "new_component_name": "Printed Antenna Ink (Conductive)",
+    "rationale": "Focuses on B2B ink for printed antennas providing conductivity."
+  },
+  {
+    "id": "8803efbb-3eb2-4aea-8639-a9a82dd0902d",
+    "legacy_name": "Anti-Bacterial Hospital Surface Coating",
+    "new_component_name": "Surface Coating (Anti-Microbial)",
+    "rationale": "Specifies B2B coating for surfaces with anti-microbial function."
+  },
+  {
+    "id": "052f9d96-aedb-4cad-90c5-38032a617f97",
+    "legacy_name": "Anti-Corrosion Coatings (Machinery)",
+    "new_component_name": "Machinery Coating (Corrosion Resistance)",
+    "rationale": "Identifies B2B coating for machinery providing corrosion resistance."
+  },
+  {
+    "id": "60e3503f-2a1c-41e8-a2ab-3550dea22f8d",
+    "legacy_name": "Anti-Corrosion Metal Paint",
+    "new_component_name": "Metal Paint Additive (Corrosion Inhibition)",
+    "rationale": "Converts to B2B additive for metal paints inhibiting corrosion."
+  },
+  {
+    "id": "aa20e37d-005a-4a9e-8e1f-7848143703ae",
+    "legacy_name": "Anti-Corrosion Undercoating",
+    "new_component_name": "Underbody Coating (Corrosion Protection)",
+    "rationale": "Focuses on B2B coating for underbodies providing corrosion protection."
+  },
+  {
+    "id": "f8b82615-04e1-4ec6-8c1d-c49b21ac9d19",
+    "legacy_name": "Anti-Graffiti Coatings",
+    "new_component_name": "Surface Coating (Graffiti Resistance)",
+    "rationale": "Specifies B2B coating for surfaces resisting graffiti."
+  },
+  {
+    "id": "cc0bdcde-05cf-4622-8ef3-1d6e9e4a317f",
+    "legacy_name": "Anti-Icing Coatings",
+    "new_component_name": "Surface Coating (Ice Repellency)",
+    "rationale": "Identifies B2B coating for surfaces providing ice repellency."
+  },
+  {
+    "id": "0be47d55-176f-4431-9ab8-97ebbfd66b32",
+    "legacy_name": "Anti-Static Coatings/Flooring (Manufacturing)",
+    "new_component_name": "Flooring Coating (ESD Protection)",
+    "rationale": "Shifts to B2B coating for flooring with ESD protection function."
+  },
+  {
+    "id": "a4a65798-a657-4dbe-ac76-a02d76c82d6e",
+    "legacy_name": "Anti-Static Epoxy Garage Floor Coating",
+    "new_component_name": "Epoxy Floor Coating (ESD)",
+    "rationale": "Focuses on B2B epoxy coating for floors providing ESD properties."
+  },
+  {
+    "id": "56c36c18-eced-4a19-b3ff-265df8bb94b6",
+    "legacy_name": "Anti-Static Hospital Flooring",
+    "new_component_name": "Hospital Floor Compound (ESD)",
+    "rationale": "Specifies B2B compound for hospital floors with ESD function."
+  },
+  {
+    "id": "d72555e3-c959-40b6-9622-e857b36b0a48",
+    "legacy_name": "Aquaculture Nets/Cages",
+    "new_component_name": "Netting Composite (Strength/Durability)",
+    "rationale": "Converts to B2B composite for netting enhancing strength and durability."
+  },
+  {
+    "id": "48001ad7-e743-4984-afb8-3023fe1be56b",
+    "legacy_name": "Archery Bows/Arrows",
+    "new_component_name": "Bow Limb Composite (Flexural Strength)",
+    "rationale": "Identifies B2B composite for bow limbs providing flexural strength."
+  },
+  {
+    "id": "55f773fd-4c05-4c4d-ba2e-832def10ed57",
+    "legacy_name": "Area Rugs/Carpets",
+    "new_component_name": "Carpet Backing Compound (Durability/Anti-Static)",
+    "rationale": "Shifts to B2B compound for carpet backing with durability and anti-static functions."
+  },
+  {
+    "id": "1858beb9-7b80-4b4a-810e-30b21ba4a725",
+    "legacy_name": "Art Supplies (Pigments/Binders)",
+    "new_component_name": "Pigment Binder Additive (Conductivity/Dispersion)",
+    "rationale": "Focuses on B2B additive for pigment binders enhancing conductivity and dispersion."
+  },
+  {
+    "id": "50ae2827-4a25-4307-954e-1d600221f178",
+    "legacy_name": "Artificial Muscles/Actuators (Non-Electrothermal)",
+    "new_component_name": "Actuator Material (Flexible/Conductive)",
+    "rationale": "Specifies B2B material for actuators with flexible and conductive properties."
+  },
+  {
+    "id": "0c545686-0639-447a-918b-758528397c52",
+    "legacy_name": "Asphalt Sealant (Driveway)",
+    "new_component_name": "Asphalt Sealant Additive (Durability/Barrier)",
+    "rationale": "Identifies B2B additive for asphalt sealants providing durability and barrier functions."
+  },
+  {
+    "id": "99ea064c-06c0-40ec-8026-68db7c660cda",
+    "legacy_name": "At-Home Cancer Screening Test",
+    "new_component_name": "Diagnostic Sensor Film (Biosensing)",
+    "rationale": "Converts to B2B sensor film for diagnostics with biosensing function."
+  },
+  {
+    "id": "4c7a4ac3-7ef0-4910-87c7-980b151a2307",
+    "legacy_name": "Automotive Composite Body Panels (e.g., Bumper)",
+    "new_component_name": "Body Panel Composite (Lightweight/Impact)",
+    "rationale": "Focuses on B2B composite for body panels with lightweight and impact resistance."
+  },
+  {
+    "id": "3ec939f5-917c-45ce-a795-d84086450284",
+    "legacy_name": "Automotive Composite Lightweight Components",
+    "new_component_name": "Lightweight Component Composite (Structural)",
+    "rationale": "Specifies B2B composite for lightweight automotive components with structural function."
+  },
+  {
+    "id": "7fda8e07-54c9-4b9b-835a-c82d09f1c026",
+    "legacy_name": "Automotive Engine Lubricant",
+    "new_component_name": "Lubricant Additive (Friction Reduction)",
+    "rationale": "Clarifies B2B additive for lubricants reducing friction."
+  },
+  {
+    "id": "1b01d53c-bbe7-4eee-a72e-966ae5435669",
+    "legacy_name": "Automotive Fuel Rail Covers",
+    "new_component_name": "Fuel Rail Cover Composite (Thermal/Strength)",
+    "rationale": "Identifies B2B composite for fuel rail covers with thermal and strength properties."
+  },
+  {
+    "id": "ff74f516-13d8-46f8-8401-77e97590c0d3",
+    "legacy_name": "Automotive Interior Cabin HVAC Vents",
+    "new_component_name": "HVAC Vent Composite (Lightweight/Durability)",
+    "rationale": "Shifts to B2B composite for HVAC vents emphasizing lightweight and durability."
+  },
+  {
+    "id": "dfd8c0a2-e80e-43b9-a80c-80844c6bbe7e",
+    "legacy_name": "Backpacks",
+    "new_component_name": "Backpack Fabric Coating (Waterproof/Strength)",
+    "rationale": "Focuses on B2B coating for backpack fabrics providing waterproofing and strength."
+  },
+  {
+    "id": "fc6f9482-9035-4a8a-9a14-944afed972cf",
+    "legacy_name": "Ballistic Panels (Body Armor)",
+    "new_component_name": "Ballistic Panel Composite (Impact Resistance)",
+    "rationale": "Specifies B2B composite for ballistic panels with impact resistance."
+  },
+  {
+    "id": "4a602c55-31ef-46aa-9983-8472ac8705c3",
+    "legacy_name": "Baseball Bat (Composite)",
+    "new_component_name": "Bat Barrel Composite (Strength/Vibration Dampening)",
+    "rationale": "Identifies B2B composite for bat barrels enhancing strength and vibration dampening."
+  },
+  {
+    "id": "a29698ff-698b-42b5-97bf-3fc7752f06b1",
+    "legacy_name": "Bearings (Coatings/Composites)",
+    "new_component_name": "Bearing Coating (Wear Resistance)",
+    "rationale": "Converts to B2B coating for bearings providing wear resistance."
+  },
+  {
+    "id": "231e34f5-8f2e-4c10-89a4-a8472d1f0d6a",
+    "legacy_name": "Bicycle Helmet",
+    "new_component_name": "Helmet Shell Composite (Impact Absorption)",
+    "rationale": "Focuses on B2B composite for helmet shells with impact absorption function."
+  },
+  {
+    "id": "f354ccf3-ad2b-4fa2-b3f5-5656b585f931",
+    "legacy_name": "Binoculars/Telescopes (Casings)",
+    "new_component_name": "Optical Device Casing (Lightweight/Durable)",
+    "rationale": "Specifies B2B casing for optical devices emphasizing lightweight and durability."
+  },
+  {
+    "id": "cd89ad87-4cd7-45c8-a9ef-54a43e95ad0e",
+    "legacy_name": "Biocompatible Coatings for Medical Devices",
+    "new_component_name": "Device Coating (Biocompatible/Adhesion)",
+    "rationale": "Identifies B2B coating for medical devices with biocompatible and adhesion properties."
+  },
+  {
+    "id": "a8195d6c-e9a5-4fba-bd65-05897a7a1248",
+    "legacy_name": "Blast-Resistant Curtains/Liners",
+    "new_component_name": "Protective Liner Fabric (Blast Resistance)",
+    "rationale": "Shifts to B2B fabric for protective liners providing blast resistance."
+  },
+  {
+    "id": "e6553930-ab87-49b9-9ded-3b578e3e9b8f",
+    "legacy_name": "Blender / Food Processor",
+    "new_component_name": "Small Appliance Motor Gasket (Wear-Resistant)",
+    "rationale": "Focuses on B2B gasket for small appliance motors with wear resistance."
+  },
+  {
+    "id": "40cfdf17-7982-4356-9221-b931e242e8b4",
+    "legacy_name": "Bookbinding Materials",
+    "new_component_name": "Binding Adhesive Additive (Strength/Flexibility)",
+    "rationale": "Specifies B2B additive for binding adhesives enhancing strength and flexibility."
+  },
+  {
+    "id": "600b1d24-aac5-4b18-8c71-f867c0c2945c",
+    "legacy_name": "Brake Pads/Rotors",
+    "new_component_name": "Brake Pad Composite (Friction/Thermal)",
+    "rationale": "Identifies B2B composite for brake pads with friction and thermal properties."
+  },
+  {
+    "id": "f16bb7de-4529-4187-8eeb-291bbc383f41",
+    "legacy_name": "Camping Chairs/Tables",
+    "new_component_name": "Furniture Frame Composite (Lightweight/Strength)",
+    "rationale": "Converts to B2B composite for furniture frames providing lightweight and strength."
+  },
+  {
+    "id": "2e640595-06af-4e6c-aea8-82a910a3d2b9",
+    "legacy_name": "Canvas/Awnings",
+    "new_component_name": "Canvas Fabric Coating (UV/Weather Resistance)",
+    "rationale": "Focuses on B2B coating for canvas fabrics enhancing UV and weather resistance."
+  },
+  {
+    "id": "3fc51cd4-7650-403b-b169-22c54abd98e9",
+    "legacy_name": "Capacitors (Dielectric Material)",
+    "new_component_name": "Dielectric Additive (Capacitance Enhancement)",
+    "rationale": "Specifies B2B additive for dielectrics enhancing capacitance."
+  },
+  {
+    "id": "87533659-d5cd-44e0-9bbd-56ce72bb2c5f",
+    "legacy_name": "Car Battery (12V Lead-Acid)",
+    "new_component_name": "Battery Electrode Additive (Conductivity)",
+    "rationale": "Identifies B2B additive for battery electrodes improving conductivity."
+  },
+  {
+    "id": "8ad0df58-3cd5-4057-9351-36db1b80aba3",
+    "legacy_name": "Catalyst Support Structures (Textile)",
+    "new_component_name": "Catalyst Support Fabric (Porous/Conductive)",
+    "rationale": "Shifts to B2B fabric for catalyst supports with porous and conductive properties."
+  },
+  {
+    "id": "42f7f790-b784-41f7-bdaf-78b3260a4f40",
+    "legacy_name": "Caulking Guns",
+    "new_component_name": "Gun Barrel Composite (Durability)",
+    "rationale": "Focuses on B2B composite for gun barrels providing durability."
+  },
+  {
+    "id": "15da701e-fd73-4712-bd55-2f9d0bf0dcd8",
+    "legacy_name": "Cement (General Additive)",
+    "new_component_name": "Cement Admixture (Strength Enhancement)",
+    "rationale": "Specifies B2B admixture for cement enhancing strength."
+  },
+  {
+    "id": "a020298f-c789-4671-9add-ddaa9ae41986",
+    "legacy_name": "Chemical Protective Suits",
+    "new_component_name": "Protective Suit Fabric (Barrier/Chemical Resistance)",
+    "rationale": "Identifies B2B fabric for protective suits with barrier and chemical resistance."
+  },
+  {
+    "id": "6c15d9fc-e747-49a6-8abb-74ef659cceba",
+    "legacy_name": "Cleanroom Wipes",
+    "new_component_name": "Wipe Fabric (Anti-Static/Absorbent)",
+    "rationale": "Converts to B2B fabric for wipes with anti-static and absorbent functions."
+  },
+  {
+    "id": "f81e8519-7ced-4b0b-a2ba-5654d519d636",
+    "legacy_name": "Climbing Harness",
+    "new_component_name": "Harness Webbing Composite (Tensile Strength)",
+    "rationale": "Focuses on B2B composite for harness webbing providing tensile strength."
+  },
+  {
+    "id": "be07d11a-007a-428f-8742-7480e4e25c5c",
+    "legacy_name": "Clothes Dryer Drum",
+    "new_component_name": "Dryer Drum Coating (Wear Resistance)",
+    "rationale": "Specifies B2B coating for dryer drums enhancing wear resistance."
+  },
+  {
+    "id": "8bbc8f99-22f1-491c-80e1-0aed4cd056be",
+    "legacy_name": "Computer Mouse",
+    "new_component_name": "Mouse Casing Composite (Ergonomic/Durable)",
+    "rationale": "Identifies B2B composite for mouse casings with ergonomic and durable properties."
+  },
+  {
+    "id": "6fdf046b-ef8c-4b38-9c96-9a1ccc25200d",
+    "legacy_name": "Conductive Adhesives",
+    "new_component_name": "Adhesive Additive (Conductivity)",
+    "rationale": "Shifts to B2B additive for adhesives providing conductivity."
+  },
+  {
+    "id": "5f46f51e-cf56-4e56-a95c-f24f4983b8ed",
+    "legacy_name": "Conductive Seat Heaters",
+    "new_component_name": "Seat Heater Element (Conductive Fabric)",
+    "rationale": "Focuses on B2B conductive fabric for seat heater elements."
+  },
+  {
+    "id": "34d4d2b2-80cd-49e8-8984-e8b2aa5dafe9",
+    "legacy_name": "Contact Lens Cases",
+    "new_component_name": "Lens Case Composite (Anti-Microbial)",
+    "rationale": "Specifies B2B composite for lens cases with anti-microbial function."
+  },
+  {
+    "id": "49313b22-71d9-477f-8ffc-480c4034d007",
+    "legacy_name": "Conveyor Belts",
+    "new_component_name": "Belt Composite (Abrasion Resistance)",
+    "rationale": "Identifies B2B composite for conveyor belts providing abrasion resistance."
+  },
+  {
+    "id": "639b4e25-09d1-46b6-8949-dd0983a6e36a",
+    "legacy_name": "Cookware (Pots/Pans)",
+    "new_component_name": "Cookware Coating (Non-Stick/Thermal)",
+    "rationale": "Converts to B2B coating for cookware with non-stick and thermal properties."
+  },
+  {
+    "id": "cde0f984-7664-4596-9589-57f48a214ce2",
+    "legacy_name": "Coolers/Insulated Boxes",
+    "new_component_name": "Insulation Foam Additive (Thermal Efficiency)",
+    "rationale": "Focuses on B2B additive for insulation foams enhancing thermal efficiency."
+  },
+  {
+    "id": "fa7c24a4-6d30-42c9-ab20-3e6432b2976d",
+    "legacy_name": "Cordless Stick Vacuum",
+    "new_component_name": "Vacuum Housing Composite (Lightweight/Durable)",
+    "rationale": "Specifies B2B composite for vacuum housings with lightweight and durable properties."
+  },
+  {
+    "id": "f1a0bcec-9273-433d-a037-2a1a60cb23ca",
+    "legacy_name": "Cosmetic Containers",
+    "new_component_name": "Container Composite (Barrier/Lightweight)",
+    "rationale": "Identifies B2B composite for containers providing barrier and lightweight functions."
+  },
+  {
+    "id": "afe7651e-cc72-4617-a86a-afac5ac25b4d",
+    "legacy_name": "Covers for Electronic Devices (eReaders, etc.)",
+    "new_component_name": "Device Cover Composite (Protective/Conductive)",
+    "rationale": "Shifts to B2B composite for device covers with protective and conductive properties."
+  },
+  {
+    "id": "acaa3d08-f75c-4b93-81a4-e17908a4a174",
+    "legacy_name": "Crack Injection Resins (Concrete/Asphalt)",
+    "new_component_name": "Resin Additive (Adhesion/Strength)",
+    "rationale": "Focuses on B2B additive for resins enhancing adhesion and strength."
+  },
+  {
+    "id": "8e7a2dd8-eb79-4bc7-b4f6-ec76ceb4825c",
+    "legacy_name": "Curtains/Blinds (Thermal)",
+    "new_component_name": "Fabric Coating (Thermal Insulation)",
+    "rationale": "Specifies B2B coating for fabrics providing thermal insulation."
+  },
+  {
+    "id": "c7f7eff4-1f9e-4fb0-96f0-cb7945e287aa",
+    "legacy_name": "Cutlery (Knives)",
+    "new_component_name": "Blade Coating (Wear Resistance)",
+    "rationale": "Identifies B2B coating for blades enhancing wear resistance."
+  },
+  {
+    "id": "b32be0ec-494c-475f-8e7c-111e78f080f3",
+    "legacy_name": "Cutting Tools (Industrial Coating)",
+    "new_component_name": "Tool Coating (Hardness/Durability)",
+    "rationale": "Converts to B2B coating for cutting tools providing hardness and durability."
+  },
+  {
+    "id": "db3b2ed9-b915-41a1-be4c-425b15f1231c",
+    "legacy_name": "Data Center Server Casing",
+    "new_component_name": "Server Casing Composite (Thermal/EMI Shielding)",
+    "rationale": "Focuses on B2B composite for server casings with thermal and EMI shielding functions."
+  },
+  {
+    "id": "8ccf2365-c1a8-4f98-80f5-a0c0f5a964ed",
+    "legacy_name": "Defense Equipment Casings",
+    "new_component_name": "Equipment Casing Composite (Impact/EMI)",
+    "rationale": "Specifies B2B composite for defense casings with impact and EMI protection."
+  },
+  {
+    "id": "4c6e60de-f2da-4fb1-82eb-9b347720a1ce",
+    "legacy_name": "Dental Fillings (Composite)",
+    "new_component_name": "Filling Composite Additive (Strength/Biocompatible)",
+    "rationale": "Identifies B2B additive for dental composites enhancing strength and biocompatibility."
+  },
+  {
+    "id": "00b5b7ec-eb3c-44bc-b4fb-5ff90d1d3282",
+    "legacy_name": "Desalination Membranes",
+    "new_component_name": "Membrane Composite (Permeability/Fouling Resistance)",
+    "rationale": "Shifts to B2B composite for membranes with permeability and fouling resistance."
+  },
+  {
+    "id": "2ead394f-4103-4970-a18d-b35317439143",
+    "legacy_name": "Desiccant Materials (Enhanced)",
+    "new_component_name": "Desiccant Additive (Adsorption Efficiency)",
+    "rationale": "Focuses on B2B additive for desiccants enhancing adsorption efficiency."
+  },
+  {
+    "id": "64eea5b1-9c47-4cb2-bd31-153c3161365d",
+    "legacy_name": "Desk Lamps (LED)",
+    "new_component_name": "Lamp Heatsink (Thermal Conduction)",
+    "rationale": "Specifies B2B heatsink for lamps providing thermal conduction."
+  },
+  {
+    "id": "d68012d1-0463-4053-a1cd-f8eea760b7ca",
+    "legacy_name": "Diaper Pails",
+    "new_component_name": "Pail Liner Coating (Odor Barrier)",
+    "rationale": "Identifies B2B coating for pail liners with odor barrier function."
+  },
+  {
+    "id": "56a9efeb-7a69-4817-bf86-cbf8226278df",
+    "legacy_name": "Doorknobs/Handles",
+    "new_component_name": "Handle Coating (Anti-Microbial/Wear)",
+    "rationale": "Converts to B2B coating for handles providing anti-microbial and wear resistance."
+  },
+  {
+    "id": "6fa3534f-3ea3-4426-8f61-0ab31bf40401",
+    "legacy_name": "Drill Bits/Saw Blades (Consumer Grade)",
+    "new_component_name": "Tool Bit Coating (Hardness)",
+    "rationale": "Focuses on B2B coating for tool bits enhancing hardness."
+  },
+  {
+    "id": "59de93dd-2192-49a5-ae53-080e5204db43",
+    "legacy_name": "Drink Coasters",
+    "new_component_name": "Coaster Composite (Absorbent/Thermal)",
+    "rationale": "Specifies B2B composite for coasters with absorbent and thermal properties."
+  },
+  {
+    "id": "63ca0764-5e18-409b-9bc2-e53bba14dab2",
+    "legacy_name": "Drone Body/Propellers",
+    "new_component_name": "Drone Frame Composite (Lightweight/Strength)",
+    "rationale": "Identifies B2B composite for drone frames providing lightweight and strength."
+  },
+  {
+    "id": "459c8ee9-098d-4749-adb5-26842f3a17c4",
+    "legacy_name": "Drug Delivery Systems",
+    "new_component_name": "Delivery Membrane (Controlled Release)",
+    "rationale": "Shifts to B2B membrane for drug delivery with controlled release function."
+  },
+  {
+    "id": "d1aa7563-01f5-4d4d-86b7-8976b01fd210",
+    "legacy_name": "E-Bike Battery Pack",
+    "new_component_name": "Battery Pack Enclosure (Composite/Thermal)",
+    "rationale": "Focuses on B2B enclosure for battery packs with composite and thermal properties."
+  },
+  {
+    "id": "3beaa230-bf67-4b4b-b8f0-64e7a39ad451",
+    "legacy_name": "Electric Stand Mixer",
+    "new_component_name": "Mixer Gear Housing (Wear-Resistant)",
+    "rationale": "Specifies B2B housing for mixer gears with wear resistance."
+  },
+  {
+    "id": "d04d5a3f-112f-4466-b73a-be233bd0763b",
+    "legacy_name": "Electric Vehicle Battery Enclosure",
+    "new_component_name": "EV Battery Enclosure (Composite/EMI Shielding)",
+    "rationale": "Enhances specificity with B2B composite enclosure providing EMI shielding."
+  },
+  {
+    "id": "20beab9d-9ca7-46f0-9e36-2bae1c86709e",
+    "legacy_name": "Electrical Conduit (Plastic)",
+    "new_component_name": "Conduit Compound (ESD/Strength)",
+    "rationale": "Identifies B2B compound for conduits with ESD and strength properties."
+  },
+  {
+    "id": "0b71c135-16a7-4c05-ad37-33790e6e3437",
+    "legacy_name": "Emergency Escape Hoods/Masks",
+    "new_component_name": "Mask Filter Membrane (Filtration/Thermal)",
+    "rationale": "Converts to B2B membrane for masks providing filtration and thermal resistance."
+  },
+  {
+    "id": "f1298753-6b18-43f8-b6a3-6cab366ad408",
+    "legacy_name": "EMI Shielding (Aerospace/Defense)",
+    "new_component_name": "Shielding Coating (EMI Protection)",
+    "rationale": "Focuses on B2B coating for EMI shielding in aerospace and defense."
+  },
+  {
+    "id": "0ccccf87-7b17-4527-ae12-f1a586af5c21",
+    "legacy_name": "EMI Shielding Fabrics/Tapes",
+    "new_component_name": "Shielding Fabric (EMI Absorption)",
+    "rationale": "Specifies B2B fabric for EMI shielding with absorption function."
+  },
+  {
+    "id": "3574f139-6031-47d7-9dc9-74e75c327418",
+    "legacy_name": "EMI-Shielded USB/HDMI Cable",
+    "new_component_name": "Cable Shielding Compound (EMI Protection)",
+    "rationale": "Identifies B2B compound for cable shielding providing EMI protection."
+  },
+  {
+    "id": "0a936b9e-e250-45f7-9c97-70fb4785f2df",
+    "legacy_name": "Engine Air Filters/Cabin Air Filters",
+    "new_component_name": "Filter Media (Filtration Efficiency)",
+    "rationale": "Shifts to B2B media for filters enhancing filtration efficiency."
+  },
+  {
+    "id": "508fca42-7eaf-424b-802f-95ef32d3fd22",
+    "legacy_name": "Environmental Remediation Sorbents",
+    "new_component_name": "Sorbent Additive (Adsorption Capacity)",
+    "rationale": "Focuses on B2B additive for sorbents increasing adsorption capacity."
+  },
+  {
+    "id": "8eb40767-365c-4e9c-bb07-7452ad93e7d8",
+    "legacy_name": "EV Thermal Management Actuator",
+    "new_component_name": "Actuator Component (Thermal Control)",
+    "rationale": "Specifies B2B component for EV actuators with thermal control function."
+  },
+  {
+    "id": "ee072959-cad4-413b-9f7f-9b4c07a1391b",
+    "legacy_name": "Exhaust System Components (Coatings)",
+    "new_component_name": "Exhaust Coating (Corrosion/Thermal)",
+    "rationale": "Identifies B2B coating for exhaust components providing corrosion and thermal resistance."
+  },
+  {
+    "id": "09f5c0b6-7680-4a44-b01a-effbc5b0aacb",
+    "legacy_name": "Fertilizer Coatings (Controlled Release)",
+    "new_component_name": "Fertilizer Coating (Release Control)",
+    "rationale": "Converts to B2B coating for fertilizers controlling release."
+  },
+  {
+    "id": "cbdfc5a0-fb58-405b-be4f-b8c9ee2a49fe",
+    "legacy_name": "Fire-Retardant Paint",
+    "new_component_name": "Paint Additive (Flame Retardancy)",
+    "rationale": "Focuses on B2B additive for paints providing flame retardancy."
+  },
+  {
+    "id": "fb90051d-2edc-403c-a066-16b30f05a0e5",
+    "legacy_name": "Firefighter Turnout Gear",
+    "new_component_name": "Protective Fabric (Thermal/Flame Resistance)",
+    "rationale": "Specifies B2B fabric for protective gear with thermal and flame resistance."
+  },
+  {
+    "id": "d3a3cfb3-c513-4288-a5db-ffc92d88cbe7",
+    "legacy_name": "Fishing Lures",
+    "new_component_name": "Lure Body Composite (Durability)",
+    "rationale": "Identifies B2B composite for lure bodies providing durability."
+  },
+  {
+    "id": "467d38a7-f8e9-416a-ad53-9a561d78d1a8",
+    "legacy_name": "Fishing Rod",
+    "new_component_name": "Rod Blank Composite (Flexural Strength)",
+    "rationale": "Shifts to B2B composite for rod blanks enhancing flexural strength."
+  },
+  {
+    "id": "3984124a-760b-4d1e-9a26-8cd56152d6de",
+    "legacy_name": "Flashlights/Headlamps",
+    "new_component_name": "Lamp Housing Composite (Impact Resistance)",
+    "rationale": "Focuses on B2B composite for lamp housings providing impact resistance."
+  },
+  {
+    "id": "a5f92bf8-f074-461f-8a57-8756d8c55f2f",
+    "legacy_name": "Flexible Food Packaging Films",
+    "new_component_name": "Packaging Film Additive (Barrier/Flexibility)",
+    "rationale": "Specifies B2B additive for packaging films enhancing barrier and flexibility."
+  },
+  {
+    "id": "4f207f5d-21b4-4152-8e5e-301e64ea4443",
+    "legacy_name": "Flexible Heaters",
+    "new_component_name": "Heater Film (Conductive/Flexible)",
+    "rationale": "Identifies B2B film for heaters with conductive and flexible properties."
+  },
+  {
+    "id": "8da3d944-e037-43c8-860a-31264dfce5f5",
+    "legacy_name": "Flexible Solar Panel",
+    "new_component_name": "Solar Panel Substrate (Flexible/Conductive)",
+    "rationale": "Converts to B2B substrate for solar panels providing flexibility and conductivity."
+  },
+  {
+    "id": "ca507b9a-5ba2-4f5e-87f4-a5b810fe335a",
+    "legacy_name": "Flexible/Bendable Smartphone Display",
+    "new_component_name": "Display Substrate Film (Flexible/Conductive)",
+    "rationale": "Focuses on B2B film for display substrates with flexible and conductive functions."
+  },
+  {
+    "id": "5363a70a-b851-4277-bc26-36644958c771",
+    "legacy_name": "Food Storage Container",
+    "new_component_name": "Container Compound (Barrier/Durability)",
+    "rationale": "Specifies B2B compound for containers enhancing barrier and durability."
+  },
+  {
+    "id": "3e35e087-d652-47b5-a275-9bd4e3be6f37",
+    "legacy_name": "Fuel Cell Components (Membranes/Electrodes)",
+    "new_component_name": "Fuel Cell Membrane Additive (Conductivity)",
+    "rationale": "Identifies B2B additive for fuel cell membranes improving conductivity."
+  },
+  {
+    "id": "4501cf81-b36e-4a90-91e2-c0cdfdadd5a7",
+    "legacy_name": "Fuel Lines/Hoses",
+    "new_component_name": "Hose Compound (Barrier/Strength)",
+    "rationale": "Shifts to B2B compound for hoses providing barrier and strength."
+  },
+  {
+    "id": "0bd48a0c-4cf4-4ee8-84d3-fea84568e953",
+    "legacy_name": "Gaming Console",
+    "new_component_name": "Console Casing Composite (Thermal/EMI)",
+    "rationale": "Focuses on B2B composite for console casings with thermal and EMI functions."
+  },
+  {
+    "id": "49b156e1-f29b-45b2-bef6-323c5efb6085",
+    "legacy_name": "Gas Separation Membranes",
+    "new_component_name": "Separation Membrane (Selectivity/Permeability)",
+    "rationale": "Specifies B2B membrane for gas separation with selectivity and permeability."
+  },
+  {
+    "id": "93f475ec-32ca-404c-83d9-1738eb10996f",
+    "legacy_name": "Geotextiles (Civil Engineering)",
+    "new_component_name": "Geotextile Fabric (Reinforcement/Drainage)",
+    "rationale": "Identifies B2B fabric for geotextiles providing reinforcement and drainage."
+  },
+  {
+    "id": "77fcf08a-380e-43fc-84d8-388be3015cc0",
+    "legacy_name": "Geothermal Piping",
+    "new_component_name": "Pipe Compound (Thermal/Corrosion Resistance)",
+    "rationale": "Converts to B2B compound for pipes with thermal and corrosion resistance."
+  },
+  {
+    "id": "c09e7345-203e-4f36-b43a-ee262811590e",
+    "legacy_name": "Golf Club (Driver)",
+    "new_component_name": "Club Shaft Composite (Flexural Strength)",
+    "rationale": "Focuses on B2B composite for club shafts enhancing flexural strength."
+  },
+  {
+    "id": "f64d039a-f00f-4641-86d0-f00b446c9774",
+    "legacy_name": "Graphene-Coated Fabrics (General)",
+    "new_component_name": "Fabric Coating (Conductive/Durable)",
+    "rationale": "Specifies B2B coating for fabrics providing conductive and durable properties."
+  },
+  {
+    "id": "8d53fb15-6ce8-400b-b138-dfb246045e61",
+    "legacy_name": "Graphene-Enhanced Cutting Fluids",
+    "new_component_name": "Cutting Fluid Additive (Lubrication/Thermal)",
+    "rationale": "Identifies B2B additive for cutting fluids enhancing lubrication and thermal properties."
+  },
+  {
+    "id": "9c9779a9-3e34-472a-9f82-47b13bcbc265",
+    "legacy_name": "Grid-Scale Battery Components (Non-Electrode)",
+    "new_component_name": "Battery Separator Membrane (Conductivity/Safety)",
+    "rationale": "Shifts to B2B membrane for battery separators with conductivity and safety functions."
+  },
+  {
+    "id": "ad86e8cd-0621-4edd-88aa-34a7494385bb",
+    "legacy_name": "Grid-Scale Supercapacitors",
+    "new_component_name": "Supercapacitor Electrode Additive (Capacitance)",
+    "rationale": "Focuses on B2B additive for supercapacitor electrodes enhancing capacitance."
+  },
+  {
+    "id": "9622df5e-6c3e-4505-938b-44dc48940d57",
+    "legacy_name": "Hard Drives and Memories",
+    "new_component_name": "Storage Device Coating (Thermal/EMI)",
+    "rationale": "Specifies B2B coating for storage devices with thermal and EMI properties."
+  },
+  {
+    "id": "1c9ec0bf-6103-4921-99f0-5d55ba23b29e",
+    "legacy_name": "Headlight/Taillight Housings",
+    "new_component_name": "Light Housing Composite (Impact/Thermal)",
+    "rationale": "Identifies B2B composite for light housings providing impact and thermal resistance."
+  },
+  {
+    "id": "5e735c47-4597-4203-896c-2c289b08a282",
+    "legacy_name": "Hearing Aids",
+    "new_component_name": "Aid Casing Composite (Lightweight/Conductive)",
+    "rationale": "Converts to B2B composite for hearing aid casings with lightweight and conductive properties."
+  },
+  {
+    "id": "1f2a78f4-1490-4df0-af68-07d4de448ea0",
+    "legacy_name": "Heated Gloves / Boots",
+    "new_component_name": "Heating Element Fabric (Conductive/Thermal)",
+    "rationale": "Focuses on B2B fabric for heating elements providing conductive and thermal functions."
+  },
+  {
+    "id": "654b483c-2fb1-47cc-821b-4989018bfee7",
+    "legacy_name": "High-Barrier PET Juice/Beer Bottle",
+    "new_component_name": "PET Bottle Compound (Barrier Enhancement)",
+    "rationale": "Specifies B2B compound for PET bottles enhancing barrier properties."
+  },
+  {
+    "id": "062644ac-2756-4e12-962a-471316147818",
+    "legacy_name": "High-End Audio Cables",
+    "new_component_name": "Cable Conductor Coating (Conductivity)",
+    "rationale": "Identifies B2B coating for cable conductors improving conductivity."
+  },
+  {
+    "id": "7808dcdf-6950-4d3a-9c63-ad0982b1a4e8",
+    "legacy_name": "High-End Coffee / Espresso Machine",
+    "new_component_name": "Machine Boiler Coating (Thermal Efficiency)",
+    "rationale": "Shifts to B2B coating for machine boilers enhancing thermal efficiency."
+  },
+  {
+    "id": "379eea34-9a02-4873-983e-4c90fffbf444",
+    "legacy_name": "High-Frequency Transistors",
+    "new_component_name": "Transistor Gate Material (Conductivity)",
+    "rationale": "Focuses on B2B material for transistor gates providing conductivity."
+  },
+  {
+    "id": "99e83c49-5732-433d-b00c-fa773cef69b8",
+    "legacy_name": "High-Performance Cement Grout",
+    "new_component_name": "Grout Admixture (Strength/Flowability)",
+    "rationale": "Specifies B2B admixture for grouts enhancing strength and flowability."
+  },
+  {
+    "id": "8bca3a25-3037-4a0f-aeb6-6a32f7010e1e",
+    "legacy_name": "High-Voltage Insulators (Ceramic/Polymer)",
+    "new_component_name": "Insulator Coating (Dielectric Strength)",
+    "rationale": "Identifies B2B coating for insulators providing dielectric strength."
+  },
+  {
+    "id": "2af24d97-c236-4615-ab9b-8194a65fd7a7",
+    "legacy_name": "Hockey Stick",
+    "new_component_name": "Stick Shaft Composite (Flexural Strength)",
+    "rationale": "Converts to B2B composite for stick shafts enhancing flexural strength."
+  },
+  {
+    "id": "d3d1f9fa-dbd0-4895-aef0-88c32f1b5b12",
+    "legacy_name": "Hot Press Dies",
+    "new_component_name": "Die Coating (Thermal/Wear Resistance)",
+    "rationale": "Focuses on B2B coating for dies providing thermal and wear resistance."
+  },
+  {
+    "id": "693d7270-8aef-402b-becb-b422f608fad6",
+    "legacy_name": "Hydrogen Production Catalysts",
+    "new_component_name": "Catalyst Additive (Efficiency/Durability)",
+    "rationale": "Specifies B2B additive for catalysts enhancing efficiency and durability."
+  },
+  {
+    "id": "f5f5ba2b-09c9-4288-b8ce-1b2cbbb935d9",
+    "legacy_name": "Hydrogen Storage Tanks (Composite)",
+    "new_component_name": "Tank Liner Composite (Barrier/Strength)",
+    "rationale": "Identifies B2B composite for tank liners providing barrier and strength."
+  },
+  {
+    "id": "f2daa46c-d163-4e1a-95d6-ab9483956e28",
+    "legacy_name": "Hydroponic System Components",
+    "new_component_name": "System Pipe Compound (Corrosion Resistance)",
+    "rationale": "Shifts to B2B compound for system pipes providing corrosion resistance."
+  },
+  {
+    "id": "1a625658-7b78-4908-ada1-340e9438e651",
+    "legacy_name": "Inductors (Core Material/Shielding)",
+    "new_component_name": "Inductor Core Additive (Magnetic Permeability)",
+    "rationale": "Focuses on B2B additive for inductor cores enhancing magnetic permeability."
+  },
+  {
+    "id": "b33fdc39-8339-4ff0-8450-3777c0f9965d",
+    "legacy_name": "Industrial Air Filters",
+    "new_component_name": "Filter Media (Efficiency/Durability)",
+    "rationale": "Specifies B2B media for industrial filters enhancing efficiency and durability."
+  },
+  {
+    "id": "8a81218b-fa9a-43f3-8fc6-655ccbab7713",
+    "legacy_name": "Industrial Chemical Containers",
+    "new_component_name": "Container Liner Coating (Chemical Resistance)",
+    "rationale": "Identifies B2B coating for container liners providing chemical resistance."
+  },
+  {
+    "id": "dcffe719-93ab-4479-a7e1-87ba1304ef4f",
+    "legacy_name": "Industrial Gaskets & Seals",
+    "new_component_name": "Gasket Compound (Sealing/Durability)",
+    "rationale": "Converts to B2B compound for gaskets enhancing sealing and durability."
+  },
+  {
+    "id": "e1cbd66a-3e8d-4f5e-b73f-c0437e8caf52",
+    "legacy_name": "Industrial Hoses (Chemical/Abrasion Resistant)",
+    "new_component_name": "Hose Compound (Abrasion/Chemical Resistance)",
+    "rationale": "Focuses on B2B compound for hoses providing abrasion and chemical resistance."
+  },
+  {
+    "id": "20f00e40-0578-42cc-8f56-4c7e802d8b32",
+    "legacy_name": "Industrial Lubricant",
+    "new_component_name": "Lubricant Additive (Friction Reduction)",
+    "rationale": "Specifies B2B additive for industrial lubricants reducing friction."
+  },
+  {
+    "id": "8db2146c-73be-40ee-8aff-51ee3e715186",
+    "legacy_name": "Industrial Protective Textiles",
+    "new_component_name": "Protective Fabric (Abrasion Resistance)",
+    "rationale": "Identifies B2B fabric for protective textiles providing abrasion resistance."
+  },
+  {
+    "id": "53b6bdda-b0ae-485b-884d-00c9db5bb277",
+    "legacy_name": "Inflatable Kayaks/Paddleboards",
+    "new_component_name": "Inflatable Hull Composite (Puncture Resistance)",
+    "rationale": "Shifts to B2B composite for inflatable hulls with puncture resistance."
+  },
+  {
+    "id": "b27b7f8b-a4af-4156-9362-9f874889509f",
+    "legacy_name": "Insulated Window Frames",
+    "new_component_name": "Frame Compound (Thermal Insulation)",
+    "rationale": "Focuses on B2B compound for window frames providing thermal insulation."
+  },
+  {
+    "id": "b66aeffc-e857-45bf-8029-ada2aa769f76",
+    "legacy_name": "Interior Trim Components (High Wear Areas)",
+    "new_component_name": "Trim Composite (Wear Resistance)",
+    "rationale": "Specifies B2B composite for interior trim with wear resistance."
+  },
+  {
+    "id": "c77127a6-10f8-42ea-8a40-5298d100c712",
+    "legacy_name": "Ironing Board Cover",
+    "new_component_name": "Cover Fabric Coating (Thermal Resistance)",
+    "rationale": "Identifies B2B coating for cover fabrics providing thermal resistance."
+  },
+  {
+    "id": "2d950422-9882-44a1-a475-7a2c1605ba82",
+    "legacy_name": "Irrigation Pipes/Drip Emitters",
+    "new_component_name": "Pipe Compound (Durability/Barrier)",
+    "rationale": "Converts to B2B compound for irrigation pipes enhancing durability and barrier."
+  },
+  {
+    "id": "78e18b23-4485-49a1-8861-f3ad0780b961",
+    "legacy_name": "Kayak / Canoe",
+    "new_component_name": "Hull Composite (Impact Resistance)",
+    "rationale": "Focuses on B2B composite for hulls providing impact resistance."
+  },
+  {
+    "id": "3701ebc3-b486-4435-98d2-51fc46fc07b9",
+    "legacy_name": "Keyboard Components",
+    "new_component_name": "Key Switch Composite (Durability/Conductive)",
+    "rationale": "Specifies B2B composite for key switches with durability and conductive properties."
+  },
+  {
+    "id": "1be53122-1e12-45c0-a81a-6b854f345470",
+    "legacy_name": "Keychains",
+    "new_component_name": "Keychain Composite (Strength/Durability)",
+    "rationale": "Identifies B2B composite for keychains providing strength and durability."
+  },
+  {
+    "id": "6a39c1ec-3be8-4499-af26-e25df056d173",
+    "legacy_name": "Laptop Casing",
+    "new_component_name": "Laptop Enclosure Composite (Lightweight/Thermal)",
+    "rationale": "Shifts to B2B composite for laptop enclosures with lightweight and thermal properties."
+  },
+  {
+    "id": "a884364a-56fc-4c63-b7fc-e2500e88029d",
+    "legacy_name": "Laptop/Tablet Stand",
+    "new_component_name": "Stand Composite (Strength/Stability)",
+    "rationale": "Focuses on B2B composite for stands providing strength and stability."
+  },
+  {
+    "id": "ffec8cd6-6ecd-4f12-95a0-72d880301e7d",
+    "legacy_name": "Levels (Tool)",
+    "new_component_name": "Tool Body Composite (Durability)",
+    "rationale": "Specifies B2B composite for tool bodies enhancing durability."
+  },
+  {
+    "id": "9c01b90b-7764-424c-a3c5-aad1ceb63de5",
+    "legacy_name": "Light Bulbs (LED Heat Sinks)",
+    "new_component_name": "LED Heatsink (Thermal Conduction)",
+    "rationale": "Identifies B2B heatsink for LEDs providing thermal conduction."
+  },
+  {
+    "id": "8d04ebf6-87fd-4c99-9b14-b957380c2b50",
+    "legacy_name": "Lightweight Composite Decking",
+    "new_component_name": "Decking Composite (Lightweight/Durability)",
+    "rationale": "Converts to B2B composite for decking with lightweight and durability."
+  },
+  {
+    "id": "bb0cdd73-52cd-4890-a137-40c65443e211",
+    "legacy_name": "Lightweight Composite Siding",
+    "new_component_name": "Siding Composite (Lightweight/Weather Resistance)",
+    "rationale": "Focuses on B2B composite for siding providing lightweight and weather resistance."
+  },
+  {
+    "id": "6311315c-a5b3-4bec-8015-a20d037eb5fe",
+    "legacy_name": "Lightweight PET Water/Soda Bottle",
+    "new_component_name": "PET Bottle Compound (Lightweight/Barrier)",
+    "rationale": "Specifies B2B compound for PET bottles enhancing lightweight and barrier properties."
+  },
+  {
+    "id": "88d37c17-317e-4e4d-bb4b-4867efbffe72",
+    "legacy_name": "Lightweight Pre-Cast Concrete Panels",
+    "new_component_name": "Concrete Panel Admixture (Lightweight/Strength)",
+    "rationale": "Identifies B2B admixture for concrete panels providing lightweight and strength."
+  },
+  {
+    "id": "433ebbe7-a465-46fb-921d-a4354715bcff",
+    "legacy_name": "Lightweight Prosthetic Limb",
+    "new_component_name": "Prosthetic Composite (Lightweight/Strength)",
+    "rationale": "Shifts to B2B composite for prosthetics with lightweight and strength properties."
+  },
+  {
+    "id": "c6decfab-549c-42ed-b917-eeecdb0e8691",
+    "legacy_name": "Lightweight Skis / Snowboard",
+    "new_component_name": "Ski Core Composite (Lightweight/Flexural)",
+    "rationale": "Focuses on B2B composite for ski cores providing lightweight and flexural properties."
+  },
+  {
+    "id": "ab209036-9ecb-4729-afd1-cab2ef9e4e79",
+    "legacy_name": "Liquid Filtration Membranes (Industrial)",
+    "new_component_name": "Filtration Membrane (Efficiency/Fouling Resistance)",
+    "rationale": "Specifies B2B membrane for liquid filtration enhancing efficiency and fouling resistance."
+  },
+  {
+    "id": "95fc9bea-5b22-4b15-9995-1a9314780eba",
+    "legacy_name": "Lithium-Ion Battery Electrodes",
+    "new_component_name": "Anode/Cathode Conductive Additive",
+    "rationale": "Clarifies B2B additive for battery electrodes providing conductivity."
+  },
+  {
+    "id": "73f96099-b844-4269-85e5-95491ffc073c",
+    "legacy_name": "Livestock Containment Fencing (Composite Posts)",
+    "new_component_name": "Fence Post Composite (Durability/Weather Resistance)",
+    "rationale": "Identifies B2B composite for fence posts with durability and weather resistance."
+  },
+  {
+    "id": "a9068715-55a3-4fc3-bbac-3386b1279122",
+    "legacy_name": "Lubricants (Solid/Dry)",
+    "new_component_name": "Solid Lubricant Additive (Friction Reduction)",
+    "rationale": "Converts to B2B additive for solid lubricants reducing friction."
+  },
+  {
+    "id": "7c16cf28-cff7-4c13-902b-2717fe139924",
+    "legacy_name": "Luggage Tags",
+    "new_component_name": "Tag Composite (Durability)",
+    "rationale": "Focuses on B2B composite for tags providing durability."
+  },
+  {
+    "id": "5cc7f2fc-eb8d-49dc-a55e-e264fb4807f5",
+    "legacy_name": "Luggage Wheels",
+    "new_component_name": "Wheel Compound (Wear Resistance)",
+    "rationale": "Specifies B2B compound for wheels enhancing wear resistance."
+  },
+  {
+    "id": "64cb2484-3bfb-4746-8993-b9f574b6cdf1",
+    "legacy_name": "Magnetic Shielding Materials",
+    "new_component_name": "Shielding Composite (Magnetic Permeability)",
+    "rationale": "Identifies B2B composite for magnetic shielding with permeability function."
+  },
+  {
+    "id": "662a7a8b-f0a3-42f6-91ec-ec59d9f19606",
+    "legacy_name": "Manhole Covers/Frames (Composite)",
+    "new_component_name": "Cover Composite (Strength/Lightweight)",
+    "rationale": "Shifts to B2B composite for manhole covers providing strength and lightweight."
+  },
+  {
+    "id": "9fd3dad7-06dc-4092-a9ce-c671ea47edb7",
+    "legacy_name": "Marine Gelcoat (Boat Hull)",
+    "new_component_name": "Hull Gelcoat Additive (UV/Barrier)",
+    "rationale": "Focuses on B2B additive for gelcoats enhancing UV and barrier properties."
+  },
+  {
+    "id": "570ea8a3-855f-4915-9370-2b5335c464e6",
+    "legacy_name": "Marine Pier/Piling Wraps",
+    "new_component_name": "Wrap Composite (Corrosion Protection)",
+    "rationale": "Specifies B2B composite for wraps providing corrosion protection."
+  },
+  {
+    "id": "fd904b57-6a4e-4e0a-9682-175ed33fc27a",
+    "legacy_name": "Marine Propellers (Composite)",
+    "new_component_name": "Propeller Blade Composite (Strength/Efficiency)",
+    "rationale": "Identifies B2B composite for propeller blades enhancing strength and efficiency."
+  },
+  {
+    "id": "5c01ba4d-2751-4736-a40f-dc0f12b5e747",
+    "legacy_name": "Mattresses (Foam)",
+    "new_component_name": "Foam Additive (Thermal Regulation)",
+    "rationale": "Converts to B2B additive for mattress foams providing thermal regulation."
+  },
+  {
+    "id": "811c67a4-5e58-4f75-abb3-f3cf5ecb15fc",
+    "legacy_name": "Medical Diagnostic Lab-on-a-Chip",
+    "new_component_name": "Chip Substrate (Conductive/Biosensing)",
+    "rationale": "Focuses on B2B substrate for diagnostic chips with conductive and biosensing properties."
+  },
+  {
+    "id": "6236806b-013a-4861-9fb2-bcda3bd9a918",
+    "legacy_name": "Medical Implant (Bone Scaffold)",
+    "new_component_name": "Scaffold Composite (Biocompatible/Strength)",
+    "rationale": "Specifies B2B composite for bone scaffolds with biocompatible and strength properties."
+  },
+  {
+    "id": "52684097-8ebe-4e8f-ad23-b225ea67a104",
+    "legacy_name": "Memristor Devices",
+    "new_component_name": "Memristor Material (Conductive/Switching)",
+    "rationale": "Identifies B2B material for memristors providing conductive and switching functions."
+  },
+  {
+    "id": "963a5005-0924-48cb-b12d-a6fa4f922181",
+    "legacy_name": "Military Vehicle Armor",
+    "new_component_name": "Armor Panel Composite (Ballistic Protection)",
+    "rationale": "Shifts to B2B composite for armor panels providing ballistic protection."
+  },
+  {
+    "id": "1d2bbd0b-d0fd-4ea5-86cf-d5143814224c",
+    "legacy_name": "Mirrors (Anti-fog Coating)",
+    "new_component_name": "Mirror Coating (Anti-Fog/Hydrophilic)",
+    "rationale": "Focuses on B2B coating for mirrors with anti-fog and hydrophilic properties."
+  },
+  {
+    "id": "55a4dcae-7f72-4725-a7b2-34cb13ffa180",
+    "legacy_name": "Mouse Pad",
+    "new_component_name": "Pad Surface Coating (Friction Control)",
+    "rationale": "Specifies B2B coating for mouse pads controlling friction."
+  },
+  {
+    "id": "568062e9-6fa2-49bf-978e-712ffa3842f6",
+    "legacy_name": "Neural Interfaces/Implants",
+    "new_component_name": "Interface Electrode Coating (Biocompatible/Conductive)",
+    "rationale": "Identifies B2B coating for neural electrodes with biocompatible and conductive properties."
+  },
+  {
+    "id": "6ad7ddb4-c093-4225-9a48-df172bc2e4ba",
+    "legacy_name": "Oil Absorption Materials",
+    "new_component_name": "Absorbent Additive (Hydrophobic/Oleophilic)",
+    "rationale": "Converts to B2B additive for absorbents with hydrophobic and oleophilic functions."
+  },
+  {
+    "id": "8aa48510-0f85-4f96-964f-3c97bbc25ca9",
+    "legacy_name": "Paintball/Airsoft Gear",
+    "new_component_name": "Gear Composite (Impact Resistance)",
+    "rationale": "Focuses on B2B composite for gear providing impact resistance."
+  },
+  {
+    "id": "e8d82875-d535-4cbb-84a1-ae2f0610c2e3",
+    "legacy_name": "Paper Shredders",
+    "new_component_name": "Shredder Blade Coating (Wear Resistance)",
+    "rationale": "Specifies B2B coating for shredder blades enhancing wear resistance."
+  },
+  {
+    "id": "c703af47-476b-4393-903e-2809289ff639",
+    "legacy_name": "Passenger Car Tires",
+    "new_component_name": "Tire Tread Compound (Mechanical/ESD)",
+    "rationale": "Focuses on the B2B material (compound) and its dual functions (Mechanical + Anti-Static)."
+  },
+  {
+    "id": "e16f0c47-38eb-4f38-974d-5bba9e026ab7",
+    "legacy_name": "Pens/Pencils (Casings)",
+    "new_component_name": "Casing Composite (Grip/Durability)",
+    "rationale": "Identifies B2B composite for pen casings providing grip and durability."
+  },
+  {
+    "id": "9f410f92-67d1-452d-a291-dcf3db1dbd42",
+    "legacy_name": "Perovskite Solar Cells",
+    "new_component_name": "Solar Cell Additive (Efficiency/Stability)",
+    "rationale": "Shifts to B2B additive for perovskite cells enhancing efficiency and stability."
+  },
+  {
+    "id": "f0b2a88f-d746-4226-96c0-19de76753ad8",
+    "legacy_name": "Personal Alert Systems (Casings)",
+    "new_component_name": "Alert Device Casing (Composite/Durable)",
+    "rationale": "Focuses on B2B composite for alert casings providing durability."
+  },
+  {
+    "id": "b951b91b-cebc-4d86-a930-2cd7aa957fd5",
+    "legacy_name": "Pesticide Delivery Systems",
+    "new_component_name": "Delivery Capsule Additive (Controlled Release)",
+    "rationale": "Specifies B2B additive for pesticide capsules controlling release."
+  },
+  {
+    "id": "bee05571-5eb6-4289-a14d-a3c3bf40c377",
+    "legacy_name": "Pharmaceutical Packaging",
+    "new_component_name": "Packaging Film (Barrier/Anti-Microbial)",
+    "rationale": "Identifies B2B film for pharmaceutical packaging with barrier and anti-microbial functions."
+  },
+  {
+    "id": "8d61f6a9-39ad-4871-9f58-94523956ec1d",
+    "legacy_name": "Phase Change Materials (Enhanced)",
+    "new_component_name": "PCM Additive (Thermal Storage)",
+    "rationale": "Converts to B2B additive for phase change materials enhancing thermal storage."
+  },
+  {
+    "id": "2cd12a1d-ea30-45e1-885e-f2ff513982e2",
+    "legacy_name": "Photocatalytic Coatings (Air/Water Purification)",
+    "new_component_name": "Coating Additive (Photocatalytic Activity)",
+    "rationale": "Focuses on B2B additive for coatings providing photocatalytic activity."
+  },
+  {
+    "id": "b4d6d8b1-822e-4fa6-bffa-5e1489d17140",
+    "legacy_name": "Photodetectors",
+    "new_component_name": "Detector Material (Sensitivity/Conductive)",
+    "rationale": "Specifies B2B material for photodetectors enhancing sensitivity and conductivity."
+  },
+  {
+    "id": "59d8a1d2-60a4-4450-893d-12c2fcf86963",
+    "legacy_name": "Picture Frames (Composite)",
+    "new_component_name": "Frame Composite (Lightweight/Strength)",
+    "rationale": "Identifies B2B composite for frames providing lightweight and strength."
+  },
+  {
+    "id": "d4e7b739-1b16-4044-9e5f-c35d73d9318b",
+    "legacy_name": "Piezoelectric Energy Harvesters (Enhanced)",
+    "new_component_name": "Harvester Additive (Efficiency)",
+    "rationale": "Shifts to B2B additive for piezoelectric harvesters enhancing efficiency."
+  },
+  {
+    "id": "3384819d-5b00-46b2-b90e-ed78e7997614",
+    "legacy_name": "Pillows (Cooling)",
+    "new_component_name": "Pillow Foam Additive (Thermal Regulation)",
+    "rationale": "Focuses on B2B additive for pillow foams providing thermal regulation."
+  },
+  {
+    "id": "de064316-cc6c-4886-92a2-68b1c4d5d049",
+    "legacy_name": "Pipeline Repair Wraps (Composite)",
+    "new_component_name": "Repair Wrap Composite (Strength/Sealing)",
+    "rationale": "Specifies B2B composite for pipeline wraps enhancing strength and sealing."
+  },
+  {
+    "id": "c864104b-f833-487b-98ca-5c881fec3a37",
+    "legacy_name": "Plywood / Oriented Strand Board (OSB)",
+    "new_component_name": "Board Binder Additive (Strength/Moisture Resistance)",
+    "rationale": "Identifies B2B additive for board binders providing strength and moisture resistance."
+  },
+  {
+    "id": "1e04e08c-c558-47ab-9fb9-a978478dee66",
+    "legacy_name": "Pocket Knives/Multi-tools",
+    "new_component_name": "Tool Blade Coating (Corrosion Resistance)",
+    "rationale": "Converts to B2B coating for tool blades providing corrosion resistance."
+  },
+  {
+    "id": "8309b167-7409-4814-8cac-d154b128aad5",
+    "legacy_name": "Power Cable Shielding",
+    "new_component_name": "Cable Shielding Compound (EMI Protection)",
+    "rationale": "Focuses on B2B compound for power cable shielding providing EMI protection."
+  },
+  {
+    "id": "e21db223-9063-4f19-b39e-777841b53d2d",
+    "legacy_name": "Power Cords/Charging Cables (Enhanced Durability)",
+    "new_component_name": "Cable Jacket Compound (Durability/Flexibility)",
+    "rationale": "Specifies B2B compound for cable jackets enhancing durability and flexibility."
+  },
+  {
+    "id": "4bef49e4-796c-4f83-a22d-959017cd587c",
+    "legacy_name": "Power Transmission Belts (V-belts/Timing Belts)",
+    "new_component_name": "Belt Compound (Tensile Strength/Wear)",
+    "rationale": "Identifies B2B compound for transmission belts providing tensile strength and wear resistance."
+  },
+  {
+    "id": "f4399481-cb3f-4e61-a554-24b4b45ed7a2",
+    "legacy_name": "Printed Circuit Board (PCB) Substrates",
+    "new_component_name": "PCB Substrate Additive (Thermal/Conductive)",
+    "rationale": "Shifts to B2B additive for PCB substrates enhancing thermal and conductive properties."
+  },
+  {
+    "id": "40ecb009-dc93-4aa1-bbf9-34f3737d9e71",
+    "legacy_name": "Professional Camera Bodies/Lenses",
+    "new_component_name": "Camera Body Composite (Lightweight/Durable)",
+    "rationale": "Focuses on B2B composite for camera bodies providing lightweight and durability."
+  },
+  {
+    "id": "b3b3130a-68ff-40d8-9215-475c4ed891da",
+    "legacy_name": "Projector Casings",
+    "new_component_name": "Projector Enclosure Composite (Thermal)",
+    "rationale": "Specifies B2B composite for projector enclosures with thermal properties."
+  },
+  {
+    "id": "ec91ff58-1cfa-4110-b511-60ac2cce9d6a",
+    "legacy_name": "Protective Coatings for Bridges/Structures",
+    "new_component_name": "Structure Coating (Corrosion/Weather Resistance)",
+    "rationale": "Identifies B2B coating for structures providing corrosion and weather resistance."
+  },
+  {
+    "id": "d2c15609-e4a5-459e-a840-090cd5829aac",
+    "legacy_name": "Pump Components (Impellers/Casings)",
+    "new_component_name": "Impeller Composite (Abrasion Resistance)",
+    "rationale": "Converts to B2B composite for pump impellers enhancing abrasion resistance."
+  },
+  {
+    "id": "1df69f08-da3d-4a24-b686-5634da0ebf59",
+    "legacy_name": "Quantum Dots (Graphene-Based)",
+    "new_component_name": "Quantum Dot Additive (Stability/Efficiency)",
+    "rationale": "Focuses on B2B additive for quantum dots enhancing stability and efficiency."
+  },
+  {
+    "id": "4978a333-1a0c-41e0-9477-d4528419c3e4",
+    "legacy_name": "Radiation Detectors",
+    "new_component_name": "Detector Sensor Film (Sensitivity)",
+    "rationale": "Specifies B2B film for radiation detectors enhancing sensitivity."
+  },
+  {
+    "id": "b0ee3c6e-ae78-43b2-b54e-a03c0199c9c1",
+    "legacy_name": "Radiation Shielding Materials (Flexible)",
+    "new_component_name": "Shielding Fabric (Radiation Absorption)",
+    "rationale": "Identifies B2B fabric for radiation shielding providing absorption."
+  },
+  {
+    "id": "564d5766-17b4-49a9-a956-69c93495e482",
+    "legacy_name": "Railway Components (Composite Sleepers/Ties)",
+    "new_component_name": "Sleeper Composite (Durability/Weather Resistance)",
+    "rationale": "Shifts to B2B composite for railway sleepers with durability and weather resistance."
+  },
+  {
+    "id": "0df8833d-2e9d-49fa-b46c-2c88889ff85e",
+    "legacy_name": "Raincoats/Umbrellas",
+    "new_component_name": "Fabric Coating (Waterproof/Breathable)",
+    "rationale": "Focuses on B2B coating for fabrics providing waterproof and breathable properties."
+  },
+  {
+    "id": "334378d6-19a8-4a3c-95b0-4de90a3d6998",
+    "legacy_name": "Refrigerator Water/Ice Dispenser",
+    "new_component_name": "Dispenser Component Coating (Anti-Microbial)",
+    "rationale": "Specifies B2B coating for dispenser components with anti-microbial function."
+  },
+  {
+    "id": "744d901e-5ae3-40c8-9af6-a74a6150c0c9",
+    "legacy_name": "Resistors (Conductive Element)",
+    "new_component_name": "Resistor Material Additive (Conductivity)",
+    "rationale": "Identifies B2B additive for resistor materials enhancing conductivity."
+  },
+  {
+    "id": "ebe17da5-6e2b-4d67-9894-11c2d9fc248b",
+    "legacy_name": "Reusable Coffee Filters (Mesh)",
+    "new_component_name": "Filter Mesh Coating (Durability/Filtration)",
+    "rationale": "Converts to B2B coating for filter meshes enhancing durability and filtration."
+  },
+  {
+    "id": "49e412c4-5cff-4a68-aac9-99e720643b5c",
+    "legacy_name": "RFID Tag (Security Label)",
+    "new_component_name": "Tag Antenna Ink (Conductive)",
+    "rationale": "Focuses on B2B ink for RFID antennas providing conductivity."
+  },
+  {
+    "id": "416e5a81-6e8b-42ae-b377-96ad460e1b85",
+    "legacy_name": "Road Marking Paint",
+    "new_component_name": "Paint Additive (Durability/Visibility)",
+    "rationale": "Specifies B2B additive for road paints enhancing durability and visibility."
+  },
+  {
+    "id": "e7f3021d-1f46-4834-bfa7-80583377628c",
+    "legacy_name": "Robotic Vacuum Cleaner",
+    "new_component_name": "Vacuum Chassis Composite (Lightweight/Durable)",
+    "rationale": "Identifies B2B composite for vacuum chassis with lightweight and durable properties."
+  },
+  {
+    "id": "20fa279f-d70f-4a01-be4a-ed0152efcb52",
+    "legacy_name": "Running Shoes",
+    "new_component_name": "Sole Compound (Cushioning/Grip)",
+    "rationale": "Shifts to B2B compound for shoe soles providing cushioning and grip."
+  },
+  {
+    "id": "1c638a07-09d4-4836-9c1e-1dfa2f88359d",
+    "legacy_name": "Safety Glasses",
+    "new_component_name": "Lens Coating (Impact/Scratch Resistance)",
+    "rationale": "Focuses on B2B coating for safety lenses enhancing impact and scratch resistance."
+  },
+  {
+    "id": "59c16cfe-7250-4141-8cd4-76bfa6bda35f",
+    "legacy_name": "Satellite Components",
+    "new_component_name": "Component Composite (Thermal/Radiation Resistance)",
+    "rationale": "Specifies B2B composite for satellite components with thermal and radiation resistance."
+  },
+  {
+    "id": "ea8af358-f7d8-4ea2-b0ce-1f7c277071a1",
+    "legacy_name": "Scientific Instrument Components",
+    "new_component_name": "Instrument Housing Composite (Precision/Thermal)",
+    "rationale": "Identifies B2B composite for instrument housings providing precision and thermal properties."
+  },
+  {
+    "id": "9fb4891b-cd6b-4efa-9bbc-820af42c69c0",
+    "legacy_name": "Scissors (Household/Office)",
+    "new_component_name": "Blade Coating (Sharpness Retention)",
+    "rationale": "Converts to B2B coating for scissor blades retaining sharpness."
+  },
+  {
+    "id": "c8887626-eafb-46d3-9b10-d6f61a1728aa",
+    "legacy_name": "Screwdriver Tips (Consumer Grade)",
+    "new_component_name": "Tip Coating (Wear Resistance)",
+    "rationale": "Focuses on B2B coating for screwdriver tips enhancing wear resistance."
+  },
+  {
+    "id": "90dbcf88-0739-44f2-b41c-50bf7bdf1ff8",
+    "legacy_name": "Self-Healing Materials (Coatings/Composites)",
+    "new_component_name": "Coating Additive (Self-Healing)",
+    "rationale": "Specifies B2B additive for coatings enabling self-healing."
+  },
+  {
+    "id": "bcaba79b-2ee0-4dae-af92-61dc7b08a7b5",
+    "legacy_name": "Shock Absorber Seals/Fluid",
+    "new_component_name": "Seal Compound (Durability/Sealing)",
+    "rationale": "Identifies B2B compound for shock absorber seals providing durability and sealing."
+  },
+  {
+    "id": "9aa2bad0-da9c-4938-8419-258474ecbcd5",
+    "legacy_name": "Shoe Insoles",
+    "new_component_name": "Insole Foam Additive (Cushioning/Thermal)",
+    "rationale": "Shifts to B2B additive for insole foams enhancing cushioning and thermal properties."
+  },
+  {
+    "id": "c2f81102-d9cd-40bb-be0d-7cda0b284951",
+    "legacy_name": "Shower Heads/Faucets",
+    "new_component_name": "Fixture Coating (Anti-Microbial/Corrosion)",
+    "rationale": "Focuses on B2B coating for fixtures providing anti-microbial and corrosion resistance."
+  },
+  {
+    "id": "81890117-911e-478a-96a0-85e379045ff6",
+    "legacy_name": "Skateboards (Decks)",
+    "new_component_name": "Deck Composite (Flexural Strength)",
+    "rationale": "Specifies B2B composite for skateboard decks enhancing flexural strength."
+  },
+  {
+    "id": "e48c15d8-eb8f-45f9-98a8-4c5d490cb0d7",
+    "legacy_name": "Sleeping Bags",
+    "new_component_name": "Lining Fabric Coating (Thermal Insulation)",
+    "rationale": "Identifies B2B coating for sleeping bag linings providing thermal insulation."
+  },
+  {
+    "id": "cb1c77d4-50b2-4b08-bf27-31daf90565b3",
+    "legacy_name": "Smart Blinds / Window Openers",
+    "new_component_name": "Actuator Component (Conductive/Efficient)",
+    "rationale": "Converts to B2B component for smart actuators with conductive and efficient properties."
+  },
+  {
+    "id": "852661d3-c5da-4725-b0db-2450bc925652",
+    "legacy_name": "Smart Grids",
+    "new_component_name": "Grid Conductor Additive (Conductivity/Efficiency)",
+    "rationale": "Focuses on B2B additive for grid conductors enhancing conductivity and efficiency."
+  },
+  {
+    "id": "c1b03033-ae0e-4188-91bc-3e14958616c5",
+    "legacy_name": "Smart Home Hub",
+    "new_component_name": "Hub Casing Composite (EMI Shielding/Thermal)",
+    "rationale": "Specifies B2B composite for home hub casings with EMI shielding and thermal functions."
+  },
+  {
+    "id": "c25f6e3e-2593-49a3-99ea-224e63a5dd42",
+    "legacy_name": "Smart Thermostat / HVAC Zone Valve",
+    "new_component_name": "Valve Actuator Component (Conductive/Thermal)",
+    "rationale": "Identifies B2B component for valve actuators with conductive and thermal properties."
+  },
+  {
+    "id": "2f75c9be-30cd-44ba-8852-ff47791b30c0",
+    "legacy_name": "Smart Watch",
+    "new_component_name": "Wearable Device Casing (Composite)",
+    "rationale": "Shifts from the B2C end-product to the B2B composite component we sell."
+  },
+  {
+    "id": "ae78cefb-fbf4-492f-8ef7-8b9b929125b7",
+    "legacy_name": "Smart Windows (Electrochromic)",
+    "new_component_name": "Window Film (Electrochromic/Conductive)",
+    "rationale": "Converts to B2B film for smart windows with electrochromic and conductive functions."
+  },
+  {
+    "id": "b821d143-84d4-421f-8452-b525a69a49c0",
+    "legacy_name": "Smartphone/Tablet",
+    "new_component_name": "Device Casing Composite (Lightweight/Thermal)",
+    "rationale": "Focuses on B2B composite for device casings providing lightweight and thermal properties."
+  },
+  {
+    "id": "c320ad90-6f17-4799-ba19-bcfec87d0caf",
+    "legacy_name": "Snowshoes",
+    "new_component_name": "Frame Composite (Lightweight/Strength)",
+    "rationale": "Specifies B2B composite for snowshoe frames with lightweight and strength."
+  },
+  {
+    "id": "604da0da-0fbc-46d8-972c-e4b88162c272",
+    "legacy_name": "Socks",
+    "new_component_name": "Sock Fabric (Conductive/Thermal)",
+    "rationale": "Identifies B2B fabric for socks providing conductive and thermal properties."
+  },
+  {
+    "id": "d5067ee3-37db-479e-a346-163947d52611",
+    "legacy_name": "Soil Moisture Sensors",
+    "new_component_name": "Sensor Electrode Coating (Conductive/Sensitive)",
+    "rationale": "Shifts to B2B coating for sensor electrodes enhancing conductivity and sensitivity."
+  },
+  {
+    "id": "e87d8b00-9429-4f02-a72d-74f9e3adfeeb",
+    "legacy_name": "Solar Panel Backsheets",
+    "new_component_name": "Backsheet Film (Barrier/Durability)",
+    "rationale": "Focuses on B2B film for solar panel backsheets providing barrier and durability."
+  },
+  {
+    "id": "91b386db-6b51-4c2a-837e-30097fbff1d8",
+    "legacy_name": "Solid-State Battery Components",
+    "new_component_name": "Battery Electrolyte Additive (Conductivity)",
+    "rationale": "Specifies B2B additive for solid-state electrolytes enhancing conductivity."
+  },
+  {
+    "id": "754941f9-69aa-45bf-82c4-75ad487aef45",
+    "legacy_name": "Sound Absorption Materials (Building)",
+    "new_component_name": "Absorption Panel Composite (Acoustic Dampening)",
+    "rationale": "Identifies B2B composite for absorption panels providing acoustic dampening."
+  },
+  {
+    "id": "5f1e45eb-e9cf-4ca7-be7e-2d0c329e8027",
+    "legacy_name": "Spacecraft Thermal Management",
+    "new_component_name": "Thermal Management Coating (Heat Dissipation)",
+    "rationale": "Converts to B2B coating for spacecraft thermal management enhancing heat dissipation."
+  },
+  {
+    "id": "4d922167-5e8d-4df2-9d98-f987b8c34fca",
+    "legacy_name": "Speaker Cones/Diaphragms (Larger Audio)",
+    "new_component_name": "Diaphragm Composite (Stiffness/Lightweight)",
+    "rationale": "Focuses on B2B composite for speaker diaphragms providing stiffness and lightweight."
+  },
+  {
+    "id": "8158f9c2-2bd4-44c5-96c0-3f426aa96253",
+    "legacy_name": "Specialized Sensor Housings",
+    "new_component_name": "Sensor Housing Composite (Protective/Thermal)",
+    "rationale": "Specifies B2B composite for sensor housings with protective and thermal properties."
+  },
+  {
+    "id": "82baf3a3-8e7d-4f61-ade4-16035456b11a",
+    "legacy_name": "Spintronic Devices",
+    "new_component_name": "Device Material (Magnetic/Conductive)",
+    "rationale": "Identifies B2B material for spintronic devices with magnetic and conductive properties."
+  },
+  {
+    "id": "9671757a-e38d-4e97-8082-3b3a2fd17e6c",
+    "legacy_name": "Sports Watch (GPS)",
+    "new_component_name": "Watch Casing Composite (Lightweight/Durable)",
+    "rationale": "Shifts to B2B composite for watch casings providing lightweight and durability."
+  },
+  {
+    "id": "2feb5860-46af-47b2-845f-7d2d58b7b3ba",
+    "legacy_name": "Staplers/Hole Punchers",
+    "new_component_name": "Mechanism Composite (Durability)",
+    "rationale": "Focuses on B2B composite for mechanisms providing durability."
+  },
+  {
+    "id": "b5626cca-3043-4c7d-bd8c-92b7d7a0df83",
+    "legacy_name": "Stealth Coatings",
+    "new_component_name": "Coating Additive (Radar Absorption)",
+    "rationale": "Specifies B2B additive for stealth coatings providing radar absorption."
+  },
+  {
+    "id": "0747d5bb-db2e-4298-98b8-f38892b388b4",
+    "legacy_name": "Steam Mop / Steam Cleaner",
+    "new_component_name": "Cleaner Housing Composite (Thermal Resistance)",
+    "rationale": "Identifies B2B composite for cleaner housings with thermal resistance."
+  },
+  {
+    "id": "a417a206-261a-48cc-a601-db3c831f9c6f",
+    "legacy_name": "Sulfur or Silicon Anode Batteries",
+    "new_component_name": "Anode Additive (Capacity/Stability)",
+    "rationale": "Converts to B2B additive for anodes enhancing capacity and stability."
+  },
+  {
+    "id": "11ff0b02-6ab4-49b3-be88-82c0e0a1179a",
+    "legacy_name": "Sunroof/Window Seals",
+    "new_component_name": "Seal Compound (Weather Resistance)",
+    "rationale": "Focuses on B2B compound for seals providing weather resistance."
+  },
+  {
+    "id": "8365f274-4620-41f3-9ee9-b5ed198492bd",
+    "legacy_name": "Supercapacitor Power Bank",
+    "new_component_name": "Supercapacitor Electrode Additive (Energy Density)",
+    "rationale": "Specifies B2B additive for supercapacitor electrodes enhancing energy density."
+  },
+  {
+    "id": "9ad8ca7a-f069-4473-9147-46d40ec74341",
+    "legacy_name": "Surfboards/Wakeboards",
+    "new_component_name": "Board Core Composite (Flexural Strength)",
+    "rationale": "Identifies B2B composite for board cores providing flexural strength."
+  },
+  {
+    "id": "94e109ed-359e-4cae-a543-f46297d7f548",
+    "legacy_name": "Surgical Tools (Coating)",
+    "new_component_name": "Tool Coating (Anti-Microbial/Wear)",
+    "rationale": "Shifts to B2B coating for surgical tools with anti-microbial and wear resistance."
+  },
+  {
+    "id": "f59bc8b9-cf5c-4f8a-8494-24e4207493ad",
+    "legacy_name": "Swimwear",
+    "new_component_name": "Swim Fabric (Hydrophobic/Durable)",
+    "rationale": "Focuses on B2B fabric for swimwear providing hydrophobic and durable properties."
+  },
+  {
+    "id": "4f90c7df-8ad1-4552-b09e-df612d2b1f30",
+    "legacy_name": "Tape Measures",
+    "new_component_name": "Tape Blade Coating (Wear Resistance)",
+    "rationale": "Specifies B2B coating for tape blades enhancing wear resistance."
+  },
+  {
+    "id": "76dd9973-2b6a-4696-b37c-e85ecdf27eeb",
+    "legacy_name": "Tennis Racket",
+    "new_component_name": "Racket Frame Composite (Stiffness/Strength)",
+    "rationale": "Identifies B2B composite for racket frames providing stiffness and strength."
+  },
+  {
+    "id": "aacede52-68f7-41a0-ac5d-faf9f18d8fd7",
+    "legacy_name": "Tents/Tarps",
+    "new_component_name": "Tent Fabric Coating (Waterproof/Tear Resistance)",
+    "rationale": "Converts to B2B coating for tent fabrics providing waterproof and tear resistance."
+  },
+  {
+    "id": "33738d30-7d8c-4bd6-8c6e-ef4ffda253dd",
+    "legacy_name": "Terahertz Detectors/Emitters",
+    "new_component_name": "Device Material (Sensitivity/Conductive)",
+    "rationale": "Focuses on B2B material for terahertz devices enhancing sensitivity and conductivity."
+  },
+  {
+    "id": "211f3745-7d02-435b-ae00-07fcbeba67f2",
+    "legacy_name": "Thermal Base Layers",
+    "new_component_name": "Base Layer Fabric (Thermal Regulation)",
+    "rationale": "Specifies B2B fabric for base layers providing thermal regulation."
+  },
+  {
+    "id": "bc210e1c-7989-4bfd-8ac5-fdebd7df940a",
+    "legacy_name": "Thermal Camouflage Materials",
+    "new_component_name": "Camouflage Fabric (Thermal Insulation)",
+    "rationale": "Identifies B2B fabric for thermal camouflage providing insulation."
+  },
+  {
+    "id": "aca798bf-d3b3-443c-91c6-3ae15d247931",
+    "legacy_name": "Thermal Interface Pads (beyond paste)",
+    "new_component_name": "Interface Pad Composite (Thermal Conduction)",
+    "rationale": "Shifts to B2B composite for thermal pads providing conduction."
+  },
+  {
+    "id": "6aaa4b96-9059-407f-8f40-7a05bea3cba8",
+    "legacy_name": "Thermally Conductive Tooling & Molds",
+    "new_component_name": "Mold Coating (Thermal Conduction)",
+    "rationale": "Focuses on B2B coating for molds enhancing thermal conduction."
+  },
+  {
+    "id": "8d653759-379c-4aed-ad7f-cd15a6e62431",
+    "legacy_name": "Thermoelectric Generator Components",
+    "new_component_name": "Generator Material Additive (Efficiency)",
+    "rationale": "Specifies B2B additive for thermoelectric components enhancing efficiency."
+  },
+  {
+    "id": "48f66285-cf50-4794-b40e-ef45f80fe92f",
+    "legacy_name": "Tissue Engineering Scaffolds",
+    "new_component_name": "Scaffold Composite (Biocompatible/Porous)",
+    "rationale": "Identifies B2B composite for tissue scaffolds with biocompatible and porous properties."
+  },
+  {
+    "id": "ab5ad4fd-2e76-4973-97d5-db4d0cdc6508",
+    "legacy_name": "Tool Boxes (Plastic)",
+    "new_component_name": "Box Composite (Impact Resistance)",
+    "rationale": "Converts to B2B composite for tool boxes providing impact resistance."
+  },
+  {
+    "id": "ca18c3f1-617a-42c8-b4be-91970647ef80",
+    "legacy_name": "Transformer Oil",
+    "new_component_name": "Oil Additive (Thermal/Insulating)",
+    "rationale": "Focuses on B2B additive for transformer oils enhancing thermal and insulating properties."
+  },
+  {
+    "id": "8cc01610-841e-4445-8ca2-201941745fc8",
+    "legacy_name": "Transparent Antennas",
+    "new_component_name": "Antenna Film (Transparent/Conductive)",
+    "rationale": "Specifies B2B film for transparent antennas providing conductivity."
+  },
+  {
+    "id": "2e726493-2666-4e1d-bf2b-d449e42ed0c0",
+    "legacy_name": "Transparent Conductive Films",
+    "new_component_name": "Conductive Film (Transparent/Flexible)",
+    "rationale": "Identifies B2B film providing transparent and flexible conductivity."
+  },
+  {
+    "id": "d9e81cc8-e6da-441f-a8b6-e43a05fdf771",
+    "legacy_name": "Tunnel Lining Sealants",
+    "new_component_name": "Sealant Additive (Adhesion/Waterproof)",
+    "rationale": "Shifts to B2B additive for sealants enhancing adhesion and waterproofing."
+  },
+  {
+    "id": "b811044b-70b8-4401-90ed-9d1452a5513e",
+    "legacy_name": "TV Remote Control",
+    "new_component_name": "Remote Casing Composite (Durability/ESD)",
+    "rationale": "Focuses on B2B composite for remote casings with durability and ESD properties."
+  },
+  {
+    "id": "4f62e4fd-8cc6-4c4f-92b5-7acf7127a8d8",
+    "legacy_name": "Underwear",
+    "new_component_name": "Fabric (Anti-Microbial/Thermal)",
+    "rationale": "Specifies B2B fabric for underwear providing anti-microbial and thermal properties."
+  },
+  {
+    "id": "59b77640-a970-4a77-aa43-8b254d914ecc",
+    "legacy_name": "Upholstery Fabric",
+    "new_component_name": "Upholstery Fabric Coating (Stain Resistance/Durability)",
+    "rationale": "Identifies B2B coating for upholstery fabrics enhancing stain resistance and durability."
+  },
+  {
+    "id": "6c5183fb-6532-467a-ae97-76393d71bf06",
+    "legacy_name": "Valves (Seats/Seals)",
+    "new_component_name": "Valve Seal Compound (Sealing/Wear)",
+    "rationale": "Converts to B2B compound for valve seals providing sealing and wear resistance."
+  },
+  {
+    "id": "89597d49-4549-419d-8d8f-cfc90dfce005",
+    "legacy_name": "Vehicle Sensors (Integrated)",
+    "new_component_name": "Sensor Housing Composite (Protective/Conductive)",
+    "rationale": "Focuses on B2B composite for vehicle sensor housings with protective and conductive properties."
+  },
+  {
+    "id": "680e2e70-3284-44c5-a680-18fb51615632",
+    "legacy_name": "VR/AR Headset",
+    "new_component_name": "Headset Frame Composite (Lightweight/Comfort)",
+    "rationale": "Specifies B2B composite for headset frames providing lightweight and comfort."
+  },
+  {
+    "id": "3d9f0197-406e-422a-b36c-514cdc26aa2f",
+    "legacy_name": "Washing Machine",
+    "new_component_name": "Appliance Drum Coating (Anti-Microbial/Wear)",
+    "rationale": "Focuses on the specific part (drum) and function (coating) we sell to the appliance OEM."
+  },
+  {
+    "id": "36667e88-60ef-49d4-8164-82e8ac9d2127",
+    "legacy_name": "Watch Bands (Rubber/Silicone)",
+    "new_component_name": "Band Compound (Flexible/Durable)",
+    "rationale": "Identifies B2B compound for watch bands providing flexibility and durability."
+  },
+  {
+    "id": "79822a89-cf9e-4fa6-bf89-37127a27e192",
+    "legacy_name": "Water Bottles (Insulated)",
+    "new_component_name": "Bottle Liner Coating (Thermal Insulation)",
+    "rationale": "Shifts to B2B coating for bottle liners providing thermal insulation."
+  },
+  {
+    "id": "398c5669-5b06-44f0-8bfe-3ee92f766c63",
+    "legacy_name": "Water Piping (PEX, PVC)",
+    "new_component_name": "Pipe Compound (Strength/Barrier)",
+    "rationale": "Focuses on B2B compound for water pipes enhancing strength and barrier."
+  },
+  {
+    "id": "03bba2c6-4ae1-4f42-a4aa-fe5eea764678",
+    "legacy_name": "Water Storage Tanks (Liners/Coatings)",
+    "new_component_name": "Tank Liner Coating (Corrosion Resistance)",
+    "rationale": "Specifies B2B coating for tank liners providing corrosion resistance."
+  },
+  {
+    "id": "348da614-5254-4340-8add-4c448ef1967f",
+    "legacy_name": "Wave Energy Converter Components",
+    "new_component_name": "Converter Composite (Durability/Corrosion)",
+    "rationale": "Identifies B2B composite for converter components with durability and corrosion resistance."
+  },
+  {
+    "id": "79235672-7546-466e-9d14-d1f55b47d281",
+    "legacy_name": "Wearable "Smart" E-Textile",
+    "new_component_name": "E-Textile Fabric (Conductive/Sensing)",
+    "rationale": "Converts to B2B fabric for e-textiles providing conductive and sensing functions."
+  },
+  {
+    "id": "b7dd9ef1-a4ed-4b5f-aece-5b9fdbf5c138",
+    "legacy_name": "Wearable Health Monitors (Skin Patches)",
+    "new_component_name": "Patch Sensor Film (Biosensing/Flexible)",
+    "rationale": "Focuses on B2B film for health patches with biosensing and flexible properties."
+  },
+  {
+    "id": "bc9c5a75-a57e-4299-a86c-ca077d9a05a3",
+    "legacy_name": "Wearable Supercapacitors",
+    "new_component_name": "Supercapacitor Electrode Fabric (Flexible/Energy Storage)",
+    "rationale": "Specifies B2B fabric for wearable supercapacitor electrodes with flexible energy storage."
+  },
+  {
+    "id": "6d1ff080-56bc-4b45-b68a-d3651dacdb5a",
+    "legacy_name": "Welding Electrodes",
+    "new_component_name": "Electrode Coating (Conductivity/Durability)",
+    "rationale": "Identifies B2B coating for welding electrodes enhancing conductivity and durability."
+  },
+  {
+    "id": "02b0dbd6-0216-4a96-89c2-9977b4a5cf8d",
+    "legacy_name": "Wetsuit",
+    "new_component_name": "Suit Fabric (Thermal Insulation/Flexible)",
+    "rationale": "Shifts to B2B fabric for wetsuits providing thermal insulation and flexibility."
+  },
+  {
+    "id": "df2a66ec-ae8c-4a03-bd7e-d3eab0b1531f",
+    "legacy_name": "Whiteboard/Dry Erase Board",
+    "new_component_name": "Board Surface Coating (Erasable/Durable)",
+    "rationale": "Focuses on B2B coating for board surfaces providing erasable and durable properties."
+  },
+  {
+    "id": "79e83ba8-9d79-45b5-85a3-172ebb781023",
+    "legacy_name": "Wind Turbine Blade Coatings",
+    "new_component_name": "Blade Coating (Erosion Resistance)",
+    "rationale": "Specifies B2B coating for turbine blades enhancing erosion resistance."
+  },
+  {
+    "id": "34bf5ea1-2034-4696-875e-2591c795ab6a",
+    "legacy_name": "Wire & Cable Insulation/Jacketing",
+    "new_component_name": "Insulation Compound (Dielectric Strength)",
+    "rationale": "Identifies B2B compound for wire insulation providing dielectric strength."
+  },
+  {
+    "id": "36f2e58a-0b50-4006-a915-3c5d71b87230",
+    "legacy_name": "Wireless Earbuds",
+    "new_component_name": "Earbud Casing Composite (Lightweight/Acoustic)",
+    "rationale": "Converts to B2B composite for earbud casings with lightweight and acoustic properties."
+  },
+  {
+    "id": "768d785b-ce5a-4db4-82e0-c16c24fa068a",
+    "legacy_name": "Wiring Harness Tapes/Sleeves",
+    "new_component_name": "Sleeve Fabric (Abrasion Resistance)",
+    "rationale": "Focuses on B2B fabric for wiring sleeves providing abrasion resistance."
+  },
+  {
+    "id": "9de5f545-dd8f-4b1a-89d9-a5acf611f16e",
+    "legacy_name": "Work Gloves",
+    "new_component_name": "Glove Fabric Coating (Grip/Abrasion)",
+    "rationale": "Specifies B2B coating for glove fabrics enhancing grip and abrasion resistance."
+  },
+  {
+    "id": "34bc6dda-8b2c-48d1-a18e-bf4869721038",
+    "legacy_name": "Wrenches/Pliers (Consumer Grade)",
+    "new_component_name": "Tool Handle Composite (Grip/Strength)",
+    "rationale": "Identifies B2B composite for tool handles providing grip and strength."
+  },
+  {
+    "id": "6749a5d1-9850-4cdf-92cb-c3e2f1331322",
+    "legacy_name": "X-Ray Shielding (Apron/Flexible Material)",
+    "new_component_name": "Shielding Fabric (Radiation Absorption)",
+    "rationale": "Shifts to B2B fabric for x-ray shielding providing radiation absorption."
+  },
+  {
+    "id": "dfc952a8-08e8-4846-943d-4c5e003cc587",
+    "legacy_name": "Yoga Mat",
+    "new_component_name": "Mat Foam Compound (Cushioning/Grip)",
+    "rationale": "Focuses on B2B compound for yoga mats providing cushioning and grip."
+  }
+]
+

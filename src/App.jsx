@@ -11,6 +11,78 @@ import { CSVLink } from "react-csv"; // Import CSVLink
 // Assuming index.css contains all necessary styles including modal styles
 
 function App() {
+  // NEW: Password protection states
+  const [password, setPassword] = useState('');
+  const [showApp, setShowApp] = useState(false);
+  const CORRECT_PASSWORD = 'TSI2025!'; // CHANGE THIS to your shared password
+
+  // NEW: Check localStorage on mount to persist access across refreshes/sessions
+  useEffect(() => {
+    const stored = localStorage.getItem('passwordEntered');
+    if (stored === 'true') {
+      setShowApp(true);
+    }
+  }, []);
+
+  // NEW: Handle password submission
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+    if (password === CORRECT_PASSWORD) {
+      localStorage.setItem('passwordEntered', 'true'); // Persist for future visits
+      setShowApp(true);
+      setPassword(''); // Clear the input
+    } else {
+      alert('Incorrect password. Please try again.');
+      setPassword('');
+    }
+  };
+
+  // NEW: If password not entered, show simple form instead of app
+  if (!showApp) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+        backgroundColor: '#f8f9fa'
+      }}>
+        <form onSubmit={handlePasswordSubmit} style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '8px', background: 'white' }}>
+          <h2 style={{ marginBottom: '20px', textAlign: 'center' }}>Enter Password to Access AGM IP Explorer</h2>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            style={{
+              width: '100%',
+              padding: '10px',
+              marginBottom: '10px',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              boxSizing: 'border-box'
+            }}
+            required
+          />
+          <button
+            type="submit"
+            style={{
+              width: '100%',
+              padding: '10px',
+              background: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Enter
+          </button>
+        </form>
+      </div>
+    );
+  }
   const [loading, setLoading] = useState(true); // Loading state for the main application list
   const [applications, setApplications] = useState([]); // Holds the list of applications displayed in the table
 
