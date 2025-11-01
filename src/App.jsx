@@ -11,78 +11,12 @@ import { CSVLink } from "react-csv"; // Import CSVLink
 // Assuming index.css contains all necessary styles including modal styles
 
 function App() {
-  // NEW: Password protection states
+  // ALL HOOKS MOVED TO TOP: Password protection states (new)
   const [password, setPassword] = useState('');
   const [showApp, setShowApp] = useState(false);
-  const CORRECT_PASSWORD = 'TSI2025!'; // CHANGE THIS to your shared password
+  const CORRECT_PASSWORD = 'agm-group:AGM123'; // Updated to match your _headers creds (or change back)
 
-  // NEW: Check localStorage on mount to persist access across refreshes/sessions
-  useEffect(() => {
-    const stored = localStorage.getItem('passwordEntered');
-    if (stored === 'true') {
-      setShowApp(true);
-    }
-  }, []);
-
-  // NEW: Handle password submission
-  const handlePasswordSubmit = (e) => {
-    e.preventDefault();
-    if (password === CORRECT_PASSWORD) {
-      localStorage.setItem('passwordEntered', 'true'); // Persist for future visits
-      setShowApp(true);
-      setPassword(''); // Clear the input
-    } else {
-      alert('Incorrect password. Please try again.');
-      setPassword('');
-    }
-  };
-
-  // NEW: If password not entered, show simple form instead of app
-  if (!showApp) {
-    return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-        backgroundColor: '#f8f9fa'
-      }}>
-        <form onSubmit={handlePasswordSubmit} style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '8px', background: 'white' }}>
-          <h2 style={{ marginBottom: '20px', textAlign: 'center' }}>Enter Password to Access AGM IP Explorer</h2>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            style={{
-              width: '100%',
-              padding: '10px',
-              marginBottom: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              boxSizing: 'border-box'
-            }}
-            required
-          />
-          <button
-            type="submit"
-            style={{
-              width: '100%',
-              padding: '10px',
-              background: '#007bff',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
-          >
-            Enter
-          </button>
-        </form>
-      </div>
-    );
-  }
+  // ALL HOOKS MOVED TO TOP: Original states
   const [loading, setLoading] = useState(true); // Loading state for the main application list
   const [applications, setApplications] = useState([]); // Holds the list of applications displayed in the table
 
@@ -103,7 +37,6 @@ function App() {
   const [csvHeaders, setCsvHeaders] = useState([]);
   const [csvFilename, setCsvFilename] = useState("agm_applications.csv");
   const [isPreparingCsv, setIsPreparingCsv] = useState(false); // Prevent multiple clicks
-
 
   // Fetch application data based on current search term and filters using the Supabase RPC function
   // Accepts an optional app ID to try and select after fetching
@@ -160,12 +93,12 @@ function App() {
     }
   }, [searchTerm, filter]); // Dependency array
 
-  // Fetch initial data on component mount
+  // ALL HOOKS MOVED TO TOP: Fetch initial data on component mount
   useEffect(() => {
     fetchApplications();
   }, [fetchApplications]); // Now depends on the stable useCallback reference
 
-  // Fetch the name of the selected market/ontology whenever the selected item changes
+  // ALL HOOKS MOVED TO TOP: Fetch the name of the selected market/ontology whenever the selected item changes
   useEffect(() => {
        let isMounted = true;
        const fetchName = async () => {
@@ -197,8 +130,15 @@ function App() {
        return () => { isMounted = false; };
    }, [selectedItem]); // Dependency array: Rerun when selectedItem changes
 
+  // NEW: Check localStorage on mount to persist access across refreshes/sessions
+  useEffect(() => {
+    const stored = localStorage.getItem('passwordEntered');
+    if (stored === 'true') {
+      setShowApp(true);
+    }
+  }, []);
 
-  // Handler called when a new application/venture is successfully added via the form
+  // NEW: Handler called when a new application/venture is successfully added via the form
   const handleItemAdded = (newAppId = null) => {
     setShowAddForm(false);
     setSearchTerm(''); // Clear search
@@ -324,6 +264,67 @@ function App() {
   }, [applications, filter, searchTerm]);
 
 
+  // NEW: Handle password submission
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+    if (password === CORRECT_PASSWORD) {
+      localStorage.setItem('passwordEntered', 'true'); // Persist for future visits
+      setShowApp(true);
+      setPassword(''); // Clear the input
+    } else {
+      alert('Incorrect password. Please try again.');
+      setPassword('');
+    }
+  };
+
+  // NEW: If password not entered, show simple form instead of app
+  if (!showApp) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+        backgroundColor: '#f8f9fa'
+      }}>
+        <form onSubmit={handlePasswordSubmit} style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '8px', background: 'white' }}>
+          <h2 style={{ marginBottom: '20px', textAlign: 'center' }}>Enter Password to Access AGM IP Explorer</h2>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            style={{
+              width: '100%',
+              padding: '10px',
+              marginBottom: '10px',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              boxSizing: 'border-box'
+            }}
+            required
+          />
+          <button
+            type="submit"
+            style={{
+              width: '100%',
+              padding: '10px',
+              background: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Enter
+          </button>
+        </form>
+      </div>
+    );
+  }
+
+  // ORIGINAL: Your entire return statement stays unchanged (the app UI)
   return (
     // Main container
     <div style={{ padding: '0 20px 20px 20px', fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif', height: 'calc(100vh - 40px)', display: 'flex', flexDirection: 'column' }}>
